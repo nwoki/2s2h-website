@@ -1,0 +1,14 @@
+ecco un pò la parte di css che ho fatto finora.
+Spero il sito sia fico, i pulsanti li ho fatti io, poi li sostituiremo con alcuni migliori.
+Elenco un attimo le caratteristiche più interessanti:
+-ogni pulsante quando è selezionato è rosso, quando non è selezionato è verde e quando ci si passa sopra con il mouse diventa girgio
+ circondato di rosso.
+-sono presenti nell'head del codice tutti i metatag necessari chela prof ha descritto(keywords,description,lang,author)
+-l'header è completamente ridimensionabile, così come il resto del sito,
+ ed è composto da un div unico che contiene 2 span a blocco che contengono le varie immagini
+-il titolo dovrà essere sostituito con un immagine(sto studiando ora come farlo),
+ in modo che quando ci sono gli stili attivi si veda l'immagine fica, quando invece lo stile è disabilitato si veda solo testo
+- oltre al css per lo screen(cioè visto da pc) ci sono i css per la stampa e per i dispositivi portatili(cell,palmari ecc)
+-il css per la stampa è molto semplice.Tutte le scritte in nero esclusi i link e sfondi bianchi7
+-il css per i disp port mostra come unica differenza che il menù navigazione sta sotto all'header in orizzontale
+ al posto che di fianco al content in verticale, questo xchè occupava troppo spazio per un cell un menù navigazione di lato

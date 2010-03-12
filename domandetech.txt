@@ -1,0 +1,27 @@
+risposte domande tech web
+
+es 2 : 
+4 domanda :
+F xchè date è per la data, e se usassimo xs:time dovremmo mettere anche i secondi
+5 domanda: V
+6 domanda: F tutto contenuto dentro un tag, non c'è nulla che contiene sia tag che testo
+7 domanda:
+
+<xsl: template match="rete">
+	<h2><xsl: value-of select="@nome"/><h2>
+	<dl><xsl: for-each
+
+	select="programma[tipologia="Approfondimento"]">
+	<dt><xsl: value-of select="inizio|dalle"/></dt>
+	<dd><xsl:vale-of select="titolo"/></dd>
+	<xsl:if test="descrizione">
+		<dd><xsl: value-of select="descrizione"/></dd>
+	</xsl:if>
+	</xsl: for-each>
+</dl>
+</xsl:template>
+
+es 3:
+F separare contenuto e struttura vorrebbe dire separare contenuto e tag ed è impossibile
+F è come mettere script da una parte e contenuto dall'altra, e non cambia nulla
+V

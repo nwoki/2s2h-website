@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html,body{
+	font-family: "Times New Roman", Times, serif;
+	background-color:#FFF;
+	
+}
+
+#header{
+	padding:2em;
+	text-align:center;
+	font-size:30px;
+	font-weight:bold;
+	
+}
+
+#logo1{
+	
+	width:80%;
+	text-align:inherit;
+	font-size:inherit;
+	font-weight:bold;
+	
+}
+
+#logo2{
+	display:none;
+}
+
+h1,h2,h3,h4,h5{
+	font:Arial, Helvetica, sans-serif;
+	font-style:normal;
+}
+	
+
+
+
+
+#posizione{
+	background-color:#FFF;
+	text-align:left;
+}
+
+#nav{
+	padding:2em;
+	float:left;
+	background-color:#FFF;
+	
+	width:10%;
+}
+
+#nav span{
+	height:3em;
+	width:100%;
+	display:block;
+	text-indent:10px;
+}
+
+#content{
+	
+	clear:right;
+	float:right;
+	width:80%;
+	background-color:#FFF;
+}
+
+
+
+#piepagina{
+	padding:0.2em;
+	
+	
+	clear:both;
+}
