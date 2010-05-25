@@ -7,7 +7,7 @@ html,body{
 
 #header {
 	
-	background-image:url(img/header.png);
+	background-image:url(img/header-dalt.png);
 	background-repeat:no-repeat;
 	background-position:left;
 	
@@ -20,7 +20,7 @@ html,body{
 
 #logo1{
 	display: block;
-	background-image:url(img/Urban-Terror-3-256x256.png);
+	background-image:url(img/Urban-Terror-3-256x256-dalt.png);
 	background-repeat:no-repeat;
 	background-position:center;
 	text-align:center;
@@ -35,7 +35,7 @@ html,body{
 
 #logo2{
 	display: block;
-	background-image:url(img/Pistola%20destra.png);
+	background-image:url(img/Pistola%20destra-dalt.png);
 	background-repeat:no-repeat;
 	background-position:right;
 	width:100%;
@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5{
 
 
 #posizione{
-	background-image:url(img/DrippingBlood2.png);
+	background-image:url(img/DrippingBlood2-dalt.png);
 	height:3em;
 	text-indent:1em;
 	font-weight:bold;
@@ -73,7 +73,7 @@ h1,h2,h3,h4,h5{
 	width:100%;
 	display:block;
 	text-indent:10px;
-	background-image:url(img/btn_3.png);
+	background-image:url(img/btn_3-dalt.png);
 	background-repeat:no-repeat;
 	background-position:center;
 }
@@ -94,7 +94,7 @@ h1,h2,h3,h4,h5{
 }
 
 #nav span a:hover{
-	background-image:url(img/btn_2-3.png);
+	background-image:url(img/btn_2-3-dalt.png);
 	background-repeat:no-repeat;
 	background-position:center;
 }
@@ -117,16 +117,10 @@ h1,h2,h3,h4,h5{
 	padding:3em;
 }
 
-
-
 #content div{
 	clear:both;
 }
-
-#iscrizione div{
-	padding:2em;
-	text-align:right;
-}
+	
 	
 
 
