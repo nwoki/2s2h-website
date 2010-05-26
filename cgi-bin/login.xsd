@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.2s2h.com"
+xmlns="http://www.2s2h.com"
+elementFormDefault="unqualified">
+
+<xsd:element name="users">
+  <xsd:complexType>
+    <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+      <xsd:element ref="user"/>
+    </xsd:sequence>  
+  </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="user">
+  <xsd:complexType>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="surname" type="xsd:string"/>
+      <xsd:element name="email" type="xsd:string"/>
+      <xsd:element name="nick" type="xsd:string"/>
+      <xsd:element name="password" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:element>
+
+</xsd:schema>
