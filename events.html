@@ -2,9 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<script type="text/javascript" src="provaScript.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title>2Steps2Hell - Eventi</title>
-    <link href="project.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link  id="layout" href="project.css" rel="stylesheet" type="text/css" media="screen"  />
     <link href="print.css" rel="stylesheet" type="text/css" media="print"/>
     <link href="handheld.css" rel="stylesheet" type="text/css" media="handheld" />
     <meta name="description" content="La pagina delle news riguardanti gli eventi della comunita' di gioco di URT, le ultime sfide, gli eventi regionali  e infine anche riguardanti incontri di amministratri" />
@@ -20,7 +21,12 @@
   
 </div>
     
-    <div id="posizione">Ti trovi in: Prossimi Eventi</div>
+    <div id="posizione">
+    Ti trovi in: Prossimi Eventi
+    	<div id="linkDaltonici" title="dalt">
+    	<a href="#" onclick="daltonizza()">Cambia Visualizzazione(Colori per Daltonici)</a>
+    	</div>
+    </div>
     
     <div id="nav">
     	<span class="homeButton"><a href="index.html" accesskey="h">Home</a></span>
@@ -30,15 +36,26 @@
         <span class="login"><a href="loginPage.html">Login Amministratore</a></span>
     </div>
     
-    <div id="linkDaltonici">
-    <a href="daltonizza.cgi">Passa alla visualizzazione della pagina in modalita' daltonismo</a>
-    </div>
+
+    
     <div id="content">
     
     	<h2>Prossimi Eventi</h2>
        
 
 </div>
+
+<div id="login">
+<fieldset><legend><h2>Login</h2></legend>
+        <form action="" method="post">
+        <label for="user">Nome utente</label><input type="text" name="user" value="username" />
+        <label for="password">Password</label><input type="password" name="password" />
+        <label for="ricorda">Ricordami</label><input type="checkbox" name="ricorda" /><br />
+        <input type="submit" name="invia" value="Login" />
+        </form>
+       	</fieldset>
+</div>    
+
 <div id="piepagina">
     <a href="http://validator.w3.org/check?uri=referer"><img
         src="http://www.w3.org/Icons/valid-xhtml10"

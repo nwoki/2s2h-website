@@ -101,39 +101,37 @@ h1,h2,h3,h4,h5{
 
 #linkDaltonici{
 	float:right;
-	width:40%;
+	width:65%;
 	text-align:right;
-	padding:1em;
+	padding-right:1em;
 }
 
 #linkDaltonici a{
-	color:#0CF;	
+	color:#B1DDFE;	
 	
 }
 
-
-
-	
+#login{
+	width:15%;
+	color:#FFF;
+	float:right;	
+}
 
 #content{
-	
-	float:right;
-	
-	
-	width:85%;
+	padding:1em;
+	width:68%;
 	color:#FFF;
+	float:left;
+	
+	
 }
 
-#iscrizione{
-	padding:3em;
-}
 
 #content div{
 	clear:both;
+	padding:3px;
+	
 }
-	
-	
-
 
 
 #piepagina{
