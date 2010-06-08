@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.2s2h.com"
+    xmlns="http://www.2s2h.com"
+    elementFormDefault="unqualified">
+
+    <xsd:element name="news">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="article"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="article">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="title" type="xsd:string"/>
+                <xsd:element name="date" type="xsd:string"/>
+                <xsd:element name="body" type="xsd:string"/>
+                <xsd:element name="author" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

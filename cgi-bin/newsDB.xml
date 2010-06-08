@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<news
+xmlns="http://www.2s2h.com"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+xsd:schemaLocation="http://www.2s2h.com newsDB.xsd">
+    <news>
+        <title></title>
+        <date></date>
+        <body></body>
+        <author></author>
+    </news>
+
+</news>
