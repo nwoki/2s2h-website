@@ -4,6 +4,7 @@ xmlns="http://www.2s2h.com"
 xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
 xs:schemaLocation="http://www.2s2h.com newsDB.xsd">
     <article>
+    	<id>0</id>
 	    <title>Titolo di prova</title>
 	    <date>2010-05-15</date>
 	    <body>Contenuto</body>
