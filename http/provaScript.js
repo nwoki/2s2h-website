@@ -54,4 +54,4 @@ return stringa;
 }
 
 
-leggiCookie();
+window.onload=leggiCookie();
