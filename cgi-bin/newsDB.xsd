@@ -15,12 +15,12 @@
     <xsd:element name="article">
         <xsd:complexType>
             <xsd:sequence>
-            	<xsd:element name="id" type="xsd:integer"/>
                 <xsd:element name="title" type="xsd:string"/>
                 <xsd:element name="date" type="xsd:date"/>
                 <xsd:element name="body" type="xsd:string"/>
                 <xsd:element name="author" type="xsd:string"/>
             </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:integer"/>
         </xsd:complexType>
     </xsd:element>
 </xsd:schema>

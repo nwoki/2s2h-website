@@ -14,7 +14,6 @@ foreach $pair (@pairs) {
     $name =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C",hex($1))/g;
     $input{$name} = $value;
 }
-print "value: " . $input{"id"} . "</br>";
 
 my $file = 'newsDB.xml';
 
@@ -25,3 +24,7 @@ my $doc = $parser->parse_file($file);
 my $root= $doc->getDocumentElement; #estrazione radice
 my @articoli = $root->getElementsByTagName('article');
 
+#cerco quello da eliminare
+foreach articolo (@articoli) {
+	
+}
