@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <news
 xmlns="http://www.2s2h.com"
-xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
-xsd:schemaLocation="http://www.2s2h.com newsDB.xsd">
-    <news>
-        <title></title>
-        <date></date>
-        <body></body>
-        <author></author>
-    </news>
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:schemaLocation="http://www.2s2h.com newsDB.xsd">
+    <article>
+	    <title>Titolo di prova</title>
+	    <date>2010-05-15</date>
+	    <body>Contenuto</body>
+	    <author>Zamy</author>
+    </article>
 
 </news>
