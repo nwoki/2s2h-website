@@ -1,6 +1,15 @@
 #!/usr/bin/perl
 use CGI::Carp qw(fatalsToBrowser);
+use CGI qw(:standard);
 print "Content-type: text/html; charset=iso-8859-1\n\n";
+#inizializzo la pagina xhtml
+print start_html(              # inizio pagina HTML
+       -title => '2Steps2Hell - Delete news',
+       -dtd=>[ '-//W3C//DTD XHTML 1.0 Strict//EN',
+        'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
+        -lang =>'it'
+);
+
 use XML::LibXML;
 
 $file = 'newsDB.xml';
@@ -53,3 +62,4 @@ else
 	close ( WDATA );
 }
 print "Finito!";
+print end_html;
