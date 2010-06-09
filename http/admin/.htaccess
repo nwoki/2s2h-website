@@ -1,0 +1,5 @@
+AuthName "Admins Area"
+AuthType Basic
+AuthUserFile /var/www/website/http/admin/.htpasswd
+Require valid-user
+
