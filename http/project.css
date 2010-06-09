@@ -111,15 +111,11 @@ h1,h2,h3,h4,h5{
 	
 }
 
-#login{
-	width:15%;
-	color:#FFF;
-	float:left;	
-}
+
 
 #content{
 	padding:1em;
-	width:68%;
+	width:80%;
 	color:#FFF;
 	float:left;
 	
