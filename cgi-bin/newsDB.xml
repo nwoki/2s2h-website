@@ -1,18 +1,15 @@
 <?xml version="1.0"?>
-<news
-xmlns="http://www.2s2h.com"
-xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-xs:schemaLocation="http://www.2s2h.com newsDB.xsd">
-    <article id="1">
-	    <title>Titolo di prova</title>
-	    <date>2010-05-15</date>
-	    <body>Contenuto</body>
+<news xmlns="http://www.2s2h.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.2s2h.com newsDB.xsd">
+	<article id="1">
+	    <title>Script di eliminazione delle news</title>
+	    <date>2010-06-09</date>
+	    <body><![CDATA[ Ayeeeee!! <br /> Finalmente ce l'ho fatta! ]]></body>
 	    <author>Zamy</author>
     </article>
-	<article id="2">
-	    <title>Titolo di prova</title>
-	    <date>2010-05-20</date>
-	    <body>Contenuto</body>
-	    <author>N3m3s1s</author>
+    <article id="2">
+	    <title>Script di eliminazione delle news</title>
+	    <date>2010-06-09</date>
+	    <body><![CDATA[ Ayeeeee!! <br /> Finalmente ce l'ho fatta! ]]></body>
+	    <author>Zamy</author>
     </article>
 </news>

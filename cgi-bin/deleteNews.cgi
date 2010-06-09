@@ -3,9 +3,12 @@ use CGI::Carp qw(fatalsToBrowser);
 print "Content-type: text/html; charset=iso-8859-1\n\n";
 use XML::LibXML;
 
+$file = 'newsDB.xml';
+
 $buffer = $ENV{'QUERY_STRING'};
 @pairs = split(/&/, $buffer);
 
+#estraggo l'id passato col metodo get
 foreach $pair (@pairs) {
    ($name, $value) = split(/=/, $pair);
     $value =~ tr/+/ /;
@@ -15,28 +18,38 @@ foreach $pair (@pairs) {
     $input{$name} = $value;
 }
 
-my $file = 'newsDB.xml';
-
 #creazione oggetto parser
-my $parser = XML::LibXML->new();
+$parser = XML::LibXML->new();
 #apertura file e lettura input
-my $doc = $parser->parse_file($file);
-my $root= $doc->getDocumentElement; #estrazione radice
-my @articoli = $root->getElementsByTagName('article');
+$doc = $parser->parse_file($file) or die( "Non trovo il file xml su cui lavorare." );
+$root= $doc->getDocumentElement; #estrazione radice
+@articoli = $root->getElementsByTagName('article');
 
 #cerco quello da eliminare
+$found=0;
 foreach $articolo (@articoli) {
 	@porcodio=$articolo->getAttributes; 
 	foreach $attributo (@porcodio){
 		if ($attributo->value==$input{"id"})
 		{
-			print "cazzo, funziona!".$attributo->value."</br>";
-			print $root->toString."</br>";
-			print "removing the node... ";
+			#trovato, lo elimino
 			$root->removeChild($articolo);
-			print "Done!</br>";
-			print $root->toString."</br>";
-			print $articolo->toString;
+			print "Eliminazione della news \"" 
+			. $articolo->getElementsByTagName("title")->string_value()
+			. "\" inserita il " . $articolo->getElementsByTagName("date")->string_value() . " da " 
+			. $articolo->getElementsByTagName("author")->string_value() . " in corso... <br />";
+			$found=1;
 		}
 	}
 }
+if ($found == 0) {
+	print "News non trovata. <br />";
+}
+else
+{
+	#la news è stata trovata e il contenuto xml modificato, salvo
+	open( WDATA, ">".$file ) or die( "Non trovo il file xml su cui lavorare, o non posso scriverci." );
+	print WDATA $doc->toString();
+	close ( WDATA );
+}
+print "Finito!";
