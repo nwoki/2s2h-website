@@ -11,9 +11,10 @@ print start_html(              # inizio pagina HTML
 );
 
 use XML::LibXML;
-use XML::Tidy;
+use XML::Twig;
 
-$XMLFile = "newsDB.xml";
+$XMLFile = "../http/newsDB.xml";
+$XMLSchema = "../http/newsDB.xsd";
 
 # estraggo i dati passati col metodo post (title, body, author)
 
@@ -42,7 +43,9 @@ $date = `date +%F`;
 chomp($date);
 
 #faccio i test sui dati in input
-
+#elimino le eventuali tag all'interno di titolo e nick
+$input{"title"}=~ s/[<|>]+//g;
+$input{"author"}=~ s/[<|>]+//g;
 
 #apertura file
 my $parser = new XML::LibXML;
@@ -58,7 +61,13 @@ foreach $articolo (@articoli) {
 }
 # trovato il massimo, incremento di uno
 $id += 1;
-
+print "<p>\n";
+print "Inserimento della news: <br />\n";
+print "Titolo: $input{title}<br />\n";
+print "Data: $date<br />\n";
+print "Contenuto: $input{body}<br />\n";
+print "Autore: $input{author}<br />\n";
+print "</p>\n<br />\n";
 #creo il nuovo nodo e lo inserisco
 #creo il titolo
 $testo_titolo=$doc->createTextNode($input{"title"});
@@ -84,18 +93,31 @@ $article->appendChild($data);
 $article->appendChild($corpo);
 $article->appendChild($autore);
 #aggiungo il nuovo nodo al documento
-
 $root->appendChild($article);
 $root->normalize();
-#print "<br/>\n" . $doc->toString();
 
 #sistemo l'indentazione 
 $all=$doc->toString();
-$tidy=XML::Tidy->new('xml' => $all);
-$tidy->tidy();
-$all=$tidy->toString();
+#$tidy=XML::Tidy->new('xml' => $all);
+#$tidy->tidy();
+#$all=$tidy->toString();
+$twig=XML::Twig->new(pretty_print => 'indented');
+$twig->parse($all);
+$all=$twig->sprint();
+
+#controllo che dopo la modifica il documento resti valido
+my $doc = $parser->parse_string( $all );
+$schema=XML::LibXML::Schema->new( location => $XMLSchema );
+eval { $schema->validate( $doc ) };
+if ($@) {
+	#schema non valido
+	print $@;
+	die;
+}
 
 #salvo su file
 open( WDATA, ">".$XMLFile ) or die( "Non trovo il file xml su cui lavorare, o non posso scriverci." );
 print WDATA $all;
 close ( WDATA );
+print "Finito! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
+print end_html;

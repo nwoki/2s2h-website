@@ -12,7 +12,7 @@ print start_html(              # inizio pagina HTML
 
 use XML::LibXML;
 
-$file = 'newsDB.xml';
+$file = '../http/newsDB.xml';
 
 $buffer = $ENV{'QUERY_STRING'};
 @pairs = split(/&/, $buffer);
