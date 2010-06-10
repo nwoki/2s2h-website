@@ -37,18 +37,15 @@ $root= $doc->getDocumentElement; #estrazione radice
 #cerco quello da eliminare
 $found=0;
 foreach $articolo (@articoli) {
-	@porcodio=$articolo->getAttributes; 
-	foreach $attributo (@porcodio){
-		if ($attributo->value==$input{"id"})
-		{
-			#trovato, lo elimino
-			$root->removeChild($articolo);
-			print "Eliminazione della news \"" 
-			. $articolo->getElementsByTagName("title")->string_value()
-			. "\" inserita il " . $articolo->getElementsByTagName("date")->string_value() . " da " 
-			. $articolo->getElementsByTagName("author")->string_value() . " in corso... <br />";
-			$found=1;
-		}
+	if ($articolo->getAttribute( "id" )==$input{"id"})
+	{
+		#trovato, lo elimino
+		$root->removeChild($articolo);
+		print "Eliminazione della news \"" 
+		. $articolo->getElementsByTagName("title")->string_value()
+		. "\" inserita il " . $articolo->getElementsByTagName("date")->string_value() . " da " 
+		. $articolo->getElementsByTagName("author")->string_value() . " in corso... <br />";
+		$found=1;
 	}
 }
 if ($found == 0) {
@@ -61,5 +58,5 @@ else
 	print WDATA $doc->toString();
 	close ( WDATA );
 }
-print "Finito!";
+print "Finito! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
 print end_html;
