@@ -33,6 +33,10 @@ html,body{
 	float:left;
 }
 
+#scrittatitolo{
+	display:none;
+}
+
 #logo2{
 	background-image:url(img/Pistola%20destraSmall.png);
 	background-repeat:no-repeat;
@@ -61,13 +65,20 @@ h1,h2,h3,h4,h5{
 	
 }
 
+#linkDaltonici{
+	float:left;
+	padding-top:1.5em;
+}
+
+
 #nav{
 	background-color:#F00;
 	
 	width:100%;
 }
 
-#nav span{
+.button{
+	float:left;
 	height:3em;
 	width:44px;
 	display:block;
@@ -99,26 +110,6 @@ h1,h2,h3,h4,h5{
 
 
 
-.homeButton{
-	float:left;
-}
-
-.eventButton{
-	float:left;
-}
-
-.clanButton{
-	float:left;
-}
-
-.iscrizioneButton{
-	float:left;
-}
-
-.newsButton{
-	float:left;
-}
-
 
 	
 
@@ -128,19 +119,11 @@ h1,h2,h3,h4,h5{
 	color:#FFF;
 }
 
-#labelIscrizione{
-	font-size:10px;
-	float:left;
-	width:20%;
+#ContentNav{
+	text-align:center;
+	background-color:#FFF;
+	color:#009;
 }
-
-#formIscrizione{
-	clear:right;
-	width:40%;
-	
-}
-	
-	
 
 
 

@@ -3,21 +3,19 @@
 
 function daltonizza(){
 	
-	//azione=document.getElementById('linkDaltonici').getAttribute('title');
+
 	var cookieVal=getCookie("daltonizzato");
 	
 	if(cookieVal=="dalt"){
 		alert("Visualizzazione Classica");
 		delCookie("daltonizzato");
 		document.getElementById('layout').setAttribute('href','project.css');
-		//document.getElementById('linkDaltonici').setAttribute('title','dalt');
 		setCookie("daltonizzato","nonDalt",9999);
 	}
 	else {
 		alert("Visualizzazione Per Daltonici");
 		delCookie("daltonizzato");
 		document.getElementById('layout').setAttribute('href','daltonized.css');
-		//document.getElementById('linkDaltonici').setAttribute('title','nonDalt');
 		setCookie("daltonizzato","dalt",9999);
 		
 	}

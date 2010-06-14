@@ -33,6 +33,15 @@ html,body{
 	float:left;
 }
 
+#titoloimg{
+	
+}
+
+#scrittatitolo{
+	display:none;
+	
+}
+
 #logo2{
 	display: block;
 	background-image:url(img/Pistola%20destra-dalt.png);
@@ -64,11 +73,10 @@ h1,h2,h3,h4,h5{
 
 #nav{
 	float:left;
-	
-	width:12%;
+	width:10em;
 }
 
-#nav span{
+.button{
 	height:3em;
 	width:100%;
 	display:block;
@@ -79,7 +87,7 @@ h1,h2,h3,h4,h5{
 }
 
 
-#nav span a{
+.button a{
 	height:3em;
 	width:100%;
 	display:block;
@@ -88,12 +96,13 @@ h1,h2,h3,h4,h5{
 	background-position:center;
 }
 
-#nav span a:first-letter{
+.key{
 	color:#000;
 	font-weight:bold;
+	text-decoration:underline;
 }
 
-#nav span a:hover{
+.button a:hover{
 	background-image:url(img/btn_2-3-dalt.png);
 	background-repeat:no-repeat;
 	background-position:center;
@@ -119,12 +128,13 @@ h1,h2,h3,h4,h5{
 
 #content{
 	padding:1em;
-	width:68%;
+	width:75%;
 	color:#FFF;
 	float:left;
 	
 	
 }
+
 
 
 #content div{
@@ -133,6 +143,12 @@ h1,h2,h3,h4,h5{
 	
 }
 
+
+#ContentNav{
+	text-align:center;
+	background-color:#FFF;
+	color:#009;
+}
 
 #piepagina{
 	padding:0.2em;

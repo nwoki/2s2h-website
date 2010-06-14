@@ -25,6 +25,17 @@ html,body{
 	
 }
 
+#scrittatitolo{
+	color:#F00;
+	text-align:center;
+	font-weight:bold;
+}
+
+#titoloimg{
+	display:none;
+}
+	
+
 #logo2{
 	display:none;
 }
@@ -44,18 +55,31 @@ h1,h2,h3,h4,h5{
 }
 
 #nav{
-	padding:2em;
+	
 	float:left;
 	background-color:#FFF;
+	padding:2em;
 	
 	width:10%;
 }
 
-#nav span{
+.button{
 	height:3em;
 	width:100%;
 	display:block;
-	text-indent:10px;
+	text-align:center;
+	
+}
+
+.key{
+	display:inline;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+#linkDaltonici{
+	display:none;
+	
 }
 
 #content{
@@ -64,6 +88,11 @@ h1,h2,h3,h4,h5{
 	float:right;
 	width:80%;
 	background-color:#FFF;
+}
+
+#ContentNav{
+	text-align:center;
+	color:#009;
 }
 
 
