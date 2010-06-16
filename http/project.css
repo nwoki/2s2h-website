@@ -23,8 +23,6 @@ html,body{
 	background-repeat:no-repeat;
 	background-position:center;
 	text-align:center;
-	color:#F00;
-	font-family:"Comic Sans MS", cursive;
 	font-size:24px;
 	
 	width:100%;
@@ -71,6 +69,14 @@ h1,h2,h3,h4,h5{
 	
 }
 
+#linkDaltonici{
+	float:right;
+	width:65%;
+	text-align:right;
+	padding-right:1em;
+	color:#B1DDFE;
+}
+
 #nav{
 	float:left;
 	width:10em;
@@ -102,19 +108,19 @@ h1,h2,h3,h4,h5{
 	text-decoration:underline;
 }
 
+.keyCNav{
+	color:#FFF;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
 .button a:hover{
 	background-image:url(img/btn_2-3.png);
 	background-repeat:no-repeat;
 	background-position:center;
 }
 
-#linkDaltonici{
-	float:right;
-	width:65%;
-	text-align:right;
-	padding-right:1em;
-	color:#B1DDFE;
-}
+
 
 #content{
 	padding:1em;
@@ -135,14 +141,14 @@ h1,h2,h3,h4,h5{
 
 #ContentNav{
 	text-align:center;
-	background-color:#FFF;
+	font-weight:bold;
 	color:#009;
 }
 	
 
 #piepagina{
 	padding:0.2em;
-	
-	
+	text-align:left;
+	color:#FFF;	
 	clear:both;
 }

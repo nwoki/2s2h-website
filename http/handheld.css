@@ -58,16 +58,13 @@ h1,h2,h3,h4,h5{
 
 
 #posizione{
-	background-image:url(img/DrippingBlood2Small.png);
-	background-position:top;
+	color:#FFF;
 	text-align:left;
-	height:25px;
 	
 }
 
 #linkDaltonici{
-	float:left;
-	padding-top:1.5em;
+	display:none;
 }
 
 
@@ -83,7 +80,7 @@ h1,h2,h3,h4,h5{
 	width:44px;
 	display:block;
 	text-align:center;
-	background-image:url(img/btn_2Small2.png);
+	background-image:url(img/btn_2Small22.png);
 	background-repeat:no-repeat;
 	background-position:center;
 }
@@ -129,12 +126,9 @@ h1,h2,h3,h4,h5{
 
 #piepagina{
 	padding:0.2em;
-	
-	
-	
-	
+	text-align:left;
+	color:#FFF;	
 	clear:both;
-	color:#CF0;
 }
 
 
