@@ -2,7 +2,7 @@
 /* CSS Document */
 
 html,body{
-	background-color:#000;
+	background-color:#FFF;
 }
 
 #header {
@@ -102,6 +102,13 @@ h1,h2,h3,h4,h5{
 	text-decoration:underline;
 }
 
+.keyCNav{
+	color:#000;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+
 .button a:hover{
 	background-image:url(img/btn_2-3-dalt.png);
 	background-repeat:no-repeat;
@@ -129,7 +136,7 @@ h1,h2,h3,h4,h5{
 #content{
 	padding:1em;
 	width:75%;
-	color:#FFF;
+	color:#000;
 	float:left;
 	
 	
@@ -146,13 +153,12 @@ h1,h2,h3,h4,h5{
 
 #ContentNav{
 	text-align:center;
-	background-color:#FFF;
 	color:#009;
 }
 
 #piepagina{
 	padding:0.2em;
-	
-	
+	text-align:left;
+	color:#FFF;	
 	clear:both;
 }
