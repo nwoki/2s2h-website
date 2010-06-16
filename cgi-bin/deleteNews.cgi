@@ -3,12 +3,9 @@ use CGI::Carp qw(fatalsToBrowser);
 use CGI qw(:standard);
 print "Content-type: text/html; charset=iso-8859-1\n\n";
 #inizializzo la pagina xhtml
-print start_html(              # inizio pagina HTML
-       -title => '2Steps2Hell - Delete news',
-       -dtd=>[ '-//W3C//DTD XHTML 1.0 Strict//EN',
-        'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
-        -lang =>'it'
-);
+open (HTML, "<head.html");
+print <HTML>;
+close (HTML);
 
 use XML::LibXML;
 
@@ -41,10 +38,10 @@ foreach $articolo (@articoli) {
 	{
 		#trovato, lo elimino
 		$root->removeChild($articolo);
-		print "Eliminazione della news \"" 
+		print "<fieldset><legend>Dati della news eliminata</legend>\n<label>Titolo: </label>" 
 		. $articolo->getElementsByTagName("title")->string_value()
-		. "\" inserita il " . $articolo->getElementsByTagName("date")->string_value() . " da " 
-		. $articolo->getElementsByTagName("author")->string_value() . " in corso... <br />";
+		. "<br /> <label>Inserita il: </label>" . $articolo->getElementsByTagName("date")->string_value() . "<br /> <label>Autore: </label> " 
+		. $articolo->getElementsByTagName("author")->string_value() . "<br /></fieldset><br />";
 		$found=1;
 	}
 }
@@ -58,5 +55,7 @@ else
 	print WDATA $doc->toString();
 	close ( WDATA );
 }
-print "Finito! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
-print end_html;
+print "Fatto! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
+open (HTML, "<foot.html");
+print <HTML>;
+close (HTML);

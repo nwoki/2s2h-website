@@ -3,12 +3,9 @@ use CGI::Carp qw(fatalsToBrowser);
 use CGI qw(:standard);
 print "Content-type: text/html; charset=iso-8859-1\n\n";
 #inizializzo la pagina xhtml
-print start_html(              # inizio pagina HTML
-       -title => '2Steps2Hell - Add news',
-       -dtd=>[ '-//W3C//DTD XHTML 1.0 Strict//EN',
-        'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
-        -lang =>'it'
-);
+open (HTML, "<head.html");
+print <HTML>;
+close (HTML);
 
 use XML::LibXML;
 use XML::Twig;
@@ -49,18 +46,16 @@ foreach $articolo (@articoli) {
         @elemento=$articolo->getChildrenByTagName('author');
         @elemento[0]->firstChild->setData($input{'author'});
         
-        print "<p>\n";
-		print "Modifica della news: <br />\n";
-		print "Titolo: $input{title}<br />\n";
-		print "Data: $date<br />\n";
-		print "Autore: $input{author}<br />\n";
-		print "</p>\n<br />\n";
+		print "<fieldset><legend>Dati modificati della news: </legend>\n";
+		print "<label>Titolo: </label>$input{title}<br />\n";
+		print "<label>Data: </label>$date<br />\n";
+		print "<label>Autore: </label>$input{author}<br />\n";
+		print "</fieldset>\n<br />\n";
     }
 }
 
 #sistemo l'indentazione 
 $all=$doc->toString();
-print $all;
 $twig=XML::Twig->new(pretty_print => 'indented');
 $twig->parse($all);
 $all=$twig->sprint();
@@ -80,4 +75,6 @@ open( WDATA, ">".$XMLFile ) or die( "Non trovo il file xml su cui lavorare, o no
 print WDATA $all;
 close ( WDATA );
 print "Finito! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
-print end_html;
+open (HTML, "<foot.html");
+print <HTML>;
+close (HTML);

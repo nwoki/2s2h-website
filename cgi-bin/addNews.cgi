@@ -3,12 +3,9 @@ use CGI::Carp qw(fatalsToBrowser);
 use CGI qw(:standard);
 print "Content-type: text/html; charset=iso-8859-1\n\n";
 #inizializzo la pagina xhtml
-print start_html(              # inizio pagina HTML
-       -title => '2Steps2Hell - Add news',
-       -dtd=>[ '-//W3C//DTD XHTML 1.0 Strict//EN',
-        'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'],
-        -lang =>'it'
-);
+open (HTML, "<head.html");
+print <HTML>;
+close (HTML);
 
 use XML::LibXML;
 use XML::Twig;
@@ -61,13 +58,12 @@ foreach $articolo (@articoli) {
 }
 # trovato il massimo, incremento di uno
 $id += 1;
-print "<p>\n";
-print "Inserimento della news: <br />\n";
+print "<fieldset><legend>Dati della news: </legend>\n";
 print "Titolo: $input{title}<br />\n";
 print "Data: $date<br />\n";
 print "Contenuto: $input{body}<br />\n";
 print "Autore: $input{author}<br />\n";
-print "</p>\n<br />\n";
+print "</fieldset>\n<br />\n";
 #creo il nuovo nodo e lo inserisco
 #creo il titolo
 $testo_titolo=$doc->createTextNode($input{"title"});
@@ -119,5 +115,7 @@ if ($@) {
 open( WDATA, ">".$XMLFile ) or die( "Non trovo il file xml su cui lavorare, o non posso scriverci." );
 print WDATA $all;
 close ( WDATA );
-print "Finito! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
-print end_html;
+print "Inserita con successo! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
+open (HTML, "<foot.html");
+print <HTML>;
+close (HTML);
