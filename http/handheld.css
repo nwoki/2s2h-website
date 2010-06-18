@@ -47,15 +47,6 @@ html,body{
 }
 
 
-	
-h1,h2,h3,h4,h5{
-	font:Arial, Helvetica, sans-serif;
-	font-style:normal;
-}
-	
-
-
-
 
 #posizione{
 	color:#FFF;
@@ -69,8 +60,6 @@ h1,h2,h3,h4,h5{
 
 
 #nav{
-	background-color:#F00;
-	
 	width:100%;
 }
 
@@ -85,7 +74,7 @@ h1,h2,h3,h4,h5{
 	background-position:center;
 }
 
-#nav span a{
+.button a{
 	height:3em;
 	width:44px;
 	display:block;
@@ -94,12 +83,9 @@ h1,h2,h3,h4,h5{
 	background-position:center;
 }
 
-#nav span a:first-letter{
-	color:#000;
-	font-weight:bold;
-}
 
-#nav span a:hover{
+
+.button a:hover{
 	background-image:url(img/btn_2Small.png);
 	background-repeat:no-repeat;
 	background-position:center;
@@ -118,8 +104,7 @@ h1,h2,h3,h4,h5{
 
 #ContentNav{
 	text-align:center;
-	background-color:#FFF;
-	color:#009;
+	font-weight:bold;
 }
 
 

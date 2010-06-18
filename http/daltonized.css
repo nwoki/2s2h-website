@@ -53,14 +53,6 @@ html,body{
 }
 
 
-	
-h1,h2,h3,h4,h5{
-	font:Arial, Helvetica, sans-serif;
-	font-style:normal;
-}
-	
-
-
 
 
 #posizione{
@@ -123,15 +115,9 @@ h1,h2,h3,h4,h5{
 }
 
 #linkDaltonici a{
-	color:#B1DDFE;	
-	
+	color:#FF0;
 }
 
-#login{
-	width:15%;
-	color:#FFF;
-	float:right;	
-}
 
 #content{
 	padding:1em;
@@ -159,6 +145,6 @@ h1,h2,h3,h4,h5{
 #piepagina{
 	padding:0.2em;
 	text-align:left;
-	color:#FFF;	
+	color:#000;	
 	clear:both;
 }
