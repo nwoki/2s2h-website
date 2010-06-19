@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="newsReader.xsl"?>
 <news xmlns="http://www.2s2h.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.2s2h.com newsDB.xsd">
-  <article id="1">
-    <title>vaccadde'</title>
-    <date>2010-06-14</date>
-    <body><![CDATA[porcodio]]></body>
-    <author>zamy</author>
-  </article>
+    <article id="1">
+        <title>vaccadde'</title>
+        <date>2010-06-14</date>
+        <body><![CDATA[porcodio]]></body>
+        <author>zamy</author>
+    </article>
 </news>
