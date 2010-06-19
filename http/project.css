@@ -88,7 +88,6 @@ html,body{
 	background-position:center;
 }
 
-
 .button a{
 	height:3em;
 	width:100%;
@@ -116,6 +115,16 @@ html,body{
 	background-position:center;
 }
 
+/* news display css */
+.newsLgd{
+    font-family:"Courier new";
+    font-weight:bold;
+}
+
+.newsPar{
+    text-align:center;
+    font-family:"Courier new";
+}
 
 
 #content{

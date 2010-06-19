@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
+
 <xsl:template match="/">
     <html xmlns="http://www.w3.org/1999/xhtml">
-        <!--head>
+        <head>
             <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
             <title>2Steps2Hell - HomePage</title>
             <link  id="layout" href="project.css" rel="stylesheet" type="text/css" media="screen"  />
@@ -41,47 +41,31 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <span class="button"><a href="home.html" accesskey="h" tabindex="4"><span class="key">H</span>ome</a></span>
                 <span class="button"><a href="game.html" accesskey="g" tabindex="5">Il <span class="key">G</span>ioco</a></span>
                 <span class="button"><a href="clan.html" accesskey="c" tabindex="6"><span class="key">C</span>lan</a></span>
-                <span class="button"><a href="news.html" accesskey="w" tabindex="7">Ne<span class="key">w</span>s</a></span>
+                <span class="button">News</span>
                 <span class="button"><a href="inserisciNews.html" accesskey="n" tabindex="8">Gestione <span class="key">N</span>otizie</a></span>
             </div>
 
             <div id="content">
                 <h2>News</h2>
-asdasd<br/-->
-                <xsl:apply-templates/>
-                <!-- qui comincio la stampa delle ultime 5/6 news >
-                <xsl:for-each select="./article">
-                    <xsl:sort select="date"/>
-                        <fieldset>
-                        asasddasd
-                            <legend><xsl:value-of select="title"/></legend>
-                            <p><xsl:value-of select="body"/></p>
-                        </fieldset>
-                </xsl:for-each-->
-            <!--/div>
-        </body-->
+                <!-- output notizie -->
+                <xsl:for-each select="news/article">
+                <xsl:sort select="date"/>
+                    <fieldset>
+                        <legend class="newsLgd" >
+                            <xsl:value-of select="title"/>
+                        </legend>
+
+                        <p class="newsPar" >
+                            <xsl:value-of select="body"/><br/>
+                            Autore: <xsl:value-of select="author"/><br/>
+                            In Data: <xsl:value-of select="date"/><br/>
+                        </p>
+                    </fieldset>
+                    <br/>   <!-- linea vuota per dividere le notizie -->
+                </xsl:for-each>
+
+            </div>
+        </body>
     </html>
 </xsl:template>
-
-<!-- templates per articolo -->
-<xsl:template match="article">
-    <fieldset>
-    prova
-        <!--xsl:apply-templates select="title"/-->
-        <!--xsl:apply-templates select="body"/>
-        <xsl:apply-templates select="author"/>
-        <xsl:apply-templates select="date"/-->
-    </fieldset>
-</xsl:template>
-
-<!-- templates per titolo -->
-<xsl:template match="title">
-    <legend>
-        <xsl:value-of select="."/>
-        sdfghjk
-    </legend>
-</xsl:template>
-
-
-
 </xsl:stylesheet>
