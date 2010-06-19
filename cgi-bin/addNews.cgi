@@ -115,7 +115,8 @@ if ($@) {
 open( WDATA, ">".$XMLFile ) or die( "Non trovo il file xml su cui lavorare, o non posso scriverci." );
 print WDATA $all;
 close ( WDATA );
-print "Inserita con successo! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
+print "Inserita con successo! <br />";
+print "<a href=\"listaNews.cgi\" accesskey=\"I\" tabindex=\"6\">torna all'Inizio</a>";
 open (HTML, "<foot.html");
 print <HTML>;
 close (HTML);

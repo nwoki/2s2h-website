@@ -74,7 +74,8 @@ if ($@) {
 open( WDATA, ">".$XMLFile ) or die( "Non trovo il file xml su cui lavorare, o non posso scriverci." );
 print WDATA $all;
 close ( WDATA );
-print "Finito! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
+print "Finito! <br />";
+print "<a href=\"listaNews.cgi\" accesskey=\"H\">torna all'<span class=\"key\ tabindex=\"6\"">I</span>nizio</a>";
 open (HTML, "<foot.html");
 print <HTML>;
 close (HTML);

@@ -39,14 +39,14 @@ foreach $articolo (@articoli) {
 		#trovato, scrivo il form per editarla
 		print "<fieldset><legend>Modifica news: </legend><form name=\"datiNews\" action=\"editNews.cgi\" method=\"POST\">\n";
 		@elemento=$articolo->getChildrenByTagName('author');
-		print "<label>Autore: <input name=\"author\" type=\"text\" value=\"".@elemento[0]->textContent."\"/></label><br />\n";
+		print "<label>Autore: <input name=\"author\" type=\"text\" value=\"".@elemento[0]->textContent."\" tabindex=\"6\"/></label><br />\n";
 		@elemento=$articolo->getChildrenByTagName('title');
-		print "<label>Titolo: <input name=\"title\" type=\"text\" value=\"".@elemento[0]->textContent."\"/></label><br />\n";
+		print "<label>Titolo: <input name=\"title\" type=\"text\" value=\"".@elemento[0]->textContent."\" tabindex=\"7\"/></label><br />\n";
 		@elemento=$articolo->getChildrenByTagName('body');
-		print "<label>Contenuto:<br /><textarea name=\"body\" rows=\"20\" cols=\"60\">".@elemento[0]->textContent."</textarea></label><br />\n";
+		print "<label>Contenuto:<br /><textarea name=\"body\" rows=\"20\" cols=\"60\" tabindex=\"8\">".@elemento[0]->textContent."</textarea></label><br />\n";
 		print "<input name=\"id\" type=\"hidden\" value=\"".$input{"id"}."\"/><br />\n";
-		print "<input type=\"submit\" value=\"Invia\"/>";
-		print "<a href=\"../admin/index.html\" accesskey=\"A\">Annulla</a>";
+		print "<input type=\"submit\" value=\"Invia\" tabindex=\"9\"/>";
+		print "<a href=\"listaNews.cgi\" accesskey=\"A\" tabindex=\"10\">Annulla</a>";
 		print "</form></fieldset>";
 		$found = 1;
 	}
@@ -61,7 +61,7 @@ else
 	print WDATA $doc->toString();
 	close ( WDATA );
 }
-print "<a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
+print "<a href=\"listaNews.cgi\" accesskey=\"I\" tabindex=\"11\">torna all'Inizio</a>";
 open (HTML, "<foot.html");
 print <HTML>;
 close (HTML);

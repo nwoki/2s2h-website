@@ -1,5 +1,5 @@
 AuthName "Admins Area"
 AuthType Basic
-AuthUserFile /var/www/website/http/admin/.htpasswd
+AuthUserFile /var/www/website/cgi-bin/.htpasswd
 Require valid-user
 

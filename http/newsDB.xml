@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <news xmlns="http://www.2s2h.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.2s2h.com newsDB.xsd">
-  <article id="1">
-    <title>vaccadde'</title>
-    <date>2010-06-14</date>
-    <body><![CDATA[porcodio]]></body>
+  <article id="2">
+    <title>Dio can</title>
+    <date>2010-06-18</date>
+    <body><![CDATA[Porco gesu' <br>
+QUel cane del signore.]]></body>
     <author>zamy</author>
+  </article>
+  
+  <article id="5">
+    <title>prova</title>
+    <date>2010-04-26</date>
+    <body><![CDATA[ajdbaovhsiovoaaboaeghac]]></body>
+    <author>asd</author>
+  </article>
+  <article id="6">
+    <title>prova</title>
+    <date>2010-06-15</date>
+    <body><![CDATA[ajdbaovhsiovoaaboaeghac]]></body>
+    <author>asd</author>
   </article>
 </news>

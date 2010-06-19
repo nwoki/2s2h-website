@@ -55,7 +55,8 @@ else
 	print WDATA $doc->toString();
 	close ( WDATA );
 }
-print "Fatto! <br /><a href=\"../index.html\" accesskey=\"H\">torna alla Home page</a>";
+print "Fatto! <br />";
+print "<a href=\"listaNews.cgi\" accesskey=\"I\" tabindex=\"6\">torna all'Inizio</a>";
 open (HTML, "<foot.html");
 print <HTML>;
 close (HTML);
