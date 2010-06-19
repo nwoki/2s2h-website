@@ -46,19 +46,20 @@ for ($i=0;$i<@articoli-1;$i++){
 
 #stampo la lista
 $index=6;
+print "<a href=\"newFormNews.cgi\" tabindex=\"".$index++."\">Inserisci una nuova news</a><br/>";
 foreach $articolo (@articoli) {
 		#scrivo le info della news
 		@elemento=$articolo->getChildrenByTagName('title');
 		print "<fieldset><legend>".@elemento[0]->textContent."</legend>\n";
 		@elemento=$articolo->getChildrenByTagName('author');
-		print "<p>Scritta da".@elemento[0]->textContent.", il ";
+		print "<p>Scritta da ".@elemento[0]->textContent.", il ";
 		@elemento=$articolo->getChildrenByTagName('date');
 		print @elemento[0]->textContent." </p><br/>\n";
 		@elemento=$articolo->getChildrenByTagName('body');
 		print "<p>". @elemento[0]->textContent ."</p><br />\n";
-		print "<label><a href=\"editFormNews.cgi?id=".$articolo->getAttribute( "id" )."\" tabindex=\"".$index++."\">modifica</a></label>
-		 <label><a href=\"deleteNews.cgi?id=".$articolo->getAttribute( "id" )."\" tabindex=\"".$index++."\">elimina</a></label><br/>";
-		print "</fieldset>";
+		print "<a href=\"editFormNews.cgi?id=".$articolo->getAttribute( "id" )."\" tabindex=\"".$index++."\">modifica</a>
+		 <a href=\"deleteNews.cgi?id=".$articolo->getAttribute( "id" )."\" tabindex=\"".$index++."\">elimina</a><br/>";
+		print "</fieldset><br/>";
 }
 
 open (HTML, "<foot.html");
