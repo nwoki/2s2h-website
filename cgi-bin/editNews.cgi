@@ -75,7 +75,7 @@ open( WDATA, ">".$XMLFile ) or die( "Non trovo il file xml su cui lavorare, o no
 print WDATA $all;
 close ( WDATA );
 print "Finito! <br />";
-print "<a href=\"listaNews.cgi\" accesskey=\"H\">torna all'<span class=\"key\ tabindex=\"6\"">I</span>nizio</a>";
+print "<a href=\"listaNews.cgi\" accesskey=\"I\" tabindex=\"6\">torna all'Inizio</a>";
 open (HTML, "<foot.html");
 print <HTML>;
 close (HTML);
