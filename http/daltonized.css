@@ -118,6 +118,16 @@ html,body{
 	color:#FF0;
 }
 
+.newsLgd{
+    font-family:"Courier new";
+    font-weight:bold;
+}
+
+.newsPar{
+    text-align:center;
+    font-family:"Courier new";
+}
+
 
 #content{
 	padding:1em;
