@@ -2,10 +2,8 @@
 // JavaScript Document
 
 function daltonizza(){
-	
-
 	var cookieVal=getCookie("daltonizzato");
-	
+
 	if(cookieVal=="dalt"){
 		alert("Visualizzazione Classica");
 		delCookie("daltonizzato");
@@ -17,9 +15,8 @@ function daltonizza(){
 		delCookie("daltonizzato");
 		document.getElementById('layout').setAttribute('href','daltonized.css');
 		setCookie("daltonizzato","dalt",9999);
-		
 	}
-	
+
 }
 
 function leggiCookie(){
