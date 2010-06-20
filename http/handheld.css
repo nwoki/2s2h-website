@@ -91,7 +91,15 @@ html,body{
 	background-position:center;
 }
 
+.newsLgd{
+    font-family:"Courier new";
+    font-weight:bold;
+}
 
+.newsPar{
+    text-align:center;
+    font-family:"Courier new";
+}
 
 
 	
