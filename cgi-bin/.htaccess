@@ -1,5 +1,5 @@
 AuthName "Admins Area"
 AuthType Basic
-AuthUserFile /var/www/website/cgi-bin/.htpasswd
+AuthUserFile /home/0/2008/dlovato/tweb1/public_html/cgi-bin/.htpasswd
 Require valid-user
 
