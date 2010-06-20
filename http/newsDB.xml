@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="newsReader.xsl"?><news xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.2s2h.com newsDB.xsd">
-  <article id="5">
+  <article id="1">
     <title>prova</title>
-    <date>2010-04-26</date>
-    <body><![CDATA[ajdbaovhsiovoaaboaeghac]]></body>
-    <author>asd</author>
+    <date>2010-05-10</date>
+    <body><![CDATA[Questa e' la prima news di prova]]></body>
+    <author>zamy</author>
   </article>
-  <article id="6">
-    <title>prova</title>
-    <date>2010-06-15</date>
-    <body><![CDATA[ajdbaovhsiovoaaboaeghac]]></body>
-    <author>asd</author>
+  <article id="2">
+    <title>Uscita nuova versione del gioco!</title>
+    <date>2010-05-12</date>
+    <body><![CDATA[E' finalmente uscita la versione 4.2 del gioco Urban Terror! 
+Nuove grafiche, nuovi effetti (come quello per l'acqua... da vedere!) e tanto altro.
+
+Lo potete scaricare dal sito ufficiale :)]]></body>
+    <author>n3m3s1s</author>
   </article>
-  <article id="7">
-    <title>per dan</title>
-    <date>2010-06-19</date>
-    <body><![CDATA[succhiami sto cazzo]]></body>
-    <author>orcodio</author>
+  <article id="3">
+    <title>Auguri nemesis!</title>
+    <date>2010-06-20</date>
+    <body><![CDATA[ Il Capo del nostro clan compie 23 anni!Fortuna che non ha ancora intenzione di farsi una famiglia e ha tempo da perdere con noi]]></body>
+    <author>Revan</author>
   </article>
 </news>

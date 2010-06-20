@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 use CGI::Carp qw(fatalsToBrowser);
-use CGI qw(:standard);
 print "Content-type: text/html; charset=iso-8859-1\n\n";
 #inizializzo la pagina xhtml
 open (HTML, "<head.html");

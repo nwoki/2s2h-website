@@ -9,13 +9,13 @@ function daltonizza(){
 	if(cookieVal=="dalt"){
 		alert("Visualizzazione Classica");
 		delCookie("daltonizzato");
-		document.getElementById('layout').setAttribute('href','../project.css');
+		document.getElementById('layout').setAttribute('href','../http/project.css');
 		setCookie("daltonizzato","nonDalt",9999);
 	}
 	else {
 		alert("Visualizzazione Per Daltonici");
 		delCookie("daltonizzato");
-		document.getElementById('layout').setAttribute('href','../daltonized.css');
+		document.getElementById('layout').setAttribute('href','../http/daltonized.css');
 		setCookie("daltonizzato","dalt",9999);
 		
 	}
@@ -25,7 +25,7 @@ function daltonizza(){
 function leggiCookie(){
 	var cookieVal=getCookie("daltonizzato");
 	if(cookieVal=="dalt") {
-		document.getElementById('layout').setAttribute('href','../daltonized.css');
+		document.getElementById('layout').setAttribute('href','../http/daltonized.css');
 	}
 }
 

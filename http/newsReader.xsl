@@ -38,18 +38,18 @@
             </div>
 
             <div id="nav">
-                <span class="button"><a href="index.html" accesskey="h" tabindex="4"><span class="key">H</span>ome</a></span>
-                <span class="button"><a href="game.html" accesskey="g" tabindex="5">Il <span class="key">G</span>ioco</a></span>
-                <span class="button"><a href="clan.html" accesskey="c" tabindex="6"><span class="key">C</span>lan</a></span>
+                <span class="button"><a href="index.html" accesskey="h" tabindex="2"><span class="key">H</span>ome</a></span>
+                <span class="button"><a href="game.html" accesskey="g" tabindex="3">Il <span class="key">G</span>ioco</a></span>
+                <span class="button"><a href="clan.html" accesskey="c" tabindex="4"><span class="key">C</span>lan</a></span>
                 <span class="button">News</span>
-                <span class="button"><a href="cgi-bin/listaNews.cgi" accesskey="n" tabindex="8">Gestione <span class="key">N</span>otizie</a></span>
+                <span class="button"><a href="../cgi-bin/listaNews.cgi" accesskey="n" tabindex="5">Gestione <span class="key">N</span>otizie</a></span>
             </div>
 
             <div id="content">
                 <h2>News</h2>
                 <!-- output notizie -->
                 <xsl:for-each select="news/article">
-                <xsl:sort select="date"/>
+                <xsl:sort order="descending" select="date"/>
                     <fieldset>
                         <legend class="newsLgd" >
                             <xsl:value-of select="title"/>
