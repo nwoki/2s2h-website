@@ -20,15 +20,15 @@
     </div>
 
 <!-- menubar -->
-    <hr size="1" width="100%" />
+    <hr/>
         <div align='center'>
             <span class="currentPageLink" >Home</span>
-            <a href='news.php' accesskey='n'><u>N</u>ews</a>
-            <a href='noleggioserver.php' accesskey='i'>Nolegg<u>i</u>oServer</a>
-            <a href='banbot.php' accesskey='b'><u>B</u>anBot</a>
-            <a href='roster.php' accesskey='r'><u>R</u>oster</a>
+            <a accesskey='n' href='news.php' ><u>N</u>ews</a>
+            <a accesskey='s' href='noleggioserver.php' >Noleggio<u>S</u>erver</span>
+            <a accesskey='b' href='banbot.php' ><u>B</u>anBot</a>
+            <a accesskey='r' href='roster.php' ><u>R</u>oster</a>
         </div>
-    <hr size="1" width="100%" />
+    <hr/>
 <!-- menubar -->
 
 </body>

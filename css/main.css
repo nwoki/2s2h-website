@@ -32,6 +32,7 @@ a:link     /* unvisited link */
 
 a:visited   /* visited link */
 {
+    color : #8D38C9;    /* violet */
     text-decoration : none;
     font-family : Courier New;
 }
@@ -39,7 +40,7 @@ a:visited   /* visited link */
 a:hover    /* link on hover */
 {
     color : #FF0000;    /* red */
-    font-size : 20px;
+    /*font-size : 20px;*/
     font-weight : bold;
     font-family : Courier New;
 }
@@ -68,6 +69,7 @@ h3  /* titles */
 {
     color : #FFFFFF;
     font-family : Courier New;
+    text-align : center;
 }
 
 p   /* paragraphs */
@@ -79,5 +81,20 @@ p   /* paragraphs */
     width : 70%;
     font-size : 15px;
     font-family : Courier New;
+}
+
+legend
+{
+    color : #408080; /* pastel green */
+    font-family : Courier New;
+    font-weight : bold;
+}
+
+fieldset
+{
+    font-size : 20px;
+    width : 70%;
+    margin-left : auto;
+    margin-right : auto;
 }
 

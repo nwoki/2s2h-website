@@ -21,13 +21,13 @@
 
 <!-- START menubar -->
     <!--hr size="1" width="100%" /-->
-    <hr />
+    <hr/>
         <div align='center'>
-            <a href='index.php' accesskey='o'>H<u>o</u>me</a>
-            <a href='news.php' accesskey='n'><u>N</u>ews</a>
-            <span class="currentPageLink">NoleggioServer</a>
-            <a href='banbot.php' accesskey='b'><u>B</u>anBot</a>
-            <a href='roster.php' accesskey='r'><u>R</u>oster</a>
+            <a accesskey='h' href='index.php' >H<u>o</u>me</a>
+            <a accesskey='n' href='news.php' ><u>N</u>ews</a>
+            <span class="currentPageLink" >NoleggioServer</span>
+            <a accesskey='b' href='banbot.php' ><u>B</u>anBot</a>
+            <a accesskey='r' href='roster.php' ><u>R</u>oster</a>
         </div>
     <hr/>
 <!-- END menubar -->
@@ -40,7 +40,7 @@
         <li><a href="#cw18">cw pack plus 18&euro</a></li>
         <li><a href="#cw21">clan pack 21&euro</a></li>
         <li><a href="#cw26">clan pack extra 26&euro</a></li>
-        <li><a href="#paga">Modalit&agrave di pagamento</a></li>
+        <li><a href="#pay">Modalit&agrave di pagamento</a></li>
         <li><a href="#faq">Domande comuni</a></li>
         <li><a href="#server">Lista server</a></li>
     </ul>
@@ -50,7 +50,7 @@
     <br/>
 
     <!-- YES, TEXTWALL!!! MUAHAHAAHA! -->
-    <h3 align="center" id="why" >Perch&egrave scegliere 2s2h?</h3>
+    <h3 id="why" >Perch&egrave scegliere 2s2h?</h3>
     <p>
         2s2h &egrave un clan che da anni gioca ad urban terror e partecipa a competizioni. Essendo noi diretti utilizzatori dei server di gioco che offriamo non possiamo venir meno sulla qualità.
         Ciò che facciamo è dunque creare un'alternativa ai prodotti che ci propone il mercato che spesso mancano della qualità necessaria oppure hanno prezzi proibitivi.
@@ -72,7 +72,7 @@
         In più su richiesta, appena sarà rilasciata la versione ufficiale, verrà fornito gratuitamente BanBot sui server pubblici, indicati nei pacchetti.
     </p>
 
-    <h3 align="center" id="banbot" >Cos'&egrave BanBot?</h3>
+    <h3 id="banbot" >Cos'&egrave BanBot?</h3>
     <p>
         BanBot è un utilissimo tool sviluppato dai nostri membri [2s2h]Zamy e [2s2h]n3m3s1s in grado di individuare
         autonomamente alcuni cheater e di bannare con maggiore efficacia rispetto ad rcon sfruttando sistemi incrociati.
@@ -83,7 +83,7 @@
 
     <br/>
 
-    <h3 align="center" id="cw13" >cw pack 13&euro </h3>
+    <h3 id="cw13" >cw pack 13&euro </h3>
     <p>
         il pacchetto essenziale, consiste di un server di gioco privato
         <ul type="square" >
@@ -98,7 +98,7 @@
         n1ping.com -> 13€ con servizio awn [il server si arresta ogni volta che rimane vuoto e va riattivato via browser]; 18€ server standard, sempre attivo.
     </p>
 
-    <h3 align="center" id="cw16" >clan pack formato essential 16&euro </h3>
+    <h3 id="cw16" >clan pack formato essential 16&euro </h3>
     <p>
         <ul>
             <li>server di gioco pubblico da 12 slot</li>
@@ -111,7 +111,7 @@
         n1ping.com -> std 19€
     </p>
 
-    <h3 align="center" id="cw18" >cw pack plus 18&euro </h3>
+    <h3 id="cw18" >cw pack plus 18&euro </h3>
     <p>
         questo pacchetto consiste in un server di gioco privato
         <ul type="square" >
@@ -127,7 +127,7 @@
     </p>
 
 
-    <h3 align="center" id="cw21" >clan pack 21&euro </h3>
+    <h3 id="cw21" >clan pack 21&euro </h3>
     <p>
         <ul>
             <li>server di gioco pubblico da 14 slot + 4 slot privati (18 in tutto)</li>
@@ -141,7 +141,7 @@
         n1ping.com -> std 23€
     </p>
 
-    <h3 align="center" id="cw26" >clan pack extra 26&euro </h3>
+    <h3 id="cw26" >clan pack extra 26&euro </h3>
     <p>
         <ul>
             <li>server di gioco pubblico da 20 slot</li>
@@ -165,14 +165,14 @@
     <hr size=5 width="50%" />
     <br/>
 
-    <h3 align="center" id="pay" >Modalit&agrave di pagamento </h3>
+    <h3 id="pay" >Modalit&agrave di pagamento </h3>
     <p>
         Accettiamo Paypal o versamento su carte Postepay
     </p>
 
     <br/>
 
-    <h3 align="center" id="faq" >Domande comuni </h3>
+    <h3 id="faq" >Domande comuni </h3>
     <p>
         è possibile lanciare script python tramite accesso ssh?
 
@@ -195,7 +195,7 @@
 
     <br/>
 
-    <h3 align="center" id="server" >Lista server (se volete provarli)</h3>
+    <h3 id="server" >Lista server (se volete provarli)</h3>
     <ol>
         <li>2s2h return ITA #1 (\connect server.2s2h.com o \connect 95.110.227.172) NON IN VENDITA</li>
         <li>2s2h server in sale 1 ITA (\connect server.2s2h.com:27961 o \connect 95.110.227.172:27961) venduto</li>
