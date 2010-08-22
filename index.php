@@ -1,10 +1,10 @@
 <?php
     session_start();
-    require( "functions.php" );
+    require( 'functions/WebClass.php' );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
+    $test = new WebClass();
 ?>
-
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require( "functions.php" );
+    //require( "functions.php" );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
 ?>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require( "functions.php" );
+    //require( "functions.php" );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
 ?>
@@ -44,7 +44,7 @@
     <div id="n3m3s1s" >
         <fieldset>
             <legend>n3m3s1s</legend>
-            <img src="img/people/anonymous.jpg" align="left" alt="nemesis-foto" width="20%"/>
+            <img src="img/people/n3m3s1s.jpg" align="left" alt="nemesis-foto" width="20%"/>
             <p>
                 inserire descrizione
             </p>
@@ -68,7 +68,7 @@
     <div id="heresyarch" >
         <fieldset>
             <legend>Heresyarch/Cityhunter</legend>
-            <img src="img/people/anonymous.jpg" align="left" alt="nemesis-foto" width="20%"/>
+            <img src="img/people/nic.jpg" align="left" alt="nemesis-foto" width="20%"/>
             <p>
                 inserire descrizione
             </p>
@@ -91,7 +91,7 @@
     <div id="revan" >
         <fieldset>
             <legend align='right' >Revan</legend>
-            <img src="img/people/anonymous.jpg" align="right" alt="nemesis-foto" width="20%"/>
+            <img src="img/people/revan.jpg" align="right" alt="nemesis-foto" width="20%"/>
             <p>
                 inserire descrizione
             </p>
@@ -115,7 +115,7 @@
     <div id="roger" >
         <fieldset>
             <legend align='right' >Roger</legend>
-            <img src="img/people/anonymous.jpg" align="right" alt="nemesis-foto" width="20%"/>
+            <img src="img/people/roger.jpg" align="right" alt="nemesis-foto" width="20%"/>
             <p>
                 inserire descrizione
             </p>
