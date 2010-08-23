@@ -1,6 +1,6 @@
 <?php
     session_start();
-    //require( "functions.php" );
+    require( 'functions/functions.php' );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
 ?>
@@ -29,6 +29,7 @@
             <a accesskey='b' href='banbot.php' ><u>B</u>anBot</a>
             <a accesskey='r' href='roster.php' ><u>R</u>oster</a>
             <a accesskey='f' href='forum/index.php' ><u>F</u>orum</a>
+            <a accesskey='t' href='bugtracker/index.php' >Bug<u>T</u>racker</a>
         </div>
     <hr/>
 <!-- END menubar -->
@@ -112,7 +113,7 @@
         n1ping.com -> std 19€
     </p>
 
-    <h3 id="cw18" >cw pack plus 18&euro </h3>
+    <h3 id="cw18" >cw pack plus 18 &euro </h3>
     <p>
         questo pacchetto consiste in un server di gioco privato
         <ul type="square" >
@@ -208,6 +209,8 @@
         <a href = http://www.x2s2hx.altervista.org/index.php?option=com_contact&Itemid=3> QUI </a>
     </p>
 
-
+    <?php
+        bottomPageInfo();
+    ?>
 </body>
 </html>

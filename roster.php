@@ -1,6 +1,6 @@
 <?php
     session_start();
-    //require( "functions.php" );
+    require( 'functions/functions.php' );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
 ?>
@@ -28,6 +28,7 @@
             <a accesskey='b' href='banbot.php' ><u>B</u>anBot</a>
             <span class="currentPageLink" >Roster</a>
             <a accesskey='f' href='forum/index.php' ><u>F</u>orum</a>
+            <a accesskey='t' href='bugtracker/index.php' >Bug<u>T</u>racker</a>
         </div>
     <hr/>
 <!-- menubar -->
@@ -125,6 +126,9 @@
 
     <br/>
 
+    <?php
+        bottomPageInfo();
+    ?>
 
 </body>
 </html>
