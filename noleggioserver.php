@@ -6,7 +6,7 @@
 ?>
 
 <html>
-<head>
+<head  id='topOfPage' >
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="stylesheet" href="css/dropdown.css" type="text/css" />
@@ -22,7 +22,7 @@
 <!-- START menubar -->
     <!--hr size="1" width="100%" /-->
     <hr/>
-        <div align='center'>
+        <div align='center' >
             <a accesskey='h' href='index.php' >H<u>o</u>me</a>
             <a accesskey='n' href='news.php' ><u>N</u>ews</a>
             <span class="currentPageLink" >NoleggioServer</span>
@@ -37,11 +37,11 @@
     <ul>
         <li><a href="#why">Perch&egrave scegliere 2s2h?</a></li>
         <li><a href="#banbot">Cos'&egrave BanBot?</a></li>
-        <li><a href="#cw13">cw pack 13&euro</a></li>
-        <li><a href="#cw16">cw pack essential 16&euro</a></li>
-        <li><a href="#cw18">cw pack plus 18&euro</a></li>
-        <li><a href="#cw21">clan pack 21&euro</a></li>
-        <li><a href="#cw26">clan pack extra 26&euro</a></li>
+        <li><a href="#cw13">cw pack 13&euro </a></li>
+        <li><a href="#cw16">cw pack essential 16&euro </a></li>
+        <li><a href="#cw18">cw pack plus 18&euro </a></li>
+        <li><a href="#cw21">clan pack 21&euro </a></li>
+        <li><a href="#cw26">clan pack extra 26&euro </a></li>
         <li><a href="#pay">Modalit&agrave di pagamento</a></li>
         <li><a href="#faq">Domande comuni</a></li>
         <li><a href="#server">Lista server</a></li>
@@ -54,10 +54,13 @@
     <!-- YES, TEXTWALL!!! MUAHAHAAHA! -->
     <h3 id="why" >Perch&egrave scegliere 2s2h?</h3>
     <p>
-        2s2h &egrave un clan che da anni gioca ad urban terror e partecipa a competizioni. Essendo noi diretti utilizzatori dei server di gioco che offriamo non possiamo venir meno sulla qualità.
-        Ciò che facciamo è dunque creare un'alternativa ai prodotti che ci propone il mercato che spesso mancano della qualità necessaria oppure hanno prezzi proibitivi.
-        Il nostro scopo è quindi il fornire dei veri server, in cui sia piacevole giocare, ad un prezzo accessibile a tutti.
-        Su tutti i nostri server è installata la patch che impedisce di prenderne il controllo tramite un voto.<br/>
+        2s2h &egrave un clan che da anni gioca ad urban terror e partecipa a competizioni. Essendo noi diretti utilizzatori dei server di gioco che offriamo non possiamo venir meno sulla qualit&agrave.
+        Ci&ograve che facciamo &egrave dunque creare un'alternativa ai prodotti che ci propone il mercato
+        che spesso mancano della qualit&agrave necessaria oppure hanno prezzi proibitivi.
+        Il nostro scopo &egrave quindi il fornire dei veri server, in cui sia piacevole giocare, ad un
+        prezzo accessibile a tutti.
+        Su tutti i nostri server &egrave installata la patch che impedisce di prenderne il controllo
+        tramite un voto.<br/>
 
         Tutte le nostre offerte prevedono:
 
@@ -67,21 +70,23 @@
             <li>5GB di spazio personale</li>
             <li>controllo totale del server, con accesso ssh ed ftp</li>
             <li>spazio ftp per il download automatico delle mappe extra messe sul proprio server ( in comune tra tutti i server )</li>
-            <li>possibilità di accesso sia tramite ip, che dns ( server.2s2h.com )</li>
+            <li>possibilit&agrave di accesso sia tramite ip, che dns ( server.2s2h.com )</li>
             <li>i server sono SEMPRE ATTIVI, 24 ore su 24, non on-demand</li>
         </ul>
 
-        In più su richiesta, appena sarà rilasciata la versione ufficiale, verrà fornito gratuitamente BanBot sui server pubblici, indicati nei pacchetti.
+        In pi&ugrave su richiesta, appena sar&agrave rilasciata la versione ufficiale, verr&agrave fornito gratuitamente BanBot sui server pubblici, indicati nei pacchetti.
     </p>
+    <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
 
     <h3 id="banbot" >Cos'&egrave BanBot?</h3>
     <p>
-        BanBot è un utilissimo tool sviluppato dai nostri membri [2s2h]Zamy e [2s2h]n3m3s1s in grado di individuare
+        BanBot &egrave un utilissimo tool sviluppato dai nostri membri [2s2h]Zamy e [2s2h]n3m3s1s in grado di individuare
         autonomamente alcuni cheater e di bannare con maggiore efficacia rispetto ad rcon sfruttando sistemi incrociati.
-        In BanBot sono state implemenentate altre comode funzionalità quali mute, kick e altre arriveranno con le prossime versioni.
-        BanBot è stato inoltre concepito per utilizzare pochissime risorse in modo da non influire minimamente sul server di gioco.
-        Elenchiamo di seguito i nostri pacchetti ( è naturalmente possibile trovare un accordo, se avete bisogno di un servizio ad hoc ):
+        In BanBot sono state implemenentate altre comode funzionalit&agrave quali mute, kick e altre arriveranno con le prossime versioni.
+        BanBot &egrave stato inoltre concepito per utilizzare pochissime risorse in modo da non influire minimamente sul server di gioco.
+        Elenchiamo di seguito i nostri pacchetti ( &egrave naturalmente possibile trovare un accordo, se avete bisogno di un servizio ad hoc ):
     </p>
+    <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
 
     <br/>
 
@@ -89,7 +94,7 @@
     <p>
         il pacchetto essenziale, consiste di un server di gioco privato
         <ul type="square" >
-            <li>11 slot (5 giocatori per squadra più un eventuale referee)</li>
+            <li>11 slot (5 giocatori per squadra pi&ugrave un eventuale referee)</li>
             <li>server voIP 10 slot codec speex 12,3kbps o superiore (in base alla banda disponibile per garantire sempre le migliori prestazioni del game server)</li>
             <li>controllo server di gioco: rcon</li>
             <li>controllo server voIP: server admin</li>
@@ -99,6 +104,7 @@
         gamesclan.it -> 14.75€ [12 game slot].
         n1ping.com -> 13€ con servizio awn [il server si arresta ogni volta che rimane vuoto e va riattivato via browser]; 18€ server standard, sempre attivo.
     </p>
+    <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
 
     <h3 id="cw16" >clan pack formato essential 16&euro </h3>
     <p>
@@ -111,6 +117,8 @@
         confronto prezzi:
         gamesclan.it -> 19€
         n1ping.com -> std 19€
+        <br/>
+        <a href='#topOfPage'><u><i>GoToTop</i></u></a>
     </p>
 
     <h3 id="cw18" >cw pack plus 18 &euro </h3>
@@ -127,7 +135,7 @@
         gamesclan.it -> 22€ [16 games slot]
         n1ping.com -> std 22€
     </p>
-
+    <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
 
     <h3 id="cw21" >clan pack 21&euro </h3>
     <p>
@@ -142,6 +150,7 @@
         gamesclan.it -> 27€
         n1ping.com -> std 23€
     </p>
+    <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
 
     <h3 id="cw26" >clan pack extra 26&euro </h3>
     <p>
@@ -154,14 +163,18 @@
 
         confronto prezzi:
         gamesclan.it -> 30€
-        n1ping.com -> nn concepisce server più grandi di 18 slot
+        n1ping.com -> nn concepisce server pi&ugrave grandi di 18 slot
     </p>
+    <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
 
     <p>
         Tutti i prezzi indicati si riferiscono al noleggio mensile.
         I server privati devono avere sempre impostata una password per l'accesso.
         I server pubblici possono essere usati con o senza password per l'accesso.
-        Gli slot privati sono degli slot speciali riservati ai membri del clan in possesso della password per il loro utilizzo (possono entrare anche se il server è pieno). Possono esserne impostati di più di quelli indicati, ma il numero di slot totali non può superare il limite indicato.
+        Gli slot privati sono degli slot speciali riservati ai membri del clan
+        in possesso della password per il loro utilizzo (possono entrare anche se
+        il server &egrave pieno). Possono esserne impostati di pi&ugrave di quelli indicati,
+        ma il numero di slot totali non pu&ograve superare il limite indicato.
     </p>
 
     <hr size=5 width="50%" />
@@ -171,29 +184,44 @@
     <p>
         Accettiamo Paypal o versamento su carte Postepay
     </p>
+    <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
 
     <br/>
 
     <h3 id="faq" >Domande comuni </h3>
     <p>
-        è possibile lanciare script python tramite accesso ssh?
+        <br/>
+        <b>D - &egrave possibile lanciare script python tramite accesso ssh?</b><br/>
 
-        yep. Attualmente non c'è python disponibile per tutti gli utenti, basta metterlo.
-        Se è per uno script di qualche esotica utilità per voi ok, se è per un bot, abbiamo deciso di non accettarli.
+        yep. Attualmente non c'&egrave python disponibile per tutti gli utenti, basta metterlo.
+        Se &egrave per uno script di qualche esotica utilit&agrave per voi ok, se &egrave per un bot, abbiamo
+        deciso di non accettarli.<br/>
 
-        i gameserver girano su macchine virtuali o direttamente su server reali?
+        <br/>
 
-        Direttamente su server reali.
+        <b>D - i gameserver girano su macchine virtuali o direttamente su server reali?</b><br/>
 
-        qual'è il rapporto RAM totale macchina / numero di gameserver?
+        Direttamente su server reali.<br/>
 
-        2 Giga/4 gameserver (ovviamente non ci sono solo quelli, vedi servizi di sistema, ma c'è un ampio margine, attualmente è libero ancora quasi un giga. Non abbiamo intenzione comunque di salire di più di 4 server per macchina, tranne rare eccezioni, per esempio se sono server piccolissimi e privati, per un quinto.)
-        In ogni caso, se considerate che un singolo game server di urt occupa circa 200M, vedete da soli che stiamo belli abbondanti :)
+        <br/>
 
-        è ammesso personalizzare lo script bash di start del gameserver?
+        <b>D - qual'&egrave il rapporto RAM totale macchina / numero di gameserver?</b><br/>
 
-        Ovviamente si. Noi ne diamo già uno, ma è possibile cambiarlo tranquillamente. Ovviamente se questo non compromette anche gli altri server.
+        2 Giga/4 gameserver (ovviamente non ci sono solo quelli, vedi servizi di sistema, ma c'&egrave un
+        ampio margine, attualmente &egrave libero ancora quasi un giga.
+        Non abbiamo intenzione comunque di salire di pi&ugrave di 4 server per macchina, tranne rare eccezioni, per
+        esempio se sono server piccolissimi e privati, per un quinto.)
+        In ogni caso, se considerate che un singolo game server di urt occupa circa 200M,
+        vedete da soli che stiamo belli abbondanti :)<br/>
+
+        <br/>
+
+        <b>D - &egrave ammesso personalizzare lo script bash di start del gameserver?</b><br/>
+
+        Ovviamente si. Noi ne diamo gi&agrave uno, ma &egrave possibile cambiarlo tranquillamente.
+        Ovviamente se questo non compromette anche gli altri server.<br/>
     </p>
+    <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
 
     <br/>
 
@@ -206,9 +234,9 @@
     </ol>
     <p>
         Per ulteriori info, scrivete sul nostro forum o contattateci direttamente nell'apposita sezione del sito:
-        <a href = http://www.x2s2hx.altervista.org/index.php?option=com_contact&Itemid=3> QUI </a>
+        <a href = 'contactus.php' > QUI </a>
     </p>
-
+    <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
     <?php
         bottomPageInfo();
     ?>
