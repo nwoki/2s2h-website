@@ -60,7 +60,7 @@ class WebClass
             return true;
     }
 
-    private function createTables() /* create database tables */
+    private function createTables()      /* create database tables */
     {
         $result = mysql_query( "show tables", $this->m_dbLink );    /* check to see if i already have the database tables */
         $row = mysql_fetch_row($result);
@@ -69,24 +69,42 @@ class WebClass
             print("<p>TABLES DON'T exist!</p>");
             $scriptArr = array( "db/admins.sql", "db/news.sql", "db/roster.sql" );    /* where my sql scripts are */
 
-           foreach( $scriptArr as $file )
-           {
-               $stream = fopen( $file, "r" );
-               $query = fread( $stream, filesize( $file ) );   /* get content of file */
-               fclose( $stream );  /* close stream, don't need it anymore */
+            foreach( $scriptArr as $file )
+            {
+                $stream = fopen( $file, "r" );
+                $query = fread( $stream, filesize( $file ) );   /* get content of file */
+                fclose( $stream );  /* close stream, don't need it anymore */
 
-               $result = mysql_query( $query, $this->m_dbLink ); /* execute query */
+                $result = mysql_query( $query, $this->m_dbLink ); /* execute query */
 
-               if( !$result ) {    /* on error */
-                   $errMsg = "<p>Invalid query: <br/>".$query;
-                   $errMsg .= "<br/>".mysql_error()."</p>";
-                   die( $errMsg ); /* terminates function */
-               }
-               print( "<p>Creation of table from ".$file." completed!</p>" );
-           }
+                if( !$result ) {    /* on error */
+                    $errMsg = "<p>Invalid query: <br/>".$query;
+                    $errMsg .= "<br/>".mysql_error()."</p>";
+                    die( $errMsg ); /* terminates function */
+                }
+                print( "<p>Creation of table from ".$file." completed!</p>" );
+            }
+            /* and add default admin */
+            $this->createDefaultAdmin();
         }
         else
             print( "<p>Database tables already exist</p>!" );
+    }
+
+    private function createDefaultAdmin()   /* inserts into db default admin, to use after fresh start */
+    {
+        $pass = md5( "defaultPassword" );
+
+        print (" PASS -> ".$pass);
+        $query = "insert into admins values( 'admin', '".$pass."' )";
+
+        if( !mysql_query( $query, $this->m_dbLink ) )
+            die( "<p>error on creating admin : ".mysql_error( $this->m_dbLink )."</p>" );
+        else {
+            print( "<p>Default admin created with success! You may now login with:<br/>" );
+            print( "login : admin<br/>password : defaultPassword</p>" );
+        }
+
     }
 
     private function createDbFirstRun() /* used to create database on first run */
@@ -110,8 +128,8 @@ class WebClass
         /* check for tables and create them if neccessary */
         $this->createTables();
 
-        print( "<p><br/>redirecting..</p>" );
-        header( "refresh: 5; index.php" );  /* redirect after 5 seconds */
+        print( "<p><br/>redirecting in 10 seconds..</p>" );
+        header( "refresh: 10; index.php" );  /* redirect after 5 seconds */
     }
 
     /*******************
@@ -122,7 +140,6 @@ class WebClass
     private $m_pass;    /* dbPass */
     private $m_dbLink;  /* link to db connection */
     private $m_dbName;  /* db Name */
-    private $m_dbScript;    /* db creation script */
 }
 
 ?>

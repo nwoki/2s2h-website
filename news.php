@@ -27,6 +27,7 @@
             <a accesskey='s' href='noleggioserver.php' >Noleggio<u>S</u>erver</span>
             <a accesskey='b' href='banbot.php' ><u>B</u>anBot</a>
             <a accesskey='r' href='roster.php' ><u>R</u>oster</a>
+            <a accesskey='f' href='forum/index.php' ><u>F</u>orum</a>
         </div>
     <hr/>
 <!-- menubar -->
