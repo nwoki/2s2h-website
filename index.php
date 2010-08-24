@@ -1,10 +1,8 @@
 <?php
     session_start();
     require( 'functions/functions.php' );
-    require( 'functions/WebClass.php' );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
-    $test = new WebClass();
 ?>
 <html>
 <head>
@@ -35,12 +33,12 @@
 <!-- menubar -->
 
     <p>
-        Cercate un clan in cui ci si possa divertire, impegnare e vincere? Vi domandate se siete nel posto giusto? se avete un'età compresa tra i 16 e i 25 anni si.
-        La storia 2s2h è cominciata con l'incrontro di poche ma brillanti menti all'università di padova più un infiltrato di provvenienza sconosciuta ( c'è chi dice mantova boh? ).
-        Partendo da un piccolo gruppo di amici che non disponeva nemmeno di un server privato proprio per potersi allenare, oggi i 2s2h sono diventati uno dei pochi clan seri presenti
-        in questo gioco, allargandosi sia per quanto riguarda discorso membri sia per l'acquisizione server di gioco. Il clan è attivo in molte competizioni vedi esempi ESL, clanbase, UZ
-        gocate principalmente in modalità team survivor. Ora se avete voglia di giocare, accrescere le vostre abilità di gioco e siete assolutamente persone serie, FORSE avete la
-        possibilità di entrare a far parte di questo gruppo di persone speciali. Buona fortuna
+        Fu nella calda estate del 2008 che all'universit&agrave di padova, dall'incontro di poche menti brillanti, prese vita il progetto conosciuto come 2steps2hell..
+        Quel piccolo clan, che allora contava giusto pochi membri, oggi si &egrave affermato nel panorama nazionale diventando uno dei maggiori sostenitori del tanto semplice quanto entusiasmante fps Urban Terror!
+        I 2s2h partecipano alle competizioni indette dalle maggiori leghe quali ESL, ClanBase e UrbanZone conseguendo risultati apprezzabili e si allenano regolarmente per migliorare.
+        La nostra community mette a disposizione server pubblici in cui testare la propria abilit&agrave o giocare per il semplice piacere di farlo ed ora offre anche la possibilit&agrave agli altri clan di prendere in affitto server di qualit&agrave a prezzi convenienti per poter iniziare o continuare la propria avventura con i giusti strumenti!
+
+        Enjoy 2s2h
     </p>
 
     <h4>

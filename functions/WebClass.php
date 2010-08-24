@@ -32,7 +32,30 @@ class WebClass
     * public functions *
     *******************/
 
+    public function adminLogin( $nick, $pass )
+    {
+        if( empty( $nick ) || empty( $pass ) )
+            return false;
+        else {
+            $query = "select *from admins where nick=\"$nick\"";
+            $result = mysql_query( $query, $this->m_dbLink ) or die( "AdminLogin: Query fallita!".mysql_error( $this->m_dbLink ) );
 
+            while( $row = mysql_fetch_assoc( $result ) ) {  //get login and pass from database
+                $out1 = $row['nick'];
+                $out2 = $row['pass'];
+            }
+
+            if( $out1 == $nick && ( md5( $pass ) == $out2 ) ) //checks validity of password
+                return true;
+            else
+                return false;
+        }
+    }
+
+    public function isAdminNick( $nick )
+    {
+
+    }
     /********************
     * private functions *
     ********************/

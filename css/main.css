@@ -65,7 +65,7 @@ li
 
 
 /* content( text and descriptive stuff ) */
-h3,h4  /* titles */
+h2,h3,h4  /* titles */
 {
     color : #FFFFFF;
     font-family : Courier New;
