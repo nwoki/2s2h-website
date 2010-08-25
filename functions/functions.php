@@ -1,5 +1,5 @@
 <?php
-    require( 'functions/WebClass.php');
+    require( 'functions/WebClass.php' );
 
 
     function adminLogin( $nick, $pass )
@@ -14,7 +14,7 @@
         "<div id=bottomPageInfo>
             <hr width='50%'/>
             2Steps2Hell website made by [2s2h]zamy & [2s2h]n3m3s1s<br/>
-            <a href='contactus.php'>Contact us</a> - <a href='adminlogin.php'>AdminCp</a>
+            <a href='contactus.php'>Contact us</a> - <a href='adminlogin.php'>AdminCp</a> - <a href='awards.php'>Awards</a>
         </div>";
     }
 

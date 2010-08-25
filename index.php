@@ -41,14 +41,6 @@
         Enjoy 2s2h
     </p>
 
-    <h4>
-        AWARDS
-    </h4>
-
-    <center>
-        <img src="img/awards/esl/DD3.jpg" >
-    </center>
-
     <?php
         bottomPageInfo();
     ?>

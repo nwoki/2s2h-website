@@ -88,8 +88,8 @@ class WebClass
         $result = mysql_query( "show tables", $this->m_dbLink );    /* check to see if i already have the database tables */
         $row = mysql_fetch_row($result);
 
-        if( empty($row[0]) ) {
-            print("<p>TABLES DON'T exist!</p>");
+        if( empty( $row[0] ) ) {
+            print( "<p>TABLES DON'T exist!</p>" );
             $scriptArr = array( "db/admins.sql", "db/news.sql", "db/roster.sql" );    /* where my sql scripts are */
 
             foreach( $scriptArr as $file )
@@ -118,7 +118,6 @@ class WebClass
     {
         $pass = md5( "defaultPassword" );
 
-        print (" PASS -> ".$pass);
         $query = "insert into admins values( 'admin', '".$pass."' )";
 
         if( !mysql_query( $query, $this->m_dbLink ) )

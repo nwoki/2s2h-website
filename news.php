@@ -1,10 +1,8 @@
 <?php
     session_start();
     require( 'functions/functions.php' );
-    require( 'functions/WebClass.php' );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
-    $webClass = new WebClass();
 ?>
 
 <html>
@@ -13,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="stylesheet" href="css/dropdown.css" type="text/css" />
 
-    <title>2Steps2Hell - BanBot</title>
+    <title>2Steps2Hell - News</title>
 
 </head>
 <body>

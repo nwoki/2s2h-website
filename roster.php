@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="stylesheet" href="css/dropdown.css" type="text/css" />
 
-    <title>2Steps2Hell - BanBot</title>
+    <title>2Steps2Hell - Roster</title>
 
 </head>
 <body>
@@ -33,7 +33,7 @@
     <hr/>
 <!-- menubar -->
     <!-- only admins and soldiers, too much hastle in adding new perople on wannabe ecc -->
-    <h3>Admin</h3>
+    <h3>Admins & Devs</h3>
 
     <div align='center'>
         <a href='#n3m3s1s' >N3m3s1s</a>
