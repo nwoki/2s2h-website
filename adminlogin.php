@@ -47,11 +47,11 @@
             <table align='center'>
                 <tr>
                     <th><p>nick </p></th>
-                    <th><input type='text' name='user' maxlength='15'></th>
+                    <th><input type=text name=user maxlength=15></th>
                 </tr>
                 <tr>
                     <th><p>pass </p></th>
-                    <th><input type='password' name='pass' maxlength='15'></th>
+                    <th><input type=password name=pass maxlength=15></th>
                 </tr>
             </table>
 
@@ -63,7 +63,7 @@
     else {
         $_SESSION['user'] = $_POST['user'];
         $_SESSION['pass'] = $_POST['pass'];
-        header( 'refresh: 5; adminpage.php' );
+        header( 'adminpage.php' );
     }
     ?>
 

@@ -3,19 +3,16 @@
     require( 'functions/functions.php' );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
-
-    if( !empty( $_SESSION['user'] ) && !empty( $_SESSION['pass'] ) ) {
-        if( adminLogin( $_SESSION['user'], $_SESSION['pass'] ) )
-            $_SESSION['status'] = "admin";
-    }
+    $test = new WebClass(); /* used to check if database is setup right */
 ?>
+
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" href="css/main.css" type="text/css" />
     <link rel="stylesheet" href="css/dropdown.css" type="text/css" />
 
-    <title>2Steps2Hell - AdminPage</title>
+    <title>2Steps2Hell - ModAdmins</title>
 
 </head>
 <body>
@@ -28,7 +25,7 @@
         <div align='center'>
             <a accesskey='h' href='index.php' ><u>H</u>ome</a>
             <a accesskey='n' href='news.php' ><u>N</u>ews</a>
-            <a accesskey='s' href='noleggioserver.php' >Noleggio<u>S</u>erver</a>
+            <a accesskey='s' href='noleggioserver.php' >Noleggio<u>S</u>erver</span>
             <a accesskey='b' href='banbot.php' ><u>B</u>anBot</a>
             <a accesskey='r' href='roster.php' ><u>R</u>oster</a>
             <a accesskey='f' href='forum/index.php' ><u>F</u>orum</a>
@@ -38,25 +35,22 @@
 <!-- menubar -->
 
     <?php
+        if( isset( $_POST['chosenAdmin'] ) )   /* show input fields to mod admin */
+            showModAdmin( $_POST['chosenAdmin'] );
 
-    /* check if already logged else show login form */
-    if( $_SESSION['status'] != 'admin' )    /* show access denied */
-        echo "<center><img src='img/fail.jpg'/></center>";
+        elseif( isset( $_POST['adminToModId'] ) )  /* submit admin mod */
+            submitModAdmin( $_POST['modAdminName'], $_POST['modAdminPass'], $_POST['adminToModId'] );
 
-    else {  /* else welcome the admin */
-        echo "<h2>Welcome : ".$_SESSION['user']."!</h2>";
+        elseif( isset( $_POST['adminToDeleteId'] ) ) /* id of admin to delete */
+            deleteAdmin( $_POST['adminToDeleteId'] );
 
-        /* list admin options */
-        echo "
-        <ul>
-            <li><a href='modadmins.php'>Mod Admins</a></li>
-            <li><a href='modnews.php'>Mod News</a></li>
-        </ul>
-        ";
-    }
+        else   /* show admin selection form */
+            showAdminList();
 
-    bottomPageInfo();
+        bottomPageInfo();
     ?>
+
+
 
 </body>
 </html>

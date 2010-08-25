@@ -25,7 +25,9 @@ class WebClass
 
     function __destruct()   /* class destructor */
     {
-        print ( "<p>WebClass::__destruct</p>" );
+        //print ( "<p>WebClass::__destruct</p>" );
+        /* close database connection */
+        mysql_close( /*$this->m_dbLink*/ );
     }
 
     /*******************
@@ -57,7 +59,7 @@ class WebClass
         $result = mysql_query( $query, $this->m_dbLink );
 
         if( !$result )
-            die( "Error with executeQuery: ".mysql_error( $this->m_dbLink ) );
+            die( "<p>Error with executeQuery: ".mysql_error( $this->m_dbLink )."</p>" );
         else
             return $result;
     }
@@ -123,7 +125,7 @@ class WebClass
     {
         $pass = md5( "defaultPassword" );
 
-        $query = "insert into admins values( 'admin', '".$pass."' )";
+        $query = "insert into admins values( '', 'admin', '".$pass."' )";
 
         if( !mysql_query( $query, $this->m_dbLink ) )
             die( "<p>error on creating admin : ".mysql_error( $this->m_dbLink )."</p>" );
