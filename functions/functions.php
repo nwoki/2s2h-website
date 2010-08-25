@@ -18,9 +18,27 @@
         </div>";
     }
 
-    function isAdmin( $who )
+    function loadNews()
     {
+        $webClass = new WebClass();
+        $query = "select *from news;";  /* get all articles here */
 
+        $result = $webClass->executeQuery( $query );
+
+        while( $row = mysql_fetch_assoc( $result ) ) {
+            $title = $row['title'];
+            $author = $row['author'];
+            $article = $row['article'];
+
+            echo "
+            <legend>".$title."</legend>
+                <p>
+                    ".$article."
+                    <br/>
+                    By: ".$author."
+                </p>
+            </fieldset>";
+        }
     }
 
 ?>

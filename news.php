@@ -3,6 +3,7 @@
     require( 'functions/functions.php' );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
+    $test = new WebClass(); /* used to check if database is setup right */
 ?>
 
 <html>
@@ -34,6 +35,7 @@
 <!-- menubar -->
 
     <?php
+        loadNews( /* put count to see up to how many articles to load? */);
         bottomPageInfo();
     ?>
 

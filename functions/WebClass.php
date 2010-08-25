@@ -52,9 +52,14 @@ class WebClass
         }
     }
 
-    public function isAdminNick( $nick )
+    public function executeQuery( $query )  /* returns result of query */
     {
+        $result = mysql_query( $query, $this->m_dbLink );
 
+        if( !$result )
+            die( "Error with executeQuery: ".mysql_error( $this->m_dbLink ) );
+        else
+            return $result;
     }
     /********************
     * private functions *
