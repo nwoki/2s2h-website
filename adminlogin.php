@@ -63,7 +63,7 @@
     else {
         $_SESSION['user'] = $_POST['user'];
         $_SESSION['pass'] = $_POST['pass'];
-        header( 'adminpage.php' );
+        header( 'Location: adminpage.php' );
     }
     ?>
 

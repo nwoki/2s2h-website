@@ -44,6 +44,12 @@
         elseif( isset( $_POST['adminToDeleteId'] ) ) /* id of admin to delete */
             deleteAdmin( $_POST['adminToDeleteId'] );
 
+        elseif( isset( $_POST['addNewAdmin'] ) )    /* show addNewAdmin form */
+            addNewAdminForm();
+
+        elseif( isset( $_POST['submitNewAdmin'] ) )     /* submit new admin to database */
+            insertNewAdmin( $_POST['newAdminNick'], $_POST['newAdminPass'] );
+
         else   /* show admin selection form */
             showAdminList();
 

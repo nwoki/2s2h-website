@@ -72,6 +72,13 @@
         <br/>
         <center><input type=submit value=submit></center>
         </form>";
+
+        /* insert new admin button */
+        echo"
+        <form action=modadmins.php method=post>
+            <center><input type=submit value=add_New_Admin></center>
+            <input type=hidden name=addNewAdmin value=true>
+        </form>";
     }
 
     function showModAdmin( $nick )  /* modify selected admin */
@@ -186,5 +193,52 @@
         </form>";
     }
 
+    function addNewAdminForm()
+    {
+        echo"
+        <center>
+            <form action=modadmins.php method=post>
+                <table>
+                    <tr>
+                        <td><p>new_nick</p></td>
+                        <td><input type=text name=newAdminNick value=''></td>
+                    </tr>
+                    <tr>
+                        <td><p>new_pass</p></td>
+                        <td><input type=text name=newAdminPass value=''></td>
+                    </tr>
+                </table>
+            <input type=hidden name=submitNewAdmin value='true'>
+            <input type=submit value=submit><input type=reset value=reset>
+            </form>
+        </center>";
+    }
 
+    function insertNewAdmin( $nick, $pass )
+    {
+        if( empty( $nick ) && empty( $pass ) )
+            print( "<p>Empty values not allowed!</p>" );
+
+        else {
+            $webClass = new WebClass();
+            $cryptPass = md5( $pass );
+            $query = "insert into admins values('',\"$nick\",\"$cryptPass\");";
+
+            $result = $webClass->executeQuery( $query );
+
+            if( $result )
+                echo"<p>ADMIN ADDED SUCCCESSFULLY</p>";
+            else
+                echo"<p>ADMIN NOT ADDED </p>";
+        }
+
+        /* back button */
+        echo"
+        <form action=adminpage.php method=post>
+            <center>
+                <input type=submit value=back>
+            </center>
+        </form>";
+
+    }
 ?>
