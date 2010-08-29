@@ -21,7 +21,7 @@
     function loadNews()
     {
         $webClass = new WebClass();
-        $query = "select *from news;";  /* get all articles here */
+        $query = "select *from 2s2h_news;";  /* get all articles here */
 
         $result = $webClass->executeQuery( $query );
 
@@ -45,7 +45,7 @@
     function showAdminList()    /* list from where to choose from */
     {
         $webClass = new WebClass();
-        $query = "select *from admins;";    /* nick, pass(md5) */
+        $query = "select *from 2s2h_admins;";    /* nick, pass(md5) */
 
         $result = $webClass->executeQuery( $query );
 
@@ -84,7 +84,7 @@
     function showModAdmin( $nick )  /* modify selected admin */
     {
         $webClass = new WebClass();
-        $query = "select *from admins where nick=\"$nick\";";
+        $query = "select *from 2s2h_admins where nick=\"$nick\";";
 
         $result = $webClass->executeQuery( $query );
 
@@ -146,7 +146,7 @@
             die( "Can't set empty nick for an admin " );
 
         $webClass = new WebClass();
-        $query = "update admins set nick=\"$nick\"";
+        $query = "update 2s2h_admins set nick=\"$nick\"";
 
         if( !empty( $pass ) ) {
             $newPass = md5( $pass );
@@ -175,7 +175,7 @@
     function deleteAdmin( $id )
     {
         $webClass = new WebClass();
-        $query = "delete from admins where id=\"$id\"";
+        $query = "delete from 2s2h_admins where id=\"$id\"";
 
         $result = $webClass->executeQuery( $query );
 
@@ -222,7 +222,7 @@
         else {
             $webClass = new WebClass();
             $cryptPass = md5( $pass );
-            $query = "insert into admins values('',\"$nick\",\"$cryptPass\");";
+            $query = "insert into 2s2h_admins values('',\"$nick\",\"$cryptPass\");";
 
             $result = $webClass->executeQuery( $query );
 

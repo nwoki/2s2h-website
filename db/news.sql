@@ -1,4 +1,4 @@
-create table news(
+create table 2s2h_news(
     id int primary key auto_increment,
     title varchar(25)not null,
     author varchar(25)not null,

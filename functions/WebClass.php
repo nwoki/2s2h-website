@@ -39,7 +39,7 @@ class WebClass
         if( empty( $nick ) || empty( $pass ) )
             return false;
         else {
-            $query = "select *from admins where nick=\"$nick\"";
+            $query = "select *from 2s2h_admins where nick=\"$nick\"";
             $result = mysql_query( $query, $this->m_dbLink ) or die( "AdminLogin: Query fallita!".mysql_error( $this->m_dbLink ) );
 
             while( $row = mysql_fetch_assoc( $result ) ) {  //get login and pass from database
@@ -125,7 +125,7 @@ class WebClass
     {
         $pass = md5( "defaultPassword" );
 
-        $query = "insert into admins values( '', 'admin', '".$pass."' )";
+        $query = "insert into 2s2h_admins values( '', 'admin', '".$pass."' )";
 
         if( !mysql_query( $query, $this->m_dbLink ) )
             die( "<p>error on creating admin : ".mysql_error( $this->m_dbLink )."</p>" );
