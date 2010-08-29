@@ -12,12 +12,15 @@ class WebClass
 
         $this->connectToDatabase(); /* create a link to database */
 
-
         if( !$initializeDatabase ) {  /* on a normal page */
             if( !$this->selectDatabase() ) {    /* select database to use */
                 print( "<p>Can't use database '".$this->m_dbName."' : ".mysql_error( $this->m_dbLink )."</p>" );
                 print( "<p>Please go to 'initialize.php' to setup database for first run</p>" );
             }
+            if( $this->testTables() ) /* also check on tables */
+                print( "<p>Database and tables both exist</p>" );
+            else
+                $this->createDbFirstRun();
         }
         else  /* i'm on initialize page */
             $this->createDbFirstRun();
@@ -90,12 +93,31 @@ class WebClass
             return true;
     }
 
+    private function testTables()   /* just a check to see if tables have been already created */
+    {
+        $result = mysql_query( "show tables", $this->m_dbLink );    /* check to see if i already have the database tables */
+
+        if( !$result )
+            // must die here else database gets created on other pages other than "initialize"
+            die( "WebClass::testTables can't create connection to database" );
+        else {
+            $row = mysql_fetch_row( $result );
+
+            if( empty( $row[0] ) || $row[0] != "2s2h_admins" ) {
+                echo "<p>TEST TABLES -> ".$row[0]."</p>";
+                return false;
+            }
+            else
+                return true;
+        }
+    }
+
     private function createTables()      /* create database tables */
     {
         $result = mysql_query( "show tables", $this->m_dbLink );    /* check to see if i already have the database tables */
-        $row = mysql_fetch_row($result);
+        $row = mysql_fetch_row( $result );
 
-        if( empty( $row[0] ) ) {
+        if( empty( $row[0] ) || $row[0] != "2s2h_admins" ) {
             print( "<p>TABLES DON'T exist!</p>" );
             $scriptArr = array( "db/admins.sql", "db/news.sql", "db/roster.sql" );    /* where my sql scripts are */
 
@@ -116,9 +138,12 @@ class WebClass
             }
             /* and add default admin */
             $this->createDefaultAdmin();
+            return true;
         }
-        else
+        else {
             print( "<p>Database tables already exist</p>!" );
+            return false;
+        }
     }
 
     private function createDefaultAdmin()   /* inserts into db default admin, to use after fresh start */
@@ -158,7 +183,7 @@ class WebClass
         $this->createTables();
 
         print( "<p><br/>redirecting in 10 seconds..</p>" );
-        header( "refresh: 10; index.php" );  /* redirect after 5 seconds */
+        //header( "refresh: 10; index.php" );  /* redirect after 5 seconds */
     }
 
     /*******************
