@@ -42,6 +42,11 @@
         }
     }
 
+
+/*******************
+ * ADMIN FUNCTIONS *
+ * ****************/
+
     function showAdminList()    /* list from where to choose from */
     {
         $webClass = new WebClass();
@@ -78,6 +83,14 @@
         <form action=modadmins.php method=post>
             <center><input type=submit value=add_New_Admin></center>
             <input type=hidden name=addNewAdmin value=true>
+        </form>";
+
+        /* back button */
+        echo"
+        <form action=adminpage.php method=post>
+            <center>
+                <input type=submit value=back>
+            </center>
         </form>";
     }
 
@@ -240,5 +253,57 @@
             </center>
         </form>";
 
+    }
+
+
+/*******************
+ * NEWS  FUNCTIONS *
+ * ****************/
+
+    function showNewsList() /* shows list of news articles to choose from */
+    {
+        $webClass = new WebClass();
+        $query = "select *from 2s2h_news;";
+
+        $result = $webClass->executeQuery( $query );
+
+        echo"
+        <h2>News List</h2>";
+
+        echo "
+        <form method=post action=modnews.php>
+            <table align=center>";
+
+        while( $row = mysql_fetch_assoc( $result ) ) {
+            $title = $row['title'];
+
+            echo "
+            <tr>
+                <td><p>".$title."</p></td>
+                <td></td>
+                <td><input type=radio name=chosenTitle value=".$title."></td>
+            </tr>";
+        }
+
+        echo "
+            </table>
+        <br/>
+        <center><input type=submit value=submit></center>
+        </form>";
+
+        /* insert new article button */
+        echo"
+        <form action=modnews.php method=post>
+            <center><input type=submit value=add_New_Article></center>
+            <input type=hidden name=addNewArticle value=true>
+        </form>";
+
+        /* back button */
+        echo"
+        <form action=adminpage.php method=post>
+            <center>
+                <input type=submit value=back>
+            </center>
+        </form>";
     }
 ?>
