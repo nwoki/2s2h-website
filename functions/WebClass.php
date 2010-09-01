@@ -37,6 +37,7 @@ class WebClass
     * public functions *
     *******************/
 
+	/* login function for admin page */
     public function adminLogin( $nick, $pass )
     {
         if( empty( $nick ) || empty( $pass ) )

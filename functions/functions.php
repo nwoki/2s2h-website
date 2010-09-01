@@ -275,16 +275,18 @@
             <table align=center>";
 
         while( $row = mysql_fetch_assoc( $result ) ) {
+            $id = $row['id'];
             $title = $row['title'];
 
             echo "
             <tr>
                 <td><p>".$title."</p></td>
                 <td></td>
-                <td><input type=radio name=chosenTitle value=".$title."></td>
+                <td><input type=radio name=chosenArticle value=".$id."></td>
             </tr>";
         }
 
+        /* submit my selection */
         echo "
             </table>
         <br/>
@@ -306,4 +308,56 @@
             </center>
         </form>";
     }
+
+    function showModArticle( $articleId )
+    {
+        $webClass = new WebClass();
+        $query = "select *from 2s2h_news where id=\"$articleId\";";
+
+        $result = $webClass->executeQuery( $query );
+
+        if( !$result )
+            print( "<p>ERROR: can't find id : ".mysql_error( $webClass->m_dbLink ) );
+        else {
+            print( "<p>chose article with id  = ".$articleId."</p>" );
+
+            /* get neccessary info */
+            $row = mysql_fetch_assoc( $result );
+
+            $title = $row['title'];
+            $article = $row['article'];
+            $author = $row['author'];
+            $time = $row['time'];
+
+            echo"
+            <form action=modnews.php method=post>
+                <table align=center cellpadding=0 cellspacing=0>
+                    <tr>
+                        <td>title</td>
+                        <td><input type=text name=modArticleTitle value=".$title."
+                    </tr>
+                    <tr>
+                        <td>author</td>
+                        <td><input type=text name=modArticleTitle value=".$author."
+                    </tr>
+                    <tr>
+                        <td>timestamp</td>
+                        <td><input type=text name=modArticleTitle value=".$time."
+                    </tr>";
+                    /*
+                     * TODO
+                     *
+                     * put a bigger text area to modify article body
+                     * left the code like this cos I was kinda drunk and sleepy after 3 nights
+                     * of going to bed at 4am
+                     */
+            echo"
+                </table>
+            </form>";
+
+
+        }
+
+    }
 ?>
+

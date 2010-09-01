@@ -98,6 +98,20 @@ fieldset
     margin-right : auto;
 }
 
+/* tables */
+table, tr, td
+{
+    padding : 0;
+    margin : 0
+}
+
+td
+{
+    font-size : bold;
+    color : #ffffff
+}
+
+
 #bottomPageInfo
 {
     font-family : Courier New;
