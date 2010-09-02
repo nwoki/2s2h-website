@@ -7,18 +7,18 @@ class WebClass
         // set private members
         $this->m_host = "localhost";
         $this->m_user = "root";
-        $this->m_pass = "root";
+        $this->m_pass = "k0sm0s0l-sql";
         $this->m_dbName = "2s2hwebsite";
 
         $this->connectToDatabase(); /* create a link to database */
 
         if( !$initializeDatabase ) {  /* on a normal page */
             if( !$this->selectDatabase() ) {    /* select database to use */
-                print( "<p>Can't use database '".$this->m_dbName."' : ".mysql_error( $this->m_dbLink )."</p>" );
-                print( "<p>Please go to 'initialize.php' to setup database for first run</p>" );
+                print( "<p class=\"debug\">Can't use database '".$this->m_dbName."' : ".mysql_error( $this->m_dbLink )."</p>" );
+                print( "<p class=\"debug\">Please go to 'initialize.php' to setup database for first run</p>" );
             }
             if( $this->testTables() ) /* also check on tables */
-                print( "<p>Database and tables both exist</p>" );
+                print( "<p class=\"debug\">Database and tables both exist</p>" );
             else
                 $this->createDbFirstRun();
         }
@@ -63,7 +63,7 @@ class WebClass
         $result = mysql_query( $query, $this->m_dbLink );
 
         if( !$result )
-            die( "<p>Error with executeQuery: ".mysql_error( $this->m_dbLink )."</p>" );
+            die( "<p  class=\"debug\">Error with executeQuery: ".mysql_error( $this->m_dbLink )."</p>" );
         else
             return $result;
     }
@@ -75,7 +75,7 @@ class WebClass
         $this->m_dbLink = mysql_connect( $this->m_host, $this->m_user, $this->m_pass );
 
         if( !$this->m_dbLink )
-            die( "<p>Can't connect to database server : ".mysql_error()."</p>" );
+            die( "<p  class=\"debug\">Can't connect to database server : ".mysql_error()."</p>" );
     }
 
     private function selectDatabase()   /* select database to use */
@@ -105,7 +105,7 @@ class WebClass
             $row = mysql_fetch_row( $result );
 
             if( empty( $row[0] ) || $row[0] != "2s2h_admins" ) {
-                echo "<p>TEST TABLES -> ".$row[0]."</p>";
+                echo "<p  class=\"debug\">TEST TABLES -> ".$row[0]."</p>";
                 return false;
             }
             else
@@ -119,7 +119,7 @@ class WebClass
         $row = mysql_fetch_row( $result );
 
         if( empty( $row[0] ) || $row[0] != "2s2h_admins" ) {
-            print( "<p>TABLES DON'T exist!</p>" );
+            print( "<p class=\"debug\">TABLES DON'T exist!</p>" );
             $scriptArr = array( "db/admins.sql", "db/news.sql", "db/roster.sql" );    /* where my sql scripts are */
 
             foreach( $scriptArr as $file )
@@ -135,7 +135,7 @@ class WebClass
                     $errMsg .= "<br/>".mysql_error()."</p>";
                     die( $errMsg ); /* terminates function */
                 }
-                print( "<p>Creation of table from ".$file." completed!</p>" );
+                print( "<p class=\"debug\">Creation of table from ".$file." completed!</p>" );
             }
             /* and add default admin */
             $this->createDefaultAdmin();
@@ -154,9 +154,9 @@ class WebClass
         $query = "insert into 2s2h_admins values( '', 'admin', '".$pass."' )";
 
         if( !mysql_query( $query, $this->m_dbLink ) )
-            die( "<p>error on creating admin : ".mysql_error( $this->m_dbLink )."</p>" );
+            die( "<p class=\"debug\">error on creating admin : ".mysql_error( $this->m_dbLink )."</p>" );
         else {
-            print( "<p>Default admin created with success! You may now login with:<br/>" );
+            print( "<p class=\"debug\">Default admin created with success! You may now login with:<br/>" );
             print( "login : admin<br/>password : defaultPassword</p>" );
         }
 

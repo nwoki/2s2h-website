@@ -1,6 +1,15 @@
 <?php
     require( 'functions/WebClass.php' );
-
+    
+		function debugCode ( $check = false) 
+		{
+		  if ( $check ) 
+			{
+			  error_reporting( E_ALL );
+        ini_set( 'display_errors', '1' );
+			}
+	    else return true;	 
+		}
 
     function adminLogin( $nick, $pass )
     {
@@ -11,13 +20,102 @@
     function bottomPageInfo()
     {
         echo
-        "<div id=bottomPageInfo>
-            <hr width='50%'/>
-            2Steps2Hell website made by [2s2h]zamy & [2s2h]n3m3s1s<br/>
-            <a href='contactus.php'>Contact us</a> - <a href='adminlogin.php'>AdminCp</a> - <a href='awards.php'>Awards</a>
-        </div>";
+        '<div id="bottomPageInfo">
+            &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
+            <a href="2stesps-2hell-contact-us.php">Contact us</a> -
+						<a href="2steps-2hell-news.php" >News</a> -  
+						<a href="2steps-2hell-noleggio-server.php" >Server</a> -  
+						<a href="2steps-2hell-banbot.php" >BanBot</a> - 
+						<a href="2steps-2hell-roster.php" >Roster</a> - 
+						<a href="forum/index.php" >Forum</a> - 
+						<a href="bugtracker/index.php" >BugTracker</a> - 
+						<a href="admin/adminlogin.php">AdminCp</a> -  
+						<a href="2steps-2hell-awards.php">Awards</a>
+        </div>';
     }
-
+		
+		function menuPages( $page ) {
+		  
+			switch ( $page ) {
+			  case "contact": 
+					echo 
+					'<ul id="menu">
+						<li><a class="active" accesskey="c" href="2steps-2hell-contact-us.php" ><u>C</u>ontact Us</a></li>
+						<li><a accesskey="n" href="2steps-2hell-news.php" ><u>N</u>ews</a></li>
+						<li><a accesskey="s" href="2steps-2hell-noleggio-server.php" ><u>S</u>erver</a></li>
+						<li><a accesskey="b" href="2steps-2hell-banbot.php" ><u>B</u>anBot</a></li>
+						<li><a accesskey="r" href="2steps-2hell-roster.php" ><u>R</u>oster</a></li>
+						<li><a accesskey="f" href="forum/index.php" ><u>F</u>orum</a></li>
+						<li><a accesskey="t" href="bugtracker/index.php" >Bug<u>T</u>racker</a></li>
+					</ul>';
+					break;
+			 	case "news": 
+					echo 
+					'<ul id="menu">
+						<li><a accesskey="c" href="2steps-2hell-contact-us.php" ><u>C</u>ontact Us</a></li>
+  					<li><a class="active" accesskey="n" href="news.php" ><u>N</u>ews</a></li>
+						<li><a accesskey="s" href="2steps-2hell-noleggio-server.php" ><u>S</u>erver</a></li>
+						<li><a accesskey="b" href="2steps-2hell-banbot.php" ><u>B</u>anBot</a></li>
+						<li><a accesskey="r" href="2steps-2hell-roster.php" ><u>R</u>oster</a></li>
+						<li><a accesskey="f" href="forum/index.php" ><u>F</u>orum</a></li>
+						<li><a accesskey="t" href="bugtracker/index.php" >Bug<u>T</u>racker</a></li>
+					</ul>';
+					break;
+				case "server": 
+					echo 
+					'<ul id="menu">
+						<li><a accesskey="c" href="2steps-2hell-contact-us.php" ><u>C</u>ontact Us</a></li>
+						<li><a accesskey="n" href="2steps-2hell-news.php" ><u>N</u>ews</a></li>
+						<li><a class="active" accesskey="s" href="2steps-2hell-noleggio-server.php" ><u>S</u>erver</a></li>
+						<li><a accesskey="b" href="2steps-2hell-banbot.php" ><u>B</u>anBot</a></li>
+						<li><a accesskey="r" href="2steps-2hell-roster.php" ><u>R</u>oster</a></li>
+						<li><a accesskey="f" href="forum/index.php" ><u>F</u>orum</a></li>
+						<li><a accesskey="t" href="bugtracker/index.php" >Bug<u>T</u>racker</a></li>
+					</ul>';
+					break;
+				case "bot": 
+					echo 
+					'<ul id="menu">
+						<li><a accesskey="c" href="2steps-2hell-contact-us.php" ><u>C</u>ontact Us</a></li>
+						<li><a accesskey="n" href="2steps-2hell-news.php" ><u>N</u>ews</a></li>
+						<li><a accesskey="s" href="2steps-2hell-noleggio-server.php" ><u>S</u>erver</a></li>
+						<li><a class="active" accesskey="b" href="2steps-2hell-banbot.php" ><u>B</u>anBot</a></li>
+						<li><a accesskey="r" href="2steps-2hell-roster.php" ><u>R</u>oster</a></li>
+						<li><a accesskey="f" href="forum/index.php" ><u>F</u>orum</a></li>
+						<li><a accesskey="t" href="bugtracker/index.php" >Bug<u>T</u>racker</a></li>
+					</ul>';
+					break;							
+		    case "roster": 
+					echo 
+					'<ul id="menu">
+						<li><a accesskey="c" href="2steps-2hell-contact-us.php" ><u>C</u>ontact Us</a></li>
+						<li><a accesskey="n" href="2steps-2hell-news.php" ><u>N</u>ews</a></li>
+						<li><a accesskey="s" href="2steps-2hell-noleggio-server.php" ><u>S</u>erver</a></li>
+						<li><a accesskey="b" href="2steps-2hell-banbot.php" ><u>B</u>anBot</a></li>
+						<li><a class="active" accesskey="r" href="2steps-2hell-roster.php" ><u>R</u>oster</a></li>
+						<li><a accesskey="f" href="forum/index.php" ><u>F</u>orum</a></li>
+						<li><a accesskey="t" href="bugtracker/index.php" >Bug<u>T</u>racker</a></li>
+					</ul>';
+					break;
+				default: 
+					echo 
+					'<ul id="menu">
+						<li><a accesskey="c" href="2steps-2hell-contact-us.php" ><u>C</u>ontact Us</a></li>
+						<li><a accesskey="n" href="2steps-2hell-news.php" ><u>N</u>ews</a></li>
+						<li><a accesskey="s" href="2steps-2hell-noleggio-server.php" ><u>S</u>erver</a></li>
+						<li><a accesskey="b" href="2steps-2hell-banbot.php" ><u>B</u>anBot</a></li>
+						<li><a accesskey="r" href="2steps-2hell-roster.php" ><u>R</u>oster</a></li>
+						<li><a accesskey="f" href="forum/index.php" ><u>F</u>orum</a></li>
+						<li><a accesskey="t" href="bugtracker/index.php" >Bug<u>T</u>racker</a></li>
+					</ul>';	
+			}
+		}
+    
+		function headInfo() {
+		
+		
+		}
+		
     function loadNews()
     {
         $webClass = new WebClass();
