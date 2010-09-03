@@ -1,6 +1,15 @@
 <?php
     require( 'functions/WebClass.php' );
-
+    
+		function debugCode ( $check = false) 
+		{
+		  if ( $check ) 
+			{
+			  error_reporting( E_ALL );
+        ini_set( 'display_errors', '1' );
+			}
+	    else return true;	 
+		}
 
     function adminLogin( $nick, $pass )
     {
@@ -11,13 +20,102 @@
     function bottomPageInfo()
     {
         echo
-        "<div id=bottomPageInfo>
-            <hr width='50%'/>
-            2Steps2Hell website made by [2s2h]zamy & [2s2h]n3m3s1s<br/>
-            <a href='contactus.php'>Contact us</a> - <a href='adminlogin.php'>AdminCp</a> - <a href='awards.php'>Awards</a>
-        </div>";
+        '<div id="bottomPageInfo">
+            &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
+            <a href="2stesps-2hell-contact-us.php">Contact us</a> -
+						<a href="2steps-2hell-news.php" >News</a> -  
+						<a href="2steps-2hell-noleggio-server.php" >Server</a> -  
+						<a href="2steps-2hell-banbot.php" >BanBot</a> - 
+						<a href="2steps-2hell-roster.php" >Roster</a> - 
+						<a href="forum/index.php" >Forum</a> - 
+						<a href="bugtracker/index.php" >BugTracker</a> - 
+						<a href="admin/adminlogin.php">AdminCp</a> -  
+						<a href="2steps-2hell-awards.php">Awards</a>
+        </div>';
     }
-
+		
+		function menuPages( $page ) {
+		  
+			switch ( $page ) {
+			  case "contact": 
+					echo 
+					'<div id="menu" class="clearfix">
+					   <a class="active" href="2steps-2hell-contact-us.php" >Contact Us</a>
+						 <a href="2steps-2hell-news.php" >News</a>
+						 <a href="2steps-2hell-noleggio-server.php" >Server</a>
+						 <a href="2steps-2hell-banbot.php" >BanBot</a>
+						 <a href="2steps-2hell-roster.php" >Roster</a>
+						 <a href="forum/index.php" >Forum</a>
+						 <a href="bugtracker/index.php" >BugTracker</a>				 	
+					</div>';	
+					break;
+			 	case "news": 
+					echo 
+					'<div id="menu" class="clearfix">
+					   <a href="2steps-2hell-contact-us.php" >Contact Us</a>
+						 <a class="active" href="2steps-2hell-news.php" >News</a>
+						 <a href="2steps-2hell-noleggio-server.php" >Server</a>
+						 <a href="2steps-2hell-banbot.php" >BanBot</a>
+						 <a href="2steps-2hell-roster.php" >Roster</a>
+						 <a href="forum/index.php" >Forum</a>
+						 <a href="bugtracker/index.php" >BugTracker</a>				 	
+					</div>';	
+					break;
+				case "server": 
+					echo 
+					'<div id="menu" class="clearfix">
+					   <a href="2steps-2hell-contact-us.php" >Contact Us</a>
+						 <a href="2steps-2hell-news.php" >News</a>
+						 <a class="active" href="2steps-2hell-noleggio-server.php" >Server</a>
+						 <a href="2steps-2hell-banbot.php" >BanBot</a>
+						 <a href="2steps-2hell-roster.php" >Roster</a>
+						 <a href="forum/index.php" >Forum</a>
+						 <a href="bugtracker/index.php" >BugTracker</a>				 	
+					</div>';	
+					break;
+				case "bot": 
+					echo 
+					'<div id="menu" class="clearfix">
+					   <a href="2steps-2hell-contact-us.php" >Contact Us</a>
+						 <a href="2steps-2hell-news.php" >News</a>
+						 <a href="2steps-2hell-noleggio-server.php" >Server</a>
+						 <a class="active" href="2steps-2hell-banbot.php" >BanBot</a>
+						 <a href="2steps-2hell-roster.php" >Roster</a>
+						 <a href="forum/index.php" >Forum</a>
+						 <a href="bugtracker/index.php" >BugTracker</a>				 	
+					</div>';	
+					break;							
+		    case "roster": 
+					echo 
+					'<div id="menu" class="clearfix">
+					   <a href="2steps-2hell-contact-us.php" >Contact Us</a>
+						 <a href="2steps-2hell-news.php" >News</a>
+						 <a href="2steps-2hell-noleggio-server.php" >Server</a>
+						 <a href="2steps-2hell-banbot.php" >BanBot</a>
+						 <a class="active" href="2steps-2hell-roster.php" >Roster</a>
+						 <a href="forum/index.php" >Forum</a>
+						 <a href="bugtracker/index.php" >BugTracker</a>				 	
+					</div>';	
+					break;
+				default: 
+					echo 
+					'<div id="menu" class="clearfix">
+					   <a href="2steps-2hell-contact-us.php" >Contact Us</a>
+						 <a href="2steps-2hell-news.php" >News</a>
+						 <a href="2steps-2hell-noleggio-server.php" >Server</a>
+						 <a href="2steps-2hell-banbot.php" >BanBot</a>
+						 <a href="2steps-2hell-roster.php" >Roster</a>
+						 <a href="forum/index.php" >Forum</a>
+						 <a href="bugtracker/index.php" >BugTracker</a>				 	
+					</div>';	
+			}
+		}
+    
+		function headInfo() {
+		
+		
+		}
+		
     function loadNews()
     {
         $webClass = new WebClass();
