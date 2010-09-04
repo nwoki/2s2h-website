@@ -40,6 +40,7 @@
 			  case "contact": 
 					echo 
 <<<<<<< HEAD
+<<<<<<< HEAD
 					'<div id="menu" class="clearfix">
 					   <a class="active" href="2steps-2hell-contact-us.php" >Contact Us</a>
 						 <a href="2steps-2hell-news.php" >News</a>
@@ -110,6 +111,8 @@
 						 <a href="bugtracker/index.php" >BugTracker</a>				 	
 					</div>';	
 =======
+=======
+>>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
 					'<ul id="menu">
 						<li><a class="active" accesskey="c" href="2steps-2hell-contact-us.php" ><u>C</u>ontact Us</a></li>
 						<li><a accesskey="n" href="2steps-2hell-news.php" ><u>N</u>ews</a></li>
@@ -179,6 +182,9 @@
 						<li><a accesskey="f" href="forum/index.php" ><u>F</u>orum</a></li>
 						<li><a accesskey="t" href="bugtracker/index.php" >Bug<u>T</u>racker</a></li>
 					</ul>';	
+<<<<<<< HEAD
+>>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
+=======
 >>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
 			}
 		}

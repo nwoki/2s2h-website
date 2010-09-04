@@ -10,7 +10,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
 
 >>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
     <title>2Steps2Hell - Home</title>
@@ -18,6 +21,7 @@
 </head>
 <body>
     <div id="header">
+<<<<<<< HEAD
 <<<<<<< HEAD
       <a href="index.php" title="2step 2hell - Noleggio Server - BanBot"><img alt="" src="img/spacer.gif" width="800" height="235" /></a>
     </div>
@@ -29,10 +33,15 @@
     </div>  
 	
 =======
+=======
+>>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
       <a href="index.php" title="2step 2hell - Noleggio Server - BanBot"><img alt="" src="img/spacer.gif" width="1000" height="299" /></a>
     </div>
         
     <div class="separate"><?php menuPages( $_SESSION["page"] ) ?></div>
+<<<<<<< HEAD
+>>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
+=======
 >>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
     	
     <div id="content">
@@ -47,7 +56,11 @@
 
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
+=======
+    <div class="separate"><?php bottomPageInfo(); ?></div>
+>>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
 =======
     <div class="separate"><?php bottomPageInfo(); ?></div>
 >>>>>>> 9f2d97748c7414af2168807c29f88d2add3fdffb
