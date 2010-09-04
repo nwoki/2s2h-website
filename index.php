@@ -9,8 +9,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <meta name="description" content="" />
-    <title></title>
+    <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
+    <title><?php echo $title[$_SESSION["page"]]; ?></title>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     
 

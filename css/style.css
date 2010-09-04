@@ -29,8 +29,11 @@ img { border: none}
 #menu ul { list-style:none; width: 100%; text-align: center;}
 #menu ul li {margin:0 40px; font-size: 1.4em; display:block;float:left;  height:24; line-height: 24px;}
 */
-#menu a {color: #fff; padding-left: 20px; font-size: 1.4em; margin: 0 20px; }
+#menu a {color: #fff; padding-left: 20px; font-size: 1.4em; margin: 0 15px; }
+#menu a.first {margin: 0 20px 0 0; }
+#menu a.last {margin: 0 0px 0 20px; }
 #menu a:hover, #menu a:active{ color: #fff; background: url(../img/menu-on.jpg) left no-repeat;}
+#menu a.active{ color: #fff; background: url(../img/menu-on.jpg) left no-repeat;}
 
 /* footer */
 .sfondo-footer { background: url(../img/background-menu.jpg) top left repeat-x; height: 80px}

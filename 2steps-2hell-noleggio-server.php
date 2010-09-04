@@ -1,39 +1,34 @@
 <?php
     session_start();
+		$_SESSION["page"] = "server"; 
     require( 'functions/functions.php' );
-    error_reporting( E_ALL );
-    ini_set( 'display_errors', '1' );
+    debugCode ( ); 
     $test = new WebClass(); /* used to check if database is setup right */
 ?>
-
-<html>
-<head  id='topOfPage' >
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/dropdown.css" type="text/css" />
-
-    <title>2Steps2Hell - NoleggioServer</title>
+    <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
+    <title><?php echo $title[$_SESSION["page"]]; ?></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    
 
 </head>
 <body>
-    <div id="banner" align="center" >
-        <img src="img/logo_scaled.jpg" >
+    <div id="header">
+      <a href="index.php" title="2step 2hell - Noleggio Server - BanBot"><img alt="" src="img/spacer.gif" width="800" height="235" /></a>
     </div>
-
-<!-- START menubar -->
-    <!--hr size="1" width="100%" /-->
-    <hr/>
-        <div align='center' >
-            <a accesskey='h' href='index.php' >H<u>o</u>me</a>
-            <a accesskey='n' href='news.php' ><u>N</u>ews</a>
-            <span class="currentPageLink" >NoleggioServer</span>
-            <a accesskey='b' href='banbot.php' ><u>B</u>anBot</a>
-            <a accesskey='r' href='roster.php' ><u>R</u>oster</a>
-            <a accesskey='f' href='forum/index.php' ><u>F</u>orum</a>
-            <a accesskey='t' href='bugtracker/index.php' >Bug<u>T</u>racker</a>
-        </div>
-    <hr/>
-<!-- END menubar -->
+        
+    <div class="separate">
+		  <div id="menu-top"></div>
+      <div id="menu-center"><?php menuPages( $_SESSION["page"] ) ?></div>
+      <div id="menu-bottom"></div>
+    </div>  
+	
+    	
+    <div id="content">
+      <div id="padding">
 
     <ul>
         <li><a href="#why">Perch&egrave scegliere 2s2h?</a></li>
@@ -238,8 +233,12 @@
         <a href = 'contactus.php' > QUI </a>
     </p>
     <br/><a href='#topOfPage' ><u><i>GoToTop</i></u></a>
-    <?php
-        bottomPageInfo();
-    ?>
+      </div>
+    </div>
+
+    
+    <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
+    
+    
 </body>
 </html>

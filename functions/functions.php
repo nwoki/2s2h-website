@@ -1,6 +1,6 @@
 <?php
     require( 'functions/WebClass.php' );
-    require( 'admin/configuration.php' );
+    require( 'configuration.php' );
 		
 		function debugCode ( $check = false) 
 		{
@@ -12,11 +12,7 @@
 	    else return true;	 
 		}
     
-		function createHeadHtml( $page ) 
-		{
 			
-		}
-		
     function adminLogin( $nick, $pass )
     {
         $webClass = new WebClass();
@@ -106,13 +102,13 @@
 				default: 
 					echo 
 					'<div id="menu" class="clearfix">
-					   <a href="2steps-2hell-contact-us.php" >Contact Us</a>
+					   <a class="first" href="2steps-2hell-contact-us.php" >Contact Us</a>
 						 <a href="2steps-2hell-news.php" >News</a>
 						 <a href="2steps-2hell-noleggio-server.php" >Server</a>
 						 <a href="2steps-2hell-banbot.php" >BanBot</a>
 						 <a href="2steps-2hell-roster.php" >Roster</a>
 						 <a href="forum/index.php" >Forum</a>
-						 <a href="bugtracker/index.php" >BugTracker</a>				 	
+						 <a class="last" href="bugtracker/index.php" >BugTracker</a>				 	
 					</div>';	
 			}
 		}
