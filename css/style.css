@@ -16,7 +16,7 @@ strong { color: #9a0c0b; }
 
 /* Content */
 #content {width: 100%; min-height: 300px; text-align: center; margin-bottom: 20px;}
-#content #padding { width: 40%; margin: 0 auto; text-align: justify}
+#content #padding { width: 90%; margin: 0 auto; text-align: justify}
 #content p {margin-top: 10px; line-height: 1.2em; font-size: 1.2em}
 
 
@@ -24,14 +24,14 @@ strong { color: #9a0c0b; }
 #menu-top {background: url(../img/menu-top.jpg) bottom left repeat-x; height: 10px; width: 100%;}
 #menu-bottom{background: url(../img/menu-bottom.jpg) top left repeat-x; height: 10px; width: 100%;}
 #menu-center{background-color: #9a0c0b; width: 100%; min-height: 24px; }
-#menu { margin: 0 auto; width: 60%; text-align: center; line-height: 24px;}
+#menu { margin: 0 auto; width: 80%; text-align: center; line-height: 24px;}
 /*
 #menu ul { list-style:none; width: 100%; text-align: center;}
 #menu ul li {margin:0 40px; font-size: 1.4em; display:block;float:left;  height:24; line-height: 24px;}
 */
-#menu a {color: #fff; padding-left: 20px; font-size: 1.4em; margin: 0 15px;}
-#menu a.first {margin: 0 20px 0 0; }
-#menu a.last {margin: 0 0px 0 20px; }
+#menu a {color: #fff; padding-left: 20px; font-size: 1.2em; margin: 0 5px; font-weight: bold}
+#menu a.first {margin: 0 5px 0 0; }
+#menu a.last {margin: 0 0px 0 5px; }
 #menu a:hover, #menu a:active{ color: #fff; background: url(../img/menu-on.jpg) left no-repeat;}
 #menu a.active{ color: #fff; background: url(../img/menu-on.jpg) left no-repeat;}
 
@@ -53,14 +53,14 @@ div.box { width: 100%; height: 50px; background-color: #000;}
 div.box-alto {width: 100%; background: url(../img/angle2.jpg) left top no-repeat; padding-top: 30px; }
 div.box-medio { width: 100%;}
 div.box-basso { width: 100%; background:  url(../img/angle2.jpg) no-repeat right bottom; padding-bottom: 30px; }
-div.box-testo { margin: 0px 50px; }
+div.box-testo { width: 90%; margin:auto}
 
-div.box-testo h2 { position:relative; top: -16px; width: 100%; text-align: center; color: #9a0c0b; font-size: 1.4em; line-height: 1.4em; text-transform:uppercase}
+div.box-testo h2 { position:relative; top: -16px; width: 100%; text-align: left; color: #9a0c0b; font-size: 1.4em; line-height: 1.4em; text-transform:uppercase}
 div.box-testo h2 em { color: #fff; font-weight: bold}
 
-h4 { font-size: 1.2em; width: 100%; text-align:center; position: relative; top: -15px;}
+h4 { font-size: 1.2em; width: 100%; text-align:left; position: relative; top: -15px;}
 
-div.box-testo ul { list-style: none; list-style-position: outside; width: 66%; margin: 0 auto;}
+div.box-testo ul { list-style: none; list-style-position: outside; width: 80%; margin: 0 auto;}
 div.box-testo ul li { background: #000 url(../img/list-type.jpg) no-repeat center left; line-height: 30px; text-indent: 30px;font-size: 1.2em} 
 
 .symb {color: #9a0c0b;padding: 0 5px;}

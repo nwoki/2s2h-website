@@ -121,7 +121,7 @@
     function loadNews()
     {
         $webClass = new WebClass();
-        $query = "select *from 2s2h_news;";  /* get all articles here */
+        $query = "select * from 2s2h_news;";  /* get all articles here */
 
         $result = $webClass->executeQuery( $query );
 
@@ -129,9 +129,9 @@
             $title = $row['title'];
             $author = $row['author'];
             $article = $row['article'];
-
+            $date = $row['time'];
             echo "
-            <legend>".$title."</legend>
+            <legend>".$title." [". convertTime ( $date ) ."]</legend>
                 <p>
                     ".$article."
                     <br/>
@@ -141,7 +141,16 @@
             <br/>"; /* extra spacing between articles */
         }
     }
-
+    
+		function convertTime ( $timeDate ) 
+		{
+		    $timestamp = explode(" ", $timeDate );
+			  
+				$date = explode("-", $timestamp[0] );
+			  
+				return $date[2] ." - ". $date[1]." - ".$date[0]." ".$timestamp[1];
+		
+		}
 
 /*******************
  * ADMIN FUNCTIONS *
