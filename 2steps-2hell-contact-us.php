@@ -29,38 +29,58 @@
     	
     <div id="content">
       <div id="padding">
-      <h4> IRC </h4>
-      <p>
-          You can find all of us on "irc.quakenet.org" @ #2s2h.
-      </p>
-  
-      <br/>
-  
-      <h4>system admins + devs( server renting, bugs ecc )</h4>
-      <p>
-          <u>N3m3s1s</u> - n3m3sis( at )email( dot )it<br/>
-          <u>Zamy</u> - skyled( at )alice( dot )it<br/>
-      </p>
-  
-      <br/>
-  
-      <h4>teamspeak admins</h4>
-      <p>
-          <u>Heresyarch/Tsujigiri</u> -<br/>
-          <u>Revan</u> - andre.88( at )hotmail( dot )it<br/>
-      </p>
-  
-      <br/>
-  
-      <h4>BanBot admins 2s2h server</h4>
-      <p>
-          See "IRC" above. All the opped people are also admins on our servers BanBot
-      </p>
-    	</div>
-    </div>
+        <h1 class="contact"><span>Contact Us</span></h1>
+      
+        <div class="box-alto">
+          <div class="box-basso">
+    				<div class="box-medio">
+      				<div class="box-testo">
+                
+                <h2><span class="irc">irc-icon</span>IRC: You can find all of us on "<em>irc.quakenet.org</em>" @ <em>#2s2h</strong>.</em>
+      					<h4>system admins + devs( server renting, bugs ecc )</h4>
+      		      
+                <ul>
+                  <li><strong>N3m3s1s</strong> -<span class="email">email</span> n3m3sis<span class="symb">(at)</span>email<span class="symb">(dot)</span>it (BanBot, WebSite)</li>
+                  <li><strong>Zamy</strong> -<span class="email">email</span> skyled<span class="symb">(at)</span>alice<span class="symb">(dot)</span>it (BanBot, WebSite)</li>
+                  <li><strong>Rambo</strong> -<span class="email">email</span> urt.ks.rambo<span class="symb">(at)</span>gmail<span class="symb">(dot)</span>com (WebSite)</li>
+                </ul>
 
-    
-    <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
+      				</div>
+    				</div>
+  				</div>
+			  </div>
+
+        <div class="box-alto">
+          <div class="box-basso">
+    				<div class="box-medio">
+      				<div class="box-testo">
+                
+                 <h2><span class="ts">ts2</span> teamspeak admins</h2>
+                 <ul>
+                  <li><strong>Heresyarch/Tsujigiri</strong></li>
+                  <li><strong>Revan</strong> - <span class="email">@@@</span> andre.88<span class="symb">(at)</span>hotmail<span class="symb">(dot)</span>it</li>
+                </ul>
+                
+      				</div>
+    				</div>
+  				</div>
+			  </div>  
+        
+       <div class="box-alto">
+          <div class="box-basso">
+    				<div class="box-medio">
+      				<div class="box-testo">
+                <h2>BanBot admins 2s2h server</h2>
+                <h4>See "IRC" above. All the opped people are also admins on our servers BanBot</h4>    
+      				</div>
+    				</div>
+  				</div>
+			  </div>  
+       
+     </div>
+
+  </div>
+  <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
     
     
 </body>
