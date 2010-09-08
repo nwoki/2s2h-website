@@ -30,7 +30,7 @@ class WebClass
     {
         //print ( "<p>WebClass::__destruct</p>" );
         /* close database connection */
-        mysql_close( /*$this->m_dbLink*/ );
+        $this->close();
     }
 
     /*******************
@@ -70,10 +70,17 @@ class WebClass
     /********************
     * private functions *
     ********************/
-    private function connectToDatabase()    /* connect to database */
+    
+		private function close () 
+		{
+		  if ( $this->m_dbLink) 
+				  mysql_close($this->m_dbLink); 
+		}
+		
+		private function connectToDatabase()    /* connect to database */
     {
         $this->m_dbLink = mysql_connect( $this->m_host, $this->m_user, $this->m_pass );
-
+        
         if( !$this->m_dbLink )
             die( "<p  class=\"debug\">Can't connect to database server : ".mysql_error()."</p>" );
     }

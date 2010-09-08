@@ -17,7 +17,7 @@ strong { color: #9a0c0b; }
 /* Content */
 #content {width: 100%; min-height: 300px; text-align: center; margin-bottom: 20px;}
 #content #padding { width: 90%; margin: 0 auto; text-align: justify}
-#content p {margin-top: 10px; line-height: 1.2em; font-size: 1.2em}
+#content p {margin-top: 10px; line-height: 1.2em; font-size: 1em}
 
 
 /* Main Menù */
@@ -60,8 +60,10 @@ div.box-testo h2 em { color: #fff; font-weight: bold}
 
 h4 { font-size: 1.2em; width: 100%; text-align:left; position: relative; top: -15px;}
 
-div.box-testo ul { list-style: none; list-style-position: outside; width: 80%; margin: 0 auto;}
+div.box-testo ul { list-style: none; list-style-position: outside; width: 95%; margin: 0 auto;}
 div.box-testo ul li { background: #000 url(../img/list-type.jpg) no-repeat center left; line-height: 30px; text-indent: 30px;font-size: 1.2em} 
+
+#accordion { margin-top: 10px;}
 
 .symb {color: #9a0c0b;padding: 0 5px;}
 .email{ background: url(../img/e-mail.jpg) center center no-repeat; color: transparent}
@@ -69,12 +71,19 @@ div.box-testo ul li { background: #000 url(../img/list-type.jpg) no-repeat cente
 .irc { background: url(../img/irc-icon2.jpg) left center no-repeat; color: transparent}
 .ts { background: url(../img/ts-icon.jpg) left center no-repeat; color: transparent}
 
+ul.list { list-style-type:disc; list-style-position:inside; margin: 1em 0}
+
+span.small { font-size:0.7em;}
+
 /* footer */
 .sfondo-footer { background: url(../img/background-menu.jpg) top left repeat-x; height: 80px}
 #bottomPageInfo { min-width: 800px; margin:0 auto; text-align: center; padding-top: 20px; font-size: 1.2em; }
 
 #bottomPageInfo a { color: #fff; font-weight: bold; line-height: 2em; font-size: 0.9em; color: #000}
 #bottomPageInfo a:hover { text-decoration:underline; color: #fff}
+
+div#accordion h3 { text-transform: uppercase}
+
 
 /* debug */
 .debug { display: none;}
