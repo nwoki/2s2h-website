@@ -163,39 +163,26 @@
           </div>
       
       		<div id="tabs-4">
-        <p>
-        <br/>
-        <b>D - &egrave possibile lanciare script python tramite accesso ssh?</b><br/>
+            <p>D - <strong>&Egrave; possibile lanciare script python tramite accesso ssh?</strong></p>
+            <p>R - yep. Attualmente non c'&egrave; python disponibile per tutti gli utenti, basta metterlo.
+            Se &egrave per uno script di qualche esotica utilit&agrave; per voi ok, se &egrave; per un bot, abbiamo
+            deciso di non accettarli.</p>
+            
+            <p>D - <strong>I gameserver girano su macchine virtuali o direttamente su server reali?</strong></p>
+            <p>R - Direttamente su server reali.</p>
+            
+            <p>D - <strong>Qual'&egrave; il rapporto RAM totale macchina/numero di gameserver?</strong></p>
+            <p>R - 2GB/4gameserver (ovviamente non ci sono solo quelli, vedi servizi di sistema, ma c'&egrave; un
+            ampio margine, attualmente &egrave; libero ancora quasi un giga.
+            Non abbiamo intenzione comunque di salire di pi&ugrave; di 4 server per macchina, tranne rare eccezioni, per
+            esempio se sono server piccolissimi e privati, per un quinto.)
+            In ogni caso, se considerate che un singolo game server di UrT occupa circa 200MB,
+            vedete da soli che stiamo belli abbondanti :)</p>
+  
+            <p>D - <strong>&Egrave; ammesso personalizzare lo script bash di start del gameserver?</strong></p>
+            <p>Ovviamente si. Noi ne diamo gi&agrave; uno, ma &egrave; possibile cambiarlo tranquillamente.<br />Ovviamente se questo non compromette anche gli altri server.</p> 
 
-        yep. Attualmente non c'&egrave python disponibile per tutti gli utenti, basta metterlo.
-        Se &egrave per uno script di qualche esotica utilit&agrave per voi ok, se &egrave per un bot, abbiamo
-        deciso di non accettarli.<br/>
-
-        <br/>
-
-        <b>D - i gameserver girano su macchine virtuali o direttamente su server reali?</b><br/>
-
-        Direttamente su server reali.<br/>
-
-        <br/>
-
-        <b>D - qual'&egrave il rapporto RAM totale macchina / numero di gameserver?</b><br/>
-
-        2 Giga/4 gameserver (ovviamente non ci sono solo quelli, vedi servizi di sistema, ma c'&egrave un
-        ampio margine, attualmente &egrave libero ancora quasi un giga.
-        Non abbiamo intenzione comunque di salire di pi&ugrave di 4 server per macchina, tranne rare eccezioni, per
-        esempio se sono server piccolissimi e privati, per un quinto.)
-        In ogni caso, se considerate che un singolo game server di urt occupa circa 200M,
-        vedete da soli che stiamo belli abbondanti :)<br/>
-
-        <br/>
-
-        <b>D - &egrave ammesso personalizzare lo script bash di start del gameserver?</b><br/>
-
-        Ovviamente si. Noi ne diamo gi&agrave uno, ma &egrave possibile cambiarlo tranquillamente.
-        Ovviamente se questo non compromette anche gli altri server.<br/>
-    </p>
-      </div>
+          </div>
       
           <div id="tabs-5">
             <ul class="list">
