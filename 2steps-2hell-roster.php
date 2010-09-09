@@ -2,8 +2,6 @@
     session_start();
 		$_SESSION["page"] = "roster"; 
     require( 'functions/functions.php' );
-    debugCode ( ); 
-    $test = new WebClass(); /* used to check if database is setup right */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
