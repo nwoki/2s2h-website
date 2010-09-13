@@ -1,5 +1,5 @@
 <?php
-    require( 'functions/WebClass.php' );
+    require( 'WebClass.php' );
     require( 'configuration.php' );
 
 		function debugCode ( $check = false)
