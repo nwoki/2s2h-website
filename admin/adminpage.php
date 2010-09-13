@@ -1,13 +1,17 @@
 <?php
+    ob_start();
+		
     session_start();
-    require( 'functions/functions.php' );
+    require( '../functions/functions.php' );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
 
     if( !empty( $_SESSION['user'] ) && !empty( $_SESSION['pass'] ) ) {
         if( adminLogin( $_SESSION['user'], $_SESSION['pass'] ) )
             $_SESSION['status'] = "admin";
-    }
+    } 
+		
+		ob_end_flush();
 ?>
 <html>
 <head>

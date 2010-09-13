@@ -1,14 +1,22 @@
 <?php
-    session_start();
-    require( '../functions/functions.php' );
+    ob_start();
+		
+		session_start();
+		require( '../functions/functions.php' );
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
 
-    if( !empty( $_SESSION['status'] ) ) {   /* if already logged in, redirect to adminpage */
-        if( $_SESSION['status'] == 'admin' )
-            header( 'Location: adminpage.php' );
+    if( !empty( $_SESSION['status'] ) && $_SESSION['status'] == 'admin' ) {   /* if already logged in, redirect to adminpage */
+     header( 'Location: adminpage.php' );
     }
-
+    
+		if( !empty( $_POST['user'] ) && !empty( $_POST['pass'] ) ) {
+		  $_SESSION['user'] = $_POST['user'];
+      $_SESSION['pass'] = $_POST['pass'];
+      header( 'Location: adminpage.php' );
+		}
+		
+		ob_end_flush();
 ?>
 <html>
 <head>
@@ -39,10 +47,7 @@
 
     <br/>
 
-    <?php
-    if( empty( $_POST['user'] ) && empty( $_POST['pass'] ) ) {
-        /* show login form */
-        echo"
+    
         <form action='adminlogin.php' method='post' >
             <table align='center'>
                 <tr>
@@ -58,14 +63,8 @@
             </br>
 
             <div align='center'><input type='submit' value='enter'></div>
-        </form>";
-    }
-    else {
-        $_SESSION['user'] = $_POST['user'];
-        $_SESSION['pass'] = $_POST['pass'];
-        header( 'Location: adminpage.php' );
-    }
-    ?>
+        </form>
+  
 
 </body>
 </head>

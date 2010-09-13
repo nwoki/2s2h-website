@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require( 'functions/functions.php' );
+    require( '../functions/functions.php' );
     //require( 'functions/WebClass.php' );    /* temp, delete after hacking */
     error_reporting( E_ALL );
     ini_set( 'display_errors', '1' );
