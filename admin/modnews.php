@@ -41,16 +41,16 @@
                     showModArticle( $_POST['chosenArticle'] );  /* got article by it's id */
 
                 elseif( isset( $_POST['articleToModId'] ) )  /* submit article mod */
-                    submitModArticle( $_POST['modArticleTitle'], $_POST['modArticleAuthor'], $_POST['modArticleText'], $_POST['articleToModId'] );
+                    submitModArticle( $_POST['modArticleTitle'], $_SESSION['user'], $_POST['modArticleText'], $_POST['articleToModId'] );
 
-                //elseif( isset( $_POST['adminToDeleteId'] ) ) /* id of admin to delete */
-                //    deleteAdmin( $_POST['adminToDeleteId'] );
+                elseif( isset( $_POST['articleToDeleteId'] ) ) /* id of admin to delete */
+                    deleteArticle( $_POST['articleToDeleteId'] );
 
                 elseif( isset( $_POST['addNewArticle'] ) )    /* show addNewAdmin form */
                     addNewArticleForm();
 
-                //elseif( isset( $_POST['submitNewAdmin'] ) )     /* submit new admin to database */
-                //    insertNewAdmin( $_POST['newAdminNick'], $_POST['newAdminPass'] );
+                elseif( isset( $_POST['submitNewArticle'] ) )     /* insert new article to database */
+                    insertNewArticle( $_POST['newTitle'], $_SESSION['user'], $_POST['newArticle'] );
 
                 else   /* show news selection form */
                     showNewsList();

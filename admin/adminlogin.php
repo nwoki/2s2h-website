@@ -11,7 +11,7 @@
         header( 'Location: adminpage.php' );
 
     if( !empty( $_POST['user'] ) && !empty( $_POST['pass'] ) ) {
-        $_SESSION['user'] = $_POST['user'];
+        $_SESSION['user'] = $_POST['user']; /* set session variables */
         $_SESSION['pass'] = $_POST['pass'];
         header( 'Location: adminpage.php' );
     }

@@ -7,6 +7,7 @@ body { background-color: #000; text-align: center;}
 a { text-decoration: none;}
 img { border: none}
 strong { color: #9a0c0b; }
+fieldset { width: 60%;}
 /* Template */
 #header { background: #000 url(../img/header.jpg) top left no-repeat; width: 800px; margin: 0 auto; height: 235px; }
 .separate { width: 100%; text-align: center; }
@@ -16,7 +17,7 @@ strong { color: #9a0c0b; }
 
 /* Content */
 #content {width: 100%; min-height: 300px; text-align: center; margin-bottom: 20px;}
-#content #padding { width: 90%; margin: 0 auto; text-align: justify}
+#content #padding { width: 90%; margin: 0 auto; text-align: justify;}
 #content p {margin-top: 10px; line-height: 1.2em; font-size: 1em}
 
 
@@ -61,7 +62,7 @@ div.box-testo h2 em { color: #fff; font-weight: bold}
 h4 { font-size: 1.2em; width: 100%; text-align:left; position: relative; top: -15px;}
 
 div.box-testo ul { list-style: none; list-style-position: outside; width: 95%; margin: 0 auto;}
-div.box-testo ul li { background: #000 url(../img/list-type.jpg) no-repeat center left; line-height: 30px; text-indent: 30px;font-size: 1.2em} 
+div.box-testo ul li { background: #000 url(../img/list-type.jpg) no-repeat center left; line-height: 30px; text-indent: 30px;font-size: 1.2em}
 
 #accordion { margin-top: 10px;}
 

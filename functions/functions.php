@@ -144,12 +144,15 @@
 
         $result = $webClass->executeQuery( $query );
 
+        echo"<center>";
+
         while( $row = mysql_fetch_assoc( $result ) ) {
             $title = $row['title'];
             $author = $row['author'];
             $article = $row['article'];
             $date = $row['time'];
             echo "
+            <fieldset>
             <legend>".$title." [". convertTime ( $date ) ."]</legend>
                 <p>
                     ".$article."
@@ -159,6 +162,8 @@
             </fieldset>
             <br/>"; /* extra spacing between articles */
         }
+
+        echo"</center>";
     }
 
     function convertTime ( $timeDate )
@@ -464,9 +469,7 @@
             $row = mysql_fetch_assoc( $result );
 
             $title = $row['title'];
-            $article = $row['article'];
             $author = $row['author'];
-            $time = $row['time'];
 
             echo"
             <center>
@@ -475,10 +478,6 @@
                         <tr>
                             <td>title</td>
                             <td><input type=text name=modArticleTitle value=".$title."></td>
-                        </tr>
-                        <tr>
-                            <td>author</td>
-                            <td><input type=text name=modArticleAuthor value=".$author."></td>
                         </tr>
                         <tr>
                             <td>article</td>
@@ -495,7 +494,7 @@
 
             /* delete button */
             echo"
-            <form action=modadmins.php method=post>
+            <form action=modnews.php method=post>
                 <center>
                     <input type=submit value=delete>
                     <input type=hidden name=articleToDeleteId value=".$articleId.">
@@ -524,12 +523,8 @@
                         <td><input type=text name=newTitle value=''></td>
                     </tr>
                     <tr>
-                        <td><p>author</p></td>
-                        <td><input type=text name=newAuthor value=''></td>
-                    </tr>
-                    <tr>
                         <td><p>article</p></td>
-                        <td><input type=text name=newArticle value=''></td>
+                        <td><textarea name=newArticle rows=20 cols=80></textarea></td>
                     </tr>
                 </table>
             <input type=hidden name=submitNewArticle value='true'>
@@ -545,6 +540,32 @@
             </center>
         </form>";
 
+    }
+
+    function insertNewArticle( $title, $author, $article )
+    {
+        if( empty( $title ) || empty( $article ) )
+            print( "<p>Empty values not allowed!</p>" );
+        else {
+            $webClass = new WebClass();
+            $date = date( "Y-m-d" );
+            $query = "insert into 2s2h_news values( '',\"$title\",\"$author\" ,\"$article\",\"$date\" );";
+
+            $result = $webClass->executeQuery( $query );
+
+            if( $result )
+                echo"<p>ARTICLE ADDED SUCCCESSFULLY</p>";
+            else
+                echo"<p>ARTICLE NOT ADDED </p>";
+        }
+
+        /* back button */
+        echo"
+        <form action=adminpage.php method=post>
+            <center>
+                <input type=submit value=back>
+            </center>
+        </form>";
     }
 
     function submitModArticle( $modTitle, $modAuthor, $modArticle, $articleIdToMod )
@@ -570,6 +591,27 @@
 
         else
             echo"<p>ARTICLE NOT UPDATED</p>";
+
+        /* back button */
+        echo"
+        <form action=adminpage.php method=post>
+            <center>
+                <input type=submit value=back>
+            </center>
+        </form>";
+    }
+
+    function deleteArticle( $articleToDeleteId )
+    {
+        $webClass = new WebClass();
+        $query = "delete from 2s2h_news where id=\"$articleToDeleteId\"";
+
+        $result = $webClass->executeQuery( $query );
+
+        if( $result )
+            echo"<p>ARTICLE DELETED</p>";
+        else
+            echo"<p>ARTICLE NOT DELETED</p>";
 
         /* back button */
         echo"
