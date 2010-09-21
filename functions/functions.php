@@ -36,6 +36,8 @@
     }
 
     function menuPages( $page ) {
+        // if use "admin" for $page variable to set the menu
+        // for when i'm in the admin section
 
         switch ( $page ) {
             case "contact":
@@ -50,6 +52,7 @@
                         <a href="bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
+
             case "news":
                 echo
                 '<div id="menu" class="clearfix">
@@ -62,6 +65,7 @@
                         <a href="bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
+
             case "server":
                 echo
                 '<div id="menu" class="clearfix">
@@ -74,6 +78,7 @@
                         <a href="bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
+
             case "bot":
                 echo
                 '<div id="menu" class="clearfix">
@@ -86,7 +91,8 @@
                         <a href="bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
-        case "roster":
+
+            case "roster":
                 echo
                 '<div id="menu" class="clearfix">
                     <a href="2steps-2hell-contact-us.php" >Contact Us</a>
@@ -98,6 +104,20 @@
                         <a href="bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
+
+            case "admin":
+                echo
+                '<div id="menu" class="clearfix">
+                    <a href="../2steps-2hell-contact-us.php" >Contact Us</a>
+                    <a href="../2steps-2hell-news.php" >News</a>
+                    <a href="../2steps-2hell-noleggio-server.php" >Server</a>
+                    <a href="../2steps-2hell-banbot.php" >BanBot</a>
+                    <a href="../2steps-2hell-roster.php" >Roster</a>
+                    <a href="../forum/index.php" >Forum</a>
+                    <a href="../bugtracker/index.php" >BugTracker</a>
+                </div>';
+                break;
+
             default:
                 echo
                 '<div id="menu" class="clearfix">
@@ -167,7 +187,8 @@
 
         echo "
         <form method=post action=modadmins.php>
-            <table align=center>";
+        <center>
+            <table>";
 
         while( $row = mysql_fetch_assoc( $result ) ) {
             $nick = $row['nick'];
@@ -182,6 +203,7 @@
 
         echo "
             </table>
+        </center>
         <br/>
         <center><input type=submit value=submit></center>
         </form>";
@@ -333,10 +355,19 @@
             <input type=submit value=submit><input type=reset value=reset>
             </form>
         </center>";
+
+        /* back button */
+        echo"
+        <form action=adminpage.php method=post>
+            <center>
+                <input type=submit value=back>
+            </center>
+        </form>";
     }
 
-    function insertNewAdmin( $nick, $pass )
+    function insertNewAdmin( $nick, $pass ) /* function that does the operations on the database */
     {
+        /// TODO _: check if admin is already on database
         if( empty( $nick ) && empty( $pass ) )
             print( "<p>Empty values not allowed!</p>" );
 
@@ -379,6 +410,7 @@
         <h2>News List</h2>";
 
         echo "
+        <center>
         <form method=post action=modnews.php>
             <table align=center>";
 
@@ -399,7 +431,8 @@
             </table>
         <br/>
         <center><input type=submit value=submit></center>
-        </form>";
+        </form>
+        </center>";
 
         /* insert new article button */
         echo"
@@ -427,8 +460,6 @@
         if( !$result )
             print( "<p>ERROR: can't find id : ".mysql_error( $webClass->m_dbLink ) );
         else {
-            print( "<p>chose article with id  = ".$articleId."</p>" );
-
             /* get neccessary info */
             $row = mysql_fetch_assoc( $result );
 
@@ -438,34 +469,116 @@
             $time = $row['time'];
 
             echo"
-            <form action=modnews.php method=post>
-                <table align=center cellpadding=0 cellspacing=0>
-                    <tr>
-                        <td>title</td>
-                        <td><input type=text name=modArticleTitle value=".$title."
-                    </tr>
-                    <tr>
-                        <td>author</td>
-                        <td><input type=text name=modArticleTitle value=".$author."
-                    </tr>
-                    <tr>
-                        <td>timestamp</td>
-                        <td><input type=text name=modArticleTitle value=".$time."
-                    </tr>";
-                    /*
-                     * TODO
-                     *
-                     * put a bigger text area to modify article body
-                     * left the code like this cos I was kinda drunk and sleepy after 3 nights
-                     * of going to bed at 4am
-                     */
+            <center>
+                <form action=modnews.php method=post>
+                    <table align=center cellpadding=0 cellspacing=0>
+                        <tr>
+                            <td>title</td>
+                            <td><input type=text name=modArticleTitle value=".$title."></td>
+                        </tr>
+                        <tr>
+                            <td>author</td>
+                            <td><input type=text name=modArticleAuthor value=".$author."></td>
+                        </tr>
+                        <tr>
+                            <td>article</td>
+                            <td><textarea name=modArticleText rows=20 cols=80>".$article."</textarea></td>
+                        </tr>
+                    </table>
+
+                <input type=hidden name=articleToModId value=".$articleId.">
+                <input type=submit value=submit>
+                <input type=reset value=reset>
+
+                </form>
+            </center>";
+
+            /* delete button */
             echo"
-                </table>
+            <form action=modadmins.php method=post>
+                <center>
+                    <input type=submit value=delete>
+                    <input type=hidden name=articleToDeleteId value=".$articleId.">
+                </center>
             </form>";
 
+            /* back button */
+            echo"
+            <form action=adminpage.php method=post>
+                <center>
+                    <input type=submit value=back>
+                </center>
+            </form>";
 
         }
+    }
+
+    function addNewArticleForm()
+    {
+        echo"
+        <center>
+            <form action=modnews.php method=post>
+                <table>
+                    <tr>
+                        <td><p>title</p></td>
+                        <td><input type=text name=newTitle value=''></td>
+                    </tr>
+                    <tr>
+                        <td><p>author</p></td>
+                        <td><input type=text name=newAuthor value=''></td>
+                    </tr>
+                    <tr>
+                        <td><p>article</p></td>
+                        <td><input type=text name=newArticle value=''></td>
+                    </tr>
+                </table>
+            <input type=hidden name=submitNewArticle value='true'>
+            <input type=submit value=submit><input type=reset value=reset>
+            </form>
+        </center>";
+
+        /* back button */
+        echo"
+        <form action=adminpage.php method=post>
+            <center>
+                <input type=submit value=back>
+            </center>
+        </form>";
 
     }
+
+    function submitModArticle( $modTitle, $modAuthor, $modArticle, $articleIdToMod )
+    {
+        print( "title ".$modTitle."\n auth ".$modAuthor."\n art ".$modArticle."\n id ".$articleIdToMod );
+        if( empty( $articleIdToMod ) )
+            die( "Can't find news id to modify. Recieved an empty value " );
+
+        /* can't set empty values */
+        if( empty( $modTitle ) || empty( $modAuthor ) || empty( $modArticle ) )
+            die( "Can't set empty values for the news articles " );
+
+        //date_default_timezone_set('CEST');   /* set default date timezone */
+        $modDate = date( "Y-m-d" );   /* get date from machine */
+        $webClass = new WebClass();
+
+        $query = "update 2s2h_news set title=\"$modTitle\", author=\"$modAuthor\", article=\"$modArticle\", time=\"$modDate\" where id=\"$articleIdToMod\"";
+
+        $result = $webClass->executeQuery( $query );
+
+        if( $result )
+            echo"<p>ARTICLE UPDATED</p>";
+
+        else
+            echo"<p>ARTICLE NOT UPDATED</p>";
+
+        /* back button */
+        echo"
+        <form action=adminpage.php method=post>
+            <center>
+                <input type=submit value=back>
+            </center>
+        </form>";
+    }
+
 ?>
 

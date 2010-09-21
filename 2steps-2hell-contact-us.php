@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="header">
-      <a href="index.php" title="2step 2hell - Noleggio Server - BanBot"><img alt="" src="img/spacer.gif" width="800" height="235" /></a>
+      <a href="index.php"><img alt="" src="img/spacer.gif" width="800" height="235" /></a>
     </div>
 
     <div class="separate">

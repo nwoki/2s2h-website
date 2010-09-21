@@ -1,62 +1,65 @@
 <?php
     session_start();
     require( '../functions/functions.php' );
-    error_reporting( E_ALL );
-    ini_set( 'display_errors', '1' );
+    $_SESSION["page"] = "admin";
+    //error_reporting( E_ALL );
+    //ini_set( 'display_errors', '1' );
     $test = new WebClass(); /* used to check if database is setup right */
 ?>
-
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/dropdown.css" type="text/css" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    </head>
 
     <title>2Steps2Hell - ModAdmins</title>
 
-</head>
-<body>
-    <div id="banner" align="center" >
-        <img src="img/logo_scaled.jpg" >
-    </div>
+    </head>
 
-<!-- menubar -->
-    <hr/>
-        <div align='center'>
-            <a accesskey='h' href='index.php' ><u>H</u>ome</a>
-            <a accesskey='n' href='news.php' ><u>N</u>ews</a>
-            <a accesskey='s' href='noleggioserver.php' >Noleggio<u>S</u>erver</span>
-            <a accesskey='b' href='banbot.php' ><u>B</u>anBot</a>
-            <a accesskey='r' href='roster.php' ><u>R</u>oster</a>
-            <a accesskey='f' href='forum/index.php' ><u>F</u>orum</a>
-            <a accesskey='t' href='bugtracker/index.php' >Bug<u>T</u>racker</a>
+    <body>
+
+        <div id="header">
+            <a href="../index.php"><img alt="" src="../img/spacer.gif" width="800" height="235" /></a>
         </div>
-    <hr/>
-<!-- menubar -->
 
-    <?php
-        if( isset( $_POST['chosenAdmin'] ) )   /* show input fields to mod admin */
-            showModAdmin( $_POST['chosenAdmin'] );
+        <div class="separate">
+            <div id="menu-top" />
+            <div id="menu-center">
+                <?php
+                    menuPages( $_SESSION["page"] );
+                ?>
+            </div>
+            <div id="menu-bottom" />
+        </div>
 
-        elseif( isset( $_POST['adminToModId'] ) )  /* submit admin mod */
-            submitModAdmin( $_POST['modAdminName'], $_POST['modAdminPass'], $_POST['adminToModId'] );
+        <div id="content">
+            <?php
+                if( isset( $_POST['chosenAdmin'] ) )   /* show input fields to mod admin */
+                    showModAdmin( $_POST['chosenAdmin'] );
 
-        elseif( isset( $_POST['adminToDeleteId'] ) ) /* id of admin to delete */
-            deleteAdmin( $_POST['adminToDeleteId'] );
+                elseif( isset( $_POST['adminToModId'] ) )  /* submit admin mod */
+                    submitModAdmin( $_POST['modAdminName'], $_POST['modAdminPass'], $_POST['adminToModId'] );
 
-        elseif( isset( $_POST['addNewAdmin'] ) )    /* show addNewAdmin form */
-            addNewAdminForm();
+                elseif( isset( $_POST['adminToDeleteId'] ) ) /* id of admin to delete */
+                    deleteAdmin( $_POST['adminToDeleteId'] );
 
-        elseif( isset( $_POST['submitNewAdmin'] ) )     /* submit new admin to database */
-            insertNewAdmin( $_POST['newAdminNick'], $_POST['newAdminPass'] );
+                elseif( isset( $_POST['addNewAdmin'] ) )    /* show addNewAdmin form */
+                    addNewAdminForm();
 
-        else   /* show admin selection form */
-            showAdminList();
+                elseif( isset( $_POST['submitNewAdmin'] ) )     /* submit new admin to database */
+                    insertNewAdmin( $_POST['newAdminNick'], $_POST['newAdminPass'] );
 
-        bottomPageInfo();
-    ?>
+                else   /* show admin selection form */
+                    showAdminList();
+            ?>
+        </div>
 
-
-
-</body>
+        <div class="separate sfondo-footer">
+            <?php
+                bottomPageInfo();
+            ?>
+        </div>
+    </body>
 </html>

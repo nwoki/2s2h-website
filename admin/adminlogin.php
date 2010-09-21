@@ -1,55 +1,56 @@
 <?php
-    ob_start();
-		
-		session_start();
-		require( '../functions/functions.php' );
-    error_reporting( E_ALL );
-    ini_set( 'display_errors', '1' );
+    //ob_start();
 
-    if( !empty( $_SESSION['status'] ) && $_SESSION['status'] == 'admin' ) {   /* if already logged in, redirect to adminpage */
-     header( 'Location: adminpage.php' );
+    session_start();
+    $_SESSION["page"] = "admin";
+    require( '../functions/functions.php' );
+    //error_reporting( E_ALL );
+    //ini_set( 'display_errors', '1' );
+
+    if( !empty( $_SESSION['status'] ) && $_SESSION['status'] == 'admin' )   /* if already logged in, redirect to adminpage */
+        header( 'Location: adminpage.php' );
+
+    if( !empty( $_POST['user'] ) && !empty( $_POST['pass'] ) ) {
+        $_SESSION['user'] = $_POST['user'];
+        $_SESSION['pass'] = $_POST['pass'];
+        header( 'Location: adminpage.php' );
     }
-    
-		if( !empty( $_POST['user'] ) && !empty( $_POST['pass'] ) ) {
-		  $_SESSION['user'] = $_POST['user'];
-      $_SESSION['pass'] = $_POST['pass'];
-      header( 'Location: adminpage.php' );
-		}
-		
-		ob_end_flush();
+
+    //ob_end_flush();
 ?>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
 
-    <title>2Steps2Hell - AdminLogin</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
 
-</head>
-<body>
-    <div id="banner" align="center" >
-        <img src="img/logo_scaled.jpg" >
-    </div>
+        <title>
+            2s2h.com - Admin Login
+        </title>
 
-<!-- menubar -->
-    <hr/>
-        <div align='center'>
-            <a accesskey='h' href='index.php' ><u>H</u>ome</a>
-            <a accesskey='n' href='news.php' ><u>N</u>ews</a>
-            <a accesskey='s' href='noleggioserver.php' >Noleggio<u>S</u>erver</a>
-            <a accesskey='b' href='banbot.php' ><u>B</u>anBot</a>
-            <a accesskey='r' href='roster.php' ><u>R</u>oster</a>
-            <a accesskey='f' href='forum/index.php' ><u>F</u>orum</a>
-            <a accesskey='t' href='bugtracker/index.php' >Bug<u>T</u>racker</a>
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+    </head>
+
+    <body>
+        <div id="header">
+            <a href="../index.php"><img alt="" src="../img/spacer.gif" width="800" height="235" /></a>
         </div>
-    <hr/>
-<!-- menubar -->
 
-    <br/>
+        <div class="separate">
+            <div id="menu-top" />
+            <div id="menu-center">
+                <?php
+                    menuPages( $_SESSION["page"] );
+                ?>
+            </div>
+            <div id="menu-bottom" />
+        </div>
 
-    
+
+        <center>
         <form action='adminlogin.php' method='post' >
-            <table align='center'>
+            <table>
                 <tr>
                     <th><p>nick </p></th>
                     <th><input type=text name=user maxlength=15></th>
@@ -64,7 +65,20 @@
 
             <div align='center'><input type='submit' value='enter'></div>
         </form>
-  
+        </center>
+
+        <!-- some info -->
+        <div id="content">
+            <br/>
+            Login to modify news and perosnell
+        </div>
+
+        <div class="separate sfondo-footer">
+            <?php
+                bottomPageInfo();
+            ?>
+        </div>
+
 
 </body>
 </head>
