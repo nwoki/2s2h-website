@@ -3,7 +3,7 @@
 
     session_start();
     $_SESSION["page"] = "admin";
-    require( '../functions/functions.php' );
+    
     //error_reporting( E_ALL );
     //ini_set( 'display_errors', '1' );
 
@@ -16,6 +16,7 @@
         header( 'Location: adminpage.php' );
     }
 
+	require( '../functions/functions.php' );
     //ob_end_flush();
 ?>
 
@@ -23,7 +24,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
+        <meta name="description" content="<?php echo $_SESSION["page"]; ?>" />
 
         <title>
             2s2h.com - Admin Login
@@ -80,5 +81,5 @@
         </div>
 
 
-</body>
-</head>
+	</body>
+</html>
