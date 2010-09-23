@@ -19,23 +19,16 @@
     </div>
 
     <div class="separate">
-		  <div id="menu-top"></div>
-      <div id="menu-center"><?php menuPages( $_SESSION["page"] ) ?></div>
+      <div id="menu-top"></div>
+      <div id="menu-center"><div id="menu"><?php menuPages( $_SESSION["page"] ) ?></div></div>
       <div id="menu-bottom"></div>
     </div>
 
-
     <div id="content">
       <div id="padding">
-        <h2 align="center">AWARDS</h2>
-
-
-
-        <center>
-            <img src="imghold/awards/esl/DD3.jpg" >
-        </center>
-
-      </div>
+        <h1 class="awards"><span>Contact Us</span></h1>
+        <p class="center"><img src="imghold/awards/esl/DD3.jpg" alt="" /></p>
+       </div>
     </div>
 
     <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>

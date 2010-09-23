@@ -21,21 +21,19 @@
     </div>
         
     <div class="separate">
-		  <div id="menu-top"></div>
-      <div id="menu-center"><?php menuPages( $_SESSION["page"] ) ?></div>
+      <div id="menu-top"></div>
+      <div id="menu-center"><div id="menu"><?php menuPages( $_SESSION["page"] ) ?></div></div>
       <div id="menu-bottom"></div>
-    </div>  
-	
-    	
+    </div>
+	    	
     <div id="content">
       <div id="padding">
+        <h1 class="news"><span>News</span></h1>
     		<?php loadNews( /* put count to see up to how many articles to load? */);?>
       </div>
     </div>
-
-    
+ 
     <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
-    
-    
+      
 </body>
 </html>

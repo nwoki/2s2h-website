@@ -2,9 +2,11 @@
 /* CSS Document */
 
 html, body, div, p, h1, h2, h3, h4, h5, h6, table, tr, td, ul, li { padding: 0px; margin: 0px;}
+h3 { font-size: 14px}
 html { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color: #fff; height: 101%}
 body { background-color: #000; text-align: center;}
-a { text-decoration: none;}
+a { text-decoration: none; color: #fff; font-weight: bold; font-style:italic }
+a:hover { text-decoration: underline}
 img { border: none}
 strong { color: #9a0c0b; }
 fieldset { width: 60%;}
@@ -16,21 +18,21 @@ fieldset { width: 60%;}
 
 
 /* Content */
-#content {width: 100%; min-height: 300px; text-align: center; margin-bottom: 20px;}
+#content {width: 800px; min-height: 300px; text-align: center; margin-bottom: 20px; margin: 0 auto}
 #content #padding { width: 90%; margin: 0 auto; text-align: justify;}
 #content p {margin-top: 10px; line-height: 1.2em; font-size: 1em}
-
+#content p.center { text-align: center}
 
 /* Main Menù */
 #menu-top {background: url(../img/menu-top.jpg) bottom left repeat-x; height: 10px; width: 100%;}
 #menu-bottom{background: url(../img/menu-bottom.jpg) top left repeat-x; height: 10px; width: 100%;}
 #menu-center{background-color: #9a0c0b; width: 100%; min-height: 24px; }
-#menu { margin: 0 auto; width: 80%; text-align: center; line-height: 24px;}
+#menu { margin: 0 auto; width: 800px; text-align: center; line-height: 24px;}
 /*
 #menu ul { list-style:none; width: 100%; text-align: center;}
 #menu ul li {margin:0 40px; font-size: 1.4em; display:block;float:left;  height:24; line-height: 24px;}
 */
-#menu a {color: #fff; padding-left: 20px; font-size: 1.2em; margin: 0 5px; font-weight: bold}
+#menu a {color: #fff; padding-left: 20px; font-size: 1.2em; margin: 0 5px; font-weight: bold; font-style:normal}
 #menu a.first {margin: 0 5px 0 0; }
 #menu a.last {margin: 0 0px 0 5px; }
 #menu a:hover, #menu a:active{ color: #fff; background: url(../img/menu-on.jpg) left no-repeat;}
@@ -66,7 +68,7 @@ div.box-testo ul li { background: #000 url(../img/list-type.jpg) no-repeat cente
 
 #accordion { margin-top: 10px;}
 
-.symb {color: #9a0c0b;padding: 0 5px;}
+.symb {color: #9a0c0b;padding: 0 5px; font-weight: bold}
 .email{ background: url(../img/e-mail.jpg) center center no-repeat; color: transparent}
 
 .irc { background: url(../img/irc-icon2.jpg) left center no-repeat; color: transparent}
@@ -82,9 +84,16 @@ span.small { font-size:0.7em;}
 
 #bottomPageInfo a { color: #fff; font-weight: bold; line-height: 2em; font-size: 0.9em; color: #000}
 #bottomPageInfo a:hover { text-decoration:underline; color: #fff}
+/**/
 
 div#accordion h3 { text-transform: uppercase}
 
+div.news-article { margin-bottom: 15px; border: 3px double  #9a0c0b; }
+h3.title-art { padding-left: 20px; text-transform:uppercase; color: #fff; margin-top: 0px; width: auto; background-color: #9a0c0b; line-height: 20px }
+h3.title-art span { font-size:14; padding-left: 1px 0 1px 20px } 
+p.auth { text-align:right; margin-bottom: 10px;}
+
+div.news-article div { padding: 0px 10px;}
 
 /* debug */
 .debug { display: none;}

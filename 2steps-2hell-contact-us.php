@@ -19,11 +19,10 @@
     </div>
 
     <div class="separate">
-		  <div id="menu-top"></div>
-      <div id="menu-center"><?php menuPages( $_SESSION["page"] ) ?></div>
+      <div id="menu-top"></div>
+      <div id="menu-center"><div id="menu"><?php menuPages( $_SESSION["page"] ) ?></div></div>
       <div id="menu-bottom"></div>
     </div>
-
 
     <div id="content">
       <div id="padding">

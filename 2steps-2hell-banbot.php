@@ -19,46 +19,26 @@
     </div>
 
     <div class="separate">
-		  <div id="menu-top"></div>
-      <div id="menu-center"><?php menuPages( $_SESSION["page"] ) ?></div>
+      <div id="menu-top"></div>
+      <div id="menu-center"><div id="menu"><?php menuPages( $_SESSION["page"] ) ?></div></div>
       <div id="menu-bottom"></div>
     </div>
 
-
     <div id="content">
       <div id="padding">
-      <center>
-          <img src="img/banbot.jpg" align="center" width="18%">
-          <p>
-            Un bot fatto in C++ che mira ad essere semplice e ad occupare poche risorse
-            della macchina che lo hosta limitando ( addirittura eliminando ) "lag"
-            non voluti del server spesso provocati dai bot.
-            Controlla il gioco di URBAN TERROR 4.1 e utilizza un database SQLite3 per contenere i suoi dati
-            ( la libreria SQLite3 &egrave intergata nel bot, quindi non &egrave richiesto che sia installata sulla macchina ).
-            Controlla periodicamente per giocatori bannati e li elimina automaticamente dal server
-            evitando il loro rientro nel futuro.
-            <br/>
-            <br/>
-            <a href="banbotReadme.txt"><u>Readme</u></a> completo del bot
-            <br/>
-            <br/>
-            Aiutaci a migliorare il bot indicandoci bug o modi per migliorarlo che secondo voi sono utili aprendo
-            un ticket sul nostro <a href="bugtracker/index.php"><u>bugtracker</u></a>
-            <br/>
-            <br/>
-            <img src="imghold/download.png">
-            <!-- list banbot versions here -->
-            <ul>
-                <li><a href="banbotDownloads/banbot_1.1.zip">Banbot_ver1.1</a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt">(ChangeLog)</a></li>
-            </ul>
-          </p>
-      </center>
-
+        <h1 class="bot"><span>BanBot</span></h1>
+        <p class="center"><img src="img/banbot.jpg" align="center" alt="BanBot"></p>
+        <p class="center">Un bot fatto in C++ che mira ad essere semplice e ad occupare poche risorse della macchina che lo hosta limitando ( addirittura eliminando ) "lag" non voluti del server spesso provocati dai bot.</p>
+        <p class="center">Controlla il gioco di URBAN TERROR 4.1 e utilizza un database SQLite3 per contenere i suoi dati ( la libreria SQLite3 &egrave intergata nel bot, quindi non &egrave richiesto che sia installata sulla macchina ).</p>
+        <p class="center">Controlla periodicamente per giocatori bannati e li elimina automaticamente dal server evitando il loro rientro nel futuro.</p>  
+        <p class="center"><a href="banbotReadme.txt">Readme</a> completo del bot</p>
+        <p class="center">Aiutaci a migliorare il bot indicandoci bug o modi per migliorarlo che secondo voi sono utili aprendo un ticket sul nostro <a href="bugtracker/index.php">bugtracker</a></p>
+        <p class="center"><a href="banbotDownloads/banbot_1.1.zip"><img src="imghold/download.png" alt=""></a></p> 
+        <p class="center"><a href="banbotDownloads/banbot_1.1.zip">Banbot_ver1.1</a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
       </div>
     </div>
 
     <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
-
 
 </body>
 </html>

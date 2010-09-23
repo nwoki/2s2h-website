@@ -30,7 +30,7 @@ class WebClass
     {
         //print ( "<p>WebClass::__destruct</p>" );
         /* close database connection */
-        $this->close();
+        //$this->close();
     }
 
     /*******************
@@ -71,10 +71,9 @@ class WebClass
     * private functions *
     ********************/
 
-    private function close ()
+    public function close ()
     {
-        if ( $this->m_dbLink)
-                mysql_close($this->m_dbLink);
+        if ( $this->m_dbLink) mysql_close($this->m_dbLink);
     }
 
     private function connectToDatabase()    /* connect to database */
