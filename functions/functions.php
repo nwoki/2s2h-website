@@ -48,7 +48,7 @@
 							<a href="../forum/index.php" >Forum</a> -
 							<a href="../bugtracker/index.php" >BugTracker</a> -
 							<a href="../admin/adminlogin.php">AdminCp</a> -
-							<a href="../2steps-2hell-awards.php">Awards</a>
+							<a href="../2steps-2hell-awards.php">Awards</a> -
 							<a href="../vwar/admin/index.php">VWar</a>
 		    </div>';
     }
