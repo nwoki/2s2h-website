@@ -158,7 +158,7 @@
     function loadNews()
     {
         $webClass = new WebClass();
-        $query = "select * from 2s2h_news;";  /* get all articles here */
+        $query = "SELECT * FROM 2s2h_news ORDER BY 2s2h_news.time DESC;";  /* get all articles here */
 
         $result = $webClass->executeQuery( $query );
 
