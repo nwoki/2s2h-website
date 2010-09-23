@@ -20,19 +20,35 @@
 
     function bottomPageInfo()
     {
-        echo
-        '<div id="bottomPageInfo">
-            &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
-            <a href="2steps-2hell-contact-us.php">Contact us</a> -
-						<a href="2steps-2hell-news.php" >News</a> -
-						<a href="2steps-2hell-noleggio-server.php" >Server</a> -
-						<a href="2steps-2hell-banbot.php" >BanBot</a> -
-						<a href="2steps-2hell-roster.php" >Roster</a> -
-						<a href="forum/index.php" >Forum</a> -
-						<a href="bugtracker/index.php" >BugTracker</a> -
-						<a href="admin/adminlogin.php">AdminCp</a> -
-						<a href="2steps-2hell-awards.php">Awards</a>
-        </div>';
+    	if ($_SESSION["page"]!="admin")
+		    echo
+		    '<div id="bottomPageInfo">
+		        &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
+		        <a href="2steps-2hell-contact-us.php">Contact us</a> -
+							<a href="2steps-2hell-news.php" >News</a> -
+							<a href="2steps-2hell-noleggio-server.php" >Server</a> -
+							<a href="2steps-2hell-banbot.php" >BanBot</a> -
+							<a href="2steps-2hell-roster.php" >Roster</a> -
+							<a href="forum/index.php" >Forum</a> -
+							<a href="bugtracker/index.php" >BugTracker</a> -
+							<a href="admin/adminlogin.php">AdminCp</a> -
+							<a href="2steps-2hell-awards.php">Awards</a>
+		    </div>';
+        else
+        //se sono nella sezione admin, i link sono diversi
+		    echo
+		    '<div id="bottomPageInfo">
+		        &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
+		        <a href="../2steps-2hell-contact-us.php">Contact us</a> -
+							<a href="../2steps-2hell-news.php" >News</a> -
+							<a href="../2steps-2hell-noleggio-server.php" >Server</a> -
+							<a href="../2steps-2hell-banbot.php" >BanBot</a> -
+							<a href="../2steps-2hell-roster.php" >Roster</a> -
+							<a href="../forum/index.php" >Forum</a> -
+							<a href="../bugtracker/index.php" >BugTracker</a> -
+							<a href="../admin/adminlogin.php">AdminCp</a> -
+							<a href="../2steps-2hell-awards.php">Awards</a>
+		    </div>';
     }
 
     function menuPages( $page ) {
