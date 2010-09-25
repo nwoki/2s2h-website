@@ -10,6 +10,7 @@
     <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
     <title><?php echo $title[$_SESSION["page"]]; ?></title>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/BanBot.css" type="text/css" />
 
 
 </head>
@@ -33,9 +34,20 @@
         	<h1 class="italiano"></h1>
 		    <p class="center">Un bot che mira ad essere semplice e ad occupare poche risorse della macchina che lo hosta evitando quindi di provocare "lag" non voluti del server.</p>
 		    <p class="center">Fatto per controllare il gioco di URBAN TERROR 4.1, integra ed utilizza la libreria SQLite3 per contenere i suoi dati: nonstante questo &egrave completamente indipendente, non necessita di alcun software preinstallato.</p>
-		    <p class="center">Offre molti strumenti utili per gli amministratori dei server, per esempio ban permanenti e un anti-cheat.</p>  
+		    <p class="center">Pensato anche per chi affitta server di gioco, &egrave in grado di controllare pi&ugrave di un server con una sola istanza, in maniera totalmente isolata l'uno dall'altro: noi l'abbiamo testato fino a 5.</p>
+		    <p class="center">Offre molti strumenti utili per gli amministratori dei server, per esempio:</p>
+		    <ul class="botList">
+		    	<li>Anticheat, con diversi livelli di sicurezza</li>
+		    	<li>Ban permamenti (anche con motivazione)</li>
+		    	<li>Kick, slap, ecc.</li>
+		    	<li>Spostamento di team per i giocatori</li>
+		    	<li>Backup automatico dei file di log</li>
+		    	<li>Comandi che accettano anche parti di nick</li>
+		    	<li>Cambio mappa attuale e successiva</li>
+		    	<li>Riconoscimento amministratori (possono usare anche fake)</li>
+		    <ul><br/>
 		    <p class="center">Per maggiori informazioni, leggete la documentazione.</p>
-		    <p class="center">Aiutaci a migliorare il bot indicandoci bug o dandoci dei suggerimenti: apri un ticket sul nostro <a href="bugtracker/index.php">BugTracker</a>.</p>
+		    <p class="center">Aiutaci a migliorare BanBot indicandoci bug o dandoci dei suggerimenti: apri un ticket sul nostro <a href="bugtracker/index.php">BugTracker</a>.</p>
 		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip"><img src="imghold/download.png" alt=""></a></p> 
 		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip">Banbot_ver1.1(ITA)</a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
 		</div>
@@ -48,9 +60,20 @@
 		    <br/>
 		    <p class="center">Made to control the game Urban Terror 4.1, it integrates and uses the SQLite3 library to contain your data: spite this is completely independent, requires no preinstalled software.</p>
 		    <br/>
-		    <p class="center">It offers many useful tools for server administrators, for example permanent ban and an anti-cheat.</p>  
+		    <p class="center">Designed also for those who rent game servers, it can controls more than one server with only one instance, in a totally isolated manner from each other: we tested it up to 5.</p>
+		    <p class="center">It offers many useful tools for server administrators, for example:</p>  
+		    <ul class="botList">
+		    	<li>Anticheat, with different levels of security</li>
+		    	<li>Permanently bans (also with motive)</li>
+		    	<li>Kick, slap, etc.</li>
+		    	<li>Force players to change team</li>
+		    	<li>Automated backup of log files</li>
+		    	<li>Comands accepts as well parts of nick</li>
+		    	<li>Change actual map and the next one</li>
+		    	<li>Recognition of admins (they can use fakes)</li>
+		    <ul><br/>
 		    <p class="center">For more information, read the documentation.</p>
-		    <p class="center">Help us improve the bot indicating bug or give us suggestions: open a ticket on our <a href="bugtracker/index.php">BugTracker</a>.</p>
+		    <p class="center">Help us improve BanBot indicating bug or give us suggestions: open a ticket on our <a href="bugtracker/index.php">BugTracker</a>.</p>
 		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip"><img src="imghold/download.png" alt=""></a></p> 
 		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip">Banbot_ver1.1(ENG)</a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
 		</div>
