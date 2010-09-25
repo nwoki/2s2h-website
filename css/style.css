@@ -90,8 +90,9 @@ div#accordion h3 { text-transform: uppercase}
 
 div.news-article { margin-bottom: 15px; border: 3px double  #9a0c0b; }
 h3.title-art { padding-left: 20px; text-transform:uppercase; color: #fff; margin-top: 0px; width: auto; background-color: #9a0c0b; line-height: 20px }
-h3.title-art span { font-size:14; padding-left: 1px 0 1px 20px } 
+h3.title-art span { font-size:14; padding-left: 1px 0 1px 20px }
 p.auth { text-align:right; margin-bottom: 10px;}
+p.quote {text-align: center; font-style: italic;}   /* taken from banbot.css */
 
 div.news-article div { padding: 0px 10px;}
 

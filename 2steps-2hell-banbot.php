@@ -29,7 +29,7 @@
       <div id="padding">
         <h1 class="bot"><span>BanBot</span></h1>
         <p class="center"><img src="img/banbot.jpg" align="center" alt="BanBot"></p>
-<!-- italiano -->        
+<!-- italiano -->
         <div class="col1" lang="it">
         	<h1 class="italiano"></h1>
 		    <p class="center">Un bot che mira ad essere semplice e ad occupare poche risorse della macchina che lo hosta evitando quindi di provocare "lag" non voluti del server.</p>
@@ -49,16 +49,16 @@
 		    <p class="center">Riassumendo, se ne sta buono e silenzioso, tranne in caso di bisogno, e tiene i vostri server puliti.</p>
 		    <p class="center">Per maggiori informazioni, leggete la documentazione.</p>
 		    <p class="center">Aiutaci a migliorare BanBot indicandoci bug o dandoci dei suggerimenti: apri un ticket sul nostro <a href="bugtracker/index.php">BugTracker</a>.</p>
-		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip"><img src="imghold/download.png" alt=""></a></p> 
+		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip"><img src="imghold/download.png" alt=""></a></p>
 		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip">Banbot_ver1.1(ITA)</a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
 		    <br/>
 		    <p class="center">I beta-tester dicono di BanBot:</p>
 		    <p class="quote">"&egrave semplice e funziona bene, meglio di b3 e cagate varie."</p>
-		    <br/> 
+		    <br/>
 		    <p class="quote">"BanBot &egrave un eccellente bot per server Urt. Non bisogna essere esperti per poterlo usare, &egrave alla portata di tutti poich&egrave i comandi sono semplici ed essenziali. Utilissimo per gestire il proprio server in maniera facile ed efficace. Inoltre &egrave dotato di un buon anticheat: nel mio server sono gi&agrave stati bannati 5 players, di cui 2 di clan importanti. Sarebbe perfetto con l'aggiunta di un comando per impostare password nel server, ma penso che presto arriver&agrave anch'esso. Un ottimo bot, lo consiglio a tutti."</p>
-		    
+
 		</div>
-		
+
 		<div class="separatore"> </div>
 <!-- inglese -->
 		<div class="col2" lang="en">
@@ -68,33 +68,33 @@
 		    <p class="center">Made to control the game Urban Terror 4.1, it integrates and uses the SQLite3 library to contain your data: spite this is completely independent, requires no preinstalled software.</p>
 		    <br/>
 		    <p class="center">Designed also for those who rent game servers, it can controls more than one server with only one instance, in a totally isolated manner from each other: we tested it up to 5.</p>
-		    <p class="center">It offers many useful tools for server administrators, for example:</p>  
+		    <p class="center">It offers many useful tools for server administrators, for example:</p>
 		    <ul class="botList">
 		    	<li>Anticheat, with different levels of security</li>
 		    	<li>Permanently bans (also with motive)</li>
 		    	<li>Kick, slap, etc.</li>
 		    	<li>Force players to change team</li>
 		    	<li>Automated backup of log files</li>
-		    	<li>Comands accepts as well parts of nick</li>
-		    	<li>Change actual map and the next one</li>
+		    	<li>Comands accept parts of a players nick</li>
+		    	<li>Change current map and the next one</li>
 		    	<li>Recognition of admins (they can use fakes)</li>
 		    <ul><br/>
-		    <p class="center">Summary, it is good and quiet, except in case of need, and keep your servers clean.</p>
+		    <p class="center">Summarizing: it stays good and quiet when not needed and keeps your server clean.</p>
 		    <p class="center">For more information, read the documentation.</p>
-		    <p class="center">Help us improve BanBot indicating bug or give us suggestions: open a ticket on our <a href="bugtracker/index.php">BugTracker</a>.</p>
-		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip"><img src="imghold/download.png" alt=""></a></p> 
+		    <p class="center">Help us improve BanBot indicating bugs or giving us suggestions: open a ticket on our <a href="bugtracker/index.php">BugTracker</a>.</p>
+		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip"><img src="imghold/download.png" alt=""></a></p>
 		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip">Banbot_ver1.1(ENG)</a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
 		    <br/>
-		    <p class="center">Beta-testers tells about BanBot:</p>
-		    <p class="quote">"It is simple and works well, better than b3 and various crap."</p>
-		    <p class="quote">"BanBot is an excellent bot server Urt. We don't need to be experts to use, it is to everyone as the controls are simple and essential. Useful to manage your server easily and effectively. It also comes with a good anticheat: in my server have already been banned five players, including two of major clans. It would be perfect with the addition of a command to set passwords on the server, but I think it will come soon too. A good bot, I recommend it to everyone."</p>
+		    <p class="center">What beta-testers say about BanBot:</p>
+		    <p class="quote">"It's simple and works well, better than b3 and various crappy bots around."</p>
+		    <p class="quote">"BanBot is an excellent bot for Urt servers.You don't need to be an expert to use it. Its controls are simple and essential. Useful to manage your server easily and effectively. It also comes with a good anticheat: in my server it has already banned five players, including two of major clans. It would be perfect with the addition of a command to set passwords on the server, but I think it will come soon too. A good bot, I recommend it to everyone."</p>
 		</div>
-		
+
 		<div id="fineBot">
-			<p class="center"><a href="banbotReadme.txt"><img src="imghold/download.png" alt=""></a></p> 
+			<p class="center"><a href="banbotReadme.txt"><img src="imghold/download.png" alt=""></a></p>
 			<p class="center"><a href="banbotReadme.txt">documentazione - documentation</a></p>
 		</div>
-		
+
       </div>
     </div>
 
