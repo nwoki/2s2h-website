@@ -27,7 +27,7 @@
       <div id="panel">
         <div class="content clearfix">
           <div class="left all">
-            <?php restrictedArea( $_SESSION["page"] ) ?>
+            <?php restrictedArea( $_SESSION['status'] ) ?>
           </div>
         </div>
       </div> 
@@ -62,11 +62,18 @@
         <div id="content">
             <?php
             /* list admin options */
+            if ( $_SESSION['status'] != 'admin' )
+            {
+            	echo "<center><img src='../imghold/fail.jpg'/></center>";
+            }
+            else
+            {
                 echo "
                 <ul>
                     <li><a href='modadmins.php'>Mod Admins</a></li>
                     <li><a href='modnews.php'>Mod News</a></li>
                 </ul>";
+            }
                 
             ?>
         </div>
