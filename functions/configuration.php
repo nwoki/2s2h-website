@@ -15,5 +15,12 @@
 	$description["bot"] = "";
 	$description["roster"] = "";
 	$description["awards"] = "";
+
+	
+	
+	
+	
+	
+	
 	
 ?>
