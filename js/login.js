@@ -10,7 +10,7 @@ $(document).ready(function () {
 		$('#load').fadeIn();
 		          
 		$.post(
-			"admin/adminLogin.php", 
+			"admin/adminlogin.php", 
 			{username:usr, password:psw},
 		  function( data ) {
 			  

@@ -1,0 +1,9 @@
+/*BanBot page*/
+.italiano { background: #000 url(../img/bandiera_italia.jpg) left top no-repeat; width:60px;height:45px;}
+.inglese { background: #000 url(../img/bandiera_inglese.jpg) left top no-repeat; width:60px;height:45px;}
+div.col1 {width: 355px;padding-right:5px;float:left;}
+div.separatore{width: 1px;height:770px;margin-top:30px;float:left;background-color:white;}
+div.col2 {width: 355px;padding-left:4px;float:left;}
+#fineBot {clear:left;text-align: center;padding-top:30px;}
+ul.botList {padding-left:20px;}
+p.quote {text-align: center; font-style: italic;}
