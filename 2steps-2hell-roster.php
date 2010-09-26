@@ -2,6 +2,7 @@
     session_start();
     $_SESSION["page"] = "roster";
     require( 'functions/functions.php' );
+		
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,11 +10,43 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
     <title><?php echo $title[$_SESSION["page"]]; ?></title>
+		<script src="js/jquery-1.4.2.min.js" type="text/javascript" ></script>
+		<script src="js/jquery-ui-1.8.4.custom.min.js" type="text/javascript" ></script>
+    <script src="js/slide.js" type="text/javascript"></script>
+    <script src="js/login.js" type="text/javascript"></script>
+		<script>
+      $(document).ready(function() {
+        $("#accordion").accordion({ active: false, collapsible: true, autoHeight: false });
+				$('#tabs').tabs();
+      });
+    </script>
+    <link type="text/css" href="css/theme-redblack/jquery-ui-1.8.4.custom.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
-
-
-</head>
+    <link rel="stylesheet" href="css/slide.css" type="text/css" media="screen" /></head>
+</html>
 <body>
+    
+    <!-- Panel -->
+    <div id="toppanel">
+      <div id="panel">
+        <div class="content clearfix">
+          <div class="left all">
+            <?php restrictedArea($_SESSION['status']) ?>
+          </div>
+        </div>
+      </div> 
+      <!-- The tab on top -->	
+      <div class="tab">
+        <ul class="login">
+          <li class="left">&nbsp;</li>
+          <li id="toggle">
+            <a id="open" class="open" href="#">Admin Area</a>
+            <a id="close" style="display: none;" class="close" href="#">Close</a>			
+          </li>
+          <li class="right">&nbsp;</li>
+        </ul> 
+      </div> <!-- / top -->
+    </div> <!--panel -->
     <div id="header">
       <a href="index.php" title="2step 2hell - Noleggio Server - BanBot"><img alt="" src="img/spacer.gif" width="800" height="235" /></a>
     </div>
@@ -27,197 +60,23 @@
 
     <div id="content">
       <div id="padding">
-    <!-- only admins and soldiers, too much hastle in adding new perople on wannabe ecc -->
-    <h3>Admins & Devs</h3>
+      
+        <h1 class="roster"><span>Roster</span></h1>
+       	<div id="tabs">
 
-    <div align='center'>
-        <a href='#n3m3s1s' >N3m3s1s</a>
-        <a href='#zamy' >Zamy</a>
-        <a href='#heresyarch' >Heresyarch</a>
+          <ul>
+            <li><a href="#tabs-1">Admins & Devs</a></li>
+            <li><a href="#tabs-2">Soldati</a></li>
+          </ul>
+          
+          <div id="tabs-1"><? listRoster(0,3)?></div>
+          <div id="tabs-2"><? listRoster(3); ?></div>
+            
+        </div>
+            
+      </div>
     </div>
 
-    <br/>
-
-    <div id="n3m3s1s" >
-        <fieldset>
-            <legend>n3m3s1s</legend>
-            <img src="imghold/people/n3m3s1s.jpg" align="left" alt="nemesis-foto" width="30%"/>
-            <p>
-                inserire descrizione
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-
-    <div id="zamy" >
-        <fieldset>
-            <legend align='right' >Zamy</legend>
-            <img src="imghold/people/zamy.jpg" align="right" alt="zamy-foto" width="30%"/>
-            <p>
-                inserire descrizione
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-
-    <div id="heresyarch" >
-        <fieldset>
-            <legend>Heresyarch/Cityhunter</legend>
-            <img src="imghold/people/nic.jpg" align="left" alt="heresyarch-foto" width="30%"/>
-            <p>
-                inserire descrizione
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-    <br/>
-
-    <h3>Soldati</h3>
-
-    <div>
-        <a href='#revan' >Revan</a>
-        <a href='#kolbebo' >Kolbebo</a>
-        <a href='#roger' >Roger</a>
-        <a href='#arca' >Arca</a>
-        <a href='#logout' >Logout</a>
-        <a href='#ranker' >Ranker</a>
-        <a href='#seifer' >Seifer</a>
-        <a href='#savo' >Savo</a>
-    </div>
-
-    <br/>
-
-    <div id="revan" >
-        <fieldset>
-            <legend align='right' >Revan</legend>
-            <img src="imghold/people/revan.jpg" align="right" alt="nemesis-foto" width="30%"/>
-            <p>
-                inserire descrizione
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-
-    <div id="kolbebo" >
-        <fieldset>
-            <legend>Kolbebo</legend>
-            <img src="imghold/people/kolbebo.jpg" align="left" alt="kolbebo-foto" width="30%"/>
-            <p>
-                La prima donna ad essere entrato nel clan. Regina dello spam e delle cazzate. Si diletta facendo scherzi un p&ograve a tutti
-                in particolare al boss, n3m3s1s.
-            </p>
-            <br/>
-            <p class="quote">
-                "Do what you want cause a pirate is free,you are a
-                pirate! Le Gocciole sono I biscotti migliori del mondo, I <3 Gocciole"
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-
-    <div id="roger" >
-        <fieldset>
-            <legend align='right' >Roger</legend>
-            <img src="imghold/people/roger.jpg" align="right" alt="nemesis-foto" width="30%"/>
-            <p>
-                inserire descrizione
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-
-    <div id="arca" >
-        <fieldset>
-            <legend>Arca</legend>
-            <img src="imghold/people/arca.jpg" align="left" alt="arca-foto" width="30%"/>
-            <p>
-                Donna che incute timore nelle sue prede. Mafiosa e alcolizzata, questa ragazza tiene testa a molti
-                sbruffoni che si trovano in giro
-            </p>
-            <br/>
-            <p class="quote">
-                "Sono rossa, ubriacona e cattiva. Nel mio tempo libero prendo per il culo Revan e cerco di fargli
-                ammettere l'omosessualit&agrave e il ritardo mentale"
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-
-    <div id="logout" >
-        <fieldset>
-            <legend  align="right">Logout</legend>
-            <img src="imghold/people/logout.jpg" align="right" alt="logout-foto" width="30%"/>
-            <p>
-                Dovrebbe prendere spunto dal suo nome e fare un favore al mondo staccando la
-                spina al proprio computer e modem
-            </p>
-            <br/>
-            <p class="quote">
-                "Wei zio come va?? l'altro giorno ho giocato cn un babbo assurdo"
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-
-    <div id="ranker" >
-        <fieldset>
-            <legend>Ranker</legend>
-            <img src="imghold/people/anonymous.jpg" align="right" alt="logout-foto" width="30%"/>
-            <p>
-                Questo nerdone si &egrave autoproclamato il simpaticone del clan( almeno, cos&igrave mi dice la Kolbebo ).Dotato di una fortissima "R" moscia
-                egli fa copia con Rambo, due elementi presi spesso di mira da Arca
-            </p>
-            <br/>
-            <p class="quote">
-                "Ho un fratello gemello e sono molto ma molto ma molto bello!"
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-
-    <div id="seifer" >
-        <fieldset>
-            <legend align="right">Seifer</legend>
-            <img src="imghold/people/seifer.jpg" align="right" alt="seifer-foto" width="30%"/>
-            <p>
-                Chitarrista e metallaro italo-inglese. Il segugio del clan sempre pronto a fiutare noobs e cheaters sul server.<br/> La sua arte: Seek & Destroy!
-            </p>
-            <br/>
-            <p class="quote">
-                "M K KZZ V?? T SPKK L KL STRNZ! T MDR ZKKL!"
-            </p>
-        </fieldset>
-    </div>
-
-    <br/>
-
-    <div id="savo" >
-        <fieldset>
-        <legend>Savo</legend>
-        <img src="imghold/people/savo.jpg" align="right" alt="savo-foto" width="30%"/>
-        <p>
-            Ex bimbominchia che grazie alla protezione di Heresyarch &egrave riuscito a crescere e a diventare una persona seria (o quasi)
-        </p>
-        <br/>
-        <p class="quote">
-            "daiiiii neme, accetta la mia amicizia su facebook"
-        </p>
-        </fieldset>
-    </div>
-
-
-
-</div>
-</div>
 
     <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
 

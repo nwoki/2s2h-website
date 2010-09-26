@@ -1,18 +1,10 @@
 <?php
-    //ob_start();
-
+    ob_start();
     session_start();
+		require( '../functions/functions.php' );
     $_SESSION["page"] = "admin";
-    require( '../functions/functions.php' );
-    //error_reporting( E_ALL );
-    //ini_set( 'display_errors', '1' );
-
-    if( !empty( $_SESSION['user'] ) && !empty( $_SESSION['pass'] ) ) {
-        if( adminLogin( $_SESSION['user'], $_SESSION['pass'] ) )
-            $_SESSION['status'] = "admin";
-    }
-
-    //ob_end_flush();
+		ob_end_flush();
+		
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -20,18 +12,39 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
-        <link rel="stylesheet" href="../css/style.css" type="text/css" />
-    </head>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
-    <link rel="stylesheet" href="css/dropdown.css" type="text/css" />
-
-    <title>2Steps2Hell - AdminPage</title>
+        <title><?php echo $title[$_SESSION["page"]]; ?></title>
+				<script src="../js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    		<script src="../js/slide.js" type="text/javascript"></script>
+        <script src="../js/login.js" type="text/javascript"></script>
+        <link href="../css/style.css" type="text/css" rel="stylesheet"/>
+        <link href="../css/slide.css" type="text/css" rel="stylesheet" media="screen" />
 
     </head>
 
-    <body>
+    <body>    
+    <!-- Panel -->
+    <div id="toppanel">
+      <div id="panel">
+        <div class="content clearfix">
+          <div class="left all">
+            <?php restrictedArea( $_SESSION["page"] ) ?>
+          </div>
+        </div>
+      </div> 
+      <!-- The tab on top -->	
+      <div class="tab">
+        <ul class="login">
+          <li class="left">&nbsp;</li>
+          <li id="toggle">
+            <a id="open" class="open" href="#">Admin Area</a>
+            <a id="close" style="display: none;" class="close" href="#">Close</a>			
+          </li>
+          <li class="right">&nbsp;</li>
+        </ul> 
+      </div> <!-- / top -->
+    </div> <!--panel -->
+
+        
         <div id="header">
             <a href="../index.php"><img alt="" src="../img/spacer.gif" width="800" height="235" /></a>
         </div>
@@ -48,24 +61,13 @@
 
         <div id="content">
             <?php
-
-            /* check if already logged else show login form */
-            if( $_SESSION['status'] != 'admin' )    /* show access denied */
-                echo "<center><img src='../imghold/fail.jpg'/></center>";
-
-            else {  /* else welcome the admin */
-                echo "<h2>Welcome : ".$_SESSION['user']."!</h2>";
-
-                /* list admin options */
+            /* list admin options */
                 echo "
                 <ul>
                     <li><a href='modadmins.php'>Mod Admins</a></li>
                     <li><a href='modnews.php'>Mod News</a></li>
                 </ul>";
                 
-                echo "<br><br><a href='logout.php'>Logout</a>";
-                
-            }
             ?>
         </div>
 

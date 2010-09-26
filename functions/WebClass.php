@@ -17,10 +17,7 @@ class WebClass
                 print( "<p class=\"debug\">Can't use database '".$this->m_dbName."' : ".mysql_error( $this->m_dbLink )."</p>" );
                 print( "<p class=\"debug\">Please go to 'initialize.php' to setup database for first run</p>" );
             }
-            if( $this->testTables() ) /* also check on tables */
-                print( "<p class=\"debug\">Database and tables both exist</p>" );
-            else
-                $this->createDbFirstRun();
+        
         }
         else  /* i'm on initialize page */
             $this->createDbFirstRun();
@@ -39,7 +36,8 @@ class WebClass
 
 	/* login function for admin page */
     public function adminLogin( $nick, $pass )
-    {
+    {   
+
         if( empty( $nick ) || empty( $pass ) )
             return false;
         else {
