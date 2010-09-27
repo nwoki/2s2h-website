@@ -24,6 +24,7 @@
 		    <?php }?>
         <link href="../css/style.css" type="text/css" rel="stylesheet"/>
         <link href="../css/slide.css" type="text/css" rel="stylesheet" media="screen" />
+        <link href="../css/admin.css" type="text/css" rel="stylesheet" media="screen" />
 
     </head>
 
@@ -58,9 +59,7 @@
         <div class="separate">
             <div id="menu-top" />
             <div id="menu-center">
-                <?php
-                    menuPages( $_SESSION["page"] );
-                ?>
+                <?php menuPages( $_SESSION["page"] );?>
             </div>
             <div id="menu-bottom" />
         </div>
@@ -68,18 +67,13 @@
         <div id="content">
             <?php
             /* list admin options */
-            if ( $_SESSION['status'] != 'admin' )
-            {
-            	echo "<center><img src='../imghold/fail.jpg'/></center>";
-            }
+            if ( $_SESSION['status'] != 'admin' ) echo "<center><img src='../imghold/fail.jpg'/></center>";
             else
-            {
                 echo "
-                <ul>
-                    <li><a href='modadmins.php'>Mod Admins</a></li>
-                    <li><a href='modnews.php'>Mod News</a></li>
+                <ul id=\"adminpage\">
+                    <li class=\"ico-admin\"><a href='modadmins.php'>Mod Admins</a></li>
+                    <li class=\"ico-art\"><a href='modnews.php'>Mod News</a></li>
                 </ul>";
-            }
                 
             ?>
         </div>
