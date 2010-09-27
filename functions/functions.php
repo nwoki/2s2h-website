@@ -27,7 +27,7 @@
                 &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
                 <a href="2steps-2hell-contact-us.php">Contact us</a> -
                 <a href="2steps-2hell-news.php" >News</a> -
-                <a href="2steps-2hell-noleggio-server.php" >Server</a> -
+                <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a> -
                 <a href="2steps-2hell-banbot.php" >BanBot</a> -
                 <a href="2steps-2hell-roster.php" >Roster</a> -
                 <a href="forum/index.php" >Forum</a> -
@@ -61,7 +61,7 @@
                 '<div id="menu" class="clearfix">
                     <a class="active" href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="2steps-2hell-news.php" >News</a>
-                    <a href="2steps-2hell-noleggio-server.php" >Server</a>
+                    <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
                     <a href="2steps-2hell-banbot.php" >BanBot</a>
                     <a href="2steps-2hell-roster.php" >Roster</a>
                     <a href="forum/index.php" >Forum</a>
@@ -74,7 +74,7 @@
                 '<div id="menu" class="clearfix">
                     <a href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a class="active" href="2steps-2hell-news.php" >News</a>
-                    <a href="2steps-2hell-noleggio-server.php" >Server</a>
+                    <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
                     <a href="2steps-2hell-banbot.php" >BanBot</a>
                     <a href="2steps-2hell-roster.php" >Roster</a>
                     <a href="forum/index.php" >Forum</a>
@@ -87,7 +87,7 @@
                 '<div id="menu" class="clearfix">
                     <a href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="2steps-2hell-news.php" >News</a>
-                    <a class="active" href="2steps-2hell-noleggio-server.php" >Server</a>
+                    <a class="active" href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
                     <a href="2steps-2hell-banbot.php" >BanBot</a>
                     <a href="2steps-2hell-roster.php" >Roster</a>
                     <a href="forum/index.php" >Forum</a>
@@ -100,7 +100,7 @@
                 '<div id="menu" class="clearfix">
                     <a href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="2steps-2hell-news.php" >News</a>
-                    <a href="2steps-2hell-noleggio-server.php" >Server</a>
+                    <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
                     <a class="active" href="2steps-2hell-banbot.php" >BanBot</a>
                     <a href="2steps-2hell-roster.php" >Roster</a>
                     <a href="forum/index.php" >Forum</a>
@@ -113,7 +113,7 @@
                 '<div id="menu" class="clearfix">
                     <a href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="2steps-2hell-news.php" >News</a>
-                    <a href="2steps-2hell-noleggio-server.php" >Server</a>
+                    <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
                     <a href="2steps-2hell-banbot.php" >BanBot</a>
                     <a class="active" href="2steps-2hell-roster.php" >Roster</a>
                     <a href="forum/index.php" >Forum</a>
@@ -126,7 +126,7 @@
                 '<div id="menu" class="clearfix">
                     <a href="../2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="../2steps-2hell-news.php" >News</a>
-                    <a href="../2steps-2hell-noleggio-server.php" >Server</a>
+                    <a href="../2steps-2hell-noleggio-server.php" >Noleggio server</a>
                     <a href="../2steps-2hell-banbot.php" >BanBot</a>
                     <a href="../2steps-2hell-roster.php" >Roster</a>
                     <a href="../forum/index.php" >Forum</a>
@@ -139,7 +139,7 @@
                 '<div id="menu" class="clearfix">
                     <a class="first" href="2steps-2hell-contact-us.php" >Contact Us</a>
                         <a href="2steps-2hell-news.php" >News</a>
-                        <a href="2steps-2hell-noleggio-server.php" >Server</a>
+                        <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
                         <a href="2steps-2hell-banbot.php" >BanBot</a>
                         <a href="2steps-2hell-roster.php" >Roster</a>
                         <a href="forum/index.php" >Forum</a>
