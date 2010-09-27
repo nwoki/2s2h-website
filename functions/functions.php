@@ -2,21 +2,23 @@
     require( 'WebClass.php' );
     require( 'configuration.php' );
 
-        function debugCode ( $check = false)
-        {
-            if ( $check ) {
-                error_reporting( E_ALL );
-                ini_set( 'display_errors', '1' );
-            }
-        else
-            return true;
-        }
+		function debugCode ( $check = false)
+		{
+				if ( $check ) {
+						error_reporting( E_ALL );
+						ini_set( 'display_errors', '1' );
+				}
+		else
+				return true;
+		}
 
 
     function adminLogin( $nick, $pass )
     {
+
 				$webClass = new WebClass();
-        return $webClass->adminLogin( $nick, $pass );
+				return $webClass->adminLogin( $nick, $pass );
+
     }
 
     function bottomPageInfo()
@@ -33,7 +35,9 @@
                 <a href="forum/index.php" >Forum</a> -
                 <a href="bugtracker/index.php" >BugTracker</a> -
                 <a href="2steps-2hell-awards.php">Awards</a> -
-                <a href="/vwar/war.php?action=nextaction">VWar</a>
+								<a href="/vwar/war.php?action=nextaction">VWar</a> -
+								<a href="#" id="show" class="adminTab">AdminCP</a> 
+								<a href="#" id="hide" class="adminTab">CloseTab</a>
             </div>';
         else    //se sono nella sezione admin, i link sono diversi
             echo
@@ -477,7 +481,9 @@
             $row = mysql_fetch_assoc( $result );
 
             $title = $row['title'];
+            $article = $row['article'];
             $author = $row['author'];
+            $date = date( "Y-m-d" );
 
             echo"
             <center>
@@ -557,7 +563,9 @@
         else {
             $webClass = new WebClass();
             $date = date( "Y-m-d" );
-            $query = "insert into 2s2h_news values( '',\"$title\",\"$author\" ,\"$article\",\"$date\" );";
+
+            $articleOk = addSlashes( $article );    /* adds slashes where needed so database query doesn't fail */
+            $query = "insert into 2s2h_news values( '',\"$title\",\"$author\" ,\"$articleOk\",\"$date\" );";
 
             $result = $webClass->executeQuery( $query );
 
@@ -578,7 +586,7 @@
 
     function submitModArticle( $modTitle, $modAuthor, $modArticle, $articleIdToMod )
     {
-        print( "title ".$modTitle."\n auth ".$modAuthor."\n art ".$modArticle."\n id ".$articleIdToMod );
+        //print( "<br/>title-> ".$modTitle."\n <br/>author-> ".$modAuthor."\n <br/>art-> ".$modArticle."\n <br/>id-> ".$articleIdToMod."<br/>" );
         if( empty( $articleIdToMod ) )
             die( "Can't find news id to modify. Recieved an empty value " );
 
@@ -589,8 +597,9 @@
         //date_default_timezone_set('CEST');   /* set default date timezone */
         $modDate = date( "Y-m-d" );   /* get date from machine */
         $webClass = new WebClass();
+        $articleOk = addSlashes( $modArticle );    /* in case i add strange quoted stuff */
 
-        $query = "update 2s2h_news set title=\"$modTitle\", author=\"$modAuthor\", article=\"$modArticle\", time=\"$modDate\" where id=\"$articleIdToMod\"";
+        $query = "update 2s2h_news set title=\"$modTitle\", author=\"$modAuthor\", article=\"$articleOk\", time=\"$modDate\" where id=\"$articleIdToMod\"";
 
         $result = $webClass->executeQuery( $query );
 
@@ -629,74 +638,74 @@
             </center>
         </form>";
     }
-		
-		function restrictedArea( $status ) {
-		  
-			if ( $_SESSION['page'] != 'admin' ) {
-			  $link1 = 'admin/adminpage.php';
-				$link2 = 'admin/logout.php'; 
-			} else {
-			  $link1 = 'adminpage.php';
-				$link2 = 'logout.php'; 
-			}
-			
-		  if ( $status != 'admin' ) {
-				echo '
-			  <!-- Login Form -->
-            <form class="clearfix" action="#" method="post" name="login">
-              <h1>Restricted Area</h1>
-              <label class="grey" for="log">Username:</label>
-              <input class="field" type="text" name="usr" id="usr" value="" size="23" />
-              <label class="grey" for="pwd">Password:</label>
-              <input class="field" type="password" name="psw" id="psw" size="23" />
-              <input type="submit" name="submit" value="Login" class="bt_login" />
-              <span id="load"></span><div id="attention">Invalid Username/Password</div>
-            </form>     
-            <!-- /login -->
-				';		
-			} else {
-			  
-				echo '
-				   <!-- Login Form -->
-            <h1>Welcome <span id="user">'. $_SESSION['username'].'</span></h1>
-            <a href="'.$link1.'" class="admin">Admin Page</a>
-						<a href="'.$link2.'" class="logout">Logout</a>
-            <!-- /login -->
-				';
-				
-			}
-		
-		}
-		
-		function listRoster($min=0, $max=10000) {
-			include('list-of-players.php');
-			
-			if ( $max == 10000) $max=count($roster);
-			
-			echo '<ul class="roster-list clearfix">'."\n";
-			for ($i=$min; $i<$max; $i++) {
-			  echo '<li><a href="#'.$roster[$i]['nome'].'">'.$roster[$i]['nome'].'</a></li>';
-			}
-			echo '</ul>'."\n";
-			echo '<div class="clear"></div>';
-			for ($i=$min; $i<$max; $i++) {
-			  if ($i == 0 || ($i%2)==0 ) 
-				  $class="left";
-				else 	 
-				  $class="right";
-			  echo '
-				<div id="'.$roster[$i]['nome'].'" class="fieldset clearfix" >
-  					<h2 class="'.$class.'">'.$roster[$i]['nome'].'</h2>
+
+    function restrictedArea( $status ) {
+
+        if ( $_SESSION['page'] != 'admin' ) {
+            $link1 = 'admin/adminpage.php';
+            $link2 = 'admin/logout.php';
+        } else {
+            $link1 = 'adminpage.php';
+            $link2 = 'logout.php';
+        }
+
+        if ( $status != 'admin' ) {
+            echo '
+            <!-- Login Form -->
+        <form class="clearfix" action="#" method="post" name="login">
+            <h1>Restricted Area</h1>
+            <label class="grey" for="log">Username:</label>
+            <input class="field" type="text" name="usr" id="usr" value="" size="23" />
+            <label class="grey" for="pwd">Password:</label>
+            <input class="field" type="password" name="psw" id="psw" size="23" />
+            <input type="submit" name="submit" value="Login" class="bt_login" />
+            <span id="load"></span><div id="attention">Invalid Username/Password</div>
+        </form>
+        <!-- /login -->
+            ';
+        } else {
+
+            echo '
+                <!-- Login Form -->
+        <h1>Welcome <span id="user">'. $_SESSION['username'].'</span></h1>
+        <a href="'.$link1.'" class="admin">Admin Page</a>
+                    <a href="'.$link2.'" class="logout">Logout</a>
+        <!-- /login -->
+            ';
+
+        }
+
+    }
+
+    function listRoster($min=0, $max=10000) {
+        include('list-of-players.php');
+
+        if ( $max == 10000) $max=count($roster);
+
+        echo '<ul class="roster-list clearfix">'."\n";
+
+        for ($i=$min; $i<$max; $i++)
+            echo '<li><a href="#'.$roster[$i]['nome'].'">'.$roster[$i]['nome'].'</a></li>';
+
+        echo '</ul>'."\n";
+        echo '<div class="clear"></div>';
+
+        for ($i=$min; $i<$max; $i++) {
+            if ($i == 0 || ($i%2)==0 )
+                $class="left";
+            else
+                $class="right";
+
+            echo '
+            <div id="'.$roster[$i]['nome'].'" class="fieldset clearfix" >
+                <h2 class="'.$class.'">'.$roster[$i]['nome'].'</h2>
             <p>
-              <img src="'.$roster[$i]['img'].'" class="'.$class.'" alt="" />'.
-              $roster[$i]['desc'].'</p> 
+            <img src="'.$roster[$i]['img'].'" class="'.$class.'" alt="" />'.
+            $roster[$i]['desc'].'</p>
             <p class="cit">'.$roster[$i]['cit'].'</p>
-        </div>
-			  ';
-			
-			}
-		
-		}
+            </div>';
+        }
+    }
 
 ?>
 

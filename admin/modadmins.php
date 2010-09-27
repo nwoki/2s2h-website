@@ -1,10 +1,14 @@
 <?php
+    ob_start();
     session_start();
-    require( '../functions/functions.php' );
+    if ( !isset($_SESSION['status']) || $_SESSION['status']!="admin" )
+      header('location: ../index.php');  
+		require( '../functions/functions.php' );
     $_SESSION["page"] = "admin";
-    //error_reporting( E_ALL );
+    ob_end_flush();
+		//error_reporting( E_ALL );
     //ini_set( 'display_errors', '1' );
-    $test = new WebClass(); /* used to check if database is setup right */
+    //$test = new WebClass(); /* used to check if database is setup right */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

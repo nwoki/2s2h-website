@@ -1,6 +1,8 @@
 <?php
     ob_start();
     session_start();
+		 if ( !isset($_SESSION['status']) || $_SESSION['status']!="admin" )
+      header('location: ../index.php');  
 		require( '../functions/functions.php' );
     $_SESSION["page"] = "admin";
 		ob_end_flush();

@@ -17,7 +17,6 @@ class WebClass
                 print( "<p class=\"debug\">Can't use database '".$this->m_dbName."' : ".mysql_error( $this->m_dbLink )."</p>" );
                 print( "<p class=\"debug\">Please go to 'initialize.php' to setup database for first run</p>" );
             }
-        
         }
         else  /* i'm on initialize page */
             $this->createDbFirstRun();
@@ -36,8 +35,7 @@ class WebClass
 
 	/* login function for admin page */
     public function adminLogin( $nick, $pass )
-    {   
-
+    {
         if( empty( $nick ) || empty( $pass ) )
             return false;
         else {
@@ -190,6 +188,10 @@ class WebClass
         print( "<p><br/>redirecting in 10 seconds..</p>" );
         //header( "refresh: 10; index.php" );  /* redirect after 5 seconds */
     }
+
+		function getLink() {
+		  return $this->m_dbLink;
+		}
 
     /*******************
     * private members  *
