@@ -2,11 +2,11 @@
 $(document).ready(function() {
 
 	$("div#toppanel").show();
-	$("div#panel").show();
+	
 	$('a#hide').show();
 	$('a#show').hide();
-	
-	$('a.open').hide();
+	$("#open").show();
+	$("#close").hide();
 	
 	$('a#show').click(function() {
 	  $('#toppanel').fadeIn();

@@ -51,6 +51,7 @@
 		<?php }?>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/slide.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/BanBot.css" type="text/css" />
 
 </head>
 <body>

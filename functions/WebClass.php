@@ -7,7 +7,7 @@ class WebClass
         // set private members
         $this->m_host = "localhost";
         $this->m_user = "root";
-        $this->m_pass = "root";
+        $this->m_pass = "k0sm0s0l-sql";
         $this->m_dbName = "2s2hwebsite";
 
         $this->connectToDatabase(); /* create a link to database */

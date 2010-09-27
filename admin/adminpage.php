@@ -16,8 +16,12 @@
         <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
         <title><?php echo $title[$_SESSION["page"]]; ?></title>
 				<script src="../js/jquery-1.4.2.min.js" type="text/javascript"></script>
-    		<script src="../js/slide.js" type="text/javascript"></script>
         <script src="../js/login.js" type="text/javascript"></script>
+    		<?php if ( isset($_SESSION['status']) && $_SESSION['status'] == 'admin') {?>
+				<script src="../js/slide-admin.js" type="text/javascript"></script>
+        <?php } else {?>
+				<script src="../js/slide.js" type="text/javascript"></script>
+		    <?php }?>
         <link href="../css/style.css" type="text/css" rel="stylesheet"/>
         <link href="../css/slide.css" type="text/css" rel="stylesheet" media="screen" />
 
@@ -39,7 +43,7 @@
           <li class="left">&nbsp;</li>
           <li id="toggle">
             <a id="open" class="open" href="#">Admin Area</a>
-            <a id="close" style="display: none;" class="close" href="#">Close</a>			
+            <a id="close" class="close" href="#">Close</a>			
           </li>
           <li class="right">&nbsp;</li>
         </ul> 
