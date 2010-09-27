@@ -15,7 +15,7 @@
 
     function adminLogin( $nick, $pass )
     {
-				$webClass = new WebClass();
+        $webClass = new WebClass();
         return $webClass->adminLogin( $nick, $pass );
     }
 
@@ -477,7 +477,7 @@
             $row = mysql_fetch_assoc( $result );
 
             $title = $row['title'];
-            $author = $row['author'];
+            $article = $row['article'];
 
             echo"
             <center>
@@ -629,74 +629,74 @@
             </center>
         </form>";
     }
-		
-		function restrictedArea( $status ) {
-		  
-			if ( $_SESSION['page'] != 'admin' ) {
-			  $link1 = 'admin/adminpage.php';
-				$link2 = 'admin/logout.php'; 
-			} else {
-			  $link1 = 'adminpage.php';
-				$link2 = 'logout.php'; 
-			}
-			
-		  if ( $status != 'admin' ) {
-				echo '
-			  <!-- Login Form -->
-            <form class="clearfix" action="#" method="post" name="login">
-              <h1>Restricted Area</h1>
-              <label class="grey" for="log">Username:</label>
-              <input class="field" type="text" name="usr" id="usr" value="" size="23" />
-              <label class="grey" for="pwd">Password:</label>
-              <input class="field" type="password" name="psw" id="psw" size="23" />
-              <input type="submit" name="submit" value="Login" class="bt_login" />
-              <span id="load"></span><div id="attention">Invalid Username/Password</div>
-            </form>     
-            <!-- /login -->
-				';		
-			} else {
-			  
-				echo '
-				   <!-- Login Form -->
-            <h1>Welcome <span id="user">'. $_SESSION['username'].'</span></h1>
-            <a href="'.$link1.'" class="admin">Admin Page</a>
-						<a href="'.$link2.'" class="logout">Logout</a>
-            <!-- /login -->
-				';
-				
-			}
-		
-		}
-		
-		function listRoster($min=0, $max=10000) {
-			include('list-of-players.php');
-			
-			if ( $max == 10000) $max=count($roster);
-			
-			echo '<ul class="roster-list clearfix">'."\n";
-			for ($i=$min; $i<$max; $i++) {
-			  echo '<li><a href="#'.$roster[$i]['nome'].'">'.$roster[$i]['nome'].'</a></li>';
-			}
-			echo '</ul>'."\n";
-			echo '<div class="clear"></div>';
-			for ($i=$min; $i<$max; $i++) {
-			  if ($i == 0 || ($i%2)==0 ) 
-				  $class="left";
-				else 	 
-				  $class="right";
-			  echo '
-				<div id="'.$roster[$i]['nome'].'" class="fieldset clearfix" >
-  					<h2 class="'.$class.'">'.$roster[$i]['nome'].'</h2>
+
+    function restrictedArea( $status ) {
+
+        if ( $_SESSION['page'] != 'admin' ) {
+            $link1 = 'admin/adminpage.php';
+            $link2 = 'admin/logout.php';
+        } else {
+            $link1 = 'adminpage.php';
+            $link2 = 'logout.php';
+        }
+
+        if ( $status != 'admin' ) {
+            echo '
+            <!-- Login Form -->
+        <form class="clearfix" action="#" method="post" name="login">
+            <h1>Restricted Area</h1>
+            <label class="grey" for="log">Username:</label>
+            <input class="field" type="text" name="usr" id="usr" value="" size="23" />
+            <label class="grey" for="pwd">Password:</label>
+            <input class="field" type="password" name="psw" id="psw" size="23" />
+            <input type="submit" name="submit" value="Login" class="bt_login" />
+            <span id="load"></span><div id="attention">Invalid Username/Password</div>
+        </form>
+        <!-- /login -->
+            ';
+        } else {
+
+            echo '
+                <!-- Login Form -->
+        <h1>Welcome <span id="user">'. $_SESSION['username'].'</span></h1>
+        <a href="'.$link1.'" class="admin">Admin Page</a>
+                    <a href="'.$link2.'" class="logout">Logout</a>
+        <!-- /login -->
+            ';
+
+        }
+
+    }
+
+    function listRoster($min=0, $max=10000) {
+        include('list-of-players.php');
+
+        if ( $max == 10000) $max=count($roster);
+
+        echo '<ul class="roster-list clearfix">'."\n";
+
+        for ($i=$min; $i<$max; $i++)
+            echo '<li><a href="#'.$roster[$i]['nome'].'">'.$roster[$i]['nome'].'</a></li>';
+
+        echo '</ul>'."\n";
+        echo '<div class="clear"></div>';
+
+        for ($i=$min; $i<$max; $i++) {
+            if ($i == 0 || ($i%2)==0 )
+                $class="left";
+            else
+                $class="right";
+
+            echo '
+            <div id="'.$roster[$i]['nome'].'" class="fieldset clearfix" >
+                <h2 class="'.$class.'">'.$roster[$i]['nome'].'</h2>
             <p>
-              <img src="'.$roster[$i]['img'].'" class="'.$class.'" alt="" />'.
-              $roster[$i]['desc'].'</p> 
+            <img src="'.$roster[$i]['img'].'" class="'.$class.'" alt="" />'.
+            $roster[$i]['desc'].'</p>
             <p class="cit">'.$roster[$i]['cit'].'</p>
-        </div>
-			  ';
-			
-			}
-		
-		}
+            </div>';
+        }
+    }
 
 ?>
 
