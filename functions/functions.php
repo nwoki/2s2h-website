@@ -35,9 +35,9 @@
                 <a href="forum/index.php" >Forum</a> -
                 <a href="bugtracker/index.php" >BugTracker</a> -
                 <a href="2steps-2hell-awards.php">Awards</a> -
-								<a href="/vwar/war.php?action=nextaction">VWar</a> -
-								<a href="#" id="show" class="adminTab" >AdminCP</a> 
-								<a href="#" id="hide" class="adminTab" style="display:none">CloseTab</a>
+                <a href="/vwar/war.php?action=nextaction">VWar</a> -
+                <a href="#" id="show" class="adminTab" >AdminCP</a>
+                <a href="#" id="hide" class="adminTab" style="display:none">CloseTab</a>
             </div>';
         else    //se sono nella sezione admin, i link sono diversi
             echo
@@ -482,6 +482,8 @@
 
             $title = $row['title'];
             $article = $row['article'];
+            $author = $row['author'];
+            $date = date( "Y-m-d" );
 
             echo"
             <center>
@@ -561,7 +563,9 @@
         else {
             $webClass = new WebClass();
             $date = date( "Y-m-d" );
-            $query = "insert into 2s2h_news values( '',\"$title\",\"$author\" ,\"$article\",\"$date\" );";
+
+            $articleOk = addSlashes( $article );    /* adds slashes where needed so database query doesn't fail */
+            $query = "insert into 2s2h_news values( '',\"$title\",\"$author\" ,\"$articleOk\",\"$date\" );";
 
             $result = $webClass->executeQuery( $query );
 
@@ -582,7 +586,7 @@
 
     function submitModArticle( $modTitle, $modAuthor, $modArticle, $articleIdToMod )
     {
-        print( "title ".$modTitle."\n auth ".$modAuthor."\n art ".$modArticle."\n id ".$articleIdToMod );
+        //print( "<br/>title-> ".$modTitle."\n <br/>author-> ".$modAuthor."\n <br/>art-> ".$modArticle."\n <br/>id-> ".$articleIdToMod."<br/>" );
         if( empty( $articleIdToMod ) )
             die( "Can't find news id to modify. Recieved an empty value " );
 
@@ -593,8 +597,9 @@
         //date_default_timezone_set('CEST');   /* set default date timezone */
         $modDate = date( "Y-m-d" );   /* get date from machine */
         $webClass = new WebClass();
+        $articleOk = addSlashes( $modArticle );    /* in case i add strange quoted stuff */
 
-        $query = "update 2s2h_news set title=\"$modTitle\", author=\"$modAuthor\", article=\"$modArticle\", time=\"$modDate\" where id=\"$articleIdToMod\"";
+        $query = "update 2s2h_news set title=\"$modTitle\", author=\"$modAuthor\", article=\"$articleOk\", time=\"$modDate\" where id=\"$articleIdToMod\"";
 
         $result = $webClass->executeQuery( $query );
 
