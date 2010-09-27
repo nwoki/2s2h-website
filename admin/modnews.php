@@ -2,7 +2,7 @@
     ob_start();
     session_start();
 		if ( !isset($_SESSION['status']) || $_SESSION['status']!="admin" )
-      header('location: ../index.php');  
+      header('location: ../index.php');
     require( '../functions/functions.php' );
     $_SESSION["page"] = "admin";
     ob_end_flush();
@@ -45,7 +45,7 @@
                     showModArticle( $_POST['chosenArticle'] );  /* got article by it's id */
 
                 elseif( isset( $_POST['articleToModId'] ) )  /* submit article mod */
-                    submitModArticle( $_POST['modArticleTitle'], $_SESSION['user'], $_POST['modArticleText'], $_POST['articleToModId'] );
+                    submitModArticle( $_POST['modArticleTitle'], $_SESSION['username']/* set by login made by MATTEO*/, $_POST['modArticleText'], $_POST['articleToModId'] );
 
                 elseif( isset( $_POST['articleToDeleteId'] ) ) /* id of admin to delete */
                     deleteArticle( $_POST['articleToDeleteId'] );
