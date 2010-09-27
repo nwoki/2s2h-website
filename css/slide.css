@@ -114,6 +114,7 @@ a.admin, a.logout {float: left}
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+		display:none;
 }
 
 #panel {
@@ -200,7 +201,7 @@ a.admin, a.logout {float: left}
 
 #panel .content input.field {
 	border: 1px #1A1A1A solid;
-	background: #414141;
+	background: #707070;
 	margin-right: 15px;
 	margin-top: 0px;
 	width: 100px;
@@ -252,4 +253,7 @@ a.admin, a.logout {float: left}
 #load {background: transparent url(../images/loading.gif) no-repeat 0 0; display: none; width: 91px; height: 20px; float: left; margin: 2px 0 0 10px}
 #attention {display: none;background: transparent url(../images/ico-attention.png) no-repeat 0 0; padding-left: 30px; line-height: 24px; color: #f00; float:left; font-size: 12px;margin: 0 0 0 10px}
 #user { color: #f00; text-transform: uppercase; font-size: bold; visibility:visible;}
+
+input.grey { background-color: #666;}
+.ui-tabs-nav { text-align: center; width: auto; margin: 0 auto;}
 

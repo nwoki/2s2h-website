@@ -1,5 +1,13 @@
 $(document).ready(function() {
 	
+	$('a#show').click(function() {
+	  $('#toppanel').fadeIn();
+	});
+	
+	$('a#hide').click(function() {
+	  $('#toppanel').fadeOut();
+	});
+	
 	// Expand Panel
 	$("#open").click(function(){
 		$("div#panel").slideDown("slow");
@@ -16,5 +24,9 @@ $(document).ready(function() {
 	$("#toggle a").click(function () {
 		$("#toggle a").toggle();
 	});		
+	
+	$("#adminTab a").click(function () {
+		$("#adminTab a").toggle();
+	});			
 		
 });

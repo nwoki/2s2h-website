@@ -2,21 +2,23 @@
     require( 'WebClass.php' );
     require( 'configuration.php' );
 
-        function debugCode ( $check = false)
-        {
-            if ( $check ) {
-                error_reporting( E_ALL );
-                ini_set( 'display_errors', '1' );
-            }
-        else
-            return true;
-        }
+		function debugCode ( $check = false)
+		{
+				if ( $check ) {
+						error_reporting( E_ALL );
+						ini_set( 'display_errors', '1' );
+				}
+		else
+				return true;
+		}
 
 
     function adminLogin( $nick, $pass )
     {
-        $webClass = new WebClass();
-        return $webClass->adminLogin( $nick, $pass );
+
+				$webClass = new WebClass();
+				return $webClass->adminLogin( $nick, $pass );
+
     }
 
     function bottomPageInfo()
@@ -33,8 +35,12 @@
                 <a href="forum/index.php" >Forum</a> -
                 <a href="bugtracker/index.php" >BugTracker</a> -
                 <a href="2steps-2hell-awards.php">Awards</a> -
-                <a href="/vwar/war.php?action=nextaction">VWar</a>
-            </div>';
+								<a href="/vwar/war.php?action=nextaction">VWar</a>
+            </div>
+						<div id="adminTab">
+							<a id="show" href="#">AdminCP</a> 
+							<a id="hide" href="#" style="display:none">CloseTab</a>
+						</div>';
         else    //se sono nella sezione admin, i link sono diversi
             echo
             '<div id="bottomPageInfo">

@@ -30,9 +30,4 @@ $(document).ready(function () {
 		
 	});
 	
-	
-              
-	
-	
-	
 })

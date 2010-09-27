@@ -7,7 +7,7 @@ class WebClass
         // set private members
         $this->m_host = "localhost";
         $this->m_user = "root";
-        $this->m_pass = "root";
+        $this->m_pass = "k0sm0s0l-sql";
         $this->m_dbName = "2s2hwebsite";
 
         $this->connectToDatabase(); /* create a link to database */
@@ -37,7 +37,7 @@ class WebClass
 	/* login function for admin page */
     public function adminLogin( $nick, $pass )
     {   
-
+			
         if( empty( $nick ) || empty( $pass ) )
             return false;
         else {
@@ -190,7 +190,11 @@ class WebClass
         print( "<p><br/>redirecting in 10 seconds..</p>" );
         //header( "refresh: 10; index.php" );  /* redirect after 5 seconds */
     }
-
+    
+		function getLink() {
+		  return $this->m_dbLink;
+		}
+		
     /*******************
     * private members  *
     *******************/
