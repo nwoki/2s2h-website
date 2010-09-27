@@ -1,8 +1,12 @@
+// JavaScript Document
 $(document).ready(function() {
+
+	$("div#toppanel").show();
+	$("div#panel").show();
+	$('a#hide').show();
+	$('a#show').hide();
 	
-	$('a#hide').hide();
-	
-	$('a.close').hide();
+	$('a.open').hide();
 	
 	$('a#show').click(function() {
 	  $('#toppanel').fadeIn();
@@ -12,15 +16,14 @@ $(document).ready(function() {
 	  $('#toppanel').fadeOut();
 	});
 	
-	// Expand Panel
-	$("#open").click(function(){
-		$("div#panel").slideDown("slow");
-	});	
-	
 	// Collapse Panel
 	$("#close").click(function(){
 		$("div#panel").slideUp("slow");	
 		$("#load").fadeOut();
+	});		
+	
+	$("#open").click(function(){
+		$("div#panel").slideDown("slow");	
 	});		
 	
 	// Switch buttons from "LogIn" to "Close Panel" on click
@@ -31,5 +34,6 @@ $(document).ready(function() {
 	$("#bottomPageInfo a.adminTab").click(function () {
 		$("#bottomPageInfo a.adminTab").toggle();
 	});			
-		
-});
+
+	
+})

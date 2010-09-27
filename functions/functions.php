@@ -36,8 +36,8 @@
                 <a href="bugtracker/index.php" >BugTracker</a> -
                 <a href="2steps-2hell-awards.php">Awards</a> -
 								<a href="/vwar/war.php?action=nextaction">VWar</a> -
-								<a href="#" id="show" class="adminTab" >AdminCP</a> 
-								<a href="#" id="hide" class="adminTab" style="display:none">CloseTab</a>
+								<a href="#" id="show" class="adminTab">AdminCP</a> 
+								<a href="#" id="hide" class="adminTab">CloseTab</a>
             </div>';
         else    //se sono nella sezione admin, i link sono diversi
             echo

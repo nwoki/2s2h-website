@@ -255,5 +255,3 @@ a.admin, a.logout {float: left}
 #user { color: #f00; text-transform: uppercase; font-size: bold; visibility:visible;}
 
 input.grey { background-color: #666;}
-.ui-tabs-nav { text-align: center; width: auto; margin: 0 auto;}
-
