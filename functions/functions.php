@@ -35,12 +35,10 @@
                 <a href="forum/index.php" >Forum</a> -
                 <a href="bugtracker/index.php" >BugTracker</a> -
                 <a href="2steps-2hell-awards.php">Awards</a> -
-								<a href="/vwar/war.php?action=nextaction">VWar</a>
-            </div>
-						<div id="adminTab">
-							<a id="show" href="#">AdminCP</a> 
-							<a id="hide" href="#" style="display:none">CloseTab</a>
-						</div>';
+								<a href="/vwar/war.php?action=nextaction">VWar</a> -
+								<a href="#" id="show" class="adminTab" >AdminCP</a> 
+								<a href="#" id="hide" class="adminTab" style="display:none">CloseTab</a>
+            </div>';
         else    //se sono nella sezione admin, i link sono diversi
             echo
             '<div id="bottomPageInfo">

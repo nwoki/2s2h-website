@@ -25,8 +25,8 @@ $(document).ready(function() {
 		$("#toggle a").toggle();
 	});		
 	
-	$("#adminTab a").click(function () {
-		$("#adminTab a").toggle();
+	$("#bottomPageInfo a.adminTab").click(function () {
+		$("#bottomPageInfo a.adminTab").toggle();
 	});			
 		
 });
