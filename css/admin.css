@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* CSS Document */
+
+ul#adminpage { list-style: none; width: 150px; margin: 0 auto; text-align: left; margin-top: 20px;}
+ul#adminpage li { line-height: 32px; height: 32px; padding-left: 40px; background-color:#000; color: #fff; margin-bottom:10px;}
+ul#adminpage li.ico-admin { background: url(../img/ico-admin.jpg) top left no-repeat;}
+ul#adminpage li.ico-art { background: url(../img/ico-article.jpg) top left no-repeat;}
+ul#adminpage li a { font-size: 16px; cursor: pointer;}
