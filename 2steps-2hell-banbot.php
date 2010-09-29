@@ -3,38 +3,42 @@
 		$_SESSION["page"] = "bot";
     require( 'functions/functions.php' );
     
+    
 	// open the directory 
-	  if ( is_dir("BanBot/last_release/") ) {
-	  	$myDirectory = opendir("BanBot/last_release/");
-		
-			// get each entry
-			while($entryName = readdir($myDirectory))
-				$dirArray[] = $entryName;
-		
-			if (($indexCount	= count($dirArray) ) > 0)
-				// sort 'em
-				sort($dirArray);
-				
-			closedir($myDirectory);	
-			// print 'em
-			print("<TABLE border=1 cellpadding=5 cellspacing=0 class=whitelinks>\n");
-			print("<TR><TH>Filename</TH><th>Filetype</th><th>Filesize</th></TR>\n");
-			// loop through the array of files and print them all
-			for($index=0; $index < $indexCount; $index++) {
-		    if (substr("$dirArray[$index]", 0, 1) != "."){ // don't list hidden files
-					print("<TR><TD><a href=\"$dirArray[$index]\">$dirArray[$index]</a></td>");
-					print("<td>");
-					print(filetype($dirArray[$index]));
-					print("</td>");
-					print("<td>");
-					print(filesize($dirArray[$index]));
-					print("</td>");
-					print("</TR>\n");
-				}
-			}
-			print("</TABLE>\n");
-		}
+    $last_dir = "BanBot/last_release/";
+    $old_dir = "BanBot/old/";
+    
+    if ( is_dir($last_dir) ) {
+	  	$myDirectory = opendir($last_dir);
 	
+		// get each entry
+		while($entryName = readdir($myDirectory))
+		{
+			// salvo i link all'ultima versione
+			if ( strpos($entryName,'ITA')>-1 ) $last_ita=$entryName;
+			else if ( strpos($entryName,'ENG')>-1 ) $last_eng=$entryName;
+			else if (substr($entryName, 0, 1) != ".") $last_Array[] = $entryName;
+		}
+
+		if (($last_indexCount = count($last_Array) ) > 0) {sort($last_Array);}
+		
+		closedir($myDirectory);	
+	}
+	
+	if ( is_dir($old_dir) ) {
+	  	$myDirectory = opendir($old_dir);
+	
+		// get each entry
+		while($entryName = readdir($myDirectory))
+		{
+			// salvo i link delle versioni vecchie
+			if (substr($entryName, 0, 1) != ".") $old_Array[] = $entryName;
+		}
+
+		if (($old_indexCount = count($old_Array) ) > 0) sort($old_Array);
+		
+		closedir($myDirectory);
+	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -113,8 +117,8 @@
 		    <p class="center">Aiutaci a migliorare BanBot indicandoci bug o dandoci dei suggerimenti: apri un ticket sul nostro <a href="bugtracker/index.php">BugTracker</a>.</p>
 		    
 
-		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip"><img src="imghold/download.png" alt=""></a></p>
-		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip">Banbot_ver1.1(ITA)</a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
+		    <p class="center"><a href="<?php echo $last_dir.$last_ita; ?>"><img src="imghold/download.png" alt=""></a></p>
+		    <p class="center"><a href="<?php echo $last_dir.$last_ita; ?>"><?php echo $last_ita; ?></a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
 		    <br/>
 		    <p class="center">I beta-tester dicono di BanBot:</p>
 		    <p class="quote">"&egrave semplice e funziona bene, meglio di b3 e cagate varie."</p>
@@ -146,8 +150,8 @@
 		    <p class="center">Summarizing: it stays good and quiet when not needed and keeps your server clean.</p>
 		    <p class="center">For more information, read the documentation.</p>
 		    <p class="center">Help us improve BanBot indicating bugs or giving us suggestions: open a ticket on our <a href="bugtracker/index.php">BugTracker</a>.</p>
-		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip"><img src="imghold/download.png" alt=""></a></p>
-		    <p class="center"><a href="banbotDownloads/banbot_1.1.zip">Banbot_ver1.1(ENG)</a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
+		    <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
+		    <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
 		    <br/>
 		    <p class="center">What beta-testers say about BanBot:</p>
 		    <p class="quote">"It's simple and works well, better than b3 and various crappy bots around."</p>
@@ -155,8 +159,17 @@
 		</div>
 
 		<div id="fineBot">
-			<p class="center"><a href="banbotReadme.txt"><img src="imghold/download.png" alt=""></a></p>
-			<p class="center"><a href="banbotReadme.txt">documentazione - documentation</a></p>
+			<?php 
+				//altre cose dell'ultima versione
+				for($index=0; $index < $last_indexCount; $index++)
+					echo '  <p class="center"><a href="'.$last_dir.$last_Array[$index].'"><img src="imghold/download.png" alt=""></a></p>
+							<p class="center"><a href="'.$last_dir.$last_Array[$index].'">'.$last_Array[$index].'</a></p>';
+				
+				//vecchie versioni
+				echo '<br/><p class="center">Older downloads:</p>';
+				for($index=0; $index < $old_indexCount; $index++)
+					echo '  <p class="center"><a href="'.$old_dir.$old_Array[$index].'">'.$old_Array[$index].'</a></p>';
+			?>
 		</div>
 
       </div>
