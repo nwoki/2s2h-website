@@ -179,6 +179,27 @@
 						echo '  <p class="center"><a href="'.$old_dir.$old_Array[$index].'">'.$old_Array[$index].'</a></p>';
 				?>
 			</div>
+			
+			<div id="tabs-4">
+				<p class="center"> Caratteristiche che verranno probabilmente aggiunte alle prossime versioni: </p>
+				<br/>
+				<?php 
+					include("BanBot/future.php");
+					$i_indexCount = count($future);
+					for($i=0; $i < $i_indexCount; $i++)
+					{
+						echo '  <p class="center">In '.$future[$i]['version'].' :</p>';
+						echo '<ul>';
+						$j_indexCount = count($future[$i]['info']);
+						for($j=0; $j < $j_indexCount; $j++)
+						{
+							echo '<li>'.$future[$i]['info'][$j]['it'].'</li>';
+						}
+						echo '</ul><br/>';	
+					}
+				?>
+			</div>
+			
 		</div>
 
       </div>
