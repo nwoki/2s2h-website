@@ -24,6 +24,10 @@
 		$future[$i]['info'][$j]['en'] = 'Command to change password.';
 		$j++;
 		
+		$future[$i]['info'][$j]['it'] = 'Comando per avere l\'ip di un giocatore.'; 
+		$future[$i]['info'][$j]['en'] = 'Command to see player\'s ip.';
+		$j++;
+		
 		$future[$i]['info'][$j]['it'] = 'Comando per caricare le impostazioni del gioco da un file di configurazione.'; 
 		$future[$i]['info'][$j]['en'] = 'Command to load options of the game from a config file.';
 		$j++;
