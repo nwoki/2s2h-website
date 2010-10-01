@@ -22,6 +22,7 @@ $(document).ready(function () {
 					  $('#load').hide();
 						$('#attention').fadeIn().delay(2000).fadeOut();
 						$('#usr').focus();
+						$('input[name=psw]').val("");
 				}
 				
 			}, "json" );
