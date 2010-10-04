@@ -122,7 +122,7 @@ class WebClass
 
         if( empty( $row[0] ) || $row[0] != "2s2h_admins" ) {
             print( "<p class=\"debug\">TABLES DON'T exist!</p>" );
-            $scriptArr = array( "db/admins.sql", "db/news.sql", "db/roster.sql" );    /* where my sql scripts are */
+            $scriptArr = array( "db/admins.sql", "db/news.sql" );    /* where my sql scripts are */
 
             foreach( $scriptArr as $file )
             {
@@ -185,7 +185,7 @@ class WebClass
         /* check for tables and create them if neccessary */
         $this->createTables();
 
-        print( "<p><br/>redirecting in 10 seconds..</p>" );
+        //print( "<p><br/>redirecting in 10 seconds..</p>" );
         //header( "refresh: 10; index.php" );  /* redirect after 5 seconds */
     }
 
