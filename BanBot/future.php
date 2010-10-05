@@ -28,6 +28,10 @@
 		$future[$i]['info'][$j]['en'] = 'Command to see player\'s ip.';
 		$j++;
 		
+		$future[$i]['info'][$j]['it'] = 'Comando per abilitare/disabilitare i voti.'; 
+		$future[$i]['info'][$j]['en'] = 'Command to enable/disable voting.';
+		$j++;
+		
 		$future[$i]['info'][$j]['it'] = 'Comando per caricare le impostazioni del gioco da un file di configurazione.'; 
 		$future[$i]['info'][$j]['en'] = 'Command to load options of the game from a config file.';
 		$j++;
@@ -36,7 +40,7 @@
 		$future[$i]['info'][$j]['en'] = 'Scan of game\'s dircetoryes, that create a list of extra maps and config files.';
 		$j++;
 		
-		$future[$i]['info'][$j]['it'] = 'I comandi per mappe e file di configuraizone accettano anche solo una parte del nome.'; 
+		$future[$i]['info'][$j]['it'] = 'I comandi per mappe e file di configurazione accettano anche solo una parte del nome.'; 
 		$future[$i]['info'][$j]['en'] = 'Commands for maps and config files will accept a part of the name too.';
 		$j++;
 	$i++;
