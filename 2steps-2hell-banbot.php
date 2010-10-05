@@ -17,10 +17,17 @@
 			// salvo i link all'ultima versione
 			if ( strpos($entryName,'ITA')>-1 ) $last_ita=$entryName;
 			else if ( strpos($entryName,'ENG')>-1 ) $last_eng=$entryName;
-			else if (substr($entryName, 0, 1) != ".") $last_Array[] = $entryName;
+			else if (substr($entryName, 0, 1) != ".") 
+			{
+				$last_Array[] = $entryName;
+				$temp[] = $entryName;
+			}
 		}
 
 		if (($last_indexCount = count($last_Array) ) > 0) {sort($last_Array);}
+		
+		$temp[] = $last_ita;
+		$temp[] = $last_eng;
 		
 		closedir($myDirectory);	
 	}
@@ -32,13 +39,19 @@
 		while($entryName = readdir($myDirectory))
 		{
 			// salvo i link delle versioni vecchie
-			if (substr($entryName, 0, 1) != ".") $old_Array[] = $entryName;
+			if (substr($entryName, 0, 1) != ".") 
+			{
+				$old_Array[] = $entryName;
+				$temp[] = $entryName;
+			}
 		}
 
 		if (($old_indexCount = count($old_Array) ) > 0) sort($old_Array);
 		
 		closedir($myDirectory);
 	}
+	
+	$downloads = getDownloads($temp);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -131,25 +144,25 @@
 					  <li>Riconoscimento amministratori (possono usare anche fake)</li>
 				  </ul>
 				  <br/>
-          <p class="center">Riassumendo, se ne sta buono e silenzioso, tranne in caso di bisogno, e tiene i vostri server puliti.</p>
+          		  <p class="center">Riassumendo, se ne sta buono e silenzioso, tranne in caso di bisogno, e tiene i vostri server puliti.</p>
 				  <p class="center">I beta-tester dicono di BanBot:</p>
 				  <p class="quote">"&egrave semplice e funziona bene, meglio di b3 e cagate varie."</p>
 				  <p class="quote">"BanBot &egrave un eccellente bot per server Urt. Non bisogna essere esperti per poterlo usare, &egrave alla portata di tutti poich&egrave i comandi sono semplici ed essenziali. Utilissimo per gestire il proprio server in maniera facile ed efficace. Inoltre &egrave dotato di un buon anticheat: nel mio server sono gi&agrave stati bannati 5 players, di cui 2 di clan importanti. Sarebbe perfetto con l'aggiunta di un comando per impostare password nel server, ma penso che presto arriver&agrave anch'esso. Un ottimo bot, lo consiglio a tutti."</p>
 				  <br/>
-          <p class="center">Per maggiori informazioni, leggete la documentazione.</p>
-          <p class="center"><a href="<?php echo $last_dir.$last_ita; ?>"><img src="imghold/download.png" alt=""></a></p>
-          <p class="center"><a href="<?php echo $last_dir.$last_ita; ?>"><?php echo $last_ita; ?></a> - <a href="#tabs-2">(ChangeLog)</a></p>
-          <p class="center">Aiutaci a migliorare BanBot indicandoci bug o dandoci dei suggerimenti: apri un ticket sul nostro <a href="bugtracker/index.php">BugTracker</a>.</p>
-          <br/><br/>
-          <p class="center">Download correlati:</p>
-          <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
-          <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a></p>
+				  <p class="center">Per maggiori informazioni, leggete la documentazione.</p>
+				  <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><img src="imghold/download.png" alt=""></a></p>
+				  <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><?php echo $last_ita; ?></a> - <?php echo $downloads[$last_ita]; ?> downloads</p>
+				  <p class="center">Aiutaci a migliorare BanBot indicandoci bug o dandoci dei suggerimenti: apri un ticket sul nostro <a href="bugtracker/index.php">BugTracker</a>.</p>
+				  <br/><br/>
+				  <p class="center">Download correlati:</p>
+				  <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
+				  <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <?php echo $downloads[$last_eng]; ?> downloads</p>
 					<?php
 					for($index=0; $index < $last_indexCount; $index++)
-						echo '  <p class="center"><a href="'.$last_dir.$last_Array[$index].'"><img src="imghold/download.png" alt=""></a></p>
-								<p class="center"><a href="'.$last_dir.$last_Array[$index].'">'.$last_Array[$index].'</a></p>';
+						echo '  <p class="center"><a href="download.php?d='.$last_dir.$last_Array[$index].'"><img src="imghold/download.png" alt=""></a></p>
+								<p class="center"><a href="download.php?d='.$last_dir.$last_Array[$index].'">'.$last_Array[$index].'</a> - '.$downloads[$last_Array[$index]].' downloads</p>';
 					?>
-          </div>
+		   </div>
           
           <!--  -->
           <div class="language en">
@@ -168,17 +181,28 @@
               <li>Recognition of admins (they can use fakes)</li>
             </ul><br/>
             <p class="center">Summarizing: it stays good and quiet when not needed and keeps your server clean.</p>
-            <p class="center">For more information, read the documentation.</p>
-            <p class="center">Help us improve BanBot indicating bugs or giving us suggestions: open a ticket on our <a href="bugtracker/index.php">BugTracker</a>.</p>
-            <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
-            <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <a href="banbotDownloads/ChangeLog_ver1.1.txt" target="_blank">(ChangeLog)</a></p>
             <br/>
             <p class="center">What beta-testers say about BanBot:</p>
             <p class="quote">"It's simple and works well, better than b3 and various crappy bots around."</p>
             <p class="quote">"BanBot is an excellent bot for Urt servers.You don't need to be an expert to use it. Its controls are simple and essential. Useful to manage your server easily and effectively. It also comes with a good anticheat: in my server it has already banned five players, including two of major clans. It would be perfect with the addition of a command to set passwords on the server, but I think it will come soon too. A good bot, I recommend it to everyone."</p>
+            <br/>
+            <p class="center">For more informations, read the documentation.</p>
+            <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
+            <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <?php echo $downloads[$last_eng]; ?> downloads</p>
+            <p class="center">Help us improve BanBot indicating bugs or giving us suggestions: open a ticket on our <a href="bugtracker/index.php">BugTracker</a>.</p>
+            <br/><br/>
+            <p class="center">Related downloads:</p>
+			  <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
+			  <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <?php echo $downloads[$last_ita]; ?> downloads</p>
+				<?php
+				for($index=0; $index < $last_indexCount; $index++)
+					echo '  <p class="center"><a href="download.php?d='.$last_dir.$last_Array[$index].'"><img src="imghold/download.png" alt=""></a></p>
+							<p class="center"><a href="download.php?d='.$last_dir.$last_Array[$index].'">'.$last_Array[$index].'</a> - '.$downloads[$last_Array[$index]].' downloads</p>';
+				?>
           </div>
-			</div>
-
+		</div>
+		
+		
 			<div id="tabs-2">
 				<p class="center"> Changelog: </p>
 				<br/>
@@ -206,7 +230,7 @@
 				<?php 
 					//vecchie versioni
 					for($index=0; $index < $old_indexCount; $index++)
-						echo '  <p class="center"><a href="'.$old_dir.$old_Array[$index].'">'.$old_Array[$index].'</a></p>';
+						echo '  <p class="center"><a href="download.php?d='.$old_dir.$old_Array[$index].'">'.$old_Array[$index].'</a> - '.$downloads[$old_Array[$index]].' downloads</p></p>';
 				?>
 			</div>
 			

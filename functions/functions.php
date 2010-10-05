@@ -161,7 +161,7 @@
 
         while( $row = mysql_fetch_assoc( $result ) ) {
 
-						$title = $row['title'];
+			$title = $row['title'];
             $author = $row['author'];
             $article = $row['article'];
             $date = $row['time'];
@@ -186,6 +186,64 @@
 
         return $date[2] ."/". $date[1]."/".$date[0]." ".$timestamp[1];
 
+    }
+    
+/*****************************
+ * Gestione numero downloads *
+ *****************************/
+    
+    function getDownloads($files)
+    {
+        $webClass = new WebClass();
+        $query = "SELECT * FROM 2s2h_downloads;";  /* get all articles here */
+
+        $result = $webClass->executeQuery( $query );
+        $filesOnDb = array();
+        while( $row = mysql_fetch_assoc( $result ) ) {
+        	//salvo tutto su un array
+        	$filesOnDb[] = $row;
+        	}
+        
+        $downloads = array();
+
+		foreach ($files as $file)
+		{
+			//controllo per ogni file se è già presente nel database
+			$name = substr($file,strrpos($file,'/'));
+			$found = false;
+			
+			foreach ($filesOnDb as $fileOnDb)
+			{				
+				if ( strcmp($fileOnDb['file'],$name) == 0 )
+				{
+					$found = true;
+					$downloads[$file] = $fileOnDb['number'];
+				}
+			}
+			if ( !$found )
+			{
+				//aggiungo un record al db
+				$query = "INSERT INTO 2s2h_downloads VALUES ('',\"$name\",\"0\");";
+				$webClass->executeQuery( $query );
+				$downloads[$file] = 0;
+			}
+		}
+
+        $webClass->close();
+        return $downloads;
+    }
+    
+    function updateDownload($file)
+    {
+    	$webClass = new WebClass();
+    	$name = substr($file,strrpos($file,'/')+1);
+    	$query = "SELECT * FROM 2s2h_downloads WHERE file=\"$name\";";
+    	$result = $webClass->executeQuery( $query );
+    	
+    	$row = mysql_fetch_assoc( $result );
+    	
+        $query = "UPDATE 2s2h_downloads SET number=\"".($row['number']+1)."\" WHERE file=\"$name\";";
+        $webClass->executeQuery( $query );     
     }
 
 /*******************

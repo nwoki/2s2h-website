@@ -122,7 +122,7 @@ class WebClass
 
         if( empty( $row[0] ) || $row[0] != "2s2h_admins" ) {
             print( "<p class=\"debug\">TABLES DON'T exist!</p>" );
-            $scriptArr = array( "db/admins.sql", "db/news.sql" );    /* where my sql scripts are */
+            $scriptArr = array( "db/admins.sql", "db/news.sql", "db/downloads.sql" );    /* where my sql scripts are */
 
             foreach( $scriptArr as $file )
             {
