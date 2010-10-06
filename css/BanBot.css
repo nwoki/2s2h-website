@@ -2,4 +2,6 @@
 ul.botList {padding-left:20px; margin-top: 10px;}
 p.quote {text-align: center; font-style: italic;}
 
+.versionName {text-align: center; font-weight: bold; font-size: 1.2em;}
+
 div#tabs .en { display: none}

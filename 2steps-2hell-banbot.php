@@ -76,6 +76,7 @@
     </script>
     <link type="text/css" href="css/theme-redblack/jquery-ui-1.8.4.custom.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/BanBot.css" type="text/css" />
     <link rel="stylesheet" href="css/slide.css" type="text/css" media="screen" />
 
 </head>
@@ -215,8 +216,8 @@
                 $i_indexCount = count($versions);
                 for($i=0; $i < $i_indexCount; $i++)
                 {
-                  echo '  <p class="center">'.$versions[$i]['nome'].'</p>';
-                  echo '<dl>';
+                  echo '  <p class="versionName">'.$versions[$i]['nome'].'</p>';
+                  echo '<ul>';
                   $j_indexCount = count($versions[$i]['info']);
                   for($j=0; $j < $j_indexCount; $j++)
                   {
@@ -237,16 +238,16 @@
                 $i_indexCount = count($versions);
                 for($i=0; $i < $i_indexCount; $i++)
                 {
-                  echo '  <p class="center">'.$versions[$i]['nome'].'</p>';
+                  echo '  <p class="versionName">'.$versions[$i]['nome'].'</p>';
                   echo '<dl>';
                   $j_indexCount = count($versions[$i]['info']);
                   for($j=0; $j < $j_indexCount; $j++)
                   {
                     echo '
-                      <dt>'.$versions[$i]['info'][$j]['data'].'</dt>
-                      <dd>'.$versions[$i]['info'][$j]['modifica'].'</dt>';
+                      <li>'.$versions[$i]['info'][$j]['data'].' : 
+                      '.$versions[$i]['info'][$j]['modifica'].'</li>';
                   }
-                  echo '</dl>';	
+                  echo '</ul>';	
                 }
               ?>
             </div>
@@ -285,7 +286,7 @@
                 $i_indexCount = count($future);
                 for($i=0; $i < $i_indexCount; $i++)
                 {
-                  echo '  <p class="center">In '.$future[$i]['version'].' :</p>';
+                  echo '  <p class="versionName">In '.$future[$i]['version'].' :</p>';
                   echo '<ul>';
                   $j_indexCount = count($future[$i]['info']);
                   for($j=0; $j < $j_indexCount; $j++)
@@ -305,7 +306,7 @@
                 $i_indexCount = count($future);
                 for($i=0; $i < $i_indexCount; $i++)
                 {
-                  echo '  <p class="center">In '.$future[$i]['version'].' :</p>';
+                  echo '  <p class="versionName">In '.$future[$i]['version'].' :</p>';
                   echo '<ul>';
                   $j_indexCount = count($future[$i]['info']);
                   for($j=0; $j < $j_indexCount; $j++)
