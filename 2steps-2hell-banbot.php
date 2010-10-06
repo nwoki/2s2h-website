@@ -195,8 +195,8 @@
               <p class="center">Help us improve BanBot indicating bugs or giving us suggestions: open a ticket on our <a href="bugtracker/index.php">BugTracker</a>.</p>
               <br/><br/>
               <p class="center">Related downloads:</p>
-              <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
-              <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <?php echo $downloads[$last_ita]; ?> downloads</p>
+              <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><img src="imghold/download.png" alt=""></a></p>
+              <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><?php echo $last_ita; ?></a> - <?php echo $downloads[$last_ita]; ?> downloads</p>
               <?php
               for($index=0; $index < $last_indexCount; $index++)
               echo '  <p class="center"><a href="download.php?d='.$last_dir.$last_Array[$index].'"><img src="imghold/download.png" alt=""></a></p>
@@ -265,7 +265,7 @@
             </div>
             
             <div class="en">
-              <p class="center"> Downloads delle versioni precedenti: </p>
+              <p class="center"> Older versions downloads: </p>
               <?php 
                 //vecchie versioni
                 for($index=0; $index < $old_indexCount; $index++)
@@ -298,7 +298,7 @@
             </div>
             
             <div class="en">
-              <p class="center"> Caratteristiche che verranno probabilmente aggiunte alle prossime versioni: </p>
+              <p class="center"> Features that probably will be added in the future: </p>
               <br/>
               <?php 
                 include("BanBot/future.php");
