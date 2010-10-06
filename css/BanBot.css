@@ -1,3 +1,5 @@
 /*BanBot page*/
 ul.botList {padding-left:20px; margin-top: 10px;}
 p.quote {text-align: center; font-style: italic;}
+
+div#tabs .en { display: none}
