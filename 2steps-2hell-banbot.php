@@ -158,6 +158,13 @@
               <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><?php echo $last_ita; ?></a> - <?php echo $downloads[$last_ita]; ?> downloads</p>
               <p class="center">Aiutaci a migliorare BanBot indicandoci bug o dandoci dei suggerimenti: apri un ticket sul nostro <a href="bugtracker/index.php">BugTracker</a>.</p>
               <br/><br/>
+              <p class="versionName">Ringraziamenti:</p>
+              <p class="center">A questo punto &egrave doveroso ringraziare tutte le persone che ci hanno aiutato, in particolare:</p>
+              <p class="center">i clan <span class="cit">=IvN=</span>, <span class="cit">@lbs</span>, <span class="cit">SdP</span> e <span class="cit">|NN|</span> 
+              					per averci fatto da beta-tester e per i loro consigli,<br/>
+              					<span class="cit">Mission85</span>, <span class="cit">ObScUrE</span>, <span class="cit">don</span>, <span class="cit">Kalish</span> e <span class="cit">Decoy</span>
+              					per il loro prezioso aiuto.</p>
+              <br/><br/>
               <p class="center">Download correlati:</p>
               <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
               <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <?php echo $downloads[$last_eng]; ?> downloads</p>
@@ -195,6 +202,13 @@
               <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <?php echo $downloads[$last_eng]; ?> downloads</p>
               <p class="center">Help us improve BanBot indicating bugs or giving us suggestions: open a ticket on our <a href="bugtracker/index.php">BugTracker</a>.</p>
               <br/><br/>
+              <p class="versionName">Thanks to:</p>
+              <p class="center">At this point it is only right to thank everyone who helped us, especially:</p>
+              <p class="center">clans <span class="cit">=IvN=</span>, <span class="cit">@lbs</span>, <span class="cit">SdP</span> and <span class="cit">|NN|</span> 
+              					 for being our beta-testers and for their tips,<br/>
+              					<span class="cit">Mission85</span>, <span class="cit">ObScUrE</span>, <span class="cit">don</span>, <span class="cit">Kalish</span> and <span class="cit">Decoy</span>
+              					for their precious help.</p>
+              <br/><br/>
               <p class="center">Related downloads:</p>
               <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><img src="imghold/download.png" alt=""></a></p>
               <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><?php echo $last_ita; ?></a> - <?php echo $downloads[$last_ita]; ?> downloads</p>
@@ -222,10 +236,10 @@
                   for($j=0; $j < $j_indexCount; $j++)
                   {
                     echo '
-                      <dt>'.$versions[$i]['info'][$j]['data'].'</dt>
-                      <dd>'.$versions[$i]['info'][$j]['modifica'].'</dt>';
+                      <li>'.$versions[$i]['info'][$j]['data'].' : 
+                      '.$versions[$i]['info'][$j]['modifica'].'</li>';
                   }
-                  echo '</dl>';	
+                  echo '</ul>';
                 }
               ?>
             </div>
@@ -239,7 +253,7 @@
                 for($i=0; $i < $i_indexCount; $i++)
                 {
                   echo '  <p class="versionName">'.$versions[$i]['nome'].'</p>';
-                  echo '<dl>';
+                  echo '<ul>';
                   $j_indexCount = count($versions[$i]['info']);
                   for($j=0; $j < $j_indexCount; $j++)
                   {
@@ -320,8 +334,33 @@
             
           </div>
 			
-				</div>
+		</div>
         
+        <!-- Bottone per le donazioni -->
+        <br/><br/>
+        <div class="it">
+        	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">
+			<input type="image" src="https://www.paypal.com/it_IT/IT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - Il sistema di pagamento online più facile e sicuro!">
+			<img alt="" border="0" src="https://www.paypal.com/it_IT/i/scr/pixel.gif" width="1" height="1">
+			</form>
+			<p class="donate"> Un progetto come questo richiede tantissimo tempo e fatica: ore ed ore di studio, esperimenti, lavoro.<br/>
+			Se apprezzi il nostro lavoro e vuoi in qualche modo darci una mano, per favore fai una donazione al nostro clan. <br/>
+			Ti ringraziamo infinitamente =)</p>
+		</div>
+		<div class="en">
+		    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">
+			<input type="image" src="https://www.paypal.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online.">
+			<img alt="" border="0" src="https://www.paypal.com/it_IT/i/scr/pixel.gif" width="1" height="1">
+			</form>
+			<p class="donate"> A project like this requires much time and labor: hours and hours spent studying, experimenting, working.<br/>
+			If you appreciate our work and want to somehow give us a hand, please make a donation to our clan.<br/>
+			Thank you =)</p>
+		</div>
+		<br/>
       </div>
     </div>
 
