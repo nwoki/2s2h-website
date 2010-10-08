@@ -440,21 +440,23 @@
 
     function insertNewAdmin( $nick, $pass ) /* function that does the operations on the database */
     {
-        /// TODO _: check if admin is already on database
         if( empty( $nick ) && empty( $pass ) )
             print( "<p>Empty values not allowed!</p>" );
 
         else {
             $webClass = new WebClass();
-            $cryptPass = md5( $pass );
-            $query = "insert into 2s2h_admins values('',\"$nick\",\"$cryptPass\");";
 
-            $result = $webClass->executeQuery( $query );
+            if( $webClass->checkAdminExistance( $nick ) ) {
+                $cryptPass = md5( $pass );
+                $query = "insert into 2s2h_admins values('',\"$nick\",\"$cryptPass\");";
 
-            if( $result )
-                echo"<p>ADMIN ADDED SUCCCESSFULLY</p>";
+                $result = $webClass->executeQuery( $query );
+
+                if( $result )
+                    echo"<p>ADMIN ADDED SUCCCESSFULLY</p>";
+            }
             else
-                echo"<p>ADMIN NOT ADDED </p>";
+                echo"<p>ADMIN NOT ADDED. Nick might be already taken</p>";
         }
 
         /* back button */
@@ -695,8 +697,8 @@
         </form>";
     }
 
-    function restrictedArea( $status ) {
-
+    function restrictedArea( $status )
+    {
         if ( $_SESSION['page'] != 'admin' ) {
             $link1 = 'admin/adminpage.php';
             $link2 = 'admin/logout.php';
@@ -733,7 +735,8 @@
 
     }
 
-    function listRoster($min=0, $max=10000) {
+    function listRoster( $min = 0, $max = 10000 )
+    {
         include('list-of-players.php');
 
         if ( $max == 10000) $max=count($roster);
