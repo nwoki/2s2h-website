@@ -134,7 +134,7 @@
             
             <div class="it">
               <p class="center">Un bot che mira ad essere semplice e ad occupare poche risorse della macchina che lo hosta evitando quindi di provocare "lag" non voluti del server.</p>
-              <p class="center">Fatto per controllare il gioco di URBAN TERROR 4.1, integra ed utilizza la libreria SQLite3 per contenere i suoi dati: nonstante questo &egrave completamente indipendente, non necessita di alcun software preinstallato.</p>
+              <p class="center">Fatto per controllare il gioco di URBAN TERROR 4.1, integra ed utilizza la libreria SQLite3 per contenere i suoi dati: grazie a questo &egrave completamente indipendente, non necessita di alcun software preinstallato.</p>
               <p class="center">Pensato anche per chi affitta server di gioco, &egrave in grado di controllare pi&ugrave di un server con una sola istanza, in maniera totalmente isolata l'uno dall'altro: noi l'abbiamo testato fino a 5.</p>
               <p class="center">Offre molti strumenti utili per gli amministratori dei server, per esempio:</p>
               <ul class="botList">
@@ -177,7 +177,7 @@
             
             <div class="en">
               <p class="center">A bot that is designed to be simple and to use few resources of the machine thus to avoid causing unwanted "lags" on server.</p>
-              <p class="center">Made to control the game Urban Terror 4.1, it integrates and uses the SQLite3 library to contain your data: spite this is completely independent, requires no preinstalled software.</p>
+              <p class="center">Made to control the game Urban Terror 4.1, it integrates and uses the SQLite3 library to contain your data: so is completely independent, requires no preinstalled software.</p>
               <p class="center">Designed also for those who rent game servers, it can controls more than one server with only one instance, in a totally isolated manner from each other: we tested it up to 5.</p>
               <p class="center">It offers many useful tools for server administrators, for example:</p>
               <ul class="botList">
