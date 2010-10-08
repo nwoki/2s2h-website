@@ -63,6 +63,27 @@ class WebClass
         else
             return $result;
     }
+
+    /* checks the existance of nick in admin database TRUE-> exists FALSE-> free*/
+    public function checkAdminExistance( $nick )
+    {
+        if( empty( $nick ) )    /* exit */
+            print( "checkAdminExistance: no admin nick inserted" );
+        else {
+            $query = "select *from 2s2h_admins where nick = \"$nick\";";
+            $result = $this->executeQuery( $query );
+
+            while( $row = mysql_fetch_assoc( $result ) )
+                $out1 = $row['nick'];
+
+            if( $out1 == $nick )  /* admin nick is free */
+                return false;
+            else
+                return true;    /* admin nick taken */
+        }
+
+    }
+
     /********************
     * private functions *
     ********************/
@@ -189,9 +210,11 @@ class WebClass
         //header( "refresh: 10; index.php" );  /* redirect after 5 seconds */
     }
 
-		function getLink() {
-		  return $this->m_dbLink;
-		}
+    function getLink()
+    {
+        return $this->m_dbLink;
+    }
+
 
     /*******************
     * private members  *

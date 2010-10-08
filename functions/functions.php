@@ -2,23 +2,21 @@
     require( 'WebClass.php' );
     require( 'configuration.php' );
 
-		function debugCode ( $check = false)
-		{
-				if ( $check ) {
-						error_reporting( E_ALL );
-						ini_set( 'display_errors', '1' );
-				}
-		else
-				return true;
-		}
+    function debugCode ( $check = false)
+    {
+        if ( $check ) {
+            error_reporting( E_ALL );
+            ini_set( 'display_errors', '1' );
+        }
+        else
+            return true;
+    }
 
 
     function adminLogin( $nick, $pass )
     {
-
-				$webClass = new WebClass();
-				return $webClass->adminLogin( $nick, $pass );
-
+        $webClass = new WebClass();
+        return $webClass->adminLogin( $nick, $pass );
     }
 
     function bottomPageInfo()
@@ -36,7 +34,7 @@
                 <a href="bugtracker/index.php" >BugTracker</a> -
                 <a href="2steps-2hell-awards.php">Awards</a> -
 								<a href="/vwar/war.php?action=nextaction">VWar</a> -
-								<a href="#" id="show" class="adminTab">AdminCP</a> 
+								<a href="#" id="show" class="adminTab">AdminCP</a>
 								<a href="#" id="hide" class="adminTab">CloseTab</a>
             </div>';
         else    //se sono nella sezione admin, i link sono diversi
@@ -187,11 +185,11 @@
         return $date[2] ."/". $date[1]."/".$date[0]." ".$timestamp[1];
 
     }
-    
+
 /*****************************
  * Gestione numero downloads *
  *****************************/
-    
+
     function getDownloads($files)
     {
         $webClass = new WebClass();
@@ -203,7 +201,7 @@
         	//salvo tutto su un array
         	$filesOnDb[] = $row;
         	}
-        
+
         $downloads = array();
 
 		foreach ($files as $file)
@@ -211,9 +209,9 @@
 			//controllo per ogni file se è già presente nel database
 			$name = substr($file,strrpos($file,'/'));
 			$found = false;
-			
+
 			foreach ($filesOnDb as $fileOnDb)
-			{				
+			{
 				if ( strcmp($fileOnDb['file'],$name) == 0 )
 				{
 					$found = true;
@@ -232,18 +230,18 @@
         $webClass->close();
         return $downloads;
     }
-    
+
     function updateDownload($file)
     {
     	$webClass = new WebClass();
     	$name = substr($file,strrpos($file,'/')+1);
     	$query = "SELECT * FROM 2s2h_downloads WHERE file=\"$name\";";
     	$result = $webClass->executeQuery( $query );
-    	
+
     	$row = mysql_fetch_assoc( $result );
-    	
+
         $query = "UPDATE 2s2h_downloads SET number=\"".($row['number']+1)."\" WHERE file=\"$name\";";
-        $webClass->executeQuery( $query );     
+        $webClass->executeQuery( $query );
     }
 
 /*******************
@@ -442,21 +440,23 @@
 
     function insertNewAdmin( $nick, $pass ) /* function that does the operations on the database */
     {
-        /// TODO _: check if admin is already on database
         if( empty( $nick ) && empty( $pass ) )
             print( "<p>Empty values not allowed!</p>" );
 
         else {
             $webClass = new WebClass();
-            $cryptPass = md5( $pass );
-            $query = "insert into 2s2h_admins values('',\"$nick\",\"$cryptPass\");";
 
-            $result = $webClass->executeQuery( $query );
+            if( $webClass->checkAdminExistance( $nick ) ) {
+                $cryptPass = md5( $pass );
+                $query = "insert into 2s2h_admins values('',\"$nick\",\"$cryptPass\");";
 
-            if( $result )
-                echo"<p>ADMIN ADDED SUCCCESSFULLY</p>";
+                $result = $webClass->executeQuery( $query );
+
+                if( $result )
+                    echo"<p>ADMIN ADDED SUCCCESSFULLY</p>";
+            }
             else
-                echo"<p>ADMIN NOT ADDED </p>";
+                echo"<p>ADMIN NOT ADDED. Nick might be already taken</p>";
         }
 
         /* back button */
@@ -697,8 +697,8 @@
         </form>";
     }
 
-    function restrictedArea( $status ) {
-
+    function restrictedArea( $status )
+    {
         if ( $_SESSION['page'] != 'admin' ) {
             $link1 = 'admin/adminpage.php';
             $link2 = 'admin/logout.php';
@@ -735,7 +735,8 @@
 
     }
 
-    function listRoster($min=0, $max=10000) {
+    function listRoster( $min = 0, $max = 10000 )
+    {
         include('list-of-players.php');
 
         if ( $max == 10000) $max=count($roster);

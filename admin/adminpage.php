@@ -2,11 +2,11 @@
     ob_start();
     session_start();
 		 if ( !isset($_SESSION['status']) || $_SESSION['status']!="admin" )
-      header('location: ../index.php');  
+      header('location: ../index.php');
 		require( '../functions/functions.php' );
     $_SESSION["page"] = "admin";
 		ob_end_flush();
-		
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -28,7 +28,7 @@
 
     </head>
 
-    <body>    
+    <body>
     <!-- Panel -->
     <div id="toppanel">
       <div id="panel">
@@ -37,21 +37,21 @@
             <?php restrictedArea( $_SESSION['status'] ) ?>
           </div>
         </div>
-      </div> 
-      <!-- The tab on top -->	
+      </div>
+      <!-- The tab on top -->
       <div class="tab">
         <ul class="login">
           <li class="left">&nbsp;</li>
           <li id="toggle">
             <a id="open" class="open" href="#">Admin Area</a>
-            <a id="close" class="close" href="#">Close</a>			
+            <a id="close" class="close" href="#">Close</a>
           </li>
           <li class="right">&nbsp;</li>
-        </ul> 
+        </ul>
       </div> <!-- / top -->
     </div> <!--panel -->
 
-        
+
         <div id="header">
             <a href="../index.php"><img alt="" src="../img/spacer.gif" width="800" height="235" /></a>
         </div>
@@ -67,14 +67,15 @@
         <div id="content">
             <?php
             /* list admin options */
-            if ( $_SESSION['status'] != 'admin' ) echo "<center><img src='../imghold/fail.jpg'/></center>";
+            if ( $_SESSION['status'] != 'admin' )
+                echo "<center><img src='../imghold/fail.jpg'/></center>";
             else
                 echo "
                 <ul id=\"adminpage\">
                     <li class=\"ico-admin\"><a href='modadmins.php'>Mod Admins</a></li>
                     <li class=\"ico-art\"><a href='modnews.php'>Mod News</a></li>
                 </ul>";
-                
+
             ?>
         </div>
 
