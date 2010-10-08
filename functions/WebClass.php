@@ -189,9 +189,10 @@ class WebClass
         //header( "refresh: 10; index.php" );  /* redirect after 5 seconds */
     }
 
-		function getLink() {
-		  return $this->m_dbLink;
-		}
+    function getLink()
+    {
+        return $this->m_dbLink;
+    }
 
     /*******************
     * private members  *

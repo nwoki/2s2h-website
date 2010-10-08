@@ -2,23 +2,21 @@
     require( 'WebClass.php' );
     require( 'configuration.php' );
 
-		function debugCode ( $check = false)
-		{
-				if ( $check ) {
-						error_reporting( E_ALL );
-						ini_set( 'display_errors', '1' );
-				}
-		else
-				return true;
-		}
+    function debugCode ( $check = false)
+    {
+        if ( $check ) {
+            error_reporting( E_ALL );
+            ini_set( 'display_errors', '1' );
+        }
+        else
+            return true;
+    }
 
 
     function adminLogin( $nick, $pass )
     {
-
-				$webClass = new WebClass();
-				return $webClass->adminLogin( $nick, $pass );
-
+        $webClass = new WebClass();
+        return $webClass->adminLogin( $nick, $pass );
     }
 
     function bottomPageInfo()
@@ -36,7 +34,7 @@
                 <a href="bugtracker/index.php" >BugTracker</a> -
                 <a href="2steps-2hell-awards.php">Awards</a> -
 								<a href="/vwar/war.php?action=nextaction">VWar</a> -
-								<a href="#" id="show" class="adminTab">AdminCP</a> 
+								<a href="#" id="show" class="adminTab">AdminCP</a>
 								<a href="#" id="hide" class="adminTab">CloseTab</a>
             </div>';
         else    //se sono nella sezione admin, i link sono diversi
@@ -187,11 +185,11 @@
         return $date[2] ."/". $date[1]."/".$date[0]." ".$timestamp[1];
 
     }
-    
+
 /*****************************
  * Gestione numero downloads *
  *****************************/
-    
+
     function getDownloads($files)
     {
         $webClass = new WebClass();
@@ -203,7 +201,7 @@
         	//salvo tutto su un array
         	$filesOnDb[] = $row;
         	}
-        
+
         $downloads = array();
 
 		foreach ($files as $file)
@@ -211,9 +209,9 @@
 			//controllo per ogni file se è già presente nel database
 			$name = substr($file,strrpos($file,'/'));
 			$found = false;
-			
+
 			foreach ($filesOnDb as $fileOnDb)
-			{				
+			{
 				if ( strcmp($fileOnDb['file'],$name) == 0 )
 				{
 					$found = true;
@@ -232,18 +230,18 @@
         $webClass->close();
         return $downloads;
     }
-    
+
     function updateDownload($file)
     {
     	$webClass = new WebClass();
     	$name = substr($file,strrpos($file,'/')+1);
     	$query = "SELECT * FROM 2s2h_downloads WHERE file=\"$name\";";
     	$result = $webClass->executeQuery( $query );
-    	
+
     	$row = mysql_fetch_assoc( $result );
-    	
+
         $query = "UPDATE 2s2h_downloads SET number=\"".($row['number']+1)."\" WHERE file=\"$name\";";
-        $webClass->executeQuery( $query );     
+        $webClass->executeQuery( $query );
     }
 
 /*******************

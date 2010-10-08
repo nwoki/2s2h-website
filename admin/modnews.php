@@ -28,7 +28,7 @@
         <link href="../css/slide.css" type="text/css" rel="stylesheet" media="screen" />
     </head>
 
-    <body>    
+    <body>
     <!-- Panel -->
     <div id="toppanel">
       <div id="panel">
@@ -37,17 +37,17 @@
             <?php restrictedArea( $_SESSION['status'] ) ?>
           </div>
         </div>
-      </div> 
-      <!-- The tab on top -->  
+      </div>
+      <!-- The tab on top -->
       <div class="tab">
         <ul class="login">
           <li class="left">&nbsp;</li>
           <li id="toggle">
             <a id="open" class="open" href="#">Admin Area</a>
-            <a id="close" class="close" href="#">Close</a>      
+            <a id="close" class="close" href="#">Close</a>
           </li>
           <li class="right">&nbsp;</li>
-        </ul> 
+        </ul>
       </div> <!-- / top -->
     </div> <!--panel -->
 
@@ -78,7 +78,7 @@
                     addNewArticleForm();
 
                 elseif( isset( $_POST['submitNewArticle'] ) )     /* insert new article to database */
-                    insertNewArticle( $_POST['newTitle'], $_SESSION['user'], $_POST['newArticle'] );
+                    insertNewArticle( $_POST['newTitle'], $_SESSION['username'], $_POST['newArticle'] );
 
                 else   /* show news selection form */
                     showNewsList();
