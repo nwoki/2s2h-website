@@ -163,11 +163,12 @@
             $author = $row['author'];
             $article = $row['article'];
             $date = $row['time'];
+
             echo "
             <div class=\"news-article\">
                 <h3 class=\"title-art\">".$title." - <span>". convertTime ( $date ) ."</span></h3>
                 <div>
-                    <p>".$article."</p>
+                    <p>".nl2br( $article, true )."</p>
                     <p class=\"auth\">By: ".$author."</p>
                 </div>
             </div>"; /* extra spacing between articles */
