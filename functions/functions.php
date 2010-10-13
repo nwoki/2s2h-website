@@ -2,7 +2,7 @@
     require( 'WebClass.php' );
     require( 'configuration.php' );
 
-    function debugCode ( $check = false)
+    function debugCode ( $check = false )
     {
         if ( $check ) {
             error_reporting( E_ALL );
@@ -159,13 +159,14 @@
 
         while( $row = mysql_fetch_assoc( $result ) ) {
 
+            $id = $row['id'];
 			$title = $row['title'];
             $author = $row['author'];
             $article = $row['article'];
             $date = $row['time'];
 
             echo "
-            <div class=\"news-article\">
+            <div id=\"$id\" class=\"news-article\">
                 <h3 class=\"title-art\">".$title." - <span>". convertTime ( $date ) ."</span></h3>
                 <div>
                     <p>".nl2br( $article, true )."</p>
@@ -621,7 +622,7 @@
             print( "<p>Empty values not allowed!</p>" );
         else {
             $webClass = new WebClass();
-            $date = date( "Y-m-d" );
+            $date = date( "Y-m-d H:m:s" );
 
             $articleOk = addSlashes( $article );    /* adds slashes where needed so database query doesn't fail */
             $query = "insert into 2s2h_news values( '',\"$title\",\"$author\" ,\"$articleOk\",\"$date\" );";
@@ -766,6 +767,104 @@
             </div>';
         }
     }
+
+/*****************
+ * RSS FUNCTIONS *
+ ****************/
+
+    /*   weblink is the link to the specific article
+     *   date is taken from system when publishing
+     */
+
+//   this is for writing rss to xml file. Do this when i figure out the permissions error. For now use "rss_news.php page
+
+//     function insertNewRss( $title, $weblink, $description )
+//     {
+//         // no empty values allowed
+//         if( empty( $title ) || empty( $weblink ) || empty( $description ) )
+//             print( "<p>insertNewsRss: Empty values not allowed!</p>" );
+//         else {
+//             $webClass = new WebClass();
+//             $pubdate = date( "y-m-d H:m:s" );
+//
+//             // add final three points
+//             $description[ strlen( $description )-1 ] = ".";
+//             $description[ strlen( $description )-2 ] = ".";
+//             $description[ strlen( $description )-3 ] = ".";
+//
+//             $query = "insert into 2s2h_rss values( '', \"$title\", \"$weblink\", \"$description\", \"$pubdate\" );";
+//
+//             $result = $webClass->executeQuery( $query );
+//
+//             if( $result )
+//                 echo"<p>RSS ARTICLE ADDED SUCCCESSFULLY</p>";
+//             else
+//                 echo"<p>RSS ARTICLE NOT ADDED </p>";
+//         }
+//     }
+//
+//
+//
+//     function modRss()
+//     {
+//     }
+//
+//     function updateRssFeed()    /* updates rss file creating a new one from data found on rss database */
+//     {
+//         $newsRssFile = "rss/newsRss.xml";  /* specific file */
+//         $newsRssfileHandle = fopen( $newsRssFile, "w" );
+//
+//         if( !$newsRssfileHandle ) {
+//             echo "<p>Can't create rss file ".$newsRssFile."!</p>";
+//             fclose( $newsRssfileHandle );   /* just to be shure */
+//         }
+//         else {  /* my file is now open */
+//
+//             // write down the first part
+//             $rssStart =
+//             "<rss version='2.0'>
+//             <channel>
+//             <title>2s2h news rss feed</title>
+//             <link>http://www.2s2h.com/2steps-2hell-news.php</link>";
+//
+//             fwrite( $newsRssfileHandle, $rssStart );    /* write first part of rss file */
+//
+//             $webClass = new WebClass();
+//             $newsQuery = "select *from 2s2h_rss;";
+//             $result = $webClass->executeQuery( $newsQuery );
+//
+//             if( $result ) {
+//                 while( $row = mysql_fetch_assoc( $result ) ) {
+//                     $title = $row['title'];
+//                     $weblink = $row['weblink'];
+//                     $description = $row['description'];
+//                     $pubdate = $row['pubdate'];
+//
+//                     $rssItem =
+//                     "<item>
+//                     <title>".$title."</title>
+//                     <link>".$weblink."</link>
+//                     <description>
+//                     ".$description."
+//                     </description>
+//                     <pubDate>".$pubdate."</pubDate>
+//                     </item>";
+//
+//                     // write item to file
+//                     fwrite( $newsRssfileHandle, $rssItem );
+//                 }
+//
+//                 // finish rss file
+//                 $rssEnd =
+//                 "</channel>
+//                 </rss>";
+//
+//                 // and close fileName
+//                 fclose( $newsRssfileHandle );
+//             }
+//         }
+//
+//     }
 
 ?>
 

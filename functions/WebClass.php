@@ -145,8 +145,7 @@ class WebClass
             print( "<p class=\"debug\">TABLES DON'T exist!</p>" );
             $scriptArr = array( "db/admins.sql", "db/news.sql", "db/downloads.sql" );    /* where my sql scripts are */
 
-            foreach( $scriptArr as $file )
-            {
+            foreach( $scriptArr as $file ) {
                 $stream = fopen( $file, "r" );
                 $query = fread( $stream, filesize( $file ) );   /* get content of file */
                 fclose( $stream );  /* close stream, don't need it anymore */
