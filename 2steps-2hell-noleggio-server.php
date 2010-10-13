@@ -30,7 +30,7 @@
 
 </head>
 <body>
-    
+
     <!-- Panel -->
     <div id="toppanel">
       <div id="panel">
@@ -39,24 +39,24 @@
             <?php restrictedArea($_SESSION['status']) ?>
           </div>
         </div>
-      </div> 
-      <!-- The tab on top -->	
+      </div>
+      <!-- The tab on top -->
       <div class="tab">
         <ul class="login">
           <li class="left">&nbsp;</li>
           <li id="toggle">
             <a id="open" class="open" href="#">Admin Area</a>
-            <a id="close" class="close" href="#">Close</a>			
+            <a id="close" class="close" href="#">Close</a>
           </li>
           <li class="right">&nbsp;</li>
-        </ul> 
+        </ul>
       </div> <!-- / top -->
     </div> <!--panel -->
-    
+
     <div id="header">
       <a href="index.php" title="2step 2hell - Noleggio Server - BanBot"><img alt="" src="img/spacer.gif" width="800" height="235" /></a>
     </div>
-    
+
     <div class="separate">
       <div id="menu-top"></div>
       <div id="menu-center"><div id="menu"><?php menuPages( $_SESSION["page"] ) ?></div></div>
@@ -91,11 +91,11 @@
 		        <p>In pi&ugrave su richiesta verr&agrave fornito gratuitamente <strong>BanBot</strong> sui <strong>server pubblici</strong>, indicati nei pacchetti.</p>
 		    </div>
 		    <div class="en">
-		    	<p>2s2h is a clan that plays for years to <strong>Urban Terror</strong> and participates in competitions. Since we are direct users of game servers that we offer, <strong>we can not fail on the quality</strong>.</p>
-		        <p>What we do is therefore to <strong>create an alternative</strong> to the products that we can found in the market that often <strong>lack</strong> the necessary quality or have <strong>prohibitive prices</strong>.</p>
-		        <p>Our aim is therefore to provide real servers, where it is pleasant to play at a price <strong>accessible to all</strong>.</p>
-		        <p>On all of our servers is installed the <strong>patch</strong> that prevents them from taking control by one vote.</p>
-		        <p>In addition, at the request will be provided free <strong>BanBot</strong> on <strong>public servers</strong>, listed in the packages.</p>
+		    	<p>2s2h is a clan that has played for years <strong>Urban Terror</strong> and still participates in competitions. Since we are direct users of game servers that we offer, <strong>we cannot fail on the quality</strong>.</p>
+		        <p>What we do is therefore to <strong>create an alternative</strong> to the products that you can find on the market that often <strong>lack</strong> the necessary quality or have <strong>prohibitive prices</strong>.</p>
+		        <p>Our aim is to provide real servers, where it is pleasant to play at a price <strong>accessible to all</strong>.</p>
+		        <p>On all of our servers we have installed the <strong>patch</strong> that prevents the game servers from being exploited b a bug accessable via vote.</p>
+		        <p>In addition to the request of a server we will provide free <strong>BanBot</strong> service on <strong>public servers</strong>, listed in the packages.</p>
 		    </div>
           </div>
 
@@ -187,7 +187,7 @@
 				      <li>I server sono <strong>SEMPRE ATTIVI</strong>, <strong>24 ore su 24</strong>, non on-demand</li>
 				    </ul>
 			</div>
-			
+
 			<div class="en">
 				    <p>Our offers:<br/></p>
 				    <div class="accordion">
