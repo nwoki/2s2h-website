@@ -67,7 +67,7 @@
 		<script src="js/slide.js" type="text/javascript"></script>
 		<?php }?>
     <script src="js/login.js" type="text/javascript"></script>
-    <script src="js/banbot.js" type="text/javascript"></script>
+    <script src="js/language.js" type="text/javascript"></script>
 		<script>
       $(document).ready(function() {
         $("#accordion").accordion({ active: false, collapsible: true, autoHeight: false });
