@@ -622,7 +622,7 @@
             print( "<p>Empty values not allowed!</p>" );
         else {
             $webClass = new WebClass();
-            $date = date( "Y-m-d H:m:s" );
+            $date = date( "Y-m-d H:i:s" );
 
             $articleHtml = htmlentities( $article, ENT_QUOTES );    /* transform into html in case of special chars */
             $articleOk = addSlashes( $articleHtml );                /* adds slashes where needed so database query doesn't fail */
@@ -657,7 +657,7 @@
             die( "Can't set empty values for the news articles " );
 
         //date_default_timezone_set('CEST');   /* set default date timezone */
-        $modDate = date( "Y-m-d H:m:s" );   /* get date from machine */
+        $modDate = date( "Y-m-d H:i:s" );   /* get date from machine */
         $webClass = new WebClass();
         $articleHtml = htmlentities( $modArticle, ENT_QUOTES );
         $articleOk = addSlashes( $articleHtml );    /* adds slashes where needed so database query doesn't fail */
