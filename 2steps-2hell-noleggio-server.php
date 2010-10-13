@@ -328,7 +328,7 @@
 				</div>
 				<div class="en">
 				    <p>Q - <strong>Can we run python script via ssh access?</strong></p>
-				    <p>A - yep. Attualmente python non è disponibile per tutti gli utenti, ma c'è solo bisogno di metterlo. Se è per uno script di qualche esotica utilità per voi ok, se è per un bot, abbiamo deciso di non accettarli.</p>
+				    <p>A - yep. Currently, python is not available for all users, but there is only need to put it. If it is for a script of some use to you exotic ok, but if it is for a bot, we decided to not accept them.</p>
 				    <br/>
 				    <p>Q - <strong>Is the game server running on virtual machines or directly on real servers?</strong></p>
 				    <p>A - Directly on real servers.</p>
