@@ -20,7 +20,7 @@
     <script src="js/language.js" type="text/javascript"></script>
 		<script>
       $(document).ready(function() {
-        $("#accordion").accordion({ active: false, collapsible: true, autoHeight: false });
+        $(".accordion").accordion({ active: false, collapsible: true, autoHeight: false });
 				$('#tabs').tabs();
       });
     </script>
@@ -100,127 +100,247 @@
           </div>
 
           <div id="tabs-6">
-            <p>Le nostre offerte:<br/></p>
-            <div id="accordion">
+          	<div class="it">
+				    <p>Le nostre offerte:<br/></p>
+				    <div class="accordion">
 
-              <h3><a href="#">cw pack &euro; 13,00 </a></h3>
-              <div>
-                <p>Il pacchetto essenziale, consiste di un <strong>server di gioco privato</strong> con:</p>
-                <ul class="list" >
-                    <li>11 slot = 5 giocatori per squadra pi&ugrave; un eventuale referee</li>
-                    <li>Server voIP 10 slot codec speex 12,3kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
-                    <li>Controllo server di gioco: <strong>rcon</strong></li>
-                    <li>Controllo server voIP: <strong>server admin</strong></li>
-                </ul>
-                <p><strong>Confronto prezzi</strong>:<br/>
-                gamesclan.it -> &euro; 14.75 <span class="small">[12 game slot]</span>.<br/>
-                n1ping.com -> &euro; 13,00 con servizio awn <span class="small">[il server si arresta ogni volta che rimane vuoto e va riattivato via browser]</span>; &euro; 18,00 server standard, sempre attivo.
-                </p>
-              </div>
+				      <h3><a href="#">cw pack &euro; 13,00 </a></h3>
+				      <div>
+				        <p>Il pacchetto essenziale, consiste di un <strong>server di gioco privato</strong> con:</p>
+				        <ul class="list" >
+				            <li>11 slot = 5 giocatori per squadra pi&ugrave; un eventuale referee</li>
+				            <li>Server voIP 10 slot codec speex 12,3kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
+				            <li>Controllo server di gioco: <strong>rcon</strong></li>
+				            <li>Controllo server voIP: <strong>server admin</strong></li>
+				        </ul>
+				        <p><strong>Confronto prezzi</strong>:<br/>
+				        gamesclan.it -> &euro; 14.75 <span class="small">[12 game slot]</span>.<br/>
+				        n1ping.com -> &euro; 13,00 con servizio awn <span class="small">[il server si arresta ogni volta che rimane vuoto e va riattivato via browser]</span>; &euro; 18,00 server standard, sempre attivo.
+				        </p>
+				      </div>
 
-              <h3><a href="#">cw pack essential &euro; 16,00</a></h3>
-              <div>
-                <ul class="list">
-                  <li>Server di gioco <strong>pubblico</strong> da 12 slot</li>
-                  <li>Server voIP da 15 slot, codec speex 16,3kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
-                  <li>Controllo server di gioco: <strong>rcon</strong>, <strong>BanBot</strong></li>
-                  <li>Controllo server voIP: <strong>server admin</strong></li>
-                </ul>
-                <strong>Confronto prezzi</strong>:<br/>
-                gamesclan.it -> &euro; 19,00<br/>
-                n1ping.com -> std &euro; 19,00<br/>
-              </div>
+				      <h3><a href="#">cw pack essential &euro; 16,00</a></h3>
+				      <div>
+				        <ul class="list">
+				          <li>Server di gioco <strong>pubblico</strong> da 12 slot</li>
+				          <li>Server voIP da 15 slot, codec speex 16,3kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
+				          <li>Controllo server di gioco: <strong>rcon</strong>, <strong>BanBot</strong></li>
+				          <li>Controllo server voIP: <strong>server admin</strong></li>
+				        </ul>
+				        <strong>Confronto prezzi</strong>:<br/>
+				        gamesclan.it -> &euro; 19,00<br/>
+				        n1ping.com -> std &euro; 19,00<br/>
+				      </div>
 
-              <h3><a href="#">cw pack plus  &euro; 18,00</a></h3>
-              <div>
-                <p>Questo pacchetto consiste in un <strong>server</strong> di <strong>gioco privato</strong></p>
-                  <ul class="list">
-                    <li>15 slot = 5 giocatori + 2 per squadra + referee</li>
-                    <li>Server voIP da 20 slot codec speex 19,5kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
-                    <li>Controllo server di gioco: <strong>rcon</strong></li>
-                    <li>Controllo server voIP: <strong>server admin</strong></li>
-                  </ul>
-                  <strong>Confronto prezzi</strong>:<br/>
-                  gamesclan.it -> &euro; 22,00 <span class="small">[16 games slot]</span><br/>
-                  n1ping.com -> std &euro; 22,00
+				      <h3><a href="#">cw pack plus  &euro; 18,00</a></h3>
+				      <div>
+				        <p>Questo pacchetto consiste in un <strong>server</strong> di <strong>gioco privato</strong></p>
+				          <ul class="list">
+				            <li>15 slot = 5 giocatori + 2 per squadra + referee</li>
+				            <li>Server voIP da 20 slot codec speex 19,5kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
+				            <li>Controllo server di gioco: <strong>rcon</strong></li>
+				            <li>Controllo server voIP: <strong>server admin</strong></li>
+				          </ul>
+				          <strong>Confronto prezzi</strong>:<br/>
+				          gamesclan.it -> &euro; 22,00 <span class="small">[16 games slot]</span><br/>
+				          n1ping.com -> std &euro; 22,00
 
-              </div>
+				      </div>
 
-              <h3><a href="#">clan pack 21&euro;</a></h3>
-              <div>
-                <ul class="list">
-                  <li>Server di gioco pubblico da 14 slot + 4 slot privati</li>
-                  <li>Server voIP da 20 slot, codec speex 19,5kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
-                  <li>Controllo server di gioco: <strong>rcon, BanBot</strong></li>
-                  <li>Controllo server voIP: <strong>server admin</strong></li>
-                </ul>
-                <strong>confronto prezzi</strong>:<br/>
-                gamesclan.it -> &euro; 27,00<br/>
-                n1ping.com -> std &euro; 23,00<br/>
-              </div>
+				      <h3><a href="#">clan pack 21&euro;</a></h3>
+				      <div>
+				        <ul class="list">
+				          <li>Server di gioco pubblico da 14 slot + 4 slot privati</li>
+				          <li>Server voIP da 20 slot, codec speex 19,5kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
+				          <li>Controllo server di gioco: <strong>rcon, BanBot</strong></li>
+				          <li>Controllo server voIP: <strong>server admin</strong></li>
+				        </ul>
+				        <strong>confronto prezzi</strong>:<br/>
+				        gamesclan.it -> &euro; 27,00<br/>
+				        n1ping.com -> std &euro; 23,00<br/>
+				      </div>
 
-              <h3><a href="#">clan pack extra &euro; 26,00</a></h3>
-              <div>
-                <ul class="list">
-                  <li>Server di <strong>gioco pubblico</strong> da 20 slot</li>
-                  <li>Server voIP da 25 slot codec speex 25,9kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
-                  <li>Controllo server di gioco: <strong>rcon, BanBot</strong></li>
-                  <li>Controllo server voIP: <strong>server admin</strong></li>
-                </ul>
-                <strong>Confronto prezzi</strong>:<br/>
-                gamesclan.it -> &euro; 30,00<br/>
-                n1ping.com -> non concepisce server pi&ugrave; grandi di 18 slot
-                </p>
-              </div>
+				      <h3><a href="#">clan pack extra &euro; 26,00</a></h3>
+				      <div>
+				        <ul class="list">
+				          <li>Server di <strong>gioco pubblico</strong> da 20 slot</li>
+				          <li>Server voIP da 25 slot codec speex 25,9kbps o superiore<br/><span class="small">[in base alla banda disponibile per garantire sempre le migliori prestazioni del game server]</span></li>
+				          <li>Controllo server di gioco: <strong>rcon, BanBot</strong></li>
+				          <li>Controllo server voIP: <strong>server admin</strong></li>
+				        </ul>
+				        <strong>Confronto prezzi</strong>:<br/>
+				        gamesclan.it -> &euro; 30,00<br/>
+				        n1ping.com -> non concepisce server pi&ugrave; grandi di 18 slot
+				        </p>
+				      </div>
 
-            </div>
+				    </div>
 
-            <p>Tutte le nostre offerte prevedono:</p>
-            <ul class="list" >
-              <li>Un game server di Urban Terror, pubblico o privato, con un numero di slot che varia a seconda del pacchetto scelto</li>
-              <li>Un server <strong>Teamspeak</strong> ( Ts2 o Ts3 ) con un numero di slot che varia a seconda del pacchetto scelto</li>
-              <li><strong>5GB</strong> di spazio personale</li>
-              <li><strong>Controllo totale</strong> del server, con accesso <strong>SSH</strong> ed <strong>FTP</strong></li>
-              <li>Spazio <strong>FTP</strong> per il download automatico delle <strong>mappe extra</strong> messe sul proprio server (in comune tra tutti i server)</li>
-              <li>Possibilit&agrave; di accesso sia tramite <strong>ip</strong>, che <strong>dns</strong> ( <strong>server.2s2h.com</strong> )</li>
-              <li>I server sono <strong>SEMPRE ATTIVI</strong>, <strong>24 ore su 24</strong>, non on-demand</li>
-            </ul>
+				    <p>Tutte le nostre offerte prevedono:</p>
+				    <ul class="list" >
+				      <li>Un game server di Urban Terror, pubblico o privato, con un numero di slot che varia a seconda del pacchetto scelto</li>
+				      <li>Un server <strong>Teamspeak</strong> ( Ts2 o Ts3 ) con un numero di slot che varia a seconda del pacchetto scelto</li>
+				      <li>Pi&ugrave; di <strong>5GB</strong> di spazio personale</li>
+				      <li><strong>Controllo totale</strong> del server, con accesso <strong>SSH</strong> ed <strong>FTP</strong></li>
+				      <li>Spazio <strong>FTP</strong> per il download automatico delle <strong>mappe extra</strong> messe sul proprio server (in comune tra tutti i server)</li>
+				      <li>Possibilit&agrave; di accesso sia tramite <strong>ip</strong>, che <strong>dns</strong> ( <strong>server.2s2h.com</strong> )</li>
+				      <li>I server sono <strong>SEMPRE ATTIVI</strong>, <strong>24 ore su 24</strong>, non on-demand</li>
+				    </ul>
+			</div>
+			
+			<div class="en">
+				    <p>Our offers:<br/></p>
+				    <div class="accordion">
 
+				      <h3><a href="#">cw pack &euro; 13,00 </a></h3>
+				      <div>
+				        <p>The essential package consists of a <strong>private game server</strong> with:</p>
+				        <ul class="list" >
+				            <li>11 slot = 5 players per team plus a possible referee</li>
+				            <li>Server voIP 10 slot codec speex 12,3kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
+				            <li>Game server controls: <strong>rcon</strong></li>
+				            <li>VoIP server controls: <strong>server admin</strong></li>
+				        </ul>
+				        <p><strong>Comparing prices</strong>:<br/>
+				        gamesclan.it -> &euro; 14.75 <span class="small">[12 game slots]</span>.<br/>
+				        n1ping.com -> &euro; 13,00 with awn service <span class="small">[the server goes down every time it is empty and must be reactivated via browser]</span>; &euro; 18,00 standard server, always active.
+				        </p>
+				      </div>
+
+				      <h3><a href="#">cw pack essential &euro; 16,00</a></h3>
+				      <div>
+				        <ul class="list">
+				          <li><strong>Public</strong> game server 12 slots</li>
+				          <li>VoIP server 15 slot, codec speex 16,3kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
+				          <li>Game server controls: <strong>rcon, BanBot</strong></li>
+				          <li>VoIP server controls: <strong>server admin</strong></li>
+				        </ul>
+				        <strong>Comparing prices</strong>:<br/>
+				        gamesclan.it -> &euro; 19,00<br/>
+				        n1ping.com -> std &euro; 19,00<br/>
+				      </div>
+
+				      <h3><a href="#">cw pack plus  &euro; 18,00</a></h3>
+				      <div>
+				        <p>The essential package consists of a <strong>private game server</strong> with:</p>
+				          <ul class="list">
+				            <li>15 slot = 5 players + 2 sub per team + referee</li>
+				            <li>VoIP server 20 slot, codec speex 19,5kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
+				            <li>Game server controls: <strong>rcon</strong></li>
+				            <li>VoIP server controls: <strong>server admin</strong></li>
+				          </ul>
+				          <strong>Comparing prices</strong>:<br/>
+				          gamesclan.it -> &euro; 22,00 <span class="small">[16 game slots]</span><br/>
+				          n1ping.com -> std &euro; 22,00
+
+				      </div>
+
+				      <h3><a href="#">clan pack 21&euro;</a></h3>
+				      <div>
+				        <ul class="list">
+				          <li><strong>Public</strong> game server 14 slots + 4 private slots</li>
+				          <li>VoIP server 20 slot, codec speex 19,5kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
+				          <li>Game server controls <strong>rcon, BanBot</strong></li>
+				          <li>VoIP server controls: <strong>server admin</strong></li>
+				        </ul>
+				        <strong>Comparing prices</strong>:<br/>
+				        gamesclan.it -> &euro; 27,00<br/>
+				        n1ping.com -> std &euro; 23,00<br/>
+				      </div>
+
+				      <h3><a href="#">clan pack extra &euro; 26,00</a></h3>
+				      <div>
+				        <ul class="list">
+				          <li><strong>Public</strong> game server 20 slot</li>
+				          <li>VoIP server 25 slot, codec speex  25,9kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
+				          <li>Game server controls <strong>rcon, BanBot</strong></li>
+				          <li>VoIP server controls: <strong>server admin</strong></li>
+				        </ul>
+				        <strong>Comparing prices</strong>:<br/>
+				        gamesclan.it -> &euro; 30,00<br/>
+				        n1ping.com -> doesn't sell servers greater than 18 slots
+				        </p>
+				      </div>
+
+				    </div>
+
+				    <p>All our packages include:</p>
+				    <ul class="list" >
+				      <li>An Urban Terror game server, public or private, with a number of slots varies depending on the package chosen</li>
+				      <li>A <strong>Teamspeak</strong> server (TS2 or TS3) with a slot number that varies depending on the package chosen</li>
+				      <li>More than <strong>5GB</strong> of personal space</li>
+				      <li><strong>Total control</strong> of the server, with <strong>SSH and FTP</strong> access</li>
+				      <li>FTP space for the <strong>automatic download of extra maps</strong> installed on your server (shared between all servers)</li>
+				      <li>Possibility of access via <strong>IP</strong> or <strong>dns</strong> (like "server.2s2h.com")</li>
+				      <li>Our servers are <strong>ALWAYS ACTIVE</strong>, 24 hours on 24, not on-demand</li>
+				    </ul>
+			</div>
           </div>
 
           <div id="tabs-2">
-            <p>Accettiamo <strong>Paypal</strong> o versamento su carte <strong>Postepay</strong></p>
+		      <div class="it">
+		        <p>Accettiamo <strong>Paypal</strong> o versamento su carte <strong>Postepay</strong></p>
+		      </div>
+		      <div class="en">
+		      	<p>We accept <strong>Paypal</strong> or transfers to <strong>Postepay</strong></p>
+		      </div>
           </div>
 
           <div id="tabs-3">
-            <ul class="list">
-              <li>Tutti i prezzi indicati si riferiscono al <strong>noleggio mensile</strong>.</li>
-              <li>I server privati <strong>devono</strong> avere sempre impostata una password per l'accesso.</li>
-              <li>I server pubblici possono essere usati con o senza password per l'accesso.</li>
-              <li>Gli slot privati sono degli slot speciali riservati ai membri del clan in possesso della password per il loro utilizzo (possono entrare anche se il server &egrave pieno).<br/>Possono esserne impostati di pi&ugrave di quelli indicati, ma il numero di slot totali non pu&ograve superare il limite indicato.</li>
-            </ul>
+          	 <div class="it">
+		        <ul class="list">
+		          <li>Tutti i prezzi indicati si riferiscono al <strong>noleggio mensile</strong>.</li>
+		          <li>I server privati <strong>devono</strong> avere sempre impostata una password per l'accesso.</li>
+		          <li>I server pubblici possono essere usati con o senza password per l'accesso.</li>
+		          <li>Gli slot privati sono degli slot speciali riservati ai membri del clan in possesso della password per il loro utilizzo (possono entrare anche se il server &egrave pieno).<br/>Possono esserne impostati di pi&ugrave di quelli indicati, ma il numero di slot totali non pu&ograve superare il limite indicato.</li>
+		        </ul>
+		     </div>
+		     <div class="en">
+		        <ul class="list">
+		          <li>All prices refers at the <strong>monthly rental</strong>.</li>
+		          <li>The private server <strong>must</strong> always set a password for access.</li>
+		          <li>Public servers can be used with or without a password for access.</li>
+		          <li>The private slots are special slots reserved for members of the clan that have the password for their use (they can enter even if the server is full).<br/>They can be set more than indicated, but the total number of slots can not exceed the limit.</li>
+		        </ul>
+		     </div>
           </div>
 
       		<div id="tabs-4">
-            <p>D - <strong>&Egrave; possibile lanciare script python tramite accesso ssh?</strong></p>
-            <p>R - yep. Attualmente non c'&egrave; python disponibile per tutti gli utenti, basta metterlo.
-            Se &egrave per uno script di qualche esotica utilit&agrave; per voi ok, se &egrave; per un bot, abbiamo
-            deciso di non accettarli.</p>
-            <br/>
-            <p>D - <strong>I gameserver girano su macchine virtuali o direttamente su server reali?</strong></p>
-            <p>R - Direttamente su server reali.</p>
-            <br/>
-            <p>D - <strong>Qual'&egrave; il rapporto RAM totale macchina/numero di gameserver?</strong></p>
-            <p>R - 2GB/4gameserver (ovviamente non ci sono solo quelli, vedi servizi di sistema, ma c'&egrave; un
-            ampio margine, attualmente &egrave; libero ancora quasi un giga.
-            Non abbiamo intenzione comunque di salire di pi&ugrave; di 4 server per macchina, tranne rare eccezioni, per
-            esempio se sono server piccolissimi e privati, per un quinto.)
-            In ogni caso, se considerate che un singolo game server di UrT occupa circa 200MB,
-            vedete da soli che stiamo belli abbondanti :)</p>
-            <br/>
-            <p>D - <strong>&Egrave; ammesso personalizzare lo script bash di start del gameserver?</strong></p>
-            <p>Ovviamente si. Noi ne diamo gi&agrave; uno, ma &egrave; possibile cambiarlo tranquillamente.<br />Ovviamente se questo non compromette anche gli altri server.</p>
-
+      			<div class="it">
+				    <p>D - <strong>&Egrave; possibile lanciare script python tramite accesso ssh?</strong></p>
+				    <p>R - yep. Attualmente non c'&egrave; python disponibile per tutti gli utenti, basta metterlo.
+				    Se &egrave per uno script di qualche esotica utilit&agrave; per voi ok, se &egrave; per un bot, abbiamo
+				    deciso di non accettarli.</p>
+				    <br/>
+				    <p>D - <strong>I gameserver girano su macchine virtuali o direttamente su server reali?</strong></p>
+				    <p>R - Direttamente su server reali.</p>
+				    <br/>
+				    <p>D - <strong>Qual'&egrave; il rapporto RAM totale macchina/numero di gameserver?</strong></p>
+				    <p>R - Sulla macchina italiana, 2GB/4gameserver (ovviamente non ci sono solo quelli, vedi servizi di sistema, ma c'&egrave; un
+				    ampio margine, attualmente &egrave; libero ancora quasi un giga.
+				    Non abbiamo intenzione comunque di salire di pi&ugrave; di 4 server per 2 giga, tranne rare eccezioni, per
+				    esempio se sono server piccolissimi e privati, per un quinto.)<br/>
+				    In ogni caso, se considerate che un singolo game server di UrT occupa circa 200MB,
+				    vedete da soli che stiamo belli abbondanti :)</p>
+				    <br/>
+				    <p>D - <strong>&Egrave; ammesso personalizzare lo script bash di start del gameserver?</strong></p>
+				    <p>R - Ovviamente si. Noi ne diamo gi&agrave; uno, ma &egrave; possibile cambiarlo tranquillamente.<br />Ovviamente se questo non compromette anche gli altri server.</p>
+				</div>
+				<div class="en">
+				    <p>Q - <strong>Can we run python script via ssh access?</strong></p>
+				    <p>A - yep. Attualmente python non è disponibile per tutti gli utenti, ma c'è solo bisogno di metterlo. Se è per uno script di qualche esotica utilità per voi ok, se è per un bot, abbiamo deciso di non accettarli.</p>
+				    <br/>
+				    <p>Q - <strong>Is the game server running on virtual machines or directly on real servers?</strong></p>
+				    <p>A - Directly on real servers.</p>
+				    <br/>
+				    <p>Q - <strong>What is the relationship RAM total machine / number of gameserver?</strong></p>
+				    <p>A - On the Italian machine, 2GB/4gameserver (obviously there are other services, see system services, but there is a wide margin, is currently still free almost a GB).
+				    We are not going to go up still more than 2 GB to 4 servers, with rare exceptions, for example, if servers are very small and private, for a fifth.)<br/>
+				    In any case, if you consider that a single UrT game server takes up about 200MB, see for ourselves that we are abundant :)</p>
+				    <br/>
+				    <p>Q - <strong>Is allowed to customize the bash script to start the game server?</strong></p>
+				    <p>A - Obviously it. We will give you one already, but you can change easily.<br/>Of course if this does not affect the other server.</p>
+				</div>
           </div>
 
           <div id="tabs-5">
