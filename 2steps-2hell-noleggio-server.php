@@ -17,6 +17,7 @@
 		<script src="js/slide.js" type="text/javascript"></script>
 		<?php }?>
     <script src="js/login.js" type="text/javascript"></script>
+    <script src="js/language.js" type="text/javascript"></script>
 		<script>
       $(document).ready(function() {
         $("#accordion").accordion({ active: false, collapsible: true, autoHeight: false });
@@ -64,25 +65,38 @@
 
     <div id="content">
       <div id="padding">
-        <h1 class="server"><span>Noleggio Server</span></h1>
+        <h1 class="server"><span>Server rent</span></h1>
+        <p class="center">
+          <a href="#" rel="it" class="change"><img src="img/bandiera_italia.jpg" alt="" /> </a>
+          <a href="#" rel="en" class="change"><img src="img/bandiera_inglese.jpg" alt="" /> </a>
+        </p>
        	<div id="tabs">
 
           <ul>
-            <li><a href="#tabs-1">Perch&egrave; scegliere 2s2h?</a></li>
-            <li><a href="#tabs-6">Offerte</a></li>
-            <li><a href="#tabs-2">Modalit&agrave; di pagamento</a></li>
-            <li><a href="#tabs-3">Note</a></li>
-            <li><a href="#tabs-4">FAQs</a></li>
-            <li><a href="#tabs-5">Lista Server</a></li>
+            <li><a href="#tabs-1"><span class="it">Perch&egrave; scegliere 2s2h?</span><span class="en">Why choose 2s2h?</span></a></li>
+            <li><a href="#tabs-6"><span class="it">Prezzi</span><span class="en">Prices</span></a></li>
+            <li><a href="#tabs-2"><span class="it">Modalit&agrave; di pagamento</span><span class="en">Payment Types</span></a></li>
+            <li><a href="#tabs-3"><span class="it">Note</span><span class="en">Notes</span></a></li>
+            <li><a href="#tabs-4"><span class="it">FAQs</span><span class="en">FAQs</span></a></li>
+            <li><a href="#tabs-5"><span class="it">Lista server</span><span class="en">Server's list</span></a></li>
           </ul>
 
           <div id="tabs-1">
-            <p>2s2h &egrave; un clan che da anni gioca ad <strong>urban terror</strong> e partecipa a competizioni. Essendo noi diretti utilizzatori dei server di gioco che offriamo non possiamo <strong>venir meno sulla qualit&agrave;</strong>.</p>
-            <p>Ci&ograve che facciamo &egrave; dunque <strong>creare</strong> un'<strong>alternativa</strong> ai prodotti che ci propone il mercato
-            che spesso <strong>mancano</strong> della qualit&agrave; necessaria oppure hanno <strong>prezzi proibitivi</strong>.</p>
-            <p>Il nostro scopo &egrave; quindi il fornire dei veri server, in cui sia piacevole giocare, ad un <strong>prezzo accessibile a tutti</strong>.</p>
-            <p>Su tutti i nostri server &egrave; installata <strong>la patch</strong> che impedisce di prenderne il controllo tramite un voto.</p>
-            <p>In pi&ugrave su richiesta, appena sar&agrave rilasciata la versione ufficiale, verr&agrave fornito gratuitamente <strong>BanBot</strong> sui <strong>server pubblici</strong>, indicati nei pacchetti.</p>
+          	<div class="it">
+		        <p>2s2h &egrave; un clan che da anni gioca ad <strong>urban terror</strong> e partecipa a competizioni. Essendo noi diretti utilizzatori dei server di gioco che offriamo non possiamo <strong>venir meno sulla qualit&agrave;</strong>.</p>
+		        <p>Ci&ograve che facciamo &egrave; dunque <strong>creare un'alternativa</strong> ai prodotti che ci propone il mercato
+		        che spesso <strong>mancano</strong> della qualit&agrave; necessaria oppure hanno <strong>prezzi proibitivi</strong>.</p>
+		        <p>Il nostro scopo &egrave; quindi il fornire dei veri server, in cui sia piacevole giocare, ad un <strong>prezzo accessibile a tutti</strong>.</p>
+		        <p>Su tutti i nostri server &egrave; installata <strong>la patch</strong> che impedisce di prenderne il controllo tramite un voto.</p>
+		        <p>In pi&ugrave su richiesta verr&agrave fornito gratuitamente <strong>BanBot</strong> sui <strong>server pubblici</strong>, indicati nei pacchetti.</p>
+		    </div>
+		    <div class="en">
+		    	<p>2s2h is a clan that plays for years to <strong>Urban Terror</strong> and participates in competitions. Since we are direct users of game servers that we offer, <strong>we can not fail on the quality</strong>.</p>
+		        <p>What we do is therefore to <strong>create an alternative</strong> to the products that we can found in the market that often <strong>lack</strong> the necessary quality or have <strong>prohibitive prices</strong>.</p>
+		        <p>Our aim is therefore to provide real servers, where it is pleasant to play at a price <strong>accessible to all</strong>.</p>
+		        <p>On all of our servers is installed the <strong>patch</strong> that prevents them from taking control by one vote.</p>
+		        <p>In addition, at the request will be provided free <strong>BanBot</strong> on <strong>public servers</strong>, listed in the packages.</p>
+		    </div>
           </div>
 
           <div id="tabs-6">
