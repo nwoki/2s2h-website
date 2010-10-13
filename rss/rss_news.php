@@ -20,14 +20,14 @@
             $id = $row['id'];
             $title = $row['title'];
             $weblink = $link."#".$id;
-            $article = $row['article'];
-            $author = $row['author'];
+            $article = html_entity_decode( $row['article'] );
+            $author =  $row['author'];
             $pubdate = $row['time'];
 
             echo "<item>
             <title>".$title."</title>
             <link>".$weblink."</link>
-            <description>".nl2br( $article )."</description>
+            <description><![CDATA[".nl2br( $article )."]]></description>
             <author>".$author."</author>
             <pubDate>".$pubdate."</pubDate>
             </item>";
