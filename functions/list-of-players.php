@@ -44,7 +44,7 @@
 	$roster[$i]['nome'] = "Arca";
 	$roster[$i]['img'] = "img/roster/arca.jpg";
 	$roster[$i]['desc'] = " Donna che incute timore nelle sue prede.<br/><br/>Mafiosa e alcolizzata, questa ragazza tiene testa a molti sbruffoni che si trovano in giro.";
-	$roster[$i]['cit'] = "\"Sono rossa, ubriacona e cattiva. Nel mio tempo libero prendo per il culo Revan e cerco di fargli ammettere l\'omosessualità e il ritardo mentale\" ";
+	$roster[$i]['cit'] = "\"Sono rossa, ubriacona e cattiva. Nel mio tempo libero prendo per il culo Revan e cerco di fargli ammettere l\'omosessualit&agrave; e il ritardo mentale\" ";
 	$i++;
 
 	$roster[$i]['nome'] = "LogOut";
@@ -62,7 +62,7 @@
 	$roster[$i]['nome'] = "S3if3r";
 	$roster[$i]['img'] = "img/roster/seifer.jpg";
 	$roster[$i]['desc'] = " Chitarrista e metallaro italo-inglese.<br/><br/>Il segugio del clan sempre pronto a fiutare noobs e cheaters sul server.<br/><br/>
-La sua arte: Seek &MP; Destroy!";
+La sua arte: Seek and Destroy!";
 	$roster[$i]['cit'] = "\"M K KZZ V?? T SPKK L KL STRNZ! T MDR ZKKL!\"";
 	$i++;
 
@@ -74,7 +74,7 @@ La sua arte: Seek &MP; Destroy!";
 
     $roster[$i]['nome'] = "Rambo";
     $roster[$i]['img'] = "img/roster/rambo.jpg";
-    $roster[$i]['desc'] = "l'uomo che dimenticò la R nell'utero di sua madre insieme all'abbronzatura ( cit. Arca )";
+    $roster[$i]['desc'] = "l'uomo che dimentic&ograve; la R nell'utero di sua madre insieme all'abbronzatura ( cit. Arca )";
     $roster[$i]['cit'] = "";
     $i++;
 
