@@ -162,15 +162,15 @@
             $id = $row['id'];
 			$title = $row['title'];
             $author = $row['author'];
-            $article = $row['article'];
+            $article = nl2br( $row['article'], true );
             $date = $row['time'];
 
             echo "
             <div id=\"$id\" class=\"news-article\">
                 <h3 class=\"title-art\">".$title." - <span>". convertTime ( $date ) ."</span></h3>
                 <div>
-                    <p>".nl2br( $article, true )."</p>
-                    <p class=\"auth\">By: ".$author."</p>
+                    <p>".html_entity_decode( $article )."</p>"; /* need to decode, on database article is saved as html */
+            echo    "<p class=\"auth\">By: ".$author."</p>
                 </div>
             </div>"; /* extra spacing between articles */
         }
@@ -624,7 +624,9 @@
             $webClass = new WebClass();
             $date = date( "Y-m-d H:m:s" );
 
-            $articleOk = addSlashes( $article );    /* adds slashes where needed so database query doesn't fail */
+            $articleHtml = htmlentities( $article, ENT_QUOTES );    /* transform into html in case of special chars */
+            $articleOk = addSlashes( $articleHtml );                /* adds slashes where needed so database query doesn't fail */
+
             $query = "insert into 2s2h_news values( '',\"$title\",\"$author\" ,\"$articleOk\",\"$date\" );";
 
             $result = $webClass->executeQuery( $query );
@@ -655,9 +657,10 @@
             die( "Can't set empty values for the news articles " );
 
         //date_default_timezone_set('CEST');   /* set default date timezone */
-        $modDate = date( "Y-m-d" );   /* get date from machine */
+        $modDate = date( "Y-m-d H:m:s" );   /* get date from machine */
         $webClass = new WebClass();
-        $articleOk = addSlashes( $modArticle );    /* in case i add strange quoted stuff */
+        $articleHtml = htmlentities( $modArticle, ENT_QUOTES );
+        $articleOk = addSlashes( $articleHtml );    /* adds slashes where needed so database query doesn't fail */
 
         $query = "update 2s2h_news set title=\"$modTitle\", author=\"$modAuthor\", article=\"$articleOk\", time=\"$modDate\" where id=\"$articleIdToMod\"";
 
@@ -665,7 +668,6 @@
 
         if( $result )
             echo"<p>ARTICLE UPDATED</p>";
-
         else
             echo"<p>ARTICLE NOT UPDATED</p>";
 
