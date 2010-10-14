@@ -38,7 +38,7 @@ strong { color: #9a0c0b; }
 #menu a:hover, #menu a:active{ color: #fff; background: url(../img/menu-on.jpg) left no-repeat;}
 #menu a.active{ color: #fff; background: url(../img/menu-on.jpg) left no-repeat;}
 
-h1 { width: 250px; margin: 10px auto 20px auto; height: 40px; }
+h1 { width: 250px; margin: 10px auto 5px auto; height: 40px;}
 .contact { background: #000 url(../img/contact-us-title.jpg) left top no-repeat;}
 .server { background: #000 url(../img/noleggio-server-title.jpg) left top no-repeat;}
 .bot { background: #000 url(../img/ban-bot-title.jpg) left top no-repeat;}
@@ -46,6 +46,7 @@ h1 { width: 250px; margin: 10px auto 20px auto; height: 40px; }
 .news {background: #000 url(../img/news-title.jpg) left top no-repeat;}
 .awards{background: #000 url(../img/awards-title.jpg) left top no-repeat;}
 h1 span { visibility: hidden}
+a#rss { display:block; width: 60px; height: 60px; margin: 0 auto 10px auto; cursor: pointer; background:url(../images/ico-feed.jpg) top left no-repeat; color: transparent}
 
 /*
 div.box { width: 100%; height: 50px; background-color: #000;}

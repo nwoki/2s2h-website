@@ -57,6 +57,7 @@
     <div id="content">
         <div id="padding">
             <h1 class="news"><span>News</span></h1>
+            <a id="rss" href="rss/rss_news.php" target="_blank">Feed RSS</a>
                 <?php loadNews( /* put count to see up to how many articles to load? */);?>
         </div>
     </div>
