@@ -1,8 +1,8 @@
 <?php
     header( "Content-type: text/xml" );
-
+    
     require( '../functions/WebClass.php' );
-
+    
     $link = "http://www.2s2h.com/2steps-2hell-news.php";
     echo "<?xml version='1.0' encoding='ISO-8859-1'?>
         <rss version='2.0'>
@@ -12,7 +12,7 @@
         <description>2Step2Hell's news</description>";
 
     $webClass = new WebClass();
-    $newsQuery = "select *from 2s2h_news;";
+    $newsQuery = "SELECT * FROM 2s2h_news ORDER BY 2s2h_news.time DESC;";
     $result = $webClass->executeQuery( $newsQuery );
 
     if( $result ) {
