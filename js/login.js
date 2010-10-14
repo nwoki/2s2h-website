@@ -2,11 +2,6 @@
 
 $(document).ready(function () {
 	
-	$('h1.rss').bind('click', function() {
-		$(this).attr('target','blank');
-	  location.href = "rss/rss_news.php";
-	}); 
-	
 	$('form[name=login]').submit(function() {
 		
 		var usr = $('input[name=usr]').val();
