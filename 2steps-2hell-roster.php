@@ -73,8 +73,8 @@
             <li><a href="#tabs-2">Soldati</a></li>
           </ul>
           
-          <div id="tabs-1"><? listRoster(0,3)?></div>
-          <div id="tabs-2"><? listRoster(3); ?></div>
+          <div id="tabs-1"><?php listRoster(0,3)?></div>
+          <div id="tabs-2"><?php listRoster(3); ?></div>
             
         </div>
             
