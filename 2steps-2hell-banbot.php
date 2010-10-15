@@ -164,7 +164,7 @@
               <br/><br/>
               <p class="versionName">Ringraziamenti:</p>
               <p class="center">A questo punto &egrave doveroso ringraziare tutte le persone che ci hanno aiutato, in particolare:</p>
-              <p class="center">i clan <span class="cit">=IvN=</span>, <span class="cit">@lbs</span>, <span class="cit">SdP</span>, <span class="cit">-WT-</span> e <span class="cit">|NN|</span> 
+              <p class="center">i clan <span class="cit">=IvN=</span>, <span class="cit">@lbs</span>, <span class="cit">SdP</span>, <span class="cit">-WT-</span> e <span class="cit">]*NN*[</span> 
               					per averci fatto da beta-tester e per i loro consigli,<br/>
               					<span class="cit">Mission85</span>, <span class="cit">ObScUrE</span>, <span class="cit">don</span>, <span class="cit">Kalish</span> e <span class="cit">Decoy</span>
               					per il loro prezioso aiuto.</p>
@@ -212,7 +212,7 @@
               <br/><br/>
               <p class="versionName">Thanks to:</p>
               <p class="center">At this point it is only right to thank everyone who helped us, especially:</p>
-              <p class="center">clans <span class="cit">=IvN=</span>, <span class="cit">@lbs</span>, <span class="cit">SdP</span>, <span class="cit">-WT-</span> and <span class="cit">|NN|</span> 
+              <p class="center">clans <span class="cit">=IvN=</span>, <span class="cit">@lbs</span>, <span class="cit">SdP</span>, <span class="cit">-WT-</span> and <span class="cit">]*NN*[</span> 
               					 for being our beta-testers and for their tips,<br/>
               					<span class="cit">Mission85</span>, <span class="cit">ObScUrE</span>, <span class="cit">don</span>, <span class="cit">Kalish</span> and <span class="cit">Decoy</span>
               					for their precious help.</p>
