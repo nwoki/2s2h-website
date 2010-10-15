@@ -27,13 +27,13 @@
                 &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
                 <a href="2steps-2hell-contact-us.php">Contact us</a> -
                 <a href="2steps-2hell-news.php" >News</a> -
-                <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a> -
+                <a href="2steps-2hell-noleggio-server.php" >Server renting</a> -
                 <a href="2steps-2hell-banbot.php" >BanBot</a> -
                 <a href="2steps-2hell-roster.php" >Roster</a> -
-                <a href="forum/index.php" >Forum</a> -
-                <a href="bugtracker/index.php" >BugTracker</a> -
+                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a> -
+                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a> -
                 <a href="2steps-2hell-awards.php">Awards</a> -
-								<a href="/vwar/war.php?action=nextaction">VWar</a> -
+				<a href="http://x2s2hx.altervista.org/vwar/war.php?action=nextaction">VWar</a> -
 								<a href="#" id="show" class="adminTab">AdminCP</a>
 								<a href="#" id="hide" class="adminTab">CloseTab</a>
             </div>';
@@ -43,13 +43,13 @@
                 &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
                 <a href="../2steps-2hell-contact-us.php">Contact us</a> -
                 <a href="../2steps-2hell-news.php" >News</a> -
-                <a href="../2steps-2hell-noleggio-server.php" >Server</a> -
+                <a href="../2steps-2hell-noleggio-server.php" >Server renting</a> -
                 <a href="../2steps-2hell-banbot.php" >BanBot</a> -
                 <a href="../2steps-2hell-roster.php" >Roster</a> -
-                <a href="../forum/index.php" >Forum</a> -
-                <a href="../bugtracker/index.php" >BugTracker</a> -
+                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a> -
+                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a> -
                 <a href="../2steps-2hell-awards.php">Awards</a> -
-                <a href="../vwar/admin/index.php">VWar</a>
+                <a href="http://x2s2hx.altervista.org/vwar/admin/index.php">VWar</a>
             </div>';
     }
 
@@ -63,11 +63,11 @@
                 '<div id="menu" class="clearfix">
                     <a class="active" href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="2steps-2hell-news.php" >News</a>
-                    <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
+                    <a href="2steps-2hell-noleggio-server.php" >Server renting</a>
                     <a href="2steps-2hell-banbot.php" >BanBot</a>
                     <a href="2steps-2hell-roster.php" >Roster</a>
-                    <a href="forum/index.php" >Forum</a>
-                    <a href="bugtracker/index.php" >BugTracker</a>
+                    <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                    <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
 
@@ -76,11 +76,11 @@
                 '<div id="menu" class="clearfix">
                     <a href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a class="active" href="2steps-2hell-news.php" >News</a>
-                    <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
+                    <a href="2steps-2hell-noleggio-server.php" >Server renting</a>
                     <a href="2steps-2hell-banbot.php" >BanBot</a>
                     <a href="2steps-2hell-roster.php" >Roster</a>
-                    <a href="forum/index.php" >Forum</a>
-                    <a href="bugtracker/index.php" >BugTracker</a>
+                    <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                    <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
 
@@ -89,11 +89,11 @@
                 '<div id="menu" class="clearfix">
                     <a href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="2steps-2hell-news.php" >News</a>
-                    <a class="active" href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
+                    <a class="active" href="2steps-2hell-noleggio-server.php" >Server renting</a>
                     <a href="2steps-2hell-banbot.php" >BanBot</a>
                     <a href="2steps-2hell-roster.php" >Roster</a>
-                    <a href="forum/index.php" >Forum</a>
-                    <a href="bugtracker/index.php" >BugTracker</a>
+                    <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                    <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
 
@@ -102,11 +102,11 @@
                 '<div id="menu" class="clearfix">
                     <a href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="2steps-2hell-news.php" >News</a>
-                    <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
+                    <a href="2steps-2hell-noleggio-server.php" >Server renting</a>
                     <a class="active" href="2steps-2hell-banbot.php" >BanBot</a>
                     <a href="2steps-2hell-roster.php" >Roster</a>
-                    <a href="forum/index.php" >Forum</a>
-                    <a href="bugtracker/index.php" >BugTracker</a>
+                    <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                    <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
 
@@ -115,11 +115,11 @@
                 '<div id="menu" class="clearfix">
                     <a href="2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="2steps-2hell-news.php" >News</a>
-                    <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
+                    <a href="2steps-2hell-noleggio-server.php" >Server renting</a>
                     <a href="2steps-2hell-banbot.php" >BanBot</a>
                     <a class="active" href="2steps-2hell-roster.php" >Roster</a>
-                    <a href="forum/index.php" >Forum</a>
-                    <a href="bugtracker/index.php" >BugTracker</a>
+                    <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                    <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
 
@@ -128,11 +128,11 @@
                 '<div id="menu" class="clearfix">
                     <a href="../2steps-2hell-contact-us.php" >Contact Us</a>
                     <a href="../2steps-2hell-news.php" >News</a>
-                    <a href="../2steps-2hell-noleggio-server.php" >Noleggio server</a>
+                    <a href="../2steps-2hell-noleggio-server.php" >Server renting</a>
                     <a href="../2steps-2hell-banbot.php" >BanBot</a>
                     <a href="../2steps-2hell-roster.php" >Roster</a>
-                    <a href="../forum/index.php" >Forum</a>
-                    <a href="../bugtracker/index.php" >BugTracker</a>
+                    <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                    <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
 
@@ -141,11 +141,11 @@
                 '<div id="menu" class="clearfix">
                     <a class="first" href="2steps-2hell-contact-us.php" >Contact Us</a>
                         <a href="2steps-2hell-news.php" >News</a>
-                        <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a>
+                        <a href="2steps-2hell-noleggio-server.php" >Server renting</a>
                         <a href="2steps-2hell-banbot.php" >BanBot</a>
                         <a href="2steps-2hell-roster.php" >Roster</a>
-                        <a href="forum/index.php" >Forum</a>
-                        <a class="last" href="bugtracker/index.php" >BugTracker</a>
+                        <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                        <a class="last" href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
                 </div>';
         }
     }
