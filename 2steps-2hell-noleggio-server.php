@@ -194,12 +194,12 @@
 
 				      <h3><a href="#">cw pack &euro; 13,00 </a></h3>
 				      <div>
-				        <p>The essential package consists of a <strong>private game server</strong> with:</p>
+				        <p>The cw package consists of a <strong>private game server</strong> with:</p>
 				        <ul class="list" >
-				            <li>11 slot = 5 players per team plus a possible referee</li>
-				            <li>Server voIP 10 slot codec speex 12,3kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
+				            <li>11 player slots = 5 players per team plus a possible referee</li>
+				            <li>Server voIP 10 slots codec speex 12,3kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
 				            <li>Game server controls: <strong>rcon</strong></li>
-				            <li>VoIP server controls: <strong>server admin</strong></li>
+				            <li>VoIP server controls: <strong>server admin via web</strong></li>
 				        </ul>
 				        <p><strong>Comparing prices</strong>:<br/>
 				        gamesclan.it -> &euro; 14.75 <span class="small">[12 game slots]</span>.<br/>
@@ -207,7 +207,7 @@
 				        </p>
 				      </div>
 
-				      <h3><a href="#">cw pack essential &euro; 16,00</a></h3>
+                    <h3><a href="#">cw essential pack &euro; 16,00</a></h3>
 				      <div>
 				        <ul class="list">
 				          <li><strong>Public</strong> game server 12 slots</li>
@@ -222,9 +222,9 @@
 
 				      <h3><a href="#">cw pack plus  &euro; 18,00</a></h3>
 				      <div>
-				        <p>The essential package consists of a <strong>private game server</strong> with:</p>
+				        <p>The cw plus package consists of a <strong>private game server</strong> with:</p>
 				          <ul class="list">
-				            <li>15 slot = 5 players + 2 sub per team + referee</li>
+				            <li>15 slots = 5 players + 2 sub per team + referee</li>
 				            <li>VoIP server 20 slot, codec speex 19,5kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
 				            <li>Game server controls: <strong>rcon</strong></li>
 				            <li>VoIP server controls: <strong>server admin</strong></li>
@@ -251,14 +251,14 @@
 				      <h3><a href="#">clan pack extra &euro; 26,00</a></h3>
 				      <div>
 				        <ul class="list">
-				          <li><strong>Public</strong> game server 20 slot</li>
-				          <li>VoIP server 25 slot, codec speex  25,9kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
+				          <li><strong>Public</strong> game server 20 slots</li>
+				          <li>VoIP server 25 slots, codec speex  25,9kbps or higher<br/><span class="small">[according to the available bandwidth to ensure the best performance of the game server]</span></li>
 				          <li>Game server controls <strong>rcon, BanBot</strong></li>
 				          <li>VoIP server controls: <strong>server admin</strong></li>
 				        </ul>
 				        <strong>Comparing prices</strong>:<br/>
 				        gamesclan.it -> &euro; 30,00<br/>
-				        n1ping.com -> doesn't sell servers greater than 18 slots
+				        n1ping.com -> doesn't sell servers with more than 18 slots
 				        </p>
 				      </div>
 
@@ -266,12 +266,12 @@
 
 				    <p>All our packages include:</p>
 				    <ul class="list" >
-				      <li>An Urban Terror game server, public or private, with a number of slots varies depending on the package chosen</li>
-				      <li>A <strong>Teamspeak</strong> server (TS2 or TS3) with a slot number that varies depending on the package chosen</li>
-				      <li>More than <strong>5GB</strong> of personal space</li>
+				      <li>An Urban Terror game server, public or private, with a number of slots depending on the package chosen</li>
+				      <li>A <strong>Teamspeak</strong> server (TS2 or TS3) with slots depending on the package chosen</li>
+				      <li>More than <strong>5GB</strong> of personal disk space</li>
 				      <li><strong>Total control</strong> of the server, with <strong>SSH and FTP</strong> access</li>
 				      <li>FTP space for the <strong>automatic download of extra maps</strong> installed on your server (shared between all servers)</li>
-				      <li>Possibility of access via <strong>IP</strong> or <strong>dns</strong> (like "server.2s2h.com")</li>
+				      <li>Possibility of access via <strong>IP</strong> or <strong>dns</strong> domain name(like "server.2s2h.com")</li>
 				      <li>Our servers are <strong>ALWAYS ACTIVE</strong>, 24 hours on 24, not on-demand</li>
 				    </ul>
 			</div>
@@ -279,10 +279,10 @@
 
           <div id="tabs-2">
 		      <div class="it">
-		        <p>Accettiamo <strong>Paypal</strong> o versamento su carte <strong>Postepay</strong></p>
+		        <p>Accettiamo pagamenti via <strong>Paypal</strong> o versamento su carte <strong>Postepay</strong></p>
 		      </div>
 		      <div class="en">
-		      	<p>We accept <strong>Paypal</strong> or transfers to <strong>Postepay</strong></p>
+		      	<p>We accept payments via <strong>Paypal</strong> or transfers to <strong>Postepay</strong></p>
 		      </div>
           </div>
 
@@ -297,10 +297,10 @@
 		     </div>
 		     <div class="en">
 		        <ul class="list">
-		          <li>All prices refers at the <strong>monthly rental</strong>.</li>
-		          <li>The private server <strong>must</strong> always set a password for access.</li>
+		          <li>All prices refer to the <strong>monthly rental</strong>.</li>
+		          <li>The private servers <strong>must</strong> always a password for access set.</li>
 		          <li>Public servers can be used with or without a password for access.</li>
-		          <li>The private slots are special slots reserved for members of the clan that have the password for their use (they can enter even if the server is full).<br/>They can be set more than indicated, but the total number of slots can not exceed the limit.</li>
+		          <li>The private slots are special slots reserved for members of the clan that have the password for their use (they can enter even if the server is full).<br/>They can be set to more than originally indicated, but the total number of slots cannot exceed the limit.</li>
 		        </ul>
 		     </div>
           </div>
@@ -327,31 +327,44 @@
 				    <p>R - Ovviamente si. Noi ne diamo gi&agrave; uno, ma &egrave; possibile cambiarlo tranquillamente.<br />Ovviamente se questo non compromette anche gli altri server.</p>
 				</div>
 				<div class="en">
-				    <p>Q - <strong>Can we run python script via ssh access?</strong></p>
-				    <p>A - yep. Currently, python is not available for all users, but there is only need to put it. If it is for a script of some use to you exotic ok, but if it is for a bot, we decided to not accept them.</p>
+				    <p>Q - <strong>Can we run python scripts via ssh access?</strong></p>
+				    <p>A - yep. Currently, python is not available for all users, but we can easily add it. If it is for a personal script of some use to you ok, but if it's for a bot, we decided not to accept them.</p>
 				    <br/>
 				    <p>Q - <strong>Is the game server running on virtual machines or directly on real servers?</strong></p>
 				    <p>A - Directly on real servers.</p>
 				    <br/>
 				    <p>Q - <strong>What is the relationship RAM total machine / number of gameserver?</strong></p>
-				    <p>A - On the Italian machine, 2GB/4gameserver (obviously there are other services, see system services, but there is a wide margin, is currently still free almost a GB).
-				    We are not going to go up still more than 2 GB to 4 servers, with rare exceptions, for example, if servers are very small and private, for a fifth.)<br/>
-				    In any case, if you consider that a single UrT game server takes up about 200MB, see for ourselves that we are abundant :)</p>
+				    <p>A - On the Italian machine, 2GB/4gameserver (obviously there are other services, see system services, but there is a wide margin between used and free ram that is almost 1GB).
+				    We are not going to use more than 4 servers, with rare exceptions, for example, if servers are very small and private, there might be room for a fifth.)<br/>
+				    In any case, if you consider that a single UrT game server takes up about 200MB, you can see for ourselves that we are abundant with free ram space :)</p>
 				    <br/>
-				    <p>Q - <strong>Is allowed to customize the bash script to start the game server?</strong></p>
-				    <p>A - Obviously it. We will give you one already, but you can change easily.<br/>Of course if this does not affect the other server.</p>
+				    <p>Q - <strong>Am I allowed to customize the bash script used to start the game server?</strong></p>
+				    <p>A - Obviously yes. We will give you one already, but you can change it according to your use.<br/>Of course only if this does not affect the other servers.</p>
 				</div>
           </div>
 
           <div id="tabs-5">
+            <div class="it">
             <ul class="list">
-              <li>2s2h return ITA #1 (\connect server.2s2h.com o \connect 95.110.227.172) <strong>NON IN VENDITA</strong></li>
-              <li>2s2h server in sale 1 ITA (\connect server.2s2h.com:27961 o \connect 95.110.227.172:27961) <strong>venduto</strong></li>
-              <li>2s2h server in sale 2 ITA (\connect server.2s2h.com:27962 o \connect 95.110.227.172:27962) <strong>venduto</strong></li>
-              <li>2s2h server in sale 3 ITA (\connect server.2s2h.com:27963 o \connect 95.110.227.172:27963) <strong>venduto</strong></li>
+              <li>2s2h return ITA #1(\connect server.2s2h.com o \connect 95.110.227.172)<strong>NON IN VENDITA</strong></li>
+              <li>2s2h server in vendita 1 ITA(\connect server.2s2h.com:27961 o \connect 95.110.227.172:27961)<strong>venduto</strong></li>
+              <li>2s2h server in vendita 2 ITA(\connect server.2s2h.com:27962 o \connect 95.110.227.172:27962)<strong>venduto</strong></li>
+              <li>2s2h server in vendita 3 ITA(\connect server.2s2h.com:27963 o \connect 95.110.227.172:27963)<strong>venduto</strong></li>
             </ul>
+            </div>
+            <div class="en">
+                <ul class="list">
+                    <li>2s2h return ITA #1(\connect server.2s2h.com o \connect 95.110.227.172)<strong>NOT FOR SALE</strong></li>
+                    <li>2s2h server for sale 1 ITA(\connect server.2s2h.com:27961 o \connect 95.110.227.172:27961)<strong>sold</strong></li>
+                    <li>2s2h server for sale 2 ITA(\connect server.2s2h.com:27962 o \connect 95.110.227.172:27962)<strong>sold</strong></li>
+                    <li>2s2h server for sale 3 ITA(\connect server.2s2h.com:27963 o \connect 95.110.227.172:27963)<strong>sold</strong></li>
+                </ul>
+            </div>
+          <div class="it">
             <p>Per ulteriori informazioni, scrivete sul nostro forum o contattateci direttamente nell'apposita sezione del sito:<a href = '2steps-2hell-contact-us.php' ><strong> QUI </strong></a></p>
-
+          </div>
+          <div class="en">
+            <p>For more information write to us on our forum or contact us directly in the apposite section of our website:<a href="2steps-2hell-contact-us.php"><strong>HERE</strong></a></p>
           </div>
 
 		  </div>
