@@ -88,14 +88,16 @@
 		        che spesso <strong>mancano</strong> della qualit&agrave; necessaria oppure hanno <strong>prezzi proibitivi</strong>.</p>
 		        <p>Il nostro scopo &egrave; quindi il fornire dei veri server, in cui sia piacevole giocare, ad un <strong>prezzo accessibile a tutti</strong>.</p>
 		        <p>Su tutti i nostri server &egrave; installata <strong>la patch</strong> che impedisce di prenderne il controllo tramite un voto.</p>
-		        <p>In pi&ugrave su richiesta verr&agrave fornito gratuitamente <strong>BanBot</strong> sui <strong>server pubblici</strong>, indicati nei pacchetti.</p>
+		        <p>In pi&ugrave su richiesta verr&agrave fornito gratuitamente <strong>BanBot</strong> sui <strong>server pubblici</strong>, indicati nei pacchetti.</p><br/>
+		        <p>Disponiamo di un server italiano e di uno francese (quest'ultimo, <strong>ideale per i tornei</strong>).</p>
 		    </div>
 		    <div class="en">
 		    	<p>2s2h is a clan that has played for years <strong>Urban Terror</strong> and still participates in competitions. Since we are direct users of game servers that we offer, <strong>we cannot fail on the quality</strong>.</p>
 		        <p>What we do is therefore to <strong>create an alternative</strong> to the products that you can find on the market that often <strong>lack</strong> the necessary quality or have <strong>prohibitive prices</strong>.</p>
 		        <p>Our aim is to provide real servers, where it is pleasant to play at a price <strong>accessible to all</strong>.</p>
 		        <p>On all of our servers we have installed the <strong>patch</strong> that prevents the game servers from being exploited b a bug accessable via vote.</p>
-		        <p>In addition to the request of a server we will provide free <strong>BanBot</strong> service on <strong>public servers</strong>, listed in the packages.</p>
+		        <p>In addition to the request of a server we will provide free <strong>BanBot</strong> service on <strong>public servers</strong>, listed in the packages.</p><br/>
+		        <p>We currently have two servers: an italian one and a french one ( the last one is <strong>ideal for tournaments</strong> ).</p>
 		    </div>
           </div>
 
@@ -274,7 +276,7 @@
 				      <li>Possibility of access via <strong>IP</strong> or <strong>dns</strong> domain name(like "server.2s2h.com")</li>
 				      <li>Our servers are <strong>ALWAYS ACTIVE</strong>, 24 hours on 24, not on-demand</li>
 				    </ul>
-			</div>
+				</div>
           </div>
 
           <div id="tabs-2">
@@ -345,21 +347,35 @@
 
           <div id="tabs-5">
             <div class="it">
-            <ul class="list">
-              <li>2s2h return ITA #1(\connect server.2s2h.com o \connect 95.110.227.172)<strong>NON IN VENDITA</strong></li>
-              <li>2s2h server in vendita 1 ITA(\connect server.2s2h.com:27961 o \connect 95.110.227.172:27961)<strong>venduto</strong></li>
-              <li>2s2h server in vendita 2 ITA(\connect server.2s2h.com:27962 o \connect 95.110.227.172:27962)<strong>venduto</strong></li>
-              <li>2s2h server in vendita 3 ITA(\connect server.2s2h.com:27963 o \connect 95.110.227.172:27963)<strong>venduto</strong></li>
-            </ul>
+             <p>Potete provare tranquillamente i nostri server, sia quelli italiani che quelli francesi.</p>
+             <p>In particolare, per provare quello italiano:<br/>
+             <strong>2s2h return ITA #1 : \connect it.2s2h.com</strong></p>
+             <p>Mentre, per provare quello francese:<br/>
+             <strong>2s2h EU ITA #1 : \connect eu.2s2h.com</strong></p>
+             <p>Se trovate il server pieno o con la password, riprovate pi&ugrave; tardi.</p>
+             
+             <p>Attualmente sono disponibili:</P>
+             <ul class="list">
+             	<li>server italiani: <strong>3</strong></li>
+             	<li>server francesi: <strong>4</strong></li>
+             </ul>
             </div>
             <div class="en">
-                <ul class="list">
-                    <li>2s2h return ITA #1(\connect server.2s2h.com o \connect 95.110.227.172)<strong>NOT FOR SALE</strong></li>
-                    <li>2s2h server for sale 1 ITA(\connect server.2s2h.com:27961 o \connect 95.110.227.172:27961)<strong>sold</strong></li>
-                    <li>2s2h server for sale 2 ITA(\connect server.2s2h.com:27962 o \connect 95.110.227.172:27962)<strong>sold</strong></li>
-                    <li>2s2h server for sale 3 ITA(\connect server.2s2h.com:27963 o \connect 95.110.227.172:27963)<strong>sold</strong></li>
-                </ul>
+             <p>You can try out our servers, both italian and french ones.</p>
+             <p>To try the italian one: <br/>
+             <strong>2s2h return ITA #1 : \connect it.2s2h.com</strong></p>
+             <p>To try the french one:<br/>
+             <strong>2s2h EU ITA #1 : \connect eu.2s2h.com</strong></p>
+             <p>If the servers are full or password protected, try again later</p>
+             
+             <p>Currently available:</P>
+             <ul class="list">
+             	<li>Italian servers: <strong>3</strong></li>
+             	<li>French servers: <strong>4</strong></li>
+             </ul>
             </div>
+         </div>
+          
           <div class="it">
             <p>Per ulteriori informazioni, scrivete sul nostro forum o contattateci direttamente nell'apposita sezione del sito:<a href = '2steps-2hell-contact-us.php' ><strong> QUI </strong></a></p>
           </div>
@@ -371,7 +387,6 @@
 
       </div>
     </div>
-
 
     <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
 
