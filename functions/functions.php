@@ -162,14 +162,14 @@
             $id = $row['id'];
 			$title = $row['title'];
             $author = $row['author'];
-            $article = nl2br( $row['article'], true );
+            $article = html_entity_decode( $row['article'] );    /* need to decode, on database article is saved as html */
             $date = $row['time'];
 
             echo "
             <div id=\"$id\" class=\"news-article\">
                 <h3 class=\"title-art\">".$title." - <span>". convertTime ( $date ) ."</span></h3>
                 <div>
-                    <p>".html_entity_decode( $article )."</p>"; /* need to decode, on database article is saved as html */
+                    <p>".$article."</p>";
             echo    "<p class=\"auth\">By: ".$author."</p>
                 </div>
             </div>"; /* extra spacing between articles */
@@ -540,10 +540,10 @@
             /* get neccessary info */
             $row = mysql_fetch_assoc( $result );
 
+            $brs = array( "<br>", "<br/>", "<br />" );              // various new line entries
             $title = $row['title'];
-            $article = $row['article'];
+            $article = str_replace( $brs, "", $row['article'] );    // replace html newlines so editing doesn't become a mess
             $author = $row['author'];
-            $date = date( "Y-m-d" );
 
             echo"
             <center>
@@ -625,7 +625,8 @@
             $date = date( "Y-m-d H:i:s" );
 
             $articleHtml = htmlentities( $article, ENT_QUOTES );    /* transform into html in case of special chars */
-            $articleOk = addSlashes( $articleHtml );                /* adds slashes where needed so database query doesn't fail */
+            $articleBR = nl2br( $articleHtml, false );              /* add <br/> in the right places */
+            $articleOk = addSlashes( $articleBR );                  /* adds slashes where needed so database query doesn't fail */
 
             $query = "insert into 2s2h_news values( '',\"$title\",\"$author\" ,\"$articleOk\",\"$date\" );";
 
@@ -660,7 +661,8 @@
         $modDate = date( "Y-m-d H:i:s" );   /* get date from machine */
         $webClass = new WebClass();
         $articleHtml = htmlentities( $modArticle, ENT_QUOTES );
-        $articleOk = addSlashes( $articleHtml );    /* adds slashes where needed so database query doesn't fail */
+        $articleBR = nl2br( $articleHtml );
+        $articleOk = addSlashes( $articleBR );    /* adds slashes where needed so database query doesn't fail */
 
         $query = "update 2s2h_news set title=\"$modTitle\", author=\"$modAuthor\", article=\"$articleOk\", time=\"$modDate\" where id=\"$articleIdToMod\"";
 
