@@ -625,7 +625,7 @@
             $date = date( "Y-m-d H:i:s" );
 
             $articleHtml = htmlentities( $article, ENT_QUOTES );    /* transform into html in case of special chars */
-            $articleBR = nl2br( $articleHtml, false );              /* add <br/> in the right places */
+            $articleBR = nl2br( $articleHtml/*, false*/ );              /* add <br/> in the right places */
             $articleOk = addSlashes( $articleBR );                  /* adds slashes where needed so database query doesn't fail */
 
             $query = "insert into 2s2h_news values( '',\"$title\",\"$author\" ,\"$articleOk\",\"$date\" );";
