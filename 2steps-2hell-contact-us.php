@@ -66,8 +66,10 @@
       					<h4>system admins + devs( server renting, bugs ecc )</h4>
 
                 <ul>
-                  <li><strong>N3m3s1s</strong> -<span class="email">email</span> n3m3sis<span class="symb">(at)</span>email<span class="symb">(dot)</span>it (Server renting & admin, BanBot, WebSite)</li>
-                  <li><strong>Zamy</strong> -<span class="email">email</span> skyled<span class="symb">(at)</span>alice<span class="symb">(dot)</span>it (Server renting & admin, BanBot, WebSite)</li>
+                  <li><strong>N3m3s1s</strong> -<span class="email">email</span> n3m3s1s<span class="symb">(at)</span>2s2h<span class="symb">(dot)</span>com</li>
+                  <li>(Server renting & admin, BanBot, WebSite)</li>
+                  <li><strong>Zamy</strong> -<span class="email">email</span> zamy<span class="symb">(at)</span>2s2h<span class="symb">(dot)</span>com</li>
+                  <li>(Server renting & admin, BanBot, WebSite)</li>
                   <li><strong>Rambo</strong> -<span class="email">email</span> urt.ks.rambo<span class="symb">(at)</span>gmail<span class="symb">(dot)</span>com (WebSite)</li>
                 </ul>
 
@@ -83,8 +85,8 @@
 
                  <h2><span class="ts">ts2</span> teamspeak admins</h2>
                  <ul>
-                 <li><strong>Heresyarch/Tsujigiri</strong> - <span class="email">@@@</span>heresyarch<span class="symb">(at)</span>hotmail<span class="symb">(dot)</span>it</li></li>
-                  <li><strong>Revan</strong> - <span class="email">@@@</span> andre.88<span class="symb">(at)</span>hotmail<span class="symb">(dot)</span>it</li>
+                 <li><strong>Heresyarch/Tsujigiri</strong> - <span class="email"></span>heresy<span class="symb">(at)</span>2s2h<span class="symb">(dot)</span>com</li></li>
+                  <li><strong>Revan</strong> - <span class="email"></span>revan<span class="symb">(at)</span>2s2h<span class="symb">(dot)</span>com</li>
                 </ul>
 
       				</div>
