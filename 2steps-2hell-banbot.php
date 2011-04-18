@@ -158,9 +158,9 @@
               <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><?php echo $last_ita; ?></a> - <?php echo $downloads[$last_ita]; ?> downloads</p>
               <br/>
               <p class="versionName">Hai trovato un bug?</p>
-              <p class="center">Aiutaci a migliorare BanBot e segnalacelo sul nostro <a href="bugtracker/index.php">BugTracker</a>.</p>
+              <p class="center">Aiutaci a migliorare BanBot e segnalacelo sul nostro <a href="http://x2s2hx.altervista.org/bugtracker/index.php">BugTracker</a>.</p>
               <p class="versionName">Hai bisogno di assistenza?</p>
-              <p class="center">Dopo aver letto BENE il manuale, chiedi aiuto sul nostro <a href="forum/index.php">forum</a>.</p>
+              <p class="center">Dopo aver letto BENE il manuale, chiedi aiuto sul nostro <a href="http://x2s2hx.altervista.org/forum/index.php">forum</a>.</p>
               <br/><br/>
               <p class="versionName">Ringraziamenti:</p>
               <p class="center">A questo punto &egrave doveroso ringraziare tutte le persone che ci hanno aiutato, in particolare:</p>
@@ -206,9 +206,9 @@
               <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <?php echo $downloads[$last_eng]; ?> downloads</p>
               <br/>
               <p class="versionName">Have you found a bug?</p>
-              <p class="center">Help us improve BanBot and report it on our <a href="bugtracker/index.php">BugTracker</a>.</p>
+              <p class="center">Help us improve BanBot and report it on our <a href="http://x2s2hx.altervista.org/bugtracker/index.php">BugTracker</a>.</p>
               <p class="versionName">Do you need assistance?</p>
-              <p class="center">After you've read the manual, ask for help on our <a href="forum/index.php">forum</a>.</p>
+              <p class="center">After you've read the manual, ask for help on our <a href="http://x2s2hx.altervista.org/forum/index.php">forum</a>.</p>
               <br/><br/>
               <p class="versionName">Thanks to:</p>
               <p class="center">At this point it is only right to thank everyone who helped us, especially:</p>
