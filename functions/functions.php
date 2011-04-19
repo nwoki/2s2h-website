@@ -156,6 +156,19 @@
                 </div>';
                 break;
 
+            case "bot-servers":
+                echo
+                '<div id="menu" class="clearfix">
+                    <a href="2steps-2hell-contact-us.php" >Contact Us</a>
+                    <a href="2steps-2hell-news.php" >News</a>
+                    <a href="2steps-2hell-noleggio-server.php" >Server renting</a>
+                    <a href="2steps-2hell-banbot.php" >BanBot</a>
+                    <a href="2steps-2hell-roster.php" >Roster</a>
+                    <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                    <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
+                </div>';
+                break;
+
             default:
                 echo
                 '<div id="menu" class="clearfix">
@@ -207,6 +220,19 @@
 
         return $date[2] ."/". $date[1]."/".$date[0]." ".$timestamp[1];
 
+    }
+
+    /*
+     * creates a back button
+     */
+    function backButton($redirectPageUrl)
+    {
+        echo"
+        <form action=\"$redirectPageUrl\" method=post>
+            <center>
+                <input type=submit value=back>
+            </center>
+        </form>";
     }
 
 /*****************************
