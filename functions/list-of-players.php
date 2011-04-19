@@ -25,7 +25,7 @@
     // soldiers ----------START
 	$roster[$i]['nome'] = "Revan/Yuu(omosessuale)";
 	$roster[$i]['img'] = "img/roster/revan.jpg";
-	$roster[$i]['desc'] = "L'uomo dalla s";
+	$roster[$i]['desc'] = "L'uomo che ci proverebbe anche con la Montalcini, quest'essere met&agrave veneto e met&agrave rosik &egrave la colonna portante di tutte le vittorie dei 2s2h... o almeno cos&igrave sostiene.";
 	$roster[$i]['cit'] = "Abbiamo vinto solo perch&egrave c'ero io";
 	$i++;
 
@@ -68,7 +68,7 @@
 
     $roster[$i]['nome'] = "Ratchet";
     $roster[$i]['img'] = "img/roster/ratchet.jpg";
-    $roster[$i]['desc'] = "Direttamente dalla";
+    $roster[$i]['desc'] = "Direttamente dai tunnel pi&ugrave profondi dell'etna questo piccolo topo sa farsi valere in battaglia anche se le apparenze dicono il contrario.";
     $roster[$i]['cit'] = "Neme, ma che cazzo lanci la nade l&igrave a fare??<br/>..<br/>";
     $i++;
 
