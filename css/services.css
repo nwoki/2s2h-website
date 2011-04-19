@@ -1,0 +1,14 @@
+/*BanBot page*/
+ul.botList {padding-left:20px; margin-top: 10px;}
+p.quote {text-align: center; font-style: italic;}
+p.donate {text-align: center; font-style: italic; font-weight: bold;}
+span.cit {text-align: center; font-style: italic;}
+
+.titoloTabella {font-weight: bold; font-size: 1.2em;}
+
+div#tabs .en { display: none}
+
+form {text-align: center;}
+h2.serverline {text-align: center; color: #9a0c0b;}
+.centered {text-align: center;}
+TD.centrata { text-align: center; vertical-align: middle;}
