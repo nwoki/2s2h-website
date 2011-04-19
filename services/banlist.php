@@ -17,6 +17,7 @@
 		$array_count = count($db_Array);
 		closedir($myDirectory);
 	}
+	sort($db_Array);
 
 	for($index=0; $index < $array_count; $index++){
 		try {
