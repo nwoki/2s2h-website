@@ -49,7 +49,7 @@
 
 	$roster[$i]['nome'] = "Engine";
 	$roster[$i]['img'] = "http://dailynade.com/wp-content/uploads/2009/07/me-150x150.jpg";
-	$roster[$i]['desc'] = "Anche chaiamto 'quickzoom' &egrave colui che predilige l'utilizzo del sr8 all'interno del clan.";
+	$roster[$i]['desc'] = "Anche chiamato 'quickzoom' &egrave colui che predilige l'utilizzo del sr8 all'interno del clan.";
 	$roster[$i]['cit'] = "~ Ratto, impara l'italiano che &egrave meglio<br/>~ <durante CW rispondendo al cell>Ah ciao Giulia. Ti chiamo tra 8 minuti<br/>~ <durante CW rispondendo al cell>Ciao giulia, oggi non posso, ho CW";
 	$i++;
 
