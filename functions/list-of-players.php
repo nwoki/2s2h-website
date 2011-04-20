@@ -55,7 +55,7 @@
 
 	$roster[$i]['nome'] = "Ranker";
 	$roster[$i]['img'] = "img/roster/ranker.jpg";
-	$roster[$i]['desc'] = "Questo nerdone si &egrave; autoproclamato il simpaticone del clan (almeno, cos&igrave; mi dice la Kolbebo).<br/><br/>Dotato di una fortissima \"R\" moscia, egli fa copia con Rambo, due elementi presi spesso di mira da Arca";
+	$roster[$i]['desc'] = "Questo nerdone si &egrave; autoproclamato il simpaticone del clan (almeno, cos&igrave; mi dice la Kolbebo).<br/><br/>Dotato di una fortissima \"R\" moscia, egli fa coppia con Rambo, due elementi presi spesso di mira da Arca";
 	$roster[$i]['cit'] = "\"Ho un fratello gemello e sono molto ma molto ma molto bello!\"";
 	$i++;
 
