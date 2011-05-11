@@ -1,11 +1,11 @@
 <?php
     ob_start();
     session_start();
-		 if ( !isset($_SESSION['status']) || $_SESSION['status']!="admin" )
+    if ( !isset($_SESSION['status']) || $_SESSION['status']!="admin" )
       header('location: ../index.php');
-		require( '../functions/functions.php' );
+    require( '../functions/functions.php' );
     $_SESSION["page"] = "admin";
-		ob_end_flush();
+    ob_end_flush();
 
 ?>
 
@@ -14,18 +14,27 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <meta name="description" content="<?php echo $description[$_SESSION["page"]]; ?>" />
-        <title><?php echo $title[$_SESSION["page"]]; ?></title>
-				<script src="../js/jquery-1.4.2.min.js" type="text/javascript"></script>
+        <title>
+            <?php
+                echo $title[$_SESSION["page"]];
+            ?>
+        </title>
+        <script src="../js/jquery-1.4.2.min.js" type="text/javascript"></script>
         <script src="../js/login.js" type="text/javascript"></script>
-    		<?php if ( isset($_SESSION['status']) && $_SESSION['status'] == 'admin') {?>
-				<script src="../js/slide-admin.js" type="text/javascript"></script>
-        <?php } else {?>
-				<script src="../js/slide.js" type="text/javascript"></script>
-		    <?php }?>
+        <?php
+            if ( isset($_SESSION['status']) && $_SESSION['status'] == 'admin') {
+        ?>
+                <script src="../js/slide-admin.js" type="text/javascript"></script>
+        <?php
+            } else {
+        ?>
+            <script src="../js/slide.js" type="text/javascript"></script>
+        <?php
+            }
+        ?>
         <link href="../css/style.css" type="text/css" rel="stylesheet"/>
         <link href="../css/slide.css" type="text/css" rel="stylesheet" media="screen" />
         <link href="../css/admin.css" type="text/css" rel="stylesheet" media="screen" />
-
     </head>
 
     <body>
@@ -74,6 +83,7 @@
                 <ul id=\"adminpage\">
                     <li class=\"ico-admin\"><a href='modadmins.php'>Mod Admins</a></li>
                     <li class=\"ico-art\"><a href='modnews.php'>Mod News</a></li>
+                    <li class=\"ico-banbot\"><a href='banbotservers.php'>BB Servers</a></li>
                 </ul>";
 
             ?>

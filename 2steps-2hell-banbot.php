@@ -166,7 +166,7 @@
               </ul>
               <br/>
               <p class="center">Riassumendo, se ne sta buono e silenzioso, tranne in caso di bisogno, e tiene i vostri server puliti.</p>
-              <p class="center">I beta-tester dicono di BanBot:</p>
+              <p class="versionName">I beta-tester dicono di BanBot:</p>
               <p class="quote">"&egrave semplice e funziona bene, meglio di b3 e cagate varie."</p>
               <p class="quote">"BanBot &egrave un eccellente bot per server Urt. Non bisogna essere esperti per poterlo usare, &egrave alla portata di tutti poich&egrave i comandi sono semplici ed essenziali. Utilissimo per gestire il proprio server in maniera facile ed efficace. Inoltre &egrave dotato di un buon anticheat: nel mio server sono gi&agrave stati bannati 5 players, di cui 2 di clan importanti. Sarebbe perfetto con l'aggiunta di un comando per impostare password nel server, ma penso che presto arriver&agrave anch'esso. Un ottimo bot, lo consiglio a tutti."</p>
               <br/>
@@ -214,7 +214,7 @@
               <br/>
               <p class="center">Summarizing: it stays good and quiet when not needed and keeps your server clean.</p>
               <br/>
-              <p class="center">What beta-testers say about BanBot:</p>
+              <p class="versionName">What beta-testers say about BanBot:</p>
               <p class="quote">"It's simple and works well, better than b3 and various crappy bots around."</p>
               <p class="quote">"BanBot is an excellent bot for Urt servers.You don't need to be an expert to use it. Its controls are simple and essential. Useful to manage your server easily and effectively. It also comes with a good anticheat: in my server it has already banned five players, including two of major clans. It would be perfect with the addition of a command to set passwords on the server, but I think it will come soon too. A good bot, I recommend it to everyone."</p>
               <br/>
