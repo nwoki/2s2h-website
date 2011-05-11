@@ -18,12 +18,21 @@
 		closedir($myDirectory);
 	}
 	sort($db_Array);
+	
+	foreach ($db_Array as $db) {
+		echo '<div class="it"><p>vai a: 
+		<a class="serverline" href="#'.substr($db,0,strpos($db,'.')).'">'.substr($db,0,strpos($db,'.')).'</a>
+		</p></div>
+		<div class="en"><p>go to: 
+		<a class="serverline" href="#'.substr($db,0,strpos($db,'.')).'">'.substr($db,0,strpos($db,'.')).'</a>
+		</p></div>';
+	}
 
 	for($index=0; $index < $array_count; $index++){
 		try {
 			$database = new PDO('sqlite:'.$databases_dir.$db_Array[$index]);
-			$result = $database->query('SELECT nick FROM oplist ORDER BY nick;');
-			echo '<h2 class="serverline">Server: '.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'</h2>
+			$result = $database->query('SELECT nick FROM oplist ORDER BY level,nick;');
+			echo '<h2 class="serverline" id="'.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'">Server: '.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'</h2>
 			<p class="titoloTabella">Admins:</p>
 			<table border="0" cellpadding="5" cellspacing="4" summary="Admins list of the server '.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'">
 			<tr>
