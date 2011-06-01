@@ -20,10 +20,10 @@
 	sort($db_Array);
 	
 	foreach ($db_Array as $db) {
-		echo '<div id="top" class="it"><p class="center">vai a: 
+		echo '<div id="ittop" class="it"><p class="center">vai a: 
 		<a class="serverline" href="#'.substr($db,0,strpos($db,'.')).'">'.substr($db,0,strpos($db,'.')).'</a>
 		</p></div>
-		<div class="en"><p class="center">go to: 
+		<div id="entop" class="en"><p class="center">go to: 
 		<a class="serverline" href="#'.substr($db,0,strpos($db,'.')).'">'.substr($db,0,strpos($db,'.')).'</a>
 		</p></div>';
 	}
@@ -35,8 +35,8 @@
 			$database = new PDO('sqlite:'.$databases_dir.$db_Array[$index]);
 			$result = $database->query('SELECT nick FROM oplist ORDER BY level,nick;');
 			echo '<h2 class="serverline" id="'.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'">Server: '.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'</h2>
-			<div class="it"><p class="center"><a href="#top">torna all\'inizio</a></p></div>
-			<div class="en"><p class="center"><a href="#top">return to top</a></p></div>
+			<div class="it"><p class="center"><a href="#ittop">torna all\'inizio</a></p></div>
+			<div class="en"><p class="center"><a href="#entop">return to top</a></p></div>
 			<p class="titoloTabella">Admins:</p>
 			<table border="0" cellpadding="5" cellspacing="4" summary="Admins list of the server '.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'">
 			<tr>
