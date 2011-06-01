@@ -92,6 +92,7 @@
           <ul>
             <li><a href="#tabs-1"><span class="it">2s2h email</span><span class="en">2s2h email</span></a></li>
             <li><a href="#tabs-2"><span class="it">Lista ban</span><span class="en">Ban list</span></a></li>
+            <li><a href="#tabs-3"><span class="it">Host mappe</span><span class="en">Maps host</span></a></li>
           </ul>
 		    
           <div id="tabs-1">
@@ -100,6 +101,10 @@
       
           <div id="tabs-2">
             <?PHP include('services/banlist.php') ?>  
+          </div>
+          
+          <div id="tabs-3">
+            <?PHP include('services/maps.php') ?>  
           </div>		
 		</div>
         

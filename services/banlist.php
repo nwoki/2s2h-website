@@ -20,13 +20,15 @@
 	sort($db_Array);
 	
 	foreach ($db_Array as $db) {
-		echo '<div class="it"><p>vai a: 
+		echo '<div class="it"><p class="center">vai a: 
 		<a class="serverline" href="#'.substr($db,0,strpos($db,'.')).'">'.substr($db,0,strpos($db,'.')).'</a>
 		</p></div>
-		<div class="en"><p>go to: 
+		<div class="en"><p class="center">go to: 
 		<a class="serverline" href="#'.substr($db,0,strpos($db,'.')).'">'.substr($db,0,strpos($db,'.')).'</a>
 		</p></div>';
 	}
+	
+	echo '<br/>';
 
 	for($index=0; $index < $array_count; $index++){
 		try {

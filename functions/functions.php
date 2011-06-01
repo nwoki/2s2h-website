@@ -292,6 +292,20 @@
         $query = "UPDATE 2s2h_downloads SET number=\"".($row['number']+1)."\" WHERE file=\"$name\";";
         $webClass->executeQuery( $query );
     }
+    
+/**********************
+ * Gestione Files 	  *
+ *********************/
+ 
+ function linux_size($file) {
+ 	  $size=exec('ls -l '.$file.' | awk \'{printf $5 }\'');
+ 	  
+      $sizes = array(" Bytes", " KB", " MB", " GB", " TB", " PB", " EB", " ZB", " YB");
+      if ($size == 0) { return('n/a'); } 
+      else {
+      	return (round($size/pow(1024, ($i = floor(log($size, 1024)))), $i > 1 ? 2 : 0) . $sizes[$i]);
+      }
+  }
 
 /*******************
  * ADMIN FUNCTIONS *
