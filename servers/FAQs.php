@@ -1,4 +1,5 @@
-<div class="it">
+<div>
+<?php if($_SESSION['language']=="it"){?>
     <p>D - <strong>&Egrave; possibile lanciare script python tramite accesso ssh?</strong></p>
     <p>R - yep. Attualmente non c'&egrave; python disponibile per tutti gli utenti, basta metterlo.
     Se &egrave per uno script di qualche esotica utilit&agrave; per voi ok, se &egrave; per un bot, abbiamo
@@ -20,8 +21,7 @@
     <br/>
     <p>D - <strong>&Egrave; possibile installare delle versioni modificate (MOD) di Urban Terror?</strong></p>
     <p>R - Si, previa comunicazione e/o richiesta.</p>
-</div>
-<div class="en">
+<?php }else {?>
     <p>Q - <strong>Can we run python scripts via ssh access?</strong></p>
     <p>A - yep. Currently, python is not available for all users, but we can easily add it. If it is for a personal script of some use to you ok, but if it's for a bot, we decided not to accept them.</p>
     <br/>
@@ -36,6 +36,7 @@
     <p>Q - <strong>Am I allowed to customize the bash script used to start the game server?</strong></p>
     <p>A - Obviously yes. We will give you one already, but you can change it according to your use.<br/>Of course only if this does not affect the other servers.</p>
     <br/>
-    <p>D - <strong>Is it possible to install modified versions (MOD) of Urban Terror?</strong></p>
+    <p>Q - <strong>Is it possible to install modified versions (MOD) of Urban Terror?</strong></p>
     <p>R - Yes, with a notice and/or a request.</p>
+<?php }?>
 </div>

@@ -1,7 +1,10 @@
 <?php
+    ob_start();
     session_start();
-		$_SESSION["page"] = "server";
     require( 'functions/functions.php' );
+    checkLanguage();
+    ob_end_flush();
+	$_SESSION["page"] = "server";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,7 +21,7 @@
 		<script src="js/slide.js" type="text/javascript"></script>
 		<?php }?>
     <script src="js/login.js" type="text/javascript"></script>
-    <script src="js/language.js" type="text/javascript"></script>
+    <!--<script src="js/language.js" type="text/javascript"></script> -->
 		<script>
       $(document).ready(function() {
         $(".accordion").accordion({ active: false, collapsible: true, autoHeight: false });
@@ -44,7 +47,6 @@
   })();
 
 </script>
-
 
 </head>
 <body>
@@ -81,61 +83,71 @@
       <div id="menu-bottom"></div>
     </div>
 
-    <div id="content">
-      <div id="padding">
-        <h1 class="server"><span>Server rent</span></h1>
-        <p class="center">
-          <a href="#" rel="it" class="change"><img src="img/bandiera_italia.jpg" alt="" /> </a>
-          <a href="#" rel="en" class="change"><img src="img/bandiera_inglese.jpg" alt="" /> </a>
-        </p>
-       	<div id="tabs">
+<?php
+	if (languageSelection())
+	{
+?>
+<div id="content">
+  <div id="padding">
+    <h1 class="server"><span>Server rent</span></h1>
+   	<div id="tabs">
+	      <ul>
+	      <?php if($_SESSION['language']=="it"){?>
+	        <li><a href="#tabs-6">Perch&egrave; scegliere 2s2h?</a></li>
+	        <li><a href="#tabs-2">Prezzi</a></li>
+	        <li><a href="#tabs-3">Note</a></li>
+	        <li><a href="#tabs-4">FAQs</a></li>
+	        <li><a href="#tabs-5">Lista server</a></li>
+	        <li><a href="#tabs-1">Ordina un server</a></li>
+	      <?php }else {?>
+	      	<li><a href="#tabs-6"><span class="it">Perch&egrave; scegliere 2s2h?</span><span class="en">Why choose 2s2h?</span></a></li>
+	        <li><a href="#tabs-2">Prices</a></li>
+	        <li><a href="#tabs-3">Notes</a></li>
+	        <li><a href="#tabs-4">FAQs</a></li>
+	        <li><a href="#tabs-5">Server's list</a></li>
+	        <li><a href="#tabs-1">Order a server</a></li>
+		  <?php }?>
+	      </ul>
 
-          <ul>
-            <li><a href="#tabs-6"><span class="it">Perch&egrave; scegliere 2s2h?</span><span class="en">Why choose 2s2h?</span></a></li>
-            <li><a href="#tabs-2"><span class="it">Prezzi</span><span class="en">Prices</span></a></li>
-            <li><a href="#tabs-3"><span class="it">Note</span><span class="en">Notes</span></a></li>
-            <li><a href="#tabs-4"><span class="it">FAQs</span><span class="en">FAQs</span></a></li>
-            <li><a href="#tabs-5"><span class="it">Lista server</span><span class="en">Server's list</span></a></li>
-            <li><a href="#tabs-1"><span class="it">Ordina un server</span><span class="en">Order a server</span></a></li>
-          </ul>
+	      <div id="tabs-6">
+	      	<?php include("servers/why.php"); ?>
+	      </div>
 
-          <div id="tabs-6">
-          	<?php include("servers/why.php"); ?>
-          </div>
+	      <div id="tabs-2">
+	      	<?php include("servers/offerte.php"); ?>
+	      </div>
 
-          <div id="tabs-2">
-          	<?php include("servers/offerte.php"); ?>
-          </div>
-
-          <div id="tabs-3">
-          	 <?php include("servers/note.php"); ?>
-          </div>
-          
+	      <div id="tabs-3">
+	      	 <?php include("servers/note.php"); ?>
+	      </div>
+	      
 		  <div id="tabs-4">
-      		 <?php include("servers/FAQs.php"); ?>
-          </div>
+	  		 <?php include("servers/FAQs.php"); ?>
+	      </div>
 
-          <div id="tabs-5">
-             <?php include("servers/listaservers.php"); ?>
-          </div>
-          
-          <div id="tabs-1">
-             <?php include("servers/modulo.php"); ?>
-          </div>
-          
-          <div class="it">
-            <p>Per ulteriori informazioni, scrivete sul nostro forum o contattateci direttamente nell'apposita sezione del sito:<a href = '2steps-2hell-contact-us.php' ><strong> QUI </strong></a></p>
-          </div>
-          <div class="en">
-            <p>For more information write to us on our forum or contact us directly in the apposite section of our website:<a href="2steps-2hell-contact-us.php"><strong>HERE</strong></a></p>
-          </div>
-
-		  </div>
-
-      </div>
-    </div>
-
-    <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
+	      <div id="tabs-5">
+	         <?php include("servers/listaservers.php"); ?>
+	      </div>
+	      
+	      <div id="tabs-1">
+	         <?php include("servers/modulo.php"); ?>
+	      </div>
+	      
+	      <div>
+  	      <?php if($_SESSION['language']=="it"){?>
+	        <p>Per ulteriori informazioni, scrivete sul nostro forum o contattateci direttamente nell'apposita sezione del sito:<a href = '2steps-2hell-contact-us.php' ><strong> QUI </strong></a></p>
+	      <?php }else {?>
+	        <p>For more information write to us on our forum or contact us directly in the apposite section of our website:<a href="2steps-2hell-contact-us.php"><strong>HERE</strong></a></p>
+	      <?php }?>
+	      </div>
+		<br/>
+	  </div>
+  </div>
+</div>
+<?php
+	}
+?>
+<?php bottomPageInfo(); ?>
 
 </body>
 </html>

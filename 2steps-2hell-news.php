@@ -1,7 +1,10 @@
 <?php
+    ob_start();
     session_start();
-		$_SESSION["page"] = "news";
     require( 'functions/functions.php' );
+    checkLanguage();
+    ob_end_flush();
+	$_SESSION["page"] = "news";
     debugCode ( );
     $test = new WebClass(); /* used to check if database is setup right */
 ?>
@@ -53,7 +56,10 @@
             <div id="menu-center"><div id="menu"><?php menuPages( $_SESSION["page"] )?></div></div>
         <div id="menu-bottom"></div>
     </div>
-
+<?php
+	if (languageSelection())
+	{
+?>
     <div id="content">
         <div id="padding">
             <h1 class="news"><span>News</span></h1>
@@ -61,12 +67,10 @@
                 <?php loadNews( /* put count to see up to how many articles to load? */);?>
         </div>
     </div>
-
-    <div class="separate sfondo-footer">
-        <?php
-            bottomPageInfo();
-        ?>
-    </div>
+<?php
+	}
+?>
+<?php bottomPageInfo(); ?>
 
 </body>
 </html>

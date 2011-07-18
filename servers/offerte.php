@@ -1,4 +1,5 @@
-<div class="it">
+<div>
+<?php if($_SESSION['language']=="it"){?>
     <p>Le nostre offerte:<br/></p>
     <div class="accordion">
 
@@ -84,9 +85,7 @@
       <li>Possibilit&agrave; di accesso sia tramite <strong>ip</strong>, che <strong>dns</strong> ( <strong>server.2s2h.com</strong> )</li>
       <li>I server sono <strong>SEMPRE ATTIVI</strong>, <strong>24 ore su 24</strong>, non on-demand</li>
     </ul>
-</div>
-
-<div class="en">
+<?php }else {?>
     <p>Our offers:<br/></p>
     <div class="accordion">
 
@@ -172,4 +171,5 @@
       <li>Possibility of access via <strong>IP</strong> or <strong>dns</strong> domain name(like "server.2s2h.com")</li>
       <li>Our servers are <strong>ALWAYS ACTIVE</strong>, 24 hours on 24, not on-demand</li>
     </ul>
+<?php }?>
 </div>
