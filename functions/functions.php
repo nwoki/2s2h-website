@@ -23,12 +23,7 @@
     {
     	if (!empty($_SESSION['language']))
     	{
-			echo '<p class="center"> <a href="?ln=select">';
-			if ($_SESSION['language'] == 'it')
-				echo 'cambia la lingua';
-			else
-				echo 'change language';
-			echo '</a></p><br/>';
+			echo '<p class="center"> <a href="?ln=select">change language</a></p>';
 		}
         if ($_SESSION["page"]!="admin")
             echo
