@@ -105,7 +105,7 @@
 	        <li><a href="#tabs-3">Notes</a></li>
 	        <li><a href="#tabs-4">FAQs</a></li>
 	        <li><a href="#tabs-5">Server's list</a></li>
-	        <li><a href="#tabs-1">Order a server</a></li>
+	        <!--<li><a href="#tabs-1">Order a server</a></li>-->
 		  <?php }?>
 	      </ul>
 
@@ -129,9 +129,9 @@
 	         <?php include("servers/listaservers.php"); ?>
 	      </div>
 	      
-	      <div id="tabs-1">
+	      <!--<div id="tabs-1">
 	         <?php include("servers/modulo.php"); ?>
-	      </div>
+	      </div>-->
 	      
 	      <div>
   	      <?php if($_SESSION['language']=="it"){?>
