@@ -990,7 +990,7 @@
  		{
  			echo '<div id="content">
  			<div id="padding">
- 				<br/><p class="center">Choose the language: <br/> Scegli la lingua:</p>
+ 				<br/><p class="center">Choose a language: <br/> Scegli una lingua:</p>
  				<p class="center">
 				  <a href="?ln=it" rel="it" class="change"><img src="img/bandiera_italia.jpg" alt="" /> </a>
 				  <a href="?ln=en" rel="en" class="change"><img src="img/bandiera_inglese.jpg" alt="" /> </a>

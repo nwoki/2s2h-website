@@ -1,8 +1,10 @@
 <?php
+    ob_start();
     session_start();
-		$_SESSION["page"] = "bot";
     require( 'functions/functions.php' );
-    
+    checkLanguage();
+    ob_end_flush();
+	$_SESSION["page"] = "bot";   
     
 	// open the directory 
     $last_dir = "BanBot/last_release/";
@@ -68,8 +70,7 @@
 		<script src="js/slide.js" type="text/javascript"></script>
 		<?php }?>
     <script src="js/login.js" type="text/javascript"></script>
-    <script src="js/language.js" type="text/javascript"></script>
-		<script>
+	<script>
       $(document).ready(function() {
         $("#accordion").accordion({ active: false, collapsible: true, autoHeight: false });
 				$('#tabs').tabs();
@@ -131,25 +132,25 @@
       <div id="menu-bottom"></div>
     </div>
 
+<?php
+	if (languageSelection())
+	{
+?>
     <div id="content">
       <div id="padding">
         <p class="center"><img src="img/banbot.jpg" align="center" alt="BanBot" class="banbot"></p>
-        <p class="center">
-          <a href="#" rel="it" class="change"><img src="img/bandiera_italia.jpg" alt="" /> </a>
-          <a href="#" rel="en" class="change"><img src="img/bandiera_inglese.jpg" alt="" /> </a>
-        </p>
+        <?php if($_SESSION['language']=="it"){?>
         <div id="tabs">
-
           <ul>
-            <li><a href="#tabs-1"><span class="it">BanBot V. 1.1</span><span class="en">BanBot V. 1.1</span></a></li>
-            <li><a href="#tabs-2"><span class="it">Changelog</span><span class="en">Changelog</span></a></li>
-            <li><a href="#tabs-3"><span class="it">Vecchie versioni</span><span class="en">Old Versions</span></a></li>
-            <li><a href="#tabs-4"><span class="it">Il futuro</span><span class="en">The Future</span></a></li>
+            <li><a href="#tabs-1">BanBot V. 1.2b</a></li>
+            <li><a href="#tabs-2">Changelog</a></li>
+            <li><a href="#tabs-3">Vecchie versioni</a></li>
+            <li><a href="#tabs-4">Il futuro</a></li>
           </ul>
 		    
           <div id="tabs-1">
             
-            <div class="it">
+            <div>
               <p class="center">Un bot che mira ad essere semplice e ad occupare poche risorse della macchina che lo hosta evitando quindi di provocare "lag" non voluti del server.</p>
               <p class="center">Fatto per controllare il gioco di URBAN TERROR 4.1, integra ed utilizza la libreria SQLite3 per contenere i suoi dati: grazie a questo &egrave completamente indipendente, non necessita di alcun software preinstallato.</p>
               <p class="center">Pensato anche per chi affitta server di gioco, &egrave in grado di controllare pi&ugrave di un server con una sola istanza, in maniera totalmente isolata l'uno dall'altro: noi l'abbiamo testato fino a 5.</p>
@@ -196,58 +197,10 @@
               ?>
             </div>
             
-            <div class="en">
-              <p class="center">A bot that is designed to be simple and to use few resources of the machine thus to avoid causing unwanted "lags" on server.</p>
-              <p class="center">Made to control the game Urban Terror 4.1, it integrates and uses the SQLite3 library to contain your data: so is completely independent, requires no preinstalled software.</p>
-              <p class="center">Designed also for those who rent game servers, it can controls more than one server with only one instance, in a totally isolated manner from each other: we tested it up to 5.</p>
-              <p class="center">It offers many useful tools for server administrators, for example:</p>
-              <ul class="botList">
-                <li>Anticheat, with different levels of security</li>
-                <li>Permanently bans (also with motive)</li>
-                <li>Kick, slap, etc.</li>
-                <li>Force players to change team</li>
-                <li>Automated backup of log files</li>
-                <li>Comands accept parts of a players nick</li>
-                <li>Change current map and the next one</li>
-                <li>Recognition of admins (they can use fakes)</li>
-              </ul>
-              <br/>
-              <p class="center">Summarizing: it stays good and quiet when not needed and keeps your server clean.</p>
-              <br/>
-              <p class="versionName">What beta-testers say about BanBot:</p>
-              <p class="quote">"It's simple and works well, better than b3 and various crappy bots around."</p>
-              <p class="quote">"BanBot is an excellent bot for Urt servers.You don't need to be an expert to use it. Its controls are simple and essential. Useful to manage your server easily and effectively. It also comes with a good anticheat: in my server it has already banned five players, including two of major clans. It would be perfect with the addition of a command to set passwords on the server, but I think it will come soon too. A good bot, I recommend it to everyone."</p>
-              <br/>
-              <p class="center">For more informations, read the documentation.</p>
-              <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
-              <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <?php echo $downloads[$last_eng]; ?> downloads</p>
-              <br/>
-              <p class="versionName">Have you found a bug?</p>
-              <p class="center">Help us improve BanBot and report it on our <a href="http://x2s2hx.altervista.org/bugtracker/index.php">BugTracker</a>.</p>
-              <p class="versionName">Do you need assistance?</p>
-              <p class="center">After you've read the manual, ask for help on our <a href="http://x2s2hx.altervista.org/forum/index.php">forum</a>.</p>
-              <br/><br/>
-              <p class="versionName">Thanks to:</p>
-              <p class="center">At this point it is only right to thank everyone who helped us, especially:</p>
-              <p class="center">clans <span class="cit">=IvN=</span>, <span class="cit">@lbs</span>, <span class="cit">SdP</span>, <span class="cit">-WT-</span> and <span class="cit">]*NN*[</span> 
-              					 for being our beta-testers and for their tips,<br/>
-              					<span class="cit">Mission85</span>, <span class="cit">ObScUrE</span>, <span class="cit">don</span>, <span class="cit">Kalish</span> and <span class="cit">Decoy</span>
-              					for their precious help.</p>
-              <br/><br/>
-              <p class="center">Related downloads:</p>
-              <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><img src="imghold/download.png" alt=""></a></p>
-              <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><?php echo $last_ita; ?></a> - <?php echo $downloads[$last_ita]; ?> downloads</p>
-              <?php
-              for($index=0; $index < $last_indexCount; $index++)
-              echo '  <p class="center"><a href="download.php?d='.$last_dir.$last_Array[$index].'"><img src="imghold/download.png" alt=""></a></p>
-              <p class="center"><a href="download.php?d='.$last_dir.$last_Array[$index].'">'.$last_Array[$index].'</a> - '.$downloads[$last_Array[$index]].' downloads</p>';
-              ?>
-            </div>
-            
           </div>
       
           <div id="tabs-2">
-            <div class="it">
+            <div>
               <p class="center"> Changelog: </p>
               <br/>
               <?php 
@@ -268,34 +221,11 @@
                 }
               ?>
             </div>
-            
-            <div class="en">
-              <p class="center"> Changelog: </p>
-              <br/>
-              <?php 
-                include("BanBot/changelog.php");
-                $i_indexCount = count($versions);
-                for($i=0; $i < $i_indexCount; $i++)
-                {
-                  echo '  <p class="versionName">'.$versions[$i]['nome'].'</p>';
-                  echo '<ul>';
-                  $j_indexCount = count($versions[$i]['info']);
-                  for($j=0; $j < $j_indexCount; $j++)
-                  {
-                    echo '
-                      <li>'.$versions[$i]['info'][$j]['data'].' : 
-                      '.$versions[$i]['info'][$j]['modifica'].'</li>';
-                  }
-                  echo '</ul>';	
-                }
-              ?>
-            </div>
-            
           </div>
   
           <div id="tabs-3">
           
-            <div class="it">
+            <div>
               <p class="center"> Downloads delle versioni precedenti: </p>
               <?php 
                 //vecchie versioni
@@ -303,21 +233,11 @@
                   echo '  <p class="center"><a href="download.php?d='.$old_dir.$old_Array[$index].'">'.$old_Array[$index].'</a> - '.$downloads[$old_Array[$index]].' downloads</p></p>';
               ?>
             </div>
-            
-            <div class="en">
-              <p class="center"> Older versions downloads: </p>
-              <?php 
-                //vecchie versioni
-                for($index=0; $index < $old_indexCount; $index++)
-                  echo '  <p class="center"><a href="download.php?d='.$old_dir.$old_Array[$index].'">'.$old_Array[$index].'</a> - '.$downloads[$old_Array[$index]].' downloads</p></p>';
-              ?>
-            </div>
-            
           </div>
         
           <div id="tabs-4">
           
-            <div class="it">
+            <div>
               <p class="center"> Caratteristiche che verranno probabilmente aggiunte alle prossime versioni: </p>
               <br/>
               <?php 
@@ -336,34 +256,13 @@
                 }
               ?>
             </div>
-            
-            <div class="en">
-              <p class="center"> Features that probably will be added in the future: </p>
-              <br/>
-              <?php 
-                include("BanBot/future.php");
-                $i_indexCount = count($future);
-                for($i=0; $i < $i_indexCount; $i++)
-                {
-                  echo '  <p class="versionName">In '.$future[$i]['version'].' :</p>';
-                  echo '<ul>';
-                  $j_indexCount = count($future[$i]['info']);
-                  for($j=0; $j < $j_indexCount; $j++)
-                  {
-                    echo '<li>'.$future[$i]['info'][$j]['en'].'</li>';
-                  }
-                  echo '</ul><br/>';	
-                }
-              ?>
-            </div>
-            
           </div>
 			
 		</div>
         
         <!-- Bottone per le donazioni -->
         <br/><br/>
-        <div class="it">
+        <div>
         	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 			<input type="hidden" name="cmd" value="_s-xclick">
 			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">
@@ -375,7 +274,127 @@
 			Se apprezzi il nostro lavoro e vuoi in qualche modo darci una mano, per favore fai una donazione al nostro clan. <br/>
 			Ti ringraziamo infinitamente =)</p>
 		</div>
-		<div class="en">
+		<br/>
+	  </div>
+	</div>
+		<?php }else {?>
+		<div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">BanBot V. 1.2b</a></li>
+            <li><a href="#tabs-2">Changelog</a></li>
+            <li><a href="#tabs-3">Old Versions</a></li>
+            <li><a href="#tabs-4">The Future</a></li>
+          </ul>
+		    
+          <div id="tabs-1">
+		      <div>
+		          <p class="center">A bot that is designed to be simple and to use few resources of the machine thus to avoid causing unwanted "lags" on server.</p>
+		          <p class="center">Made to control the game Urban Terror 4.1, it integrates and uses the SQLite3 library to contain your data: so is completely independent, requires no preinstalled software.</p>
+		          <p class="center">Designed also for those who rent game servers, it can controls more than one server with only one instance, in a totally isolated manner from each other: we tested it up to 5.</p>
+		          <p class="center">It offers many useful tools for server administrators, for example:</p>
+		          <ul class="botList">
+		            <li>Anticheat, with different levels of security</li>
+		            <li>Permanently bans (also with motive)</li>
+		            <li>Kick, slap, etc.</li>
+		            <li>Force players to change team</li>
+		            <li>Automated backup of log files</li>
+		            <li>Comands accept parts of a players nick</li>
+		            <li>Change current map and the next one</li>
+		            <li>Recognition of admins (they can use fakes)</li>
+		          </ul>
+		          <br/>
+		          <p class="center">Summarizing: it stays good and quiet when not needed and keeps your server clean.</p>
+		          <br/>
+		          <p class="versionName">What beta-testers say about BanBot:</p>
+		          <p class="quote">"It's simple and works well, better than b3 and various crappy bots around."</p>
+		          <p class="quote">"BanBot is an excellent bot for Urt servers.You don't need to be an expert to use it. Its controls are simple and essential. Useful to manage your server easily and effectively. It also comes with a good anticheat: in my server it has already banned five players, including two of major clans. It would be perfect with the addition of a command to set passwords on the server, but I think it will come soon too. A good bot, I recommend it to everyone."</p>
+		          <br/>
+		          <p class="center">For more informations, read the documentation.</p>
+		          <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><img src="imghold/download.png" alt=""></a></p>
+		          <p class="center"><a href="<?php echo $last_dir.$last_eng; ?>"><?php echo $last_eng; ?></a> - <?php echo $downloads[$last_eng]; ?> downloads</p>
+		          <br/>
+		          <p class="versionName">Have you found a bug?</p>
+		          <p class="center">Help us improve BanBot and report it on our <a href="http://x2s2hx.altervista.org/bugtracker/index.php">BugTracker</a>.</p>
+		          <p class="versionName">Do you need assistance?</p>
+		          <p class="center">After you've read the manual, ask for help on our <a href="http://x2s2hx.altervista.org/forum/index.php">forum</a>.</p>
+		          <br/><br/>
+		          <p class="versionName">Thanks to:</p>
+		          <p class="center">At this point it is only right to thank everyone who helped us, especially:</p>
+		          <p class="center">clans <span class="cit">=IvN=</span>, <span class="cit">@lbs</span>, <span class="cit">SdP</span>, <span class="cit">-WT-</span> and <span class="cit">]*NN*[</span> 
+		          					 for being our beta-testers and for their tips,<br/>
+		          					<span class="cit">Mission85</span>, <span class="cit">ObScUrE</span>, <span class="cit">don</span>, <span class="cit">Kalish</span> and <span class="cit">Decoy</span>
+		          					for their precious help.</p>
+		          <br/><br/>
+		          <p class="center">Related downloads:</p>
+		          <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><img src="imghold/download.png" alt=""></a></p>
+		          <p class="center"><a href="download.php?d=<?php echo $last_dir.$last_ita; ?>"><?php echo $last_ita; ?></a> - <?php echo $downloads[$last_ita]; ?> downloads</p>
+		          <?php
+		          for($index=0; $index < $last_indexCount; $index++)
+		          echo '  <p class="center"><a href="download.php?d='.$last_dir.$last_Array[$index].'"><img src="imghold/download.png" alt=""></a></p>
+		          <p class="center"><a href="download.php?d='.$last_dir.$last_Array[$index].'">'.$last_Array[$index].'</a> - '.$downloads[$last_Array[$index]].' downloads</p>';
+		          ?>
+		        </div>
+			</div>
+			
+			<div id="tabs-2">
+				<div>
+		          <p class="center"> Changelog: </p>
+		          <br/>
+		          <?php 
+		            include("BanBot/changelog.php");
+		            $i_indexCount = count($versions);
+		            for($i=0; $i < $i_indexCount; $i++)
+		            {
+		              echo '  <p class="versionName">'.$versions[$i]['nome'].'</p>';
+		              echo '<ul>';
+		              $j_indexCount = count($versions[$i]['info']);
+		              for($j=0; $j < $j_indexCount; $j++)
+		              {
+		                echo '
+		                  <li>'.$versions[$i]['info'][$j]['data'].' : 
+		                  '.$versions[$i]['info'][$j]['modifica'].'</li>';
+		              }
+		              echo '</ul>';	
+		            }
+		          ?>
+		        </div>
+	        </div>
+	        
+	        <div id="tabs-3">
+				<div>
+				  <p class="center"> Older versions downloads: </p>
+				  <?php 
+					//vecchie versioni
+					for($index=0; $index < $old_indexCount; $index++)
+					  echo '  <p class="center"><a href="download.php?d='.$old_dir.$old_Array[$index].'">'.$old_Array[$index].'</a> - '.$downloads[$old_Array[$index]].' downloads</p></p>';
+				  ?>
+				</div>
+            </div>
+            
+            <div id="tabs-4">   
+		        <div>
+		          <p class="center"> Features that probably will be added in the future: </p>
+		          <br/>
+		          <?php 
+		            include("BanBot/future.php");
+		            $i_indexCount = count($future);
+		            for($i=0; $i < $i_indexCount; $i++)
+		            {
+		              echo '  <p class="versionName">In '.$future[$i]['version'].' :</p>';
+		              echo '<ul>';
+		              $j_indexCount = count($future[$i]['info']);
+		              for($j=0; $j < $j_indexCount; $j++)
+		              {
+		                echo '<li>'.$future[$i]['info'][$j]['en'].'</li>';
+		              }
+		              echo '</ul><br/>';	
+		            }
+		          ?>
+		        </div>
+		    </div>
+        </div>
+        <br/><br/>
+        <div>
 		    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 			<input type="hidden" name="cmd" value="_s-xclick">
 			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">
@@ -388,10 +407,13 @@
 			Thank you =)</p>
 		</div>
 		<br/>
-      </div>
-    </div>
-
-    <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
+	  </div>
+	</div>
+<?php
+		}
+	}
+?>
+<?php bottomPageInfo(); ?>
 
 </body>
 </html>
