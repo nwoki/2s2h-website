@@ -1,7 +1,10 @@
 <?php
+	ob_start();
     session_start();
-		$_SESSION["page"] = "index";
     require( 'functions/functions.php' );
+    checkLanguage();
+    ob_end_flush();
+    $_SESSION["page"] = "index";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -54,7 +57,11 @@
       <div id="menu-center"><div id="menu"><?php menuPages( $_SESSION["page"] ) ?></div></div>
       <div id="menu-bottom"></div>
     </div>
-
+	
+<?PHP
+	if (languageSelection())
+	{
+?>
     <div id="content">
       <div id="padding">
         <p class="center">Fu nella calda estate del 2008 che all'universit&agrave di Padova, dall'incontro di poche menti brillanti, prese vita il progetto conosciuto come 2steps2hell...</p>
@@ -65,8 +72,10 @@
         </div>  
     </div>
 
-
-    <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
+<?PHP
+	}
+?>
+    <?php bottomPageInfo(); ?>
 
 
 </body>

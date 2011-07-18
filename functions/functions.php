@@ -21,9 +21,19 @@
 
     function bottomPageInfo()
     {
+    	if (!empty($_SESSION['language']))
+    	{
+			echo '<p class="center"> <a href="?ln=select">';
+			if ($_SESSION['language'] == 'it')
+				echo 'cambia la lingua';
+			else
+				echo 'change language';
+			echo '</a></p><br/>';
+		}
         if ($_SESSION["page"]!="admin")
             echo
-            '<div id="bottomPageInfo">
+            '<div class="separate sfondo-footer">
+             <div id="bottomPageInfo">
                 &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
                 <a href="2steps-2hell-contact-us.php">Contact us</a> -
                 <a href="2steps-2hell-news.php" >News</a> -
@@ -36,10 +46,12 @@
 				<a href="http://x2s2hx.altervista.org/vwar/war.php?action=nextaction">VWar</a> -
 								<a href="#" id="show" class="adminTab">AdminCP</a>
 								<a href="#" id="hide" class="adminTab">CloseTab</a>
+            </div>
             </div>';
         else    //se sono nella sezione admin, i link sono diversi
             echo
-            '<div id="bottomPageInfo">
+            '<div class="separate sfondo-footer">
+             <div id="bottomPageInfo">
                 &copy; 2Steps 2Hell '.date("Y").' website made by [2s2h]zamy &amp; [2s2h]n3m3s1s &amp; [2s2h]Rambo<br/>
                 <a href="../2steps-2hell-contact-us.php">Contact us</a> -
                 <a href="../2steps-2hell-news.php" >News</a> -
@@ -50,6 +62,7 @@
                 <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a> -
                 <a href="../2steps-2hell-awards.php">Awards</a> -
                 <a href="http://x2s2hx.altervista.org/vwar/admin/index.php">VWar</a>
+            </div>
             </div>';
     }
 
@@ -832,6 +845,51 @@
             </div>';
         }
     }
+    
+/**********************
+ * Language selection *
+ *********************/
+ 	//set the seleceted language, set and check the cookie
+ 	function checkLanguage ()
+ 	{
+ 		if ( empty($_SESSION['language']) )
+ 		{
+	 		if ( !empty($_GET['ln']) )
+	 		{
+	 			if ( $_GET['ln'] == 'it' ) $_SESSION['language'] = $_GET['ln']; //check if the language is correct
+	 			else $_SESSION['language'] = 'en'; //else apply the default
+	 			setcookie ( "language", $_SESSION['language'], time() + 60*60*24*30, "/" );
+	 		}
+	 		else if ( !empty($_COOKIE['language']) )
+	 		{
+	 			$_SESSION['language'] = $_COOKIE['language'];
+	 			setcookie ( "language", $_SESSION['language'], time() + 60*60*24*30, "/" );
+	 		}
+	 	}
+	 	else if ($_GET['ln'] == "select")
+		{
+			$_SESSION['language'] = "";
+			setcookie ( "language", "", time() - 30, "/" );
+		}
+ 	}
+ 	
+ 	// return true if the language is already selected and you can continue with normal content, false if it insert the language selection.
+ 	function languageSelection ()
+ 	{
+ 		if ( !empty($_SESSION['language']) ) return true;
+ 		else
+ 		{
+ 			echo '<div id="content">
+ 			<div id="padding">
+ 				<br/><p class="center">Choose the language: <br/> Scegli la lingua:</p>
+ 				<p class="center">
+				  <a href="?ln=it" rel="it" class="change"><img src="img/bandiera_italia.jpg" alt="" /> </a>
+				  <a href="?ln=en" rel="en" class="change"><img src="img/bandiera_inglese.jpg" alt="" /> </a>
+				</p>
+ 			</div></div>';
+ 			return false;
+ 		}
+ 	}
 
 /*****************
  * RSS FUNCTIONS *
