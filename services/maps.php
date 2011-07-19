@@ -37,7 +37,7 @@
 		';
 		
 		foreach ( $maps_Array as $map ){
-			echo '<tr><td align="right"><a href="download.php?d='.$maps_dir.$map.'">'.$map.'</a></td><td align="right">'.linux_size($maps_dir.$map).'</td><td align="right">'.$downloads_count[$map].'</td></tr>
+			echo '<tr><td align="left"><a href="download.php?d='.$maps_dir.$map.'">'.$map.'</a></td><td align="right">'.linux_size($maps_dir.$map).'</td><td align="right">'.$downloads_count[$map].'</td></tr>
 			';
 		}
 	echo '</table>
