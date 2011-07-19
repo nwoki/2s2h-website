@@ -1,9 +1,11 @@
 <?php
+    ob_start();
     session_start();
-	$_SESSION["page"] = "index";
 	header( "Refresh:5;".$_GET['d'] );
     require( 'functions/functions.php' );
     updateDownload($_GET['d']);
+    checkLanguage();
+    ob_end_flush();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -57,14 +59,24 @@
       <div id="menu-bottom"></div>
     </div>
 
+<?php
+	if (languageSelection())
+	{
+?>
     <div id="content">
       <div id="padding">
+      <?php if($_SESSION['language']=="it"){?>
+        <p class="center">Il download partir&agrave automaticamente in 5 secondi: cliccate <a href="<?php echo $_GET['d']; ?>">qui</a> in caso contrario.</p>
+      <?php }else {?>
         <p class="center">Download will start automatically in 5 seconds: click <a href="<?php echo $_GET['d']; ?>">here</a> if not.</p>
-        </div>  
-    </div>
+      <?php }?>
+	  </div>  
+	</div>
 
-
-    <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
+<?php
+	}
+?>
+    <?php bottomPageInfo(); ?>
 
 
 </body>

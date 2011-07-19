@@ -60,9 +60,7 @@
     <p>
         <?php
             $init = new WebClass( true );
-            echo '<div class="separate sfondo-footer">';
-            bottomPageInfo();
-            echo "</div>";
+            echo bottomPageInfo();
         ?>
     </p>
 

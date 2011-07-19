@@ -1,7 +1,10 @@
 <?php
+    ob_start();
     session_start();
-		$_SESSION["page"] = "otherservices";
     require( 'functions/functions.php' );
+    checkLanguage();
+    ob_end_flush();
+	$_SESSION["page"] = "otherservices";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -18,7 +21,6 @@
 		<script src="js/slide.js" type="text/javascript"></script>
 		<?php }?>
     <script src="js/login.js" type="text/javascript"></script>
-    <script src="js/language.js" type="text/javascript"></script>
 		<script>
       $(document).ready(function() {
         $("#accordion").accordion({ active: false, collapsible: true, autoHeight: false });
@@ -81,13 +83,14 @@
       <div id="menu-bottom"></div>
     </div>
 
+<?php
+	if (languageSelection())
+	{
+?>
     <div id="content">
       <div id="padding">
-        <p class="center">
-          <a href="#" rel="it" class="change"><img src="img/bandiera_italia.jpg" alt="" /> </a>
-          <a href="#" rel="en" class="change"><img src="img/bandiera_inglese.jpg" alt="" /> </a>
-        </p>
-        
+      	<br/> 
+      	<?php if($_SESSION['language']=="it"){?>
         <div id="tabs">
           <ul>
             <li><a href="#tabs-1"><span class="it">2s2h email</span><span class="en">2s2h email</span></a></li>
@@ -110,7 +113,7 @@
         
         <!-- Bottone per le donazioni -->
         <br/><br/>
-        <div class="it">
+        <div class="donazioni">
         	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 			<input type="hidden" name="cmd" value="_s-xclick">
 			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">
@@ -121,7 +124,30 @@
 			<p class="donate"> Se apprezzi il nostro lavoro e vuoi in qualche modo darci una mano, per favore fai una donazione al nostro clan. <br/>
 			Ti ringraziamo infinitamente =)</p>
 		</div>
-		<div class="en">
+		<?php }else {?>
+		<div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">2s2h email</a></li>
+            <li><a href="#tabs-2">Ban list</a></li>
+            <li><a href="#tabs-3">Maps host</a></li>
+          </ul>
+		    
+          <div id="tabs-1">
+            <?PHP include('services/email.php') ?>
+          </div>
+      
+          <div id="tabs-2">
+            <?PHP include('services/banlist.php') ?>  
+          </div>
+          
+          <div id="tabs-3">
+            <?PHP include('services/maps.php') ?>  
+          </div>		
+		</div>
+        
+        <!-- Bottone per le donazioni -->
+        <br/><br/>
+		<div class="donazioni">
 		    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 			<input type="hidden" name="cmd" value="_s-xclick">
 			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">
@@ -132,11 +158,14 @@
 			<p class="donate"> If you appreciate our work and want to somehow give us a hand, please make a donation to our clan.<br/>
 			Thank you =)</p>
 		</div>
+		<?php }?>
 		<br/>
       </div>
     </div>
-
-    <div class="separate sfondo-footer"><?php bottomPageInfo(); ?></div>
+<?php
+	}
+?>
+<?php bottomPageInfo(); ?>
 
 </body>
 </html>

@@ -69,13 +69,34 @@
         <p class="center">Quel piccolo clan, che allora contava giusto pochi membri, oggi si &egrave affermato nel panorama nazionale diventando uno dei maggiori sostenitori del tanto semplice quanto entusiasmante fps Urban Terror!</p>
         <p class="center">I 2s2h partecipano alle competizioni indette dalle maggiori leghe quali <strong>ESL</strong>, <strong>ClanBase</strong> e <strong>UrbanZone</strong> conseguendo risultati apprezzabili e si allenano regolarmente per migliorare.</p>
         <p class="center">La nostra community mette a disposizione <strong>server pubblici</strong> in cui testare la propria abilit&agrave o giocare per il semplice piacere di farlo ed ora offre anche la possibilit&agrave agli altri clan di prendere in affitto server di qualit&agrave a prezzi convenienti per poter iniziare o continuare la propria avventura con i giusti strumenti!</p>
+        <p class="center"><strong>Enjoy 2s2h</strong></p>
+        <br/><br/>
+        <div id="donazioni">
+        	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">
+			<input type="hidden" name="item_name" value="2Steps2Hell UrT Clan">
+			<input type="image" src="https://www.paypal.com/it_IT/IT/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - Il sistema di pagamento online più facile e sicuro!">
+			<img alt="" border="0" src="https://www.paypal.com/it_IT/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</div>
       <?php }else {?>
         <p class="center">It was in the hot summer of 2008 that at the University of Padua, from the encounter of a few brilliant minds, came to life the project known as 2steps2hell...</p>
         <p class="center">That small clan, which had just a few members, today has emerged on the national scene to become one of the biggest supporters of both simple and exciting FPS game called Urban Terror!</p>
         <p class="center">The 2s2h participate in competitions organized by the major leagues such as <strong>ESL</strong>, <strong>ClanBase</strong> and <strong>UrbanZone</strong> achieving significant results, and exercise regularly to improve.</p>
         <p class="center">Our community provides <strong>public servers</strong> in which test your skills or play for the simple pleasure of it, and now also offers the opportunity for other clans to rent quality servers at affordable prices in order to start or continue your adventure with the right tools!</p>
-      <?php }?>
         <p class="center"><strong>Enjoy 2s2h</strong></p>
+        <br/><br/>
+        <div id="donazioni">
+		    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">
+			<input type="hidden" name="item_name" value="2Steps2Hell UrT Clan">
+			<input type="image" src="https://www.paypal.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online.">
+			<img alt="" border="0" src="https://www.paypal.com/it_IT/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</div>
+      <?php }?>
         </div>  
     </div>
 

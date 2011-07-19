@@ -262,7 +262,7 @@
         
         <!-- Bottone per le donazioni -->
         <br/><br/>
-        <div>
+        <div id="donazioni">
         	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 			<input type="hidden" name="cmd" value="_s-xclick">
 			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">
@@ -394,7 +394,7 @@
 		    </div>
         </div>
         <br/><br/>
-        <div>
+        <div id="donazioni">
 		    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 			<input type="hidden" name="cmd" value="_s-xclick">
 			<input type="hidden" name="hosted_button_id" value="E6M9R7GX33PNW">

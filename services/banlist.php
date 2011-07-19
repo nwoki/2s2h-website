@@ -35,9 +35,14 @@
 			$database = new PDO('sqlite:'.$databases_dir.$db_Array[$index]);
 			$result = $database->query('SELECT nick FROM oplist ORDER BY level,nick;');
 			echo '<h2 class="serverline" id="'.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'">Server: '.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'</h2>
-			<div class="it"><p class="center"><a href="#ittop">torna all\'inizio</a></p></div>
-			<div class="en"><p class="center"><a href="#entop">return to top</a></p></div>
+			<div>';
+			if($_SESSION['language']=="it")
+			echo '<p class="right"><a href="#ittop">torna all\'inizio</a></p>';
+			else
+			echo '<p class="right"><a href="#entop">return to top</a></p>';
+			echo '</div>
 			<p class="titoloTabella">Admins:</p>
+			<div align="center">
 			<table border="0" cellpadding="5" cellspacing="4" summary="Admins list of the server '.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'">
 			<tr>
 				<th scope="col">Nick</th>
@@ -45,18 +50,20 @@
 			foreach ( $result as $row ){
 				print "<tr><td>".$row['nick']."</td></tr>";
 			}
-			echo '</table><br/>';
+			echo '</table><br/>
+			</div>';
 			
 			$result = $database->query('SELECT * FROM banned ORDER BY nick;');
 			echo '
-			<div class="it">
-				<p class="titoloTabella">Lista dei ban:</p>
+			<div>
+			';
+			if($_SESSION['language']=="it")
+				echo '<p class="titoloTabella">Lista dei ban:</p>';
+			else
+			  	echo '<p class="titoloTabella">Ban list:</p>';
+			echo'
 			</div>
-						
-			<div class="en">
-			  <p class="titoloTabella">Ban list:</p>
-			</div>
-
+			<div align="center">
 			<table border="0" cellpadding="5" cellspacing="4" summary="Ban list of the server '.substr($db_Array[$index],0,strpos($db_Array[$index],'.')).'">
 			<tr>
 				<th scope="col">Nick</th>
@@ -72,7 +79,8 @@
 				print "<td>".$row['author']."</td>";
 				print "<td>".$row['date']." ".$row['time']."</td></tr>";
 			}
-			echo '</table>';
+			echo '</table>
+			</div>';
 		}
 		catch(PDOException $e){
 		    print 'Exception : '.$e->getMessage();

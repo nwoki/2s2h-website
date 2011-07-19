@@ -1,11 +1,11 @@
-<div class="it">
+<div>
+<?php if($_SESSION['language']=="it"){?>
 	<p class="center">Ecco la lista completa delle mappe sull'host, cliccate sul nome per scaricarle.<br/>
-	Il numero di download si riferisce a quelli effettuati dal sito.</p>
-</div>
-            
-<div class="en">
+	Il numero di download si riferisce solo a quelli effettuati dal sito.</p>
+<?php }else {?>
 	<p class="center">This is the complete list of maps on the host, click on the name to download the map.<br/>
-	The downloads number refers to those done through this site.</p>
+	The downloads number refers only to those done through this site.</p>
+<?php }?>
 </div>
 
 <?PHP
@@ -25,16 +25,19 @@
 	$downloads_count = getDownloads($maps_Array);
 	
 	echo '
-<div class="center">
+<div align="center">
 	<table border="0" cellpadding="5" cellspacing="4" summary="List of maps">
-		<tr>
-			<th scope="col">Map name</th>
-			<th scope="col">Dimension</th>
-			<th scope="col">Downloads</th>
-		</tr>';
+		<THEAD>
+			<tr>
+				<th scope="col">Map name</th>
+				<th scope="col">Dimension</th>
+				<th scope="col">Downloads</th>
+			</tr>
+		<TBODY>
+		';
 		
 		foreach ( $maps_Array as $map ){
-			echo '<tr><td><a href="download.php?d='.$maps_dir.$map.'">'.$map.'</a></td><td>'.linux_size($maps_dir.$map).'</td><td>'.$downloads_count[$map].'</td></tr>
+			echo '<tr><td align="right"><a href="download.php?d='.$maps_dir.$map.'">'.$map.'</a></td><td align="right">'.linux_size($maps_dir.$map).'</td><td align="right">'.$downloads_count[$map].'</td></tr>
 			';
 		}
 	echo '</table>
