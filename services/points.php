@@ -50,7 +50,7 @@
 		
 	$i = 0;
 	foreach ($date_match as $match){
-		echo '	<tr><td align="right"><a href="'.$match['file'].'">'.$match['date'].'</a></td>';
+		echo '	<tr><td align="right"><a href="'.$screen_folder.$match['file'].'">'.$match['date'].'</a></td>';
 		
 		foreach ($ordered as $item)
 			echo ' <td align="center">'.$points[$item['player']]['scores'][$i].'</td>';
