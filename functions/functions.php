@@ -37,7 +37,7 @@
 		            <a href="2steps-2hell-noleggio-server.php" >Noleggio server</a> -
 		            <a href="2steps-2hell-banbot.php" >BanBot</a> -
 		            <a href="2steps-2hell-roster.php" >Roster</a> -
-		            <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a> -
+		            <a href="/forum/index.php" >Forum</a> -
 		            <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a> -
 		            <a href="2steps-2hell-awards.php">Premi</a> -
 					<a href="http://x2s2hx.altervista.org/vwar/war.php?action=nextaction">VWar</a> -
@@ -55,7 +55,7 @@
 		            <a href="2steps-2hell-noleggio-server.php" >Server renting</a> -
 		            <a href="2steps-2hell-banbot.php" >BanBot</a> -
 		            <a href="2steps-2hell-roster.php" >Roster</a> -
-		            <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a> -
+		            <a href="/forum/index.php" >Forum</a> -
 		            <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a> -
 		            <a href="2steps-2hell-awards.php">Awards</a> -
 					<a href="http://x2s2hx.altervista.org/vwar/war.php?action=nextaction">VWar</a> -
@@ -74,7 +74,7 @@
                 <a href="../2steps-2hell-noleggio-server.php" >Server renting</a> -
                 <a href="../2steps-2hell-banbot.php" >BanBot</a> -
                 <a href="../2steps-2hell-roster.php" >Roster</a> -
-                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a> -
+                <a href="/forum/index.php" >Forum</a> -
                 <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a> -
                 <a href="../2steps-2hell-awards.php">Awards</a> -
                 <a href="http://x2s2hx.altervista.org/vwar/admin/index.php">VWar</a>
@@ -99,7 +99,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Altri servizi</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
             	else
@@ -111,7 +111,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Other services</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
                 break;
@@ -126,7 +126,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Altri servizi</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
             	else
@@ -138,7 +138,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Other services</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
                 break;
@@ -153,7 +153,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Altri servizi</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
             	else
@@ -165,7 +165,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Other services</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
                 break;
@@ -179,7 +179,7 @@
 		                <a class="active" href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Altri servizi</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
             	else
@@ -191,7 +191,7 @@
 		                <a class="active" href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Other services</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
                 break;
@@ -206,7 +206,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a class="active" href="2steps-2hell-services.php" >Altri servizi</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
             	else
@@ -218,7 +218,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a class="active" href="2steps-2hell-services.php" >Other services</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
                 break;
@@ -233,7 +233,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Altri servizi</a>
 		                <a class="active" href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
             	else
@@ -245,7 +245,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Other services</a>
 		                <a class="active" href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
                 break;
@@ -259,7 +259,7 @@
                     <a href="../2steps-2hell-banbot.php" >BanBot</a>
                     <a href="../2steps-2hell-services.php" >Other services</a>
                     <a href="../2steps-2hell-roster.php" >Roster</a>
-                    <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                    <a href="/forum/index.php" >Forum</a>
                     <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
@@ -272,7 +272,7 @@
                     <a href="../2steps-2hell-noleggio-server.php" >Server renting</a>
                     <a href="../2steps-2hell-banbot.php" >BanBot</a>
                     <a href="../2steps-2hell-roster.php" >Roster</a>
-                    <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+                    <a href="/forum/index.php" >Forum</a>
                     <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
                 </div>';
                 break;
@@ -287,7 +287,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Altri servizi</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
             	else
@@ -299,7 +299,7 @@
 		                <a href="2steps-2hell-banbot.php" >BanBot</a>
 		                <a href="2steps-2hell-services.php" >Other services</a>
 		                <a href="2steps-2hell-roster.php" >Roster</a>
-		                <a href="http://x2s2hx.altervista.org/forum/index.php" >Forum</a>
+		                <a href="/forum/index.php" >Forum</a>
 		                <a href="http://x2s2hx.altervista.org/bugtracker/index.php" >BugTracker</a>
 		            </div>';
                 break;
