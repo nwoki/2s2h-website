@@ -7,14 +7,18 @@
 	<p>In pi&ugrave su richiesta verr&agrave fornito gratuitamente <strong>BanBot</strong> sui <strong>server pubblici</strong>, indicati nei pacchetti.</p><br/>
 	<p>Disponiamo di un server francese, <strong>ideale per i tornei</strong>.</p>
 	<br/>
+	<p>Offriamo anche servers di Minecraft, che per&ograve; sono completamente non amministrati (per maggiori informazioni, scriveteci).</p>
+	<br/>
 	<p>Accettiamo pagamenti via <strong>Paypal</strong>, <strong>IBAN</strong> o versamento su carte <strong>Postepay</strong>.</p>
 <?php }else {?>
 	<p>2s2h is a clan that has played for years <strong>Urban Terror</strong> and still participates in competitions. Since we are direct users of game servers that we offer, <strong>we cannot fail on the quality</strong>.</p>
 	<p>What we do is therefore to <strong>create an alternative</strong> to the products that you can find on the market that often <strong>lack</strong> the necessary quality or have <strong>prohibitive prices</strong>.</p>
 	<p>Our aim is to provide real servers, where it is pleasant to play at a price <strong>accessible to all</strong>.</p>
-	<p>On all of our servers we have installed the <strong>patch</strong> that prevents the game servers from being exploited b a bug accessable via vote.</p>
+	<p>On all of our servers we have installed the <strong>patch</strong> that prevents the game servers from being exploited by a bug accessable via vote.</p>
 	<p>In addition to the request of a server we will provide free <strong>BanBot</strong> service on <strong>public servers</strong>, listed in the packages.</p><br/>
 	<p>We currently have a french server, <strong>ideal for tournaments</strong>.</p>
+	<br/>
+	<p>We offer Minecraft servers too, but please notice that they are totally unmanaged (for more info, write to us).</p>
 	<br/>
 	<p>We accept payments via <strong>Paypal</strong>, <strong>IBAN</strong> or transfers to <strong>Postepay</strong>.</p>
 <?php }?>

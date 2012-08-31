@@ -115,6 +115,8 @@ ul.roster-list li {width: auto; float: left; margin: 0 3px;}
 #donazioni { text-align: center }
 p.right { text-align: right}
 
+.languageflag { width: 20px; height:20px; }
+
 /*
 div#adminTab { margin-top: 15px;}
 div#adminTab a {color: #222}*/

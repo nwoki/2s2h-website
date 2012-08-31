@@ -100,7 +100,7 @@
 	        <li><a href="#tabs-5">Lista server</a></li>
 	        <li><a href="#tabs-1">Ordina un server</a></li>
 	      <?php }else {?>
-	      	<li><a href="#tabs-6"><span class="it">Perch&egrave; scegliere 2s2h?</span><span class="en">Why choose 2s2h?</span></a></li>
+	      	<li><a href="#tabs-6">Why choose 2s2h?</a></li>
 	        <li><a href="#tabs-2">Prices</a></li>
 	        <li><a href="#tabs-3">Notes</a></li>
 	        <li><a href="#tabs-4">FAQs</a></li>

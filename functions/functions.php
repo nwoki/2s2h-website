@@ -23,7 +23,7 @@
     {
     	if (!empty($_SESSION['language']))
     	{
-			echo '<p class="center"> <a href="?ln=select">change language</a></p>';
+			echo '<br/><p class="center"><span class="languageflag"><img src="img/bandiera_italia.jpg" width="30" height="25"/></span> <a href="?ln=select">change language</a> <span class="languageflag"><img src="img/bandiera_inglese.jpg" width="30" height="25"/></span> </p>';
 		}
         if ($_SESSION["page"]!="admin")
         {
@@ -974,18 +974,23 @@
 	 			$_SESSION['language'] = $_COOKIE['language'];
 	 			setcookie ( "language", $_SESSION['language'], time() + 60*60*24*30, "/" );
 	 		}
+	 		else
+	 		{
+	 		    $_SESSION['language'] = "en";    
+	 		}
 	 	}
 	 	else if ($_GET['ln'] == "select")
 		{
-			$_SESSION['language'] = "";
+			$_SESSION['language'] = "select";
 			setcookie ( "language", "", time() - 30, "/" );
 		}
  	}
  	
- 	// return true if the language is already selected and you can continue with normal content, false if it insert the language selection.
+ 	// init the language.
  	function languageSelection ()
  	{
- 		if ( !empty($_SESSION['language']) ) return true;
+ 		
+ 		if ( $_SESSION['language'] != "select" ) return true;
  		else
  		{
  			echo '<div id="content">
@@ -996,8 +1001,10 @@
 				  <a href="?ln=en" rel="en" class="change"><img src="img/bandiera_inglese.jpg" alt="" /> </a>
 				</p>
  			</div></div>';
+ 			$_SESSION['language'] = "";
  			return false;
  		}
+
  	}
 
 /*****************
